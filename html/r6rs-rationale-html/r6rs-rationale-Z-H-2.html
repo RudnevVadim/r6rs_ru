@@ -1,0 +1,261 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-1.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-3.html">next</a></span> page<span class=disable>; &nbsp;&nbsp;</span><span class=disable>contents</span>]</div>
+<p></p>
+<a name="node_chap_Temp_2"></a>
+<h1 class=chapter>
+<div class=chapterheading>&nbsp;</div><br>
+Contents</h1>
+<p></p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+                    <a name="node_toc_start"></a></p>
+
+<p class=noindent></p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_1"></a><a href="r6rs-rationale-Z-H-3.html#node_chap_1">1&nbsp;&nbsp;Historical background</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_2"></a><a href="r6rs-rationale-Z-H-4.html#node_chap_2">2&nbsp;&nbsp;Requirement levels</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_3"></a><a href="r6rs-rationale-Z-H-5.html#node_chap_3">3&nbsp;&nbsp;Numbers</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_3.1"></a><a href="r6rs-rationale-Z-H-5.html#node_sec_3.1">3.1&nbsp;&nbsp;Infinities, NaNs</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_3.2"></a><a href="r6rs-rationale-Z-H-5.html#node_sec_3.2">3.2&nbsp;&nbsp;Distinguished -0.0</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_4"></a><a href="r6rs-rationale-Z-H-6.html#node_chap_4">4&nbsp;&nbsp;Lexical syntax and datum syntax</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_4.1"></a><a href="r6rs-rationale-Z-H-6.html#node_sec_4.1">4.1&nbsp;&nbsp;Symbol and identifier syntax</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_4.1.1"></a><a href="r6rs-rationale-Z-H-6.html#node_sec_4.1.1">4.1.1&nbsp;&nbsp;Escaped symbol constituents</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_4.1.2"></a><a href="r6rs-rationale-Z-H-6.html#node_sec_4.1.2">4.1.2&nbsp;&nbsp;Case sensitivity</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_4.1.3"></a><a href="r6rs-rationale-Z-H-6.html#node_sec_4.1.3">4.1.3&nbsp;&nbsp;Identifiers starting with <tt>-&gt;</tt></a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_4.2"></a><a href="r6rs-rationale-Z-H-6.html#node_sec_4.2">4.2&nbsp;&nbsp;Comments</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_4.3"></a><a href="r6rs-rationale-Z-H-6.html#node_sec_4.3">4.3&nbsp;&nbsp;Future extensions</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_5"></a><a href="r6rs-rationale-Z-H-7.html#node_chap_5">5&nbsp;&nbsp;Semantic concepts</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_5.1"></a><a href="r6rs-rationale-Z-H-7.html#node_sec_5.1">5.1&nbsp;&nbsp;Argument and subform checking</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_5.2"></a><a href="r6rs-rationale-Z-H-7.html#node_sec_5.2">5.2&nbsp;&nbsp;Safety</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_5.3"></a><a href="r6rs-rationale-Z-H-7.html#node_sec_5.3">5.3&nbsp;&nbsp;Proper tail recursion</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_6"></a><a href="r6rs-rationale-Z-H-8.html#node_chap_6">6&nbsp;&nbsp;Entry format</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_7"></a><a href="r6rs-rationale-Z-H-9.html#node_chap_7">7&nbsp;&nbsp;Libraries</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.1"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.1">7.1&nbsp;&nbsp;Syntax</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.2"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.2">7.2&nbsp;&nbsp;Local import</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.3"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.3">7.3&nbsp;&nbsp;Local modules</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.4"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.4">7.4&nbsp;&nbsp;Fixed <tt>import</tt> and <tt>export</tt> clauses</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.5"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.5">7.5&nbsp;&nbsp;Instantiation and initialization</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.6"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.6">7.6&nbsp;&nbsp;Immutable exports</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.7"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.7">7.7&nbsp;&nbsp;Compound library names</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.8"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.8">7.8&nbsp;&nbsp;Versioning</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_7.9"></a><a href="r6rs-rationale-Z-H-9.html#node_sec_7.9">7.9&nbsp;&nbsp;Treatment of different versions</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_8"></a><a href="r6rs-rationale-Z-H-10.html#node_chap_8">8&nbsp;&nbsp;Top-level programs</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_9"></a><a href="r6rs-rationale-Z-H-11.html#node_chap_9">9&nbsp;&nbsp;Primitive syntax</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_9.1"></a><a href="r6rs-rationale-Z-H-11.html#node_sec_9.1">9.1&nbsp;&nbsp;Unspecified evaluation order</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_10"></a><a href="r6rs-rationale-Z-H-12.html#node_chap_10">10&nbsp;&nbsp;Expansion process</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_11"></a><a href="r6rs-rationale-Z-H-13.html#node_chap_11">11&nbsp;&nbsp;Base library</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.1"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.1">11.1&nbsp;&nbsp;Library organization</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.2"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.2">11.2&nbsp;&nbsp;Bodies</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.3"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.3">11.3&nbsp;&nbsp;Export levels</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.4"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.4">11.4&nbsp;&nbsp;Binding forms</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.5"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.5">11.5&nbsp;&nbsp;Equivalence predicates</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.5.1"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.5.1">11.5.1&nbsp;&nbsp;Treatment of procedures</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.5.2"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.5.2">11.5.2&nbsp;&nbsp;Equivalence of NaNs</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.5.3"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.5.3">11.5.3&nbsp;&nbsp;<tt>eq?</tt></a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6">11.6&nbsp;&nbsp;Arithmetic</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.1"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.1">11.6.1&nbsp;&nbsp;Full numerical tower</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.2"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.2">11.6.2&nbsp;&nbsp;IEEE-754 conformance</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.3"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.3">11.6.3&nbsp;&nbsp;Transcendental functions</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.4"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.4">11.6.4&nbsp;&nbsp;Domains of numerical predicates</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.5"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.5">11.6.5&nbsp;&nbsp;Numerical types</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.6"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.6">11.6.6&nbsp;&nbsp;Closure Properties</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.6.1"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.6.1">11.6.6.1&nbsp;&nbsp;Representation-specific operations</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.6.2"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.6.2">11.6.6.2&nbsp;&nbsp;Flow analysis</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.6.3"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.6.3">11.6.6.3&nbsp;&nbsp;div and mod</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.7"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.7">11.6.7&nbsp;&nbsp;Numerical predicates</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.6.8"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.8">11.6.8&nbsp;&nbsp;Notes on individual procedures</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.7"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.7">11.7&nbsp;&nbsp;Characters and strings</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.8"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.8">11.8&nbsp;&nbsp;Symbols</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.9"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.9">11.9&nbsp;&nbsp;Control features</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.9.1"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.9.1">11.9.1&nbsp;&nbsp;<tt>call-with-current-continuation</tt></a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.9.2"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.9.2">11.9.2&nbsp;&nbsp;<tt>dynamic-wind</tt></a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.9.3"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.9.3">11.9.3&nbsp;&nbsp;Multiple values</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.10"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.10">11.10&nbsp;&nbsp;Macro transformers</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_11.10.1"></a><a href="r6rs-rationale-Z-H-13.html#node_sec_11.10.1">11.10.1&nbsp;&nbsp;<tt>syntax-rules</tt></a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_12"></a><a href="r6rs-rationale-Z-H-14.html#node_chap_12">12&nbsp;&nbsp;Formal semantics</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_13"></a><a href="r6rs-rationale-Z-H-15.html#node_chap_13">13&nbsp;&nbsp;Unicode</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_13.1"></a><a href="r6rs-rationale-Z-H-15.html#node_sec_13.1">13.1&nbsp;&nbsp;Case mapping</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_14"></a><a href="r6rs-rationale-Z-H-16.html#node_chap_14">14&nbsp;&nbsp;Bytevectors</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_15"></a><a href="r6rs-rationale-Z-H-17.html#node_chap_15">15&nbsp;&nbsp;List utilities</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_15.1"></a><a href="r6rs-rationale-Z-H-17.html#node_sec_15.1">15.1&nbsp;&nbsp;Notes on individual procedures</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_16"></a><a href="r6rs-rationale-Z-H-18.html#node_chap_16">16&nbsp;&nbsp;Sorting</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_17"></a><a href="r6rs-rationale-Z-H-19.html#node_chap_17">17&nbsp;&nbsp;Control structures</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_17.1"></a><a href="r6rs-rationale-Z-H-19.html#node_sec_17.1">17.1&nbsp;&nbsp;<tt>when</tt> and <tt>unless</tt></a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_17.2"></a><a href="r6rs-rationale-Z-H-19.html#node_sec_17.2">17.2&nbsp;&nbsp;<tt>case-lambda</tt></a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_18"></a><a href="r6rs-rationale-Z-H-20.html#node_chap_18">18&nbsp;&nbsp;Records</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_18.1"></a><a href="r6rs-rationale-Z-H-20.html#node_sec_18.1">18.1&nbsp;&nbsp;Syntactic layer</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_18.2"></a><a href="r6rs-rationale-Z-H-20.html#node_sec_18.2">18.2&nbsp;&nbsp;Positional access and field names</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_18.3"></a><a href="r6rs-rationale-Z-H-20.html#node_sec_18.3">18.3&nbsp;&nbsp;Lack of multiple inheritance</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_18.4"></a><a href="r6rs-rationale-Z-H-20.html#node_sec_18.4">18.4&nbsp;&nbsp;Constructor mechanism</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_18.5"></a><a href="r6rs-rationale-Z-H-20.html#node_sec_18.5">18.5&nbsp;&nbsp;Sealed record types</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_19"></a><a href="r6rs-rationale-Z-H-21.html#node_chap_19">19&nbsp;&nbsp;Conditions and exceptions</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_19.1"></a><a href="r6rs-rationale-Z-H-21.html#node_sec_19.1">19.1&nbsp;&nbsp;Exceptions</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_19.2"></a><a href="r6rs-rationale-Z-H-21.html#node_sec_19.2">19.2&nbsp;&nbsp;Conditions</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_20"></a><a href="r6rs-rationale-Z-H-22.html#node_chap_20">20&nbsp;&nbsp;I/O</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.1"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.1">20.1&nbsp;&nbsp;File names</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.2"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.2">20.2&nbsp;&nbsp;File options</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.3"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.3">20.3&nbsp;&nbsp;End-of-line styles</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.4"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.4">20.4&nbsp;&nbsp;Error-handling modes</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.5"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.5">20.5&nbsp;&nbsp;Binary and textual ports</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.6"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.6">20.6&nbsp;&nbsp;File positions</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.7"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.7">20.7&nbsp;&nbsp;Freshness of standard ports</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_20.8"></a><a href="r6rs-rationale-Z-H-22.html#node_sec_20.8">20.8&nbsp;&nbsp;Argument conventions</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_21"></a><a href="r6rs-rationale-Z-H-23.html#node_chap_21">21&nbsp;&nbsp;File system</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_22"></a><a href="r6rs-rationale-Z-H-24.html#node_chap_22">22&nbsp;&nbsp;Arithmetic</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_22.1"></a><a href="r6rs-rationale-Z-H-24.html#node_sec_22.1">22.1&nbsp;&nbsp;Fixnums and flonums</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_22.2"></a><a href="r6rs-rationale-Z-H-24.html#node_sec_22.2">22.2&nbsp;&nbsp;Bitwise operations</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_22.3"></a><a href="r6rs-rationale-Z-H-24.html#node_sec_22.3">22.3&nbsp;&nbsp;Notes on individual procedures</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_23"></a><a href="r6rs-rationale-Z-H-25.html#node_chap_23">23&nbsp;&nbsp;<tt>syntax-case</tt></a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_24"></a><a href="r6rs-rationale-Z-H-26.html#node_chap_24">24&nbsp;&nbsp;Hashtables</a></b><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_24.1"></a><a href="r6rs-rationale-Z-H-26.html#node_sec_24.1">24.1&nbsp;&nbsp;Caching</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_24.2"></a><a href="r6rs-rationale-Z-H-26.html#node_sec_24.2">24.2&nbsp;&nbsp;Immutable hashtables</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <a name="node_toc_node_sec_24.3"></a><a href="r6rs-rationale-Z-H-26.html#node_sec_24.3">24.3&nbsp;&nbsp;Hash functions</a><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_25"></a><a href="r6rs-rationale-Z-H-27.html#node_chap_25">25&nbsp;&nbsp;Enumerations</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_26"></a><a href="r6rs-rationale-Z-H-28.html#node_chap_26">26&nbsp;&nbsp;Composite library</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_27"></a><a href="r6rs-rationale-Z-H-29.html#node_chap_27">27&nbsp;&nbsp;Mutable pairs</a></b><br>
+</p>
+<p></p>
+
+<p class=noindent><b>
+&nbsp; &nbsp; <a name="node_toc_node_chap_28"></a><a href="r6rs-rationale-Z-H-30.html#node_chap_28">28&nbsp;&nbsp;Mutable strings</a></b><br>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-1.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-3.html">next</a></span> page<span class=disable>; &nbsp;&nbsp;</span><span class=disable>contents</span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

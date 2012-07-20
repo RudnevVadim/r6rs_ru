@@ -1,0 +1,222 @@
+\begin{thebibliography}{10}
+
+\bibitem{SICP}
+Harold Abelson, Gerald~Jay Sussman, and Julie Sussman.
+\newblock {\em Structure and Interpretation of Computer Programs}.
+\newblock MIT Press, Cambridge, Mass., second edition, 1996.
+
+\bibitem{srfi76}
+Will Clinger, R.~Kent Dybvig, Michael Sperber, and Anton van Straaten.
+\newblock {SRFI~76}: {R6RS} records.
+\newblock \url{http://srfi.schemers.org/srfi-76/}, 2005.
+
+\bibitem{RRRS}
+William Clinger.
+\newblock The revised revised report on {Scheme}, or an uncommon {Lisp}.
+\newblock Technical Report MIT Artificial Intelligence Memo 848, MIT, 1985
+  1985.
+\newblock Also published as Computer Science Department Technical Report 174,
+  Indiana University, June 1985.
+
+\bibitem{R3RS}
+William Clinger and Jonathan Rees.
+\newblock Revised{$^3$} report on the algorithmic language {Scheme}.
+\newblock {\em {SIGPLAN} Notices}, 21(12):37--79, December 1986.
+
+\bibitem{R4RS}
+William Clinger and Jonathan Rees.
+\newblock Revised{$^4$} report on the algorithmic language {Scheme}.
+\newblock {\em Lisp Pointers}, IV(3):1--55, July--September 1991.
+
+\bibitem{srfi77}
+William~D Clinger and Michael Sperber.
+\newblock {SRFI~77}: Preliminary proposal for {R6RS} arithmetic.
+\newblock \url{http://srfi.schemers.org/srfi-77/}, 2005.
+
+\bibitem{algorithms}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press and McGraw-Hill, second edition, 2001.
+
+\bibitem{tspl3}
+R.~Kent Dybvig.
+\newblock {\em The {Scheme} Programming Language}.
+\newblock MIT Press, Cambridge, third edition, 2003.
+\newblock \url{http://www.scheme.com/tspl3/}.
+
+\bibitem{srfi93}
+R.~Kent Dybvig.
+\newblock {SRFI~93}: {R6RS} {\url{syntax-case}} macros.
+\newblock \url{http://srfi.schemers.org/srfi-93/}, 2006.
+
+\bibitem{syntacticabstraction}
+R.~Kent Dybvig, Robert Hieb, and Carl Bruggeman.
+\newblock Syntactic abstraction in {Scheme}.
+\newblock {\em Lisp and Symbolic Computation}, 1(1):53--75, 1988.
+
+\bibitem{cleaninguptower}
+Sebastian Egner, Richard Kelsey, and Michael Sperber.
+\newblock Cleaning up the tower: Numbers in {Scheme}.
+\newblock In Olin Shivers and Oscar Waddell, editors, {\em Proceedings of the
+  Fifth Workshop on Scheme and Functional Programming}, pages 109--120,
+  Snowbird, October 2004.
+\newblock Indiana University Technical Report TR600.
+
+\bibitem{Scheme311}
+Carol Fessenden, William Clinger, Daniel~P. Friedman, and Christopher Haynes.
+\newblock {\em {Scheme} 311 version 4 reference manual}.
+\newblock Indiana University, 1983.
+\newblock Indiana University Computer Science Technical Report 137, Superseded
+  by~\cite{Scheme84}.
+
+\bibitem{srfi83}
+Matthew Flatt and Kent Dybvig.
+\newblock {SRFI~83}: {R6RS} library syntax.
+\newblock \url{http://srfi.schemers.org/srfi-83/}, 2005.
+
+\bibitem{srfi75}
+Matthew Flatt and Marc Feeley.
+\newblock {SRFI~75}: {R6RS} unicode data.
+\newblock \url{http://srfi.schemers.org/srfi-75/}, 2005.
+
+\bibitem{Scheme84}
+Daniel~P. Friedman, Christopher Haynes, Eugene Kohlbecker, and Mitchell Wand.
+\newblock {\em {Scheme} 84 interim reference manual}.
+\newblock Indiana University, January 1985.
+\newblock Indiana University Computer Science Technical Report 153.
+
+\bibitem{srfi11}
+Lars~T Hansen.
+\newblock {SRFI~11}: Syntax for receiving multiple values.
+\newblock \url{http://srfi.schemers.org/srfi-11/}, 2000.
+
+\bibitem{quicksort}
+C.~A.~R. Hoare.
+\newblock Algorithm 63 (partition); 64 (quicksort); 65 (find).
+\newblock {\em Communications of the {ACM}}, 4(7):321--322, 1961.
+
+\bibitem{IEEE}
+{IEEE} standard 754-1985. {IEEE} standard for binary floating-point arithmetic,
+  1985.
+\newblock Reprinted in SIGPLAN Notices, 22(2):9-25, 1987.
+
+\bibitem{IEEE754R}
+{IEEE} 754 revision work.
+\newblock \url{http://grouper.ieee.org/groups/754/revision.html}, 2006.
+
+\bibitem{srfi60}
+Aubrey Jaffer.
+\newblock {SRFI~60}: Integers as bits.
+\newblock \url{http://srfi.schemers.org/srfi-60/}, 2005.
+
+\bibitem{R5RS}
+Richard Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^5$ report on the algorithmic language {Scheme}.
+\newblock {\em Higher-Order and Symbolic Computation}, 11(1):7--105, 1998.
+
+\bibitem{srfi34}
+Richard Kelsey and Michael Sperber.
+\newblock {SRFI~34}: Exception handling for programs.
+\newblock \url{http://srfi.schemers.org/srfi-34/}, 2002.
+
+\bibitem{Landin65}
+Peter Landin.
+\newblock A correspondence between {Algol 60} and {Church}'s lambda notation:
+  Part {I}.
+\newblock {\em Communications of the {ACM}}, 8(2):89--101, February 1965.
+
+\bibitem{mf:scheme-op-sem}
+Jacob Matthews and Robert~Bruce Findler.
+\newblock An operational semantics for {S}cheme.
+\newblock {\em Journal of Functional Programming}, 2007.
+\newblock
+  {\href{http://journals.cambridge.org/action/displayAbstract?fromPage=online&%
+aid=1268564&fulltextType=RA&fileId=S0956796807006478}{From
+  \url{http://www.cambridge.org/journals/JFP/}}}.
+
+\bibitem{MITScheme}
+MIT Department of Electrical Engineering and Computer Science.
+\newblock {\em {Scheme} manual, seventh edition}, September 1984.
+
+\bibitem{Penfield81}
+Paul {Penfield Jr.}
+\newblock Principal values and branch cuts in complex {APL}.
+\newblock In {\em APL '81 Conference Proceedings}, pages 248--256, San
+  Francisco, September 1981. ACM SIGAPL.
+\newblock Proceedings published as {\textit{APL Quote Quad}} 12(1).
+
+\bibitem{Rees82}
+Jonathan~A. Rees and Norman I.~Adams IV.
+\newblock T: a dialect of lisp or lambda: The ultimate software tool.
+\newblock In {\em {ACM} Conference on {Lisp} and Functional Programming}, pages
+  114--122, Pittsburgh, Pennsylvania, 1982. {ACM} Press.
+
+\bibitem{Reynolds72}
+John~C. Reynolds.
+\newblock Definitional interpreters for higher-order programming languages.
+\newblock In {\em ACM Annual Conference}, pages 717--740, July 1972.
+
+\bibitem{SchemeCharter2006}
+{Scheme} standardization charter.
+\newblock
+  \url{http://www.schemers.org/Documents/Standards/Charter/mar-2006.txt}, March
+  2006.
+
+\bibitem{srfi1}
+Olin Shivers.
+\newblock {SRFI~1}: List library.
+\newblock \url{http://srfi.schemers.org/srfi-1/}, 1999.
+
+\bibitem{srfi33}
+Olin Shivers.
+\newblock {SRFI~33}: Integer bitwise-operation library.
+\newblock \url{http://srfi.schemers.org/srfi-33/}, 2002.
+
+\bibitem{srfi74}
+Michael Sperber.
+\newblock {SRFI~74}: Octet-addressed binary blocks.
+\newblock \url{http://srfi.schemers.org/srfi-74/}, 2005.
+
+\bibitem{R6RS-appendices}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, and Anton van Straaten.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}
+  ({Non-Normative} appendices).
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{R6RS}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+  Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}.
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{R6RS-libraries}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+  Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}
+  ({Libraries}).
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{Rabbit}
+Guy~Lewis {Steele Jr.}
+\newblock {Rabbit}: a compiler for {Scheme}.
+\newblock Technical Report MIT Artificial Intelligence Laboratory Technical
+  Report 474, MIT, May 1978.
+
+\bibitem{CLtL}
+Guy~Lewis {Steele Jr.}
+\newblock {\em {Common Lisp}: The Language}.
+\newblock Digital Press, Burlington, MA, second edition, 1990.
+
+\bibitem{Scheme78}
+Guy~Lewis {Steele Jr.} and Gerald~Jay Sussman.
+\newblock The revised report on {Scheme}, a dialect of {Lisp}.
+\newblock Technical Report MIT Artificial Intelligence Memo 452, MIT, January
+  1978.
+
+\bibitem{Scheme75}
+Gerald~Jay Sussman and Guy Lewis~Steele Jr.
+\newblock {Scheme}: an interpreter for extended lambda calculus.
+\newblock Technical Report MIT Artificial Intelligence Memo 349, MIT, December
+  1975.
+
+\end{thebibliography}

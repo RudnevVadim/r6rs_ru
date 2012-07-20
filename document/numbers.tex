@@ -1,0 +1,289 @@
+%\chapter{Numbers}
+\chapter{Числа}
+\label{numbertypeschapter}
+\mainindex{number}
+
+%This chapter describes Scheme's model for numbers.  It is important to
+%distinguish between the mathematical numbers, the Scheme objects that
+%attempt to model them, the machine representations used to implement
+%the numbers, and notations used to write numbers.  In this report, the
+%term \textit{number} refers to a mathematical number, and the term
+%\textit{number object} refers to a Scheme object representing a
+%number.  This report uses the types \type{complex}, \type{real},
+%\type{rational}, and \type{integer} to refer to both mathematical
+%numbers and number objects.  The \type{fixnum} and \type{flonum} types
+%refer to special subsets of the number objects, as determined by
+%common machine representations, as explained below.
+В этой главе описывается модель Scheme для чисел. Важно различать математические числа, объекты
+Scheme, стремящиеся представить их, машинные представления, используемые для реализации чисел, и
+используемые для записи чисел нотации. В данной работе термин \textit{число} относится к
+математическому числу, а термин \textit{числовой объект} - к объекту Scheme, представляющему
+число. В данной работе используются типы \type{complex}, \type{real}, \type{rational} и
+\type{integer} для обращения и к математическим числам, и к числовым объектам. Типы
+\type{fixnum} и \type{flonum} относятся к специальным подмножествам числовых объектов, как
+определяется общими машинными представлениями и объясняется ниже.
+
+%\section{Numerical tower}
+\section{Числовая башня}
+\label{numericaltypes}
+\index{numerical types}
+
+%Numbers may be arranged into a tower of subsets in which each level
+%is a subset of the level above it:
+Числа могут быть квалифицированы башней подмножеств, в которой каждый уровень является
+подмножеством уровня выше него:
+\begin{tabbing}
+\ \ \ \ \ \ \ \ \ \=\tupe{number} \\
+\> \tupe{complex} \\
+\> \tupe{real} \\
+\> \tupe{rational} \\
+\> \tupe{integer}
+\end{tabbing}
+
+%For example, 5 is an integer.  Therefore 5 is also a rational,
+%a real, and a complex.  The same is true of the number objects
+%that model 5.
+Например, 5 является целым числом. Поэтому 5 также является рациональным, действительным и
+комплексным. То же верно и для числовых объектов, представляющих 5.
+
+
+%Number objects are organized as a corresponding tower of subtypes
+%defined by the predicates {\cf number?}, {\cf complex?}, {\cf real?},
+%{\cf rational?}, and {\cf integer?}; see section~\ref{number?}.
+%Integer number objects are also called \textit{integer
+%  objects}\mainindex{integer object}.
+Числовые объекты организованы как соответствующая башня подтипов, определённых предикатами
+{\cf\bfseries number?}, {\cf\bfseries complex?}, {\cf\bfseries real?}, {\cf\bfseries racional?},
+и {\cf\bfseries integer?}; см. секцию~\ref{number?}. Числовые объекты целого также
+называются \textit{объектами целого}\mainindex{integer objects}.
+
+%There is no simple relationship between the subset that contains a
+%number and its representation inside a computer.  For example, the
+%integer 5 may have several representations.  Scheme's numerical
+%operations treat number objects as abstract data, as independent of
+%their representation as possible.  Although an implementation of
+%Scheme may use many different representations for numbers, this should
+%not be apparent to a casual programmer writing simple programs.
+Не существует очевидной взаимосвязи между подмножеством, содержащим число, и его представлением
+в компьютере. Например, целое число 5 может иметь несколько представлений. Операции с числами в
+Scheme интерпретируют числовые объекты как абстрактные данные, столь же независимые от их
+представления, насколько возможно. Хотя реализация Scheme может использовать множество различных
+представлений чисел, это не должно быть очевидно случайному программисту, пишущему простые
+программы.
+
+%\section{Exactness}
+\section{Точность}
+\label{exactly}
+
+%\mainindex{exactness}It is useful to distinguish between number objects
+%that are known to correspond to a number exactly, and those number
+%objects whose computation involved rounding or other errors.  For
+%example, index operations into data structures may need to know the index
+%exactly, as may some operations on polynomial coefficients in a symbolic algebra
+%system.  On the other hand, the results of measurements are inherently
+%inexact, and irrational numbers may be approximated by rational and
+%therefore inexact approximations.  In order to catch uses of numbers
+%known only inexactly where exact numbers are required, Scheme
+%explicitly distinguishes \defining{exact} from \defining{inexact} number objects.  This
+%distinction is orthogonal to the dimension of type.
+\mainindex{exactness}Целесообразно различать числовые объекты, о которых известно, что они точно
+соответствуют числу, и числовые объекты, вычисление которых повлекло за собой округление или
+другие ошибки. Например, операциям индексации структур данных может потребоваться знание точного
+индекса, как и некоторым операциям с коэффициентами полинома в системе символьной алгебры. С
+другой стороны, результаты измерений являются неточными по определению, и иррациональные
+числа могут быть апроксимированы рациональной, и поэтому неточной, апроксимацией. Для обнаружения
+использования чисел, известных только приблизительно, там, где требуются точные числа,
+Scheme явно различает \defining{точные} числовые объекты от \defining{неточных}. Это
+различие независимо от измерения типа.
+
+%A
+%number object is exact if it is the value of an exact numerical
+%literal or was derived from exact number objects using only exact
+%operations.  Exact number objects correspond to mathematical numbers
+%in the obvious way.
+Числовой объект является точным, если он является значением точного числового литерала или был
+получен из точных числовых объектов с помощью только точных операций. Точные числовые объекты
+соответствуют математическим числам явным образом.
+
+%Conversely, a number object is inexact if it is the value of an
+%inexact numerical literal, or was derived from inexact number objects,
+%or was derived using inexact operations.  Thus inexactness is
+%contagious.
+В свою очередь, числовой объект является неточным, если он является значением неточного
+числового литерала или был получен из неточных числовых объектов числа, или с помощью неточных
+операций. Таким образом неточность передаётся непосредственно.
+
+%Exact arithmetic is reliable in the following sense: If exact number
+%objects are passed to any of the arithmetic procedures described in
+%section~\ref{propagationsection}, and an exact number object is
+%returned, then the result is mathematically correct.  This is
+%generally not true of computations involving inexact number objects
+%because approximate methods such as floating-point arithmetic may be
+%used, but it is the duty of each implementation to make the result as
+%close as practical to the mathematically ideal result.
+Точная арифметика безопасна в следующем смысле: Если точные числовые объекты передаются любой из
+арифметических процедур, описанных в секции~\ref{propagationsection}, и возвращается точный
+числовой объект, результат математически корректен. Это в общем случае не верно для вычислений с
+использованием неточных числовых объектов, так как могут использоваться методы аппроксимации,
+типа арифметики с плавающей запятой, но это уже является обязанностью каждой реализации -
+выдать результат как можно ближе практически к математически идеальному результату.
+
+\section{Fixnums and flonums}
+
+%A \defining{fixnum} is an exact integer object that lies
+%within a certain implementation-dependent subrange of the
+%exact integer objects. (Library section \extref{lib:fixnumssection}{Fixnums} describes a
+%library for computing with fixnums.)
+%Likewise, every implementation must
+%designate a subset of its inexact real number objects as \defining{flonum}s, and
+%to convert certain external representations into flonums.
+%(Library section \extref{lib:flonumssection}{Flonums} describes a library for
+%computing with flonums.)  Note that
+%this does not imply that an implementation must use
+%floating-point representations.
+\defining{fixnum} является точным объектом целого, который лежит в пределах конкретного
+зависимого от реализации поддиапазона точного объекта целого. (В секции
+\extref{lib:fixnumssection}{Fixnums} описана библиотека для вычислений с fixnums.) Аналогично,
+каждая реализация должно обозначать подмножество своих неточных вещественных числовых объектов
+как \defining {flonum}s, и преобразовывать конкретные внешние представления в flonums. (В секции
+\extref{lib:flonumssection}{Flonums} описана библиотека для вычислений с flonums.) Заметьте, что
+не подразумевается, что реализация должна использовать представления с плавающей запятой.
+
+%\section{Implementation requirements}
+\section{Требования к реализациям}
+
+\index{implementation restriction}\label{restrictions}
+
+%Implementations of Scheme must support number objects for
+%the entire tower of subtypes given in section~\ref{numericaltypes}.
+%Moreover, implementations must support exact integer
+%objects and exact rational number objects of practically unlimited
+%size and precision, and to implement certain procedures (listed in
+%\ref{propagationsection}) so they always return exact results when
+%given exact arguments.  (``Practically unlimited'' means that the size
+%and precision of these numbers should only be limited by the size of
+%the available memory.)
+Реализации Scheme должны поддерживать числовые объекты для всей башни подтипов, приведённых в
+секции~\ref{numericaltypes}. Кроме того, реализации должны поддерживать точные объекты целого
+точные рациональные числовые объекты практически неограниченного размера и точности,
+и реализовывать конкретные процедуры (перечисленные в \ref{propagationsection}) с тем, чтобы
+они всегда возвращали точные результаты при предоставлении точных аргументов. (``Практически
+неограниченный'' означает, что размер и точность таких чисел должны
+ограничиваться только размером доступной памяти.)
+
+\newpage
+
+%Implementations may support only a limited range of inexact number
+%objects of any type, subject to the requirements of this section.  For
+%example, an implementation may limit the range of the inexact real
+%number objects (and therefore the range of inexact integer and
+%rational number objects) to the dynamic range of the flonum format.
+%Furthermore the gaps between the inexact integer objects and
+%rationals are likely to be very large in such an implementation as the
+%limits of this range are approached.
+Реализации могут поддерживать только ограниченный диапазон неточных числовых объектов любого
+типа, подчининяясь требованиям данной секции. Например, реализация может ограничить диапазон
+неточных вещественных числовых объектов (и, следовательно, диапазон неточных целых и
+рациональных числовых объектов) динамическим диапазоном формата flonum. Кроме того, зазоры
+между неточными целыми объектами и rationals, вероятно, будут очень большими в такой
+реализации при приближении к границам этого диапазона.
+
+%An implementation may use floating point and other approximate
+%representation strategies for \tupe{inexact} numbers.
+%This report recommends, but does not require, that the IEEE
+%floating-point standards be followed by implementations that use
+%floating-point representations, and that implementations using
+%other representations should match or exceed the precision achievable
+%using these floating-point standards~\cite{IEEE}.
+Реализация может использовать плавающую запятую и другие неточные способы представления
+\tupe{неточных} чисел. В данной работе рекомендуется, но не требуется, чтобы реализации,
+использующие представления с плавающей запятой, следовали стандартам плавающей запятой IEEE, а
+реализации, использующие другие представления, должны иметь точность, соответствовующую или
+превышающую точность, достигаемую этими стандартами с плавающей запятой~\cite{IEEE}.
+
+%In particular, implementations that use floating-point representations
+%must follow these rules: A floating-point result must be represented
+%with at least as much precision as is used to express any of the
+%inexact arguments to that operation.
+%Potentially inexact operations such as {\cf sqrt}, when
+%applied to exact arguments, should produce exact answers whenever possible
+%(for example the square root of an exact 4 ought to be an exact 2).
+%However, this is not required.
+%If, on the other hand, an exact number object is operated upon so as to produce an
+%inexact result (as by {\cf sqrt}), and if the result is represented in
+%floating point, then the most precise floating-point format available
+%must be used; but if the result is represented in some other way then
+%the representation must have at least as much precision as the most
+%precise floating-point format available.
+В частности, реализации, использующие представления с плавающей запятой, должны соблюдать
+следующие правила: результат с плавающей запятой должен быть представлен с точностью, по крайней
+мере не менее используемой для выражения любого неточного аргумента в данной операции. При
+применении потенциально неточных операций, типа {\cf\bfseries sqrt} к точным аргументам должны
+выдаваться точные ответы всегда, когда возможно (например, квадратный корень точного 4 должен
+быть точным 2). Однако это не является требованием. Если, с другой стороны, точным числовым
+объектом управляют с целью получения неточного результата (как {\cf\bfseries sqrt}), и если
+результат представляется с плавающей запятой, должен использоваться самый точный доступный
+формат с плавающей запятой; но если результат представлен неким иным способом, тогда,
+представление должно иметь точность, по крайней мере не менее самого точного доступного формата с
+плавающей запятой.
+
+%It is the programmer's responsibility to avoid using inexact number
+%objects with magnitude or significand too large to be represented in
+%the implementation.
+Недопущение использования неточных числовых объектов со слишком большим для представления в
+реализации значением или значащей частью является заботой программистов.\vspace{-5mm}
+
+%\section{Infinities and NaNs}
+\section{Бесконечность и NaN}\vspace{-2mm}
+
+%Some Scheme implementations, specifically those that follow the IEEE
+%floating-point standards, distinguish special number objects called
+%\mainindex{infinity}\defining{positive infinity}, \defining{negative
+%  infinity}, and \defining{NaN}.
+Некоторое реализации Scheme, например, придерживающиеся стандартов IEEE с плавающей
+точкой, различают специальные числовые объекты, называемые \mainindex
+{infinity}\defining{положительная бесконечность}, \defining {отрицательная бесконечность} и
+\defining{NaN}.
+
+%Positive infinity is regarded as an inexact real (but not rational) number
+%object that represents an indeterminate number greater than the
+%numbers represented by all rational number objects.  Negative infinity
+%is regarded as an inexact real (but not rational) number object that represents
+%an indeterminate number less than the numbers represented by all
+%rational numbers.
+Положительная бесконечность рассматривается как неточный вещественный (но не рациональный)
+числовой объект, представляющий неопределённое число, большее, чем числа, представляемые всеми
+рациональными числовыми объектами. Отрицательная бесконечность рассматривается как неточный
+вещественный (но не рациональный) числовой объект, представляющий неизвестное число, меньшее,
+чем числа, представляемые всеми рациональными числами.
+
+%A NaN is regarded as an inexact real (but not rational) number object so
+%indeterminate that it might represent any real number, including
+%positive or negative infinity, and might even be greater than positive
+%infinity or less than negative infinity.
+NaN рассматривается как неточный вещественный (но не рациональный) числовой объект, настолько
+неопределённый, что он может представлять любое вещественное число, включая положительную или
+отрицательную бесконечность, и даже может быть больше положительной бесконечности или
+меньше отрицательной бесконечности.\vspace{-5mm}
+
+%\section{Distinguished -0.0}
+\section{Распознавание -0.0}\vspace{-2mm}
+
+%\index{-0.0}
+%Some Scheme implementations, specifically those that follow the IEEE
+%floating-point standards, distinguish between number objects for $0.0$
+%and $-0.0$, i.e., positive and negative inexact zero.  This report
+%will sometimes specify the behavior of certain arithmetic operations
+%on these number objects.  These specifications are marked with ``if
+%$-0.0$ is distinguished'' or ``implementations that distinguish
+%$-0.0$''.
+\index{-0.0} Некоторые реализации Scheme, например, придерживающиеся стандартов IEEE с
+плавающей точкой, различают числовые объекты $0.0$ и $-0.0$, то есть, положительный и
+отрицательный неточный ноль. В данной работе в ряде случаев специфицируется функционирование
+конкретных арифметических операций с такими числовыми объектами. Такие спецификации записываются
+вместе с ``если $-0.0$ распознан'' или ``реализация, различающая $-0.0$''.\vspace{-4mm}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "r6rs"
+%%% End:

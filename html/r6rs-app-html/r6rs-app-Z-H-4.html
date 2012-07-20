@@ -1,0 +1,63 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-app.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Rationale -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-app-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-3.html">previous</a></span><span>, <a href="r6rs-app-Z-H-5.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_B"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-app-Z-H-2.html#node_toc_node_chap_B">Appendix B</a></div><br>
+<a href="r6rs-app-Z-H-2.html#node_toc_node_chap_B">Optional case insensitivity</a></h1>
+<p></p>
+<p>
+In contrast with earlier revisions of the report&nbsp;[<a href="r6rs-app-Z-H-10.html#node_bib_2">2</a>], the
+syntax of data distinguishes upper and lower case in identifiers and in
+characters specified via their names.  For example, the identifiers
+<tt>X</tt> and <tt>x</tt> are different, and the character
+<tt><tt>#</tt><tt>\</tt>space</tt> cannot be written
+<tt><tt>#</tt><tt>\</tt>SPACE</tt>.</p>
+<p>
+Implementors may wish to support case-insensitive syntax for backward
+compatibility or other reasons.
+If they do so, they should adopt the following directives
+to control case folding.</p>
+<p>
+</p>
+<p><tt>#!fold-case</tt><a name="node_idx_2"></a><br>
+<tt>#!no-fold-case</tt><a name="node_idx_4"></a></p>
+<p>
+These directives may appear anywhere comments may appear and are
+treated as comments, except that they affect the reading of subsequent
+lexemes.
+The <tt>#!fold-case</tt> causes the reader to case-fold
+(see library section&nbsp;on &#8220;&#8220;Unicode&#8221;&#8221;)
+each &lt;identifier&gt; and &lt;character name&gt;.
+The <tt>#!no-fold-case</tt> directive causes the reader to return
+to the default, non-folding behavior.
+</p>
+<p></p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-3.html">previous</a></span><span>, <a href="r6rs-app-Z-H-5.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

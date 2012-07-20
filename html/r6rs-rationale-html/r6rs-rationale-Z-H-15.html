@@ -1,0 +1,60 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-14.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-16.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_13"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_13">Chapter 13</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_13">Unicode</a></h1>
+<p></p>
+<a name="node_sec_13.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_13.1">13.1&nbsp;&nbsp;Case mapping</a></h2>
+<p>The various case-mapping procedures of the <tt>(rnrs unicode (6))</tt>
+library all operate in a locale-independent manner.  The Unicode
+standard also offers locale-sensitive case operations, not implemented
+by the procedures from the <tt>(rnrs unicode (6))</tt> library.  While the
+library does not make available the full spectrum of case-related
+functionality defined by the Unicode standard, it does provide the
+most commonly used procedures.  In particular, this strategy has
+allowed providing procedures mostly compatible with those provided by
+R<sup>5</sup>RS.  (A minor exception is the case-insensitive procedures for
+string comparison.  However, it is unlikely that this affects many
+existing programs.)  Providing locale-sensitive operations would have
+meant significant novel design effort without significant precedent,
+which is why they are not part of R<sup>6</sup>RS.</p>
+<p>
+The case-mapping procedures operating on characters are not sufficient
+for implementing case mapping on strings.  For example, the upper-case
+version of the German &#8220;&szlig;&#8221; in a string is &#8220;SS&#8221;.  As <tt>char-upcase</tt> can only return a single character, it must return
+&szlig; for &szlig;.  This limits the usefulness of the procedures
+operating on characters, but provides compatibility with R<sup>5</sup>RS
+sufficient for many existing applications.  Moreover, it provides
+direct access to the corresponding attributes of the Unicode character
+database.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-14.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-16.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-8.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-10.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_7"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_7">Chapter 7</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_7">Libraries</a></h1>
+<p>The design of the library system was a challenging process: Many
+existing Scheme implementations offer &#8220;module systems&#8221;, but they
+differ dramatically both in functionality and in the goals they
+address.  The library system was designed with the primary
+requirement of allowing programmers to write, distribute, and evolve
+portable code.  A secondary requirement was to be able to separately
+compile libraries in the sense that compiling a library requires only
+having compiled its dependencies.  This entailed the following
+corollary requirements:
+</p>
+<ul>
+<li><p>Composing libraries requires management of dependencies.
+</p>
+<li><p>Libraries from different sources may have name conflicts.
+Consequently, name-space management is needed.
+</p>
+<li><p>Macro definitions appear in portable code, requiring that macro
+bindings may be exported from libraries, with all the consequences
+dictated by the referential-transparency property of hygienic
+macros.
+</p>
+</ul><p>
+The library system does not address the following goals, which were
+considered during the design process:
+</p>
+<ul>
+<li><p>independent compilation
+</p>
+<li><p>mutually dependent libraries
+</p>
+<li><p>separation of library interface from library implementation
+</p>
+<li><p>local modules and local imports
+</p>
+</ul><p>
+This section discusses some aspects of the design of the library
+system that have been controversial.</p>
+<p>
+</p>
+<a name="node_sec_7.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.1">7.1&nbsp;&nbsp;Syntax</a></h2>
+<p>A library definition is a single form, rather than a sequence of forms
+where some forms are some kind of header and the remaining forms
+contain the actual code.
+It is not clear that a sequence of forms is more convenient than a
+single form for processing and generation. Both syntactic choices have
+technical merits and drawbacks. The single-form syntax chosen for
+R<sup>6</sup>RS has the advantage of being self-delimiting.</p>
+<p>
+A difference between top-level programs and libraries is that a
+program contains only one top-level program but multiple libraries.
+Thus, delimiting the text for a library body will be a
+common need (in streams of various kinds) that it is worth
+standardizing the delimiters; parentheses are the obvious choice.</p>
+<p>
+</p>
+<a name="node_sec_7.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.2">7.2&nbsp;&nbsp;Local import</a></h2>
+<p></p>
+<p>
+Some Scheme implementations feature module systems that allow a
+module&#8217;s bindings to be imported into a local environment.  While local
+imports can be used to limit the scope of an import and thus lead to more
+modular code and less need for the prefixing and renaming of imports,
+the existence of local imports would mean that the set of libraries upon
+which a library depends cannot be approximated as precisely from the
+library header.
+(The precise set of libraries used
+cannot be determined even in the absense of local import,
+because a library might be listed but its exports not used, and a library
+not listed might still be imported at run time through the <tt>environment</tt> procedure.)
+Leaving out local import for now does not preclude it from being added
+later.</p>
+<p>
+</p>
+<a name="node_sec_7.3"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.3">7.3&nbsp;&nbsp;Local modules</a></h2>
+<p>Some Scheme implementations feature local libraries and/or modules, e.g.,
+libraries or modules that appear within top-level libraries or within
+local bodies.
+This feature allows libraries and top-level programs to be further
+subdivided into modular subcomponents, but it also complicates the scoping
+rules of the language.
+Whereas the library system allows bindings to be transported only from one
+library top level to another, local modules allow bindings to be
+transported from one local scope to another, which complicates the rules
+for determining where identifiers are bound.
+Leaving out local libraries and modules for now does
+not preclude them from being added later.</p>
+<p>
+</p>
+<a name="node_sec_7.4"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.4">7.4&nbsp;&nbsp;Fixed <tt>import</tt> and <tt>export</tt> clauses</a></h2>
+<p>The <tt>import</tt> and <tt>export</tt> clauses of the <tt>library</tt> form
+are a fixed part of the library syntax.
+This eliminates the need to specify in what language or language
+version the clauses are written and simplifies the process of
+approximating the set of libraries upon which a library depends, as
+described in section&nbsp;<a href="#node_sec_7.2">7.2</a>.
+A downside is that <tt>import</tt> and <tt>export</tt> clauses cannot
+be abstracted, i.e., cannot be the products of macro calls.</p>
+<p>
+</p>
+<a name="node_sec_7.5"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.5">7.5&nbsp;&nbsp;Instantiation and initialization</a></h2>
+<p>Opinions vary on how libraries should be instantiated and
+initialized during the expansion and execution of library bodies,
+whether library instances should be distinguished across phases,
+and whether levels should be declared so that they constrain 
+identifier uses to particular phases. This report therefore leaves
+considerable latitude to implementations, while attempting to
+provide enough guarantees to make portable libraries feasible.</p>
+<p>
+Note that, if each right-hand side of the keyword definition and keyword
+binding forms appearing in a program is a <tt>syntax-rules</tt> or
+<tt>identifier-syntax</tt> form, <tt>syntax-rules</tt> and <tt>identifier-syntax</tt>
+forms do not appear in any other contexts, and no <tt>import</tt> form employs
+<tt>for</tt> to override the default import phases, 
+then the program does not depend on whether instances are
+distinguished across phases, and the phase of an identifier&#8217;s use cannot
+be inconsistent with the identifier&#8217;s level.
+Moreover, the phase of an identifier&#8217;s use is never inconsistent with the
+identifier&#8217;s level if the implementation uses an implicit phasing model in
+which references are allowed at any phase regardless of any phase
+declarations.</p>
+<p>
+</p>
+<a name="node_sec_7.6"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.6">7.6&nbsp;&nbsp;Immutable exports</a></h2>
+<p>The asymmetry in the prohibitions against assignments to explicitly
+and implicitly exported variables reflects the fact that the violation
+can be determined for implicitly exported variables only when the
+importing library is expanded.</p>
+<p>
+</p>
+<a name="node_sec_7.7"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.7">7.7&nbsp;&nbsp;Compound library names</a></h2>
+<p>Library names are compound.  This differs from the treatment of
+identifiers in the rest of the language.  Using compound names
+reflects experience across programming languages that a structured
+top-level name space is necessary to avoid collisions.  Embedding a
+hierarchy within a single string or symbol is certainly possible.
+However, in Scheme, list data is the natural means for representing
+hierarchical structure, rather than encoding it in a string or symbol.
+The hierarchical structure makes it easy to formulate policies for
+choosing unique names or possible storage formats in a file system.
+See appendix&nbsp;on &#8220;Unique library
+names&#8221;.
+Consequently, despite the syntactic complexity of compound
+names, and despite the potential mishandling of the hierarchy by
+implementations, the editors chose the list representation.</p>
+<p>
+</p>
+<a name="node_sec_7.8"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.8">7.8&nbsp;&nbsp;Versioning</a></h2>
+<p>Libraries and <tt>import</tt> clauses optionally carry versioning
+information.  This allows reflecting the development history of a
+library, but also significantly increases the complexity of the
+library system.  Experience with module systems gathered in other
+languages as well as with shared libraries at the operating-system
+level consistently indicates that relying only on the name of a module
+for identification causes conflicts impossible to rectify in the
+absence of versioning information, and thus diminishes the
+opportunities for sharing code.  Therefore, versioning is part of the
+library system.</p>
+<p>
+</p>
+<a name="node_sec_7.9"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_7.9">7.9&nbsp;&nbsp;Treatment of different versions</a></h2>
+<p>Implementations are encouraged to prohibit two
+libraries with the same name but different versions to coexist
+within the same program.
+While this prevents the combination of libraries and
+programs that require different versions of the same library,
+it eliminates the potential for having multiple copies of a
+library&#8217;s state, thus avoiding problems experienced with
+other shared-library mechanisms,
+including Windows DLLs and Unix shared objects.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-8.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-10.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-26.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-28.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_25"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_25">Chapter 25</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_25">Enumerations</a></h1>
+<p>Many procedures in many libraries accept arguments from a finite set,
+or subsets of a finite set to describe a certain mode of operation,
+or several flags to describe a mode of operation.  Examples in the
+R<sup>6</sup>RS include the endianness for bytes-object operations, and file
+and buffering modes in the I/O library.  Offering a default policy for
+dealing with such values fosters portable and readable code, much as
+records do for compound values, or multiple values for procedures
+computing several values.  Moreover, representations of sets from a
+finite set of options should offer the standard set operations, as
+they tend to occur in practice.  One such set operation is the
+complement, which makes lists of symbols a less than suitable
+representation.</p>
+<p>
+Different Scheme implementations have taken different approaches to
+this problem in the past, which suggests that a default policy does
+more than merely encode what any sensible programmer would do anyway.  As
+possible uses occur quite frequently, this particular aspect of
+interface construction has been standardized.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-26.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-28.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

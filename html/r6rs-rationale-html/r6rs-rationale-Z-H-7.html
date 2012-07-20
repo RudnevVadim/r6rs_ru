@@ -1,0 +1,129 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-6.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-8.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_5"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_5">Chapter 5</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_5">Semantic concepts</a></h1>
+<p></p>
+<a name="node_sec_5.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_5.1">5.1&nbsp;&nbsp;Argument and subform checking</a></h2>
+<p></p>
+<p>
+The report requires implementations to check the arguments of
+procedures and subforms for syntactic forms for adherence to the
+specification.  However, implementations are not required to detect
+every violation of a specification.  Specifically, the report allows
+the following exceptions:
+</p>
+<ol>
+<li><p>Some restrictions are undecidable.  Hence, checking is not
+required, such as certain properties of procedures passed as
+arguments, or properties of subexpressions, whose macro expansion
+may not terminate.
+</p>
+<li><p>Checking that an argument is a list where doing so would be
+impractical or expensive is not required.  Specifically, procedures that
+invoke another procedure passed as an argument are not required to
+check that a list remains a list after every invocation.
+</p>
+<li><p>With some procedures, future extensions to the arguments they
+accept are explicitly allowed.
+</p>
+</ol><p>
+The second item deserves special attention, as the specific decisions
+made for the report are meant to enable &#8220;picky&#8221; implementations that
+catch as many violations and unportable assumptions made by programs
+as possible, while also enabling practical
+implementations that execute programs quickly.</p>
+<p>
+</p>
+<a name="node_sec_5.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_5.2">5.2&nbsp;&nbsp;Safety</a></h2>
+<p>R<sup>5</sup>RS describes many situations not specified in the report as &#8220;is
+an error&#8221;: Portable R<sup>5</sup>RS programs cannot cause such situations, but
+R<sup>5</sup>RS implementations are free to implement arbitrary behavior under this
+umbrella.  Arbitrary behavior can include &#8220;crashing&#8221; the running program, or
+somehow compromising the integrity of its execution model to result
+in random behavior.  This situation stands in sharp contrast to the common assumption
+that Scheme is a &#8220;safe&#8221; language, where each
+violation of a restriction of the language standard or the
+implementation would at least result in defined behavior (e.g.,
+interrupting or aborting the program, or starting a debugger).</p>
+<p>
+To avoid the problems associated with this arbitrary behavior, all
+libraries specified in the report must be safe, and they react to
+detected violations of the specification by raising
+an exception, which allows the program to detect and react
+to the violation itself.</p>
+<p>
+The report allows implementations to provide &#8220;unsafe&#8221; libraries that
+may compromise safety.</p>
+<p>
+</p>
+<a name="node_sec_5.3"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_5.3">5.3&nbsp;&nbsp;Proper tail recursion</a></h2>
+<p>Intuitively, no space is needed for an active tail call, because the
+continuation that is used in the tail call has the same semantics as the
+continuation passed to the procedure containing the call.  Although an improper
+implementation might use a new continuation in the call, a return
+to this new continuation would be followed immediately by a return
+to the continuation passed to the procedure.  A properly tail-recursive
+implementation returns to that continuation directly.</p>
+<p>
+Proper tail recursion was one of the central ideas in Steele and
+Sussman&#8217;s original version of Scheme.  Their first Scheme interpreter
+implemented both functions and actors.  Control flow was expressed using
+actors, which differed from functions in that they passed their results
+on to another actor instead of returning to a caller.  In the terminology
+of the report, each actor finished with a tail call to another actor.</p>
+<p>
+Steele and Sussman later observed that in their interpreter the code
+for dealing with actors was identical to that for functions and thus
+there was no need to include both in the language.</p>
+<p>
+While a proper tail recursion has been a cornerstone property of
+Scheme since its inception, it is difficult to implement efficiently
+on some architectures, specifically those compiling to higher-level
+intermediate languages such as C or to certain virtual-machine
+architectures such as JVM or CIL.</p>
+<p>
+Nevertheless, abandoning proper tail recursion as a language property
+and relegating it to optional optimizations would have far-reaching
+consequences: Many programs written with the assumption of proper tail
+recursion would no longer work.  Moreover, the lack of proper tail
+recursion would prevent the natural expression of certain programming
+styles such as Actors-style message-passing systems, self-replacing
+servers, or automata written as mutually recursive procedures.
+Furthermore, if they did not exist, special &#8220;loop&#8221; constructs would
+have to be added to the language to compensate for the lack of a general
+iteration construct.  Consequently, proper tail recursion remains an
+essential aspect of the Scheme language.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-6.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-8.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

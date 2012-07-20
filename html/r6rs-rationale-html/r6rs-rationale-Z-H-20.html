@@ -1,0 +1,126 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-19.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-21.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_18"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_18">Chapter 18</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_18">Records</a></h1>
+<p></p>
+<a name="node_sec_18.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_18.1">18.1&nbsp;&nbsp;Syntactic layer</a></h2>
+<p>While the syntactic layer can be expressed portably in terms of the
+procedural layer, standardizing a particular surface syntax
+facilitates communication via code.</p>
+<p>
+Moreover, the syntactic layer is designed to allow expansion-time
+determination of record characteristics, including field offsets, so that,
+for example, record accesses can be reduced to simple memory indirects
+without flow analyses or any other nontrivial compiler support. 
+(This property may be lost if the <tt>parent-rtd</tt> clause is present, and
+the parent is thus not generally known until run time.)
+Thus, the syntactic layer facilitates the development of efficient
+portable libraries that define and use record types and can serve as a
+basis for other syntactic record definition constructs. </p>
+<p>
+</p>
+<a name="node_sec_18.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_18.2">18.2&nbsp;&nbsp;Positional access and field names</a></h2>
+<p>The record and field names passed to <tt>make-record-type-descriptor</tt>
+and appearing in the syntactic layer are for informational purposes
+only, e.g., for printers and debuggers.  In particular, the accessor
+and mutator creation routines do not use names, but rather field
+indices, to identify fields.
+Thus, field names are not required to be distinct in the procedural or
+syntactic layers.  This relieves macros and other code generators from
+the need to generate distinct names.</p>
+<p>
+Moreover, not requiring distinctness prevents naming conflicts that
+occur when a field in a base type is renamed such that it is the same
+as in an extension Also, the record and field names are used in the
+syntactic layer for the generation of accessor and mutator names, and
+thus duplicate field names may lead to accessor and mutator naming
+conflicts.</p>
+<p>
+</p>
+<a name="node_sec_18.3"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_18.3">18.3&nbsp;&nbsp;Lack of multiple inheritance</a></h2>
+<p>Multiple inheritance was considered but omitted from the records
+facility, as it raises a number of semantic issues such as sharing
+among common parent types.</p>
+<p>
+</p>
+<a name="node_sec_18.4"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_18.4">18.4&nbsp;&nbsp;Constructor mechanism</a></h2>
+<p>The constructor-descriptor mechanism is an infrastructure for
+creating specialized constructors, rather than just creating default
+constructors that accept the initial values of all the fields as
+arguments. This infrastructure achieves full generality while leaving
+each level of an inheritance hierarchy in control over its own fields
+and allowing child record definitions to be abstracted away from the
+actual number and contents of parent fields.</p>
+<p>
+The constructor mechanism allows the initial values of the fields to be specially
+computed or to default to constant values. It also allows for
+operations to be performed on or with the resulting record, such as
+the registration of a record for finalization. Moreover, the
+constructor-descriptor mechanism allows the creation of such
+initializers in a modular manner, separating the initialization
+concerns of the parent types from those of the extensions.</p>
+<p>
+</p>
+<a name="node_sec_18.5"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_18.5">18.5&nbsp;&nbsp;Sealed record types</a></h2>
+<p>Record types may be sealed.  This feature allows enforcing abstraction
+barriers, which is useful in itself, but also allows more efficient
+compilation.</p>
+<p>
+In particular, when the implementor of an abstract data type chooses
+to represent that ADT by a record type, and allows one of the record types
+that represent the ADT to be exposed and extended, then the ADT is
+no longer abstract.  Its implementors must expose enough information
+to allow for effective subtyping, and must commit to enough of the
+representation to allow those subtypes to continue to work even as
+the ADT evolves.</p>
+<p>
+A partial solution is to maintain independence of the child record type
+from the specific fields of the parent, particularly by specifying a
+record constructor descriptor for the parent type that is independent of
+its specific fields.
+When this is deemed to be insufficient, the record type can be sealed,
+thereby preventing the ADT from being subtyped.
+(This does not completely eliminate the problem, however, since the ADT
+may be extended implicitly, i.e., used as a delegate for some other type.)</p>
+<p>
+Moreover, making a record type sealed may prevent its accessors and
+mutators from becoming polymorphic, which would make effective flow analysis and
+optimization difficult.  This is particularly relevant for
+Scheme implementations that use records to implement some of Scheme&#8217;s
+other primitive data types such as pairs.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-19.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-21.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

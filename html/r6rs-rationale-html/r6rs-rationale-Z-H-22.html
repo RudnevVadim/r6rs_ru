@@ -1,0 +1,132 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-21.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-23.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_20"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_20">Chapter 20</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_20">I/O</a></h1>
+<p></p>
+<a name="node_sec_20.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.1">20.1&nbsp;&nbsp;File names</a></h2>
+<p></p>
+<p>
+The file names in most common operating systems, despite their
+appearance in most cases, are not text: For example, Unix uses
+null-terminated byte sequences, and Windows uses null-terminated
+sequences of UTF-16 code units.  On Unix, the textual representation
+of a file name depends on the locale, an environmental setting.  In both
+cases, a file name may be an invalid encoding and thus not correspond
+to a string.  An appropriate representation for file names that covers
+these cases while still offering convenient access to file-system
+names through strings is still an open problem.  Therefore,
+R<sup>6</sup>RS allows specifying file names as strings, but also allows an
+implementation to add its own representation for file names.</p>
+<p>
+</p>
+<a name="node_sec_20.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.2">20.2&nbsp;&nbsp;File options</a></h2>
+<p>The flags specified for <tt>file-options</tt> represent only a common
+subset of meaningful options on popular platforms.  The <tt>file-options</tt> form does not restrict the &lt;file-options name&gt;s,
+so implementations can extend the file options by platform-specific
+flags.</p>
+<p>
+</p>
+<a name="node_sec_20.3"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.3">20.3&nbsp;&nbsp;End-of-line styles</a></h2>
+<p>The set of end-of-line styles recognized by the <tt>(rnrs ports (6))</tt>
+library is not closed, because end-of-line styles other than those
+listed might become commonplace in the future.</p>
+<p>
+</p>
+<a name="node_sec_20.4"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.4">20.4&nbsp;&nbsp;Error-handling modes</a></h2>
+<p>The set of error-handling modes is not closed, because implementations
+may support error-handling modes other than those listed.</p>
+<p>
+</p>
+<a name="node_sec_20.5"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.5">20.5&nbsp;&nbsp;Binary and textual ports</a></h2>
+<p>The plethora of widely used encodings for texts makes providing
+textual I/O significantly more complicated than the simple model
+offered by R<sup>5</sup>RS.  In particular, realistic textual I/O should
+address encodings such as UTF-16 that include a header word
+determining the &#8220;actual&#8221; encoding of the rest of the byte stream,
+stateful encodings, and textual formats such as XML, which specify the
+encoding in a header line.  Consequently, a library implementing
+textual I/O should support specifying an encoding upon opening a port,
+but should also support opening a port in &#8220;binary mode&#8221; to determine
+the encoding and switch to &#8220;text mode&#8221;.</p>
+<p>
+In contrast, arbitrary switching between &#8220;binary mode&#8221; and &#8220;text
+mode&#8221; is difficult to support, as it may interfere with efficient
+buffering strategies, and because the semantics may be unclear in the
+case of stateful encodings.  Consequently, the <tt>(rnrs io ports (6))</tt>
+library allows switching from &#8220;binary mode&#8221; to &#8220;text mode&#8221; by
+converting a binary port into a textual port, but not the other way
+around.  The <tt>transcoded-port</tt> procedure closes the binary port to
+preclude interference between the binary port and the textual port
+constructed from it.  Applications that read from sources that
+intersperse binary and textual data should open a binary port and use
+either <tt>bytevector-&gt;string</tt> or the procedures from the
+<tt>(rnrs bytevectors (6))</tt> library to convert the binary data to text.</p>
+<p>
+The separation of binary and textual ports enables creating ports from
+both binary and textual sources and sinks.  It also makes creating
+both binary and textual versions of many procedures
+necessary.</p>
+<p>
+</p>
+<a name="node_sec_20.6"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.6">20.6&nbsp;&nbsp;File positions</a></h2>
+<p>Transcoded ports do not always support the <tt>port-position</tt> and
+<tt>set-port-position!</tt> operations: The position of a transcoded port
+may not be well-defined, and may be hard to calculate even when
+defined, especially when transcoding is buffered.</p>
+<p>
+</p>
+<a name="node_sec_20.7"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.7">20.7&nbsp;&nbsp;Freshness of standard ports</a></h2>
+<p>The ports returned by <tt>standard-input-port</tt>, <tt>standard-output-port</tt>, and <tt>standard-error-port</tt> are fresh so it
+can be safely closed or converted to a textual port without risking
+the usability of an existing port.</p>
+<p>
+</p>
+<a name="node_sec_20.8"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_20.8">20.8&nbsp;&nbsp;Argument conventions</a></h2>
+<p>While the <tt>(rnrs io simple (6))</tt> library provides mostly
+R<sup>5</sup>RS-compatible procedures for performing textual I/O, the
+<tt>(rnrs io ports (6))</tt> library uses a different convention for
+argument ordering.  In particular, the port is always the first
+argument.  This enables the use of optional arguments for information
+about the data to be read or written, such as the range in a
+bytevector.  As this convention is incompatible with the convention of
+<tt>(rnrs io simple (6))</tt>, corresponding procedures have different
+names.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-21.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-23.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

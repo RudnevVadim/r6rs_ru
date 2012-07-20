@@ -1,0 +1,7 @@
+This is makeindex, version 2.14 [02-Oct-2002] (kpathsea + Thai support).
+Scanning style file ./r6rs.mst....done (4 attributes redefined, 0 ignored).
+Scanning input file r6rs-lib-html/r6rs-lib-Z-I.idx....done (654 entries accepted, 0 rejected).
+Sorting entries........done (7019 comparisons).
+Generating output file r6rs-lib-html/r6rs-lib-Z-I.ind....done (708 lines written, 0 warnings).
+Output written in r6rs-lib-html/r6rs-lib-Z-I.ind.
+Transcript written in r6rs-lib-html/r6rs-lib-Z-I.ilg.

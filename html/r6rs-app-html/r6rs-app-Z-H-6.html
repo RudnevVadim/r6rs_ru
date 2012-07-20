@@ -1,0 +1,163 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-app.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Rationale -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-app-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-5.html">previous</a></span><span>, <a href="r6rs-app-Z-H-7.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_D"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-app-Z-H-2.html#node_toc_node_chap_D">Appendix D</a></div><br>
+<a href="r6rs-app-Z-H-2.html#node_toc_node_chap_D">Scripts</a></h1>
+<p></p>
+<p>
+A <a name="node_idx_6"></a><em>Scheme script<a name="node_idx_8"></a></em> is a top-level program 
+(see report chapter&nbsp;on &#8220;Top-level
+programs&#8221;) which is packaged such that 
+it is directly executable by conforming implementations of Scheme, on 
+one or more plaforms.</p>
+<p>
+</p>
+<a name="node_sec_D.1"></a>
+<h2 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.1">D.1&nbsp;&nbsp;Script interpreter</a></h2>
+<p>Where applicable, implementations should provide a <a name="node_idx_10"></a><em>script interpreter</em> in 
+the form of an executable program named <tt>scheme-script</tt> that is 
+capable of initiating the execution of Scheme scripts, as described 
+below.</p>
+<p>
+</p>
+<blockquote><em>Rationale:&nbsp;&nbsp;</em>
+Distributing a Scheme program that is portable with respect to both 
+Scheme implementations and operating systems is challenging, even 
+if that program has been written in standard Scheme.  Languages with 
+a single or primary implementation can at least rely on a standard 
+name for their script interpreters.  Standardizing the name of the 
+executable used to start a Scheme script removes one barrier to the 
+distribution of Scheme scripts.
+</blockquote><p>
+</p>
+<a name="node_sec_D.2"></a>
+<h2 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.2">D.2&nbsp;&nbsp;Syntax</a></h2>
+<p></p>
+<p>
+A Scheme <a name="node_idx_12"></a><em>script</em> is a delimited piece of text, typically a
+file, which consists of an optional script header, followed by a
+top-level program.  A script header has the following syntax:
+</p>
+<tt>&lt;script header&gt; &rarr; &lt;shebang&gt; /usr/bin/env &lt;space&gt; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scheme-script &lt;linefeed&gt;<br>
+&lt;shebang&gt; &rarr; #! | #! &lt;space&gt;<br>
+</tt><p>
+</p>
+<a name="node_sec_D.2.1"></a>
+<h3 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.2.1">D.2.1&nbsp;&nbsp;Script header</a></h3>
+<p>The <a name="node_idx_14"></a><em>script header</em>, if present on the first line of a script,
+is used by Unix-like operating systems to identify the interpreter to 
+execute that script.</p>
+<p>
+The script header syntax given above is the recommended portable 
+form that programmers should use.  However, if the first line 
+of a script begins with <tt>#!/</tt> or <tt>#!&lt;space&gt;</tt>, 
+implementations should ignore it on all platforms, even if it does not conform to 
+the recommended syntax.  </p>
+<p>
+</p>
+<blockquote><em>Rationale:&nbsp;&nbsp;</em>
+Requiring script interpreters to recognize and ignore the script 
+header helps ensure that Scheme scripts written for Unix-like systems 
+can also run on other kinds of systems. Furthermore, recognizing
+all <tt>#!/</tt> or <tt>#!&lt;space&gt;</tt> combinations 
+allows local customizations to be 
+performed by altering a script header from its default form.
+</blockquote><p>
+</p>
+<a name="node_sec_D.2.2"></a>
+<h3 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.2.2">D.2.2&nbsp;&nbsp;Example</a></h3>
+<p></p>
+
+<tt>#!/usr/bin/env&nbsp;scheme-script<br>
+#!r6rs<br>
+(import&nbsp;(rnrs&nbsp;base)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(rnrs&nbsp;io&nbsp;ports)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(rnrs&nbsp;programs))<br>
+(put-bytes&nbsp;(standard-output-port)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(call-with-port<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(open-file-input-port<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(cadr&nbsp;(command-line)))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get-bytes-all))<p></tt></p>
+<p>
+</p>
+<a name="node_sec_D.3"></a>
+<h2 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.3">D.3&nbsp;&nbsp;Platform considerations</a></h2>
+<p>Many platforms require that scripts be marked as executable in some way. 
+The platform-specific details of this are beyond the scope of this 
+report.  Scripts that are not suitably marked as executable will fail 
+to execute on many platforms.
+Other platform-specific notes for some popular operating systems follow.</p>
+<p>
+</p>
+<a name="node_sec_D.3.1"></a>
+<h3 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.3.1">D.3.1&nbsp;&nbsp;Apple Mac OS X</a></h3>
+<p>The Mac OS X operating system supports the Unix-like script header for
+shell scripts that run in the Terminal.  Depending on the intended
+usage, it may be advisable to choose a file name ending in <tt>.command</tt> for a script, as this makes the script double-clickable.
+</p>
+<p>
+</p>
+<a name="node_sec_D.3.2"></a>
+<h3 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.3.2">D.3.2&nbsp;&nbsp;Unix</a></h3>
+<p>Scheme scripts on Unix-like operating systems are supported by the 
+presence of the script header.  Scripts that omit the script header 
+are unlikely to be directly executable on Unix-like systems.</p>
+<p>
+To support installation of the Scheme script interpreter in 
+non-standard paths, scripts should use the <tt>/usr/bin/env</tt> 
+program as specified in the recommended script header syntax.  
+(Note that on many Unix-like systems, this also allows the 
+script interpreter itself to be implemented as a shell script.)</p>
+<p>
+</p>
+<a name="node_sec_D.3.3"></a>
+<h3 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.3.3">D.3.3&nbsp;&nbsp;Microsoft Windows</a></h3>
+<p>The Windows operating system allows a file extension to be associated 
+with a script interpreter such as <tt>scheme-script</tt>.  This 
+association may be configured appropriately by Scheme implementations, 
+installation programs, or by the user.</p>
+<p>
+</p>
+<a name="node_sec_D.3.4"></a>
+<h3 class=section><a href="r6rs-app-Z-H-2.html#node_toc_node_sec_D.3.4">D.3.4&nbsp;&nbsp;Selecting an implementation</a></h3>
+<p>If multiple implementations of Scheme are installed on a machine, the
+user may wish to specify which implementation should be used to 
+execute Scheme scripts by default.  Most platforms support some 
+mechanism for choosing between alternative implementations of a 
+program.  For example, Debian GNU/Linux uses the <tt>/etc/alternatives</tt> 
+mechanism to do this; Microsoft Windows uses file extension 
+associations.  Implementations are expected to configure this 
+appropriately, e.g., as part of their installation procedure.
+Failing that, users must perform any necessary configuration to 
+choose their preferred Scheme script interpreter.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-5.html">previous</a></span><span>, <a href="r6rs-app-Z-H-7.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

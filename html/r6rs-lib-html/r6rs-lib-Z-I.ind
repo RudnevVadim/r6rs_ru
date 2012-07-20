@@ -1,0 +1,708 @@
+\begin{theindex}
+
+  \item \texttt{...} \expandhtmlindex{1128}, \expandhtmlindex{1130}
+  \item \texttt{=>} \expandhtmlindex{372}
+  \item \texttt{\_} \expandhtmlindex{1126}
+
+  \indexspace
+
+  \item accessor \expandhtmlindex{272}
+  \item antimark \expandhtmlindex{1104}
+  \item \texttt{\&{}assertion} \expandhtmlindex{438}
+  \item \texttt{assertion-violation?} \expandhtmlindex{442}
+  \item \texttt{assoc} \expandhtmlindex{234}
+  \item \texttt{assp} \expandhtmlindex{232}
+  \item \texttt{assq} \expandhtmlindex{238}
+  \item \texttt{assv} \expandhtmlindex{236}
+
+  \indexspace
+
+  \item base record type \expandhtmlindex{276}
+  \item big-endian \expandhtmlindex{74}
+  \item binary port \expandhtmlindex{568}, \expandhtmlindex{586}
+  \item \texttt{binary-port?} \expandhtmlindex{648}
+  \item bit fields \expandhtmlindex{852}
+  \item \texttt{bitwise-and} \expandhtmlindex{1066}
+  \item \texttt{bitwise-arithmetic-shift} \expandhtmlindex{1088}
+  \item \texttt{bitwise-arithmetic-shift-left} \expandhtmlindex{1090}
+  \item \texttt{bitwise-arithmetic-shift-right} \expandhtmlindex{1092}
+  \item \texttt{bitwise-bit-count} \expandhtmlindex{1074}
+  \item \texttt{bitwise-bit-field} \expandhtmlindex{1084}
+  \item \texttt{bitwise-bit-set?} \expandhtmlindex{1080}
+  \item \texttt{bitwise-copy-bit} \expandhtmlindex{1082}
+  \item \texttt{bitwise-copy-bit-field} \expandhtmlindex{1086}
+  \item \texttt{bitwise-first-bit-set} \expandhtmlindex{1078}
+  \item \texttt{bitwise-if} \expandhtmlindex{1072}
+  \item \texttt{bitwise-ior} \expandhtmlindex{1068}
+  \item \texttt{bitwise-length} \expandhtmlindex{1076}
+  \item \texttt{bitwise-not} \expandhtmlindex{1064}
+  \item \texttt{bitwise-reverse-bit-field} \expandhtmlindex{1096}
+  \item \texttt{bitwise-rotate-bit-field} \expandhtmlindex{1094}
+  \item \texttt{bitwise-xor} \expandhtmlindex{1070}
+  \item \texttt{bound-identifier=?} \expandhtmlindex{1140}
+  \item \texttt{buffer-mode} \expandhtmlindex{576}
+  \item \texttt{buffer-mode?} \expandhtmlindex{578}
+  \item byte \expandhtmlindex{66}
+  \item bytevector \expandhtmlindex{64}
+  \item \texttt{bytevector->sint-list} \expandhtmlindex{118}
+  \item \texttt{bytevector->string} \expandhtmlindex{630}
+  \item \texttt{bytevector->u8-list} \expandhtmlindex{104}
+  \item \texttt{bytevector->uint-list} \expandhtmlindex{116}
+  \item \texttt{bytevector-copy} \expandhtmlindex{94}
+  \item \texttt{bytevector-copy!} \expandhtmlindex{92}
+  \item \texttt{bytevector-fill!} \expandhtmlindex{90}
+  \item \texttt{bytevector-ieee-double-native-ref} 
+		\expandhtmlindex{176}
+  \item \texttt{bytevector-ieee-double-native-set!} 
+		\expandhtmlindex{182}
+  \item \texttt{bytevector-ieee-double-ref} \expandhtmlindex{178}
+  \item \texttt{bytevector-ieee-single-native-ref} 
+		\expandhtmlindex{172}
+  \item \texttt{bytevector-ieee-single-native-set!} 
+		\expandhtmlindex{180}
+  \item \texttt{bytevector-ieee-single-ref} \expandhtmlindex{174}
+  \item \texttt{bytevector-length} \expandhtmlindex{86}
+  \item \texttt{bytevector-s16-native-ref} \expandhtmlindex{130}
+  \item \texttt{bytevector-s16-native-set!} \expandhtmlindex{138}
+  \item \texttt{bytevector-s16-ref} \expandhtmlindex{126}
+  \item \texttt{bytevector-s16-set!} \expandhtmlindex{134}
+  \item \texttt{bytevector-s32-native-ref} \expandhtmlindex{146}
+  \item \texttt{bytevector-s32-native-set!} \expandhtmlindex{154}
+  \item \texttt{bytevector-s32-ref} \expandhtmlindex{142}
+  \item \texttt{bytevector-s32-set!} \expandhtmlindex{150}
+  \item \texttt{bytevector-s64-native-ref} \expandhtmlindex{162}
+  \item \texttt{bytevector-s64-native-set!} \expandhtmlindex{170}
+  \item \texttt{bytevector-s64-ref} \expandhtmlindex{158}
+  \item \texttt{bytevector-s64-set!} \expandhtmlindex{166}
+  \item \texttt{bytevector-s8-ref} \expandhtmlindex{98}
+  \item \texttt{bytevector-s8-set!} \expandhtmlindex{102}
+  \item \texttt{bytevector-sint-ref} \expandhtmlindex{110}
+  \item \texttt{bytevector-sint-set!} \expandhtmlindex{114}
+  \item \texttt{bytevector-u16-native-ref} \expandhtmlindex{128}
+  \item \texttt{bytevector-u16-native-set!} \expandhtmlindex{136}
+  \item \texttt{bytevector-u16-ref} \expandhtmlindex{124}
+  \item \texttt{bytevector-u16-set!} \expandhtmlindex{132}
+  \item \texttt{bytevector-u32-native-ref} \expandhtmlindex{144}
+  \item \texttt{bytevector-u32-native-set!} \expandhtmlindex{152}
+  \item \texttt{bytevector-u32-ref} \expandhtmlindex{140}
+  \item \texttt{bytevector-u32-set!} \expandhtmlindex{148}
+  \item \texttt{bytevector-u64-native-ref} \expandhtmlindex{160}
+  \item \texttt{bytevector-u64-native-set!} \expandhtmlindex{168}
+  \item \texttt{bytevector-u64-ref} \expandhtmlindex{156}
+  \item \texttt{bytevector-u64-set!} \expandhtmlindex{164}
+  \item \texttt{bytevector-u8-ref} \expandhtmlindex{96}
+  \item \texttt{bytevector-u8-set!} \expandhtmlindex{100}
+  \item \texttt{bytevector-uint-ref} \expandhtmlindex{108}
+  \item \texttt{bytevector-uint-set!} \expandhtmlindex{112}
+  \item \texttt{bytevector=?} \expandhtmlindex{88}
+  \item \texttt{bytevector?} \expandhtmlindex{80}
+
+  \indexspace
+
+  \item call by need \expandhtmlindex{1300}
+  \item \texttt{call-with-bytevector-output-port} \expandhtmlindex{724}
+  \item \texttt{call-with-input-file} \expandhtmlindex{776}
+  \item \texttt{call-with-output-file} \expandhtmlindex{778}
+  \item \texttt{call-with-port} \expandhtmlindex{662}
+  \item \texttt{call-with-string-output-port} \expandhtmlindex{728}
+  \item \texttt{case-lambda} \expandhtmlindex{262}
+  \item \texttt{char-alphabetic?} \expandhtmlindex{22}
+  \item \texttt{char-ci<=?} \expandhtmlindex{18}
+  \item \texttt{char-ci<?} \expandhtmlindex{14}
+  \item \texttt{char-ci=?} \expandhtmlindex{12}
+  \item \texttt{char-ci>=?} \expandhtmlindex{20}
+  \item \texttt{char-ci>?} \expandhtmlindex{16}
+  \item \texttt{char-downcase} \expandhtmlindex{6}
+  \item \texttt{char-foldcase} \expandhtmlindex{10}
+  \item \texttt{char-general-category} \expandhtmlindex{34}
+  \item \texttt{char-lower-case?} \expandhtmlindex{30}
+  \item \texttt{char-numeric?} \expandhtmlindex{24}
+  \item \texttt{char-title-case?} \expandhtmlindex{32}
+  \item \texttt{char-titlecase} \expandhtmlindex{8}
+  \item \texttt{char-upcase} \expandhtmlindex{4}
+  \item \texttt{char-upper-case?} \expandhtmlindex{28}
+  \item \texttt{char-whitespace?} \expandhtmlindex{26}
+  \item \texttt{close-input-port} \expandhtmlindex{804}
+  \item \texttt{close-output-port} \expandhtmlindex{806}
+  \item \texttt{close-port} \expandhtmlindex{660}
+  \item codec \expandhtmlindex{580}
+  \item \texttt{command-line} \expandhtmlindex{844}
+  \item compound condition \expandhtmlindex{388}
+  \item condition \expandhtmlindex{390}
+  \item \texttt{\&{}condition} \expandhtmlindex{392}
+  \item \texttt{condition} \expandhtmlindex{394}
+  \item \texttt{condition-accessor} \expandhtmlindex{402}
+  \item \texttt{condition-irritants} \expandhtmlindex{450}
+  \item \texttt{condition-message} \expandhtmlindex{412}
+  \item \texttt{condition-predicate} \expandhtmlindex{400}
+  \item \texttt{condition-who} \expandhtmlindex{458}
+  \item \texttt{condition?} \expandhtmlindex{398}
+  \item \texttt{cons*} \expandhtmlindex{240}, \expandhtmlindex{242}
+  \item constructor descriptor \expandhtmlindex{326}
+  \item continuable exception \expandhtmlindex{380}
+  \item current exception handler \expandhtmlindex{366}
+  \item \texttt{current-error-port} \expandhtmlindex{736}, 
+		\expandhtmlindex{788}, \expandhtmlindex{794}
+  \item \texttt{current-input-port} \expandhtmlindex{678}, 
+		\expandhtmlindex{784}, \expandhtmlindex{790}
+  \item \texttt{current-output-port} \expandhtmlindex{734}, 
+		\expandhtmlindex{786}, \expandhtmlindex{792}
+
+  \indexspace
+
+  \item \texttt{datum->syntax} \expandhtmlindex{1146}
+  \item \texttt{define-condition-type} \expandhtmlindex{404}
+  \item \texttt{define-enumeration} \expandhtmlindex{1262}
+  \item \texttt{define-record-type} \expandhtmlindex{288}
+  \item \texttt{delay} \expandhtmlindex{1296}
+  \item \texttt{delete-file} \expandhtmlindex{840}
+  \item \texttt{display} \expandhtmlindex{828}, \expandhtmlindex{830}
+  \item \texttt{do} \expandhtmlindex{258}
+
+  \indexspace
+
+  \item \texttt{else} \expandhtmlindex{374}
+  \item end-of-file object \expandhtmlindex{634}
+  \item end-of-line style \expandhtmlindex{582}
+  \item endianness \expandhtmlindex{70}
+  \item \texttt{endianness} \expandhtmlindex{76}
+  \item \texttt{enum-set->list} \expandhtmlindex{1244}
+  \item \texttt{enum-set-complement} \expandhtmlindex{1258}
+  \item \texttt{enum-set-constructor} \expandhtmlindex{1242}
+  \item \texttt{enum-set-difference} \expandhtmlindex{1256}
+  \item \texttt{enum-set-indexer} \expandhtmlindex{1240}
+  \item \texttt{enum-set-intersection} \expandhtmlindex{1254}
+  \item \texttt{enum-set-member?} \expandhtmlindex{1246}
+  \item \texttt{enum-set-projection} \expandhtmlindex{1260}
+  \item \texttt{enum-set-subset?} \expandhtmlindex{1248}
+  \item \texttt{enum-set-union} \expandhtmlindex{1252}
+  \item \texttt{enum-set-universe} \expandhtmlindex{1238}
+  \item \texttt{enum-set=?} \expandhtmlindex{1250}
+  \item enumeration \expandhtmlindex{1228}
+  \item enumeration sets \expandhtmlindex{1230}
+  \item enumeration type \expandhtmlindex{1234}
+  \item environment \expandhtmlindex{1268}
+  \item \texttt{environment} \expandhtmlindex{1270}
+  \item \texttt{eof-object} \expandhtmlindex{636}, 
+		\expandhtmlindex{768}, \expandhtmlindex{772}
+  \item \texttt{eof-object?} \expandhtmlindex{638}, 
+		\expandhtmlindex{770}, \expandhtmlindex{774}
+  \item \texttt{eol-style} \expandhtmlindex{596}
+  \item \texttt{equal-hash} \expandhtmlindex{1218}
+  \item equivalence function \expandhtmlindex{1170}
+  \item \texttt{\&{}error} \expandhtmlindex{426}
+  \item \texttt{error-handling-mode} \expandhtmlindex{614}
+  \item \texttt{error?} \expandhtmlindex{430}
+  \item \texttt{eval} \expandhtmlindex{1266}
+  \item \texttt{exact->inexact} \expandhtmlindex{1286}
+  \item exceptional situation \expandhtmlindex{384}
+  \item exceptions \expandhtmlindex{362}
+  \item \texttt{exists} \expandhtmlindex{206}
+  \item \texttt{exit} \expandhtmlindex{846}, \expandhtmlindex{848}
+
+  \indexspace
+
+  \item field \expandhtmlindex{266}
+  \item \texttt{fields} \expandhtmlindex{290}
+  \item file options \expandhtmlindex{572}
+  \item \texttt{file-exists?} \expandhtmlindex{838}
+  \item \texttt{file-options} \expandhtmlindex{574}
+  \item \texttt{filter} \expandhtmlindex{208}
+  \item \texttt{find} \expandhtmlindex{202}
+  \item \texttt{fixnum->flonum} \expandhtmlindex{1060}
+  \item \texttt{fixnum-width} \expandhtmlindex{858}
+  \item \texttt{fixnum?} \expandhtmlindex{856}
+  \item \texttt{fl*} \expandhtmlindex{988}
+  \item \texttt{fl+} \expandhtmlindex{986}
+  \item \texttt{fl-} \expandhtmlindex{990}, \expandhtmlindex{992}
+  \item \texttt{fl/} \expandhtmlindex{994}, \expandhtmlindex{996}
+  \item \texttt{fl<=?} \expandhtmlindex{958}
+  \item \texttt{fl<?} \expandhtmlindex{956}
+  \item \texttt{fl=?} \expandhtmlindex{954}
+  \item \texttt{fl>=?} \expandhtmlindex{962}
+  \item \texttt{fl>?} \expandhtmlindex{960}
+  \item \texttt{flabs} \expandhtmlindex{998}
+  \item \texttt{flacos} \expandhtmlindex{1038}
+  \item \texttt{flasin} \expandhtmlindex{1036}
+  \item \texttt{flatan} \expandhtmlindex{1040}, \expandhtmlindex{1042}
+  \item \texttt{flceiling} \expandhtmlindex{1018}
+  \item \texttt{flcos} \expandhtmlindex{1032}
+  \item \texttt{fldenominator} \expandhtmlindex{1014}
+  \item \texttt{fldiv} \expandhtmlindex{1002}
+  \item \texttt{fldiv-and-mod} \expandhtmlindex{1000}
+  \item \texttt{fldiv0} \expandhtmlindex{1008}
+  \item \texttt{fldiv0-and-mod0} \expandhtmlindex{1006}
+  \item \texttt{fleven?} \expandhtmlindex{974}
+  \item \texttt{flexp} \expandhtmlindex{1024}
+  \item \texttt{flexpt} \expandhtmlindex{1046}
+  \item \texttt{flfinite?} \expandhtmlindex{976}
+  \item \texttt{flfloor} \expandhtmlindex{1016}
+  \item \texttt{flinfinite?} \expandhtmlindex{978}
+  \item \texttt{flinteger?} \expandhtmlindex{964}
+  \item \texttt{fllog} \expandhtmlindex{1026}, \expandhtmlindex{1028}
+  \item \texttt{flmax} \expandhtmlindex{982}
+  \item \texttt{flmin} \expandhtmlindex{984}
+  \item \texttt{flmod} \expandhtmlindex{1004}
+  \item \texttt{flmod0} \expandhtmlindex{1010}
+  \item \texttt{flnan?} \expandhtmlindex{980}
+  \item \texttt{flnegative?} \expandhtmlindex{970}
+  \item \texttt{flnumerator} \expandhtmlindex{1012}
+  \item \texttt{flodd?} \expandhtmlindex{972}
+  \item \texttt{flonum?} \expandhtmlindex{950}
+  \item \texttt{flpositive?} \expandhtmlindex{968}
+  \item \texttt{flround} \expandhtmlindex{1022}
+  \item \texttt{flsin} \expandhtmlindex{1030}
+  \item \texttt{flsqrt} \expandhtmlindex{1044}
+  \item \texttt{fltan} \expandhtmlindex{1034}
+  \item \texttt{fltruncate} \expandhtmlindex{1020}
+  \item \texttt{flush-output-port} \expandhtmlindex{712}
+  \item \texttt{flzero?} \expandhtmlindex{966}
+  \item \texttt{fold-left} \expandhtmlindex{212}
+  \item \texttt{fold-right} \expandhtmlindex{214}
+  \item \texttt{for-all} \expandhtmlindex{204}
+  \item \texttt{force} \expandhtmlindex{1304}
+  \item \texttt{free-identifier=?} \expandhtmlindex{1142}
+  \item \texttt{fx*} \expandhtmlindex{890}
+  \item \texttt{fx*/carry} \expandhtmlindex{912}
+  \item \texttt{fx+} \expandhtmlindex{888}
+  \item \texttt{fx+/carry} \expandhtmlindex{908}
+  \item \texttt{fx-} \expandhtmlindex{892}, \expandhtmlindex{894}
+  \item \texttt{fx-/carry} \expandhtmlindex{910}
+  \item \texttt{fx<=?} \expandhtmlindex{872}
+  \item \texttt{fx<?} \expandhtmlindex{868}
+  \item \texttt{fx=?} \expandhtmlindex{864}
+  \item \texttt{fx>=?} \expandhtmlindex{870}
+  \item \texttt{fx>?} \expandhtmlindex{866}
+  \item \texttt{fxand} \expandhtmlindex{916}
+  \item \texttt{fxarithmetic-shift} \expandhtmlindex{938}
+  \item \texttt{fxarithmetic-shift-left} \expandhtmlindex{940}
+  \item \texttt{fxarithmetic-shift-right} \expandhtmlindex{942}
+  \item \texttt{fxbit-count} \expandhtmlindex{924}
+  \item \texttt{fxbit-field} \expandhtmlindex{934}
+  \item \texttt{fxbit-set?} \expandhtmlindex{930}
+  \item \texttt{fxcopy-bit} \expandhtmlindex{932}
+  \item \texttt{fxcopy-bit-field} \expandhtmlindex{936}
+  \item \texttt{fxdiv} \expandhtmlindex{898}
+  \item \texttt{fxdiv-and-mod} \expandhtmlindex{896}
+  \item \texttt{fxdiv0} \expandhtmlindex{904}
+  \item \texttt{fxdiv0-and-mod0} \expandhtmlindex{902}
+  \item \texttt{fxeven?} \expandhtmlindex{882}
+  \item \texttt{fxfirst-bit-set} \expandhtmlindex{928}
+  \item \texttt{fxif} \expandhtmlindex{922}
+  \item \texttt{fxior} \expandhtmlindex{918}
+  \item \texttt{fxlength} \expandhtmlindex{926}
+  \item \texttt{fxmax} \expandhtmlindex{884}
+  \item \texttt{fxmin} \expandhtmlindex{886}
+  \item \texttt{fxmod} \expandhtmlindex{900}
+  \item \texttt{fxmod0} \expandhtmlindex{906}
+  \item \texttt{fxnegative?} \expandhtmlindex{878}
+  \item \texttt{fxnot} \expandhtmlindex{914}
+  \item \texttt{fxodd?} \expandhtmlindex{880}
+  \item \texttt{fxpositive?} \expandhtmlindex{876}
+  \item \texttt{fxreverse-bit-field} \expandhtmlindex{946}
+  \item \texttt{fxrotate-bit-field} \expandhtmlindex{944}
+  \item \texttt{fxxor} \expandhtmlindex{920}
+  \item \texttt{fxzero?} \expandhtmlindex{874}
+
+  \indexspace
+
+  \item \texttt{generate-temporaries} \expandhtmlindex{1150}
+  \item \texttt{get-bytevector-all} \expandhtmlindex{694}
+  \item \texttt{get-bytevector-n} \expandhtmlindex{688}
+  \item \texttt{get-bytevector-n!} \expandhtmlindex{690}
+  \item \texttt{get-bytevector-some} \expandhtmlindex{692}
+  \item \texttt{get-char} \expandhtmlindex{696}
+  \item \texttt{get-datum} \expandhtmlindex{708}
+  \item \texttt{get-line} \expandhtmlindex{706}
+  \item \texttt{get-string-all} \expandhtmlindex{704}
+  \item \texttt{get-string-n} \expandhtmlindex{700}
+  \item \texttt{get-string-n!} \expandhtmlindex{702}
+  \item \texttt{get-u8} \expandhtmlindex{684}
+  \item \texttt{greatest-fixnum} \expandhtmlindex{862}
+  \item \texttt{guard} \expandhtmlindex{370}
+
+  \indexspace
+
+  \item hash function \expandhtmlindex{1168}
+  \item hashtable \expandhtmlindex{1166}, \expandhtmlindex{1172}
+  \item \texttt{hashtable-clear!} \expandhtmlindex{1204}, 
+		\expandhtmlindex{1206}
+  \item \texttt{hashtable-contains?} \expandhtmlindex{1196}
+  \item \texttt{hashtable-copy} \expandhtmlindex{1200}, 
+		\expandhtmlindex{1202}
+  \item \texttt{hashtable-delete!} \expandhtmlindex{1194}
+  \item \texttt{hashtable-entries} \expandhtmlindex{1210}
+  \item \texttt{hashtable-equivalence-function} \expandhtmlindex{1212}
+  \item \texttt{hashtable-hash-function} \expandhtmlindex{1214}
+  \item \texttt{hashtable-keys} \expandhtmlindex{1208}
+  \item \texttt{hashtable-mutable?} \expandhtmlindex{1216}
+  \item \texttt{hashtable-ref} \expandhtmlindex{1190}
+  \item \texttt{hashtable-set!} \expandhtmlindex{1192}
+  \item \texttt{hashtable-size} \expandhtmlindex{1188}
+  \item \texttt{hashtable-update!} \expandhtmlindex{1198}
+  \item \texttt{hashtable?} \expandhtmlindex{1186}
+
+  \indexspace
+
+  \item \texttt{\&{}i/o} \expandhtmlindex{494}
+  \item \texttt{\&{}i/o-decoding} \expandhtmlindex{600}
+  \item \texttt{i/o-decoding-error?} \expandhtmlindex{604}
+  \item \texttt{\&{}i/o-encoding} \expandhtmlindex{606}
+  \item \texttt{i/o-encoding-error-char} \expandhtmlindex{612}
+  \item \texttt{i/o-encoding-error?} \expandhtmlindex{610}
+  \item \texttt{i/o-error-filename} \expandhtmlindex{526}
+  \item \texttt{i/o-error-port} \expandhtmlindex{558}
+  \item \texttt{i/o-error-position} \expandhtmlindex{518}
+  \item \texttt{i/o-error?} \expandhtmlindex{498}
+  \item \texttt{\&{}i/o-file-already-exists} \expandhtmlindex{540}
+  \item \texttt{i/o-file-already-exists-error?} \expandhtmlindex{544}
+  \item \texttt{\&{}i/o-file-does-not-exist} \expandhtmlindex{546}
+  \item \texttt{i/o-file-does-not-exist-error?} \expandhtmlindex{550}
+  \item \texttt{\&{}i/o-file-is-read-only} \expandhtmlindex{534}
+  \item \texttt{i/o-file-is-read-only-error?} \expandhtmlindex{538}
+  \item \texttt{\&{}i/o-file-protection} \expandhtmlindex{528}
+  \item \texttt{i/o-file-protection-error?} \expandhtmlindex{532}
+  \item \texttt{\&{}i/o-filename} \expandhtmlindex{520}
+  \item \texttt{i/o-filename-error?} \expandhtmlindex{524}
+  \item \texttt{\&{}i/o-invalid-position} \expandhtmlindex{512}
+  \item \texttt{i/o-invalid-position-error?} \expandhtmlindex{516}
+  \item \texttt{\&{}i/o-port} \expandhtmlindex{552}
+  \item \texttt{i/o-port-error?} \expandhtmlindex{556}
+  \item \texttt{\&{}i/o-read} \expandhtmlindex{500}
+  \item \texttt{i/o-read-error?} \expandhtmlindex{504}
+  \item \texttt{\&{}i/o-write} \expandhtmlindex{506}
+  \item \texttt{i/o-write-error?} \expandhtmlindex{510}
+  \item identifier macro \expandhtmlindex{1136}
+  \item \texttt{identifier?} \expandhtmlindex{1138}
+  \item \texttt{immutable} \expandhtmlindex{294}
+  \item immutable record type \expandhtmlindex{282}
+  \item \texttt{\&{}implementation-restriction} \expandhtmlindex{466}
+  \item \texttt{implementation-restriction-violation?} 
+		\expandhtmlindex{470}
+  \item implicit identifier \expandhtmlindex{1148}
+  \item \texttt{inexact->exact} \expandhtmlindex{1288}
+  \item input port \expandhtmlindex{564}
+  \item \texttt{input-port?} \expandhtmlindex{664}, 
+		\expandhtmlindex{780}
+  \item \texttt{\&{}irritants} \expandhtmlindex{444}
+  \item \texttt{irritants-condition?} \expandhtmlindex{448}
+
+  \indexspace
+
+  \item \texttt{latin-1-codec} \expandhtmlindex{590}
+  \item lazy evaluation \expandhtmlindex{1298}
+  \item \texttt{least-fixnum} \expandhtmlindex{860}
+  \item \texttt{\&{}lexical} \expandhtmlindex{472}
+  \item \texttt{lexical-violation?} \expandhtmlindex{476}
+  \item \texttt{list-sort} \expandhtmlindex{246}
+  \item little-endian \expandhtmlindex{72}
+  \item \texttt{lookahead-char} \expandhtmlindex{698}
+  \item \texttt{lookahead-u8} \expandhtmlindex{686}
+
+  \indexspace
+
+  \item macro transformer \expandhtmlindex{1114}
+  \item \texttt{make-assertion-violation} \expandhtmlindex{440}
+  \item \texttt{make-bytevector} \expandhtmlindex{82}, 
+		\expandhtmlindex{84}
+  \item \texttt{make-custom-binary-input-port} \expandhtmlindex{680}
+  \item \texttt{make-custom-binary-input/output-port} 
+		\expandhtmlindex{762}
+  \item \texttt{make-custom-binary-output-port} \expandhtmlindex{738}
+  \item \texttt{make-custom-textual-input-port} \expandhtmlindex{682}
+  \item \texttt{make-custom-textual-input/output-port} 
+		\expandhtmlindex{764}
+  \item \texttt{make-custom-textual-output-port} \expandhtmlindex{740}
+  \item \texttt{make-enumeration} \expandhtmlindex{1236}
+  \item \texttt{make-eq-hashtable} \expandhtmlindex{1174}, 
+		\expandhtmlindex{1176}
+  \item \texttt{make-eqv-hashtable} \expandhtmlindex{1178}, 
+		\expandhtmlindex{1180}
+  \item \texttt{make-error} \expandhtmlindex{428}
+  \item \texttt{make-hashtable} \expandhtmlindex{1182}, 
+		\expandhtmlindex{1184}
+  \item \texttt{make-i/o-decoding-error} \expandhtmlindex{602}
+  \item \texttt{make-i/o-encoding-error} \expandhtmlindex{608}
+  \item \texttt{make-i/o-error} \expandhtmlindex{496}
+  \item \texttt{make-i/o-file-already-exists-error} 
+		\expandhtmlindex{542}
+  \item \texttt{make-i/o-file-does-not-exist-error} 
+		\expandhtmlindex{548}
+  \item \texttt{make-i/o-file-is-read-only-error} \expandhtmlindex{536}
+  \item \texttt{make-i/o-file-protection-error} \expandhtmlindex{530}
+  \item \texttt{make-i/o-filename-error} \expandhtmlindex{522}
+  \item \texttt{make-i/o-invalid-position-error} \expandhtmlindex{514}
+  \item \texttt{make-i/o-port-error} \expandhtmlindex{554}
+  \item \texttt{make-i/o-read-error} \expandhtmlindex{502}
+  \item \texttt{make-i/o-write-error} \expandhtmlindex{508}
+  \item \texttt{make-implementation-restriction-violation} 
+		\expandhtmlindex{468}
+  \item \texttt{make-irritants-condition} \expandhtmlindex{446}
+  \item \texttt{make-lexical-violation} \expandhtmlindex{474}
+  \item \texttt{make-message-condition} \expandhtmlindex{408}
+  \item \texttt{make-no-infinities-violation} \expandhtmlindex{1050}
+  \item \texttt{make-no-nans-violation} \expandhtmlindex{1056}
+  \item \texttt{make-non-continuable-violation} \expandhtmlindex{462}
+  \item \texttt{make-record-constructor-descriptor} 
+		\expandhtmlindex{322}
+  \item \texttt{make-record-type-descriptor} \expandhtmlindex{314}
+  \item \texttt{make-serious-condition} \expandhtmlindex{422}
+  \item \texttt{make-syntax-violation} \expandhtmlindex{480}
+  \item \texttt{make-transcoder} \expandhtmlindex{616}, 
+		\expandhtmlindex{618}, \expandhtmlindex{620}
+  \item \texttt{make-undefined-violation} \expandhtmlindex{490}
+  \item \texttt{make-variable-transformer} \expandhtmlindex{1120}
+  \item \texttt{make-violation} \expandhtmlindex{434}
+  \item \texttt{make-warning} \expandhtmlindex{416}
+  \item \texttt{make-who-condition} \expandhtmlindex{454}
+  \item mark \expandhtmlindex{1100}
+  \item \texttt{member} \expandhtmlindex{226}
+  \item \texttt{memp} \expandhtmlindex{224}
+  \item \texttt{memq} \expandhtmlindex{230}
+  \item \texttt{memv} \expandhtmlindex{228}
+  \item \texttt{\&{}message} \expandhtmlindex{406}
+  \item \texttt{message-condition?} \expandhtmlindex{410}
+  \item \texttt{modulo} \expandhtmlindex{1294}
+  \item \texttt{mutable} \expandhtmlindex{292}
+  \item mutable record type \expandhtmlindex{284}
+  \item mutator \expandhtmlindex{274}
+
+  \indexspace
+
+  \item \texttt{native-endianness} \expandhtmlindex{78}
+  \item \texttt{native-eol-style} \expandhtmlindex{598}
+  \item \texttt{native-transcoder} \expandhtmlindex{622}
+  \item \texttt{newline} \expandhtmlindex{824}, \expandhtmlindex{826}
+  \item \texttt{\&{}no-infinities} \expandhtmlindex{1048}
+  \item \texttt{no-infinities-violation?} \expandhtmlindex{1052}
+  \item \texttt{\&{}no-nans} \expandhtmlindex{1054}
+  \item \texttt{no-nans-violation?} \expandhtmlindex{1058}
+  \item \texttt{\&{}non-continuable} \expandhtmlindex{460}
+  \item \texttt{non-continuable-violation?} \expandhtmlindex{464}
+  \item nongenerative \expandhtmlindex{280}
+  \item \texttt{nongenerative} \expandhtmlindex{304}
+  \item \texttt{null-environment} \expandhtmlindex{1306}
+  \item number \expandhtmlindex{850}
+
+  \indexspace
+
+  \item octet \expandhtmlindex{68}
+  \item \texttt{opaque} \expandhtmlindex{302}
+  \item \texttt{open-bytevector-input-port} \expandhtmlindex{672}
+  \item \texttt{open-bytevector-output-port} \expandhtmlindex{720}, 
+		\expandhtmlindex{722}
+  \item \texttt{open-file-input-port} \expandhtmlindex{668}, 
+		\expandhtmlindex{670}
+  \item \texttt{open-file-input/output-port} \expandhtmlindex{758}, 
+		\expandhtmlindex{760}
+  \item \texttt{open-file-output-port} \expandhtmlindex{716}, 
+		\expandhtmlindex{718}
+  \item \texttt{open-input-file} \expandhtmlindex{800}
+  \item \texttt{open-output-file} \expandhtmlindex{802}
+  \item \texttt{open-string-input-port} \expandhtmlindex{674}
+  \item \texttt{open-string-output-port} \expandhtmlindex{726}
+  \item output ports \expandhtmlindex{566}
+  \item \texttt{output-port-buffer-mode} \expandhtmlindex{714}
+  \item \texttt{output-port?} \expandhtmlindex{710}, 
+		\expandhtmlindex{782}
+
+  \indexspace
+
+  \item \texttt{parent} \expandhtmlindex{296}
+  \item \texttt{parent-rtd} \expandhtmlindex{306}
+  \item \texttt{partition} \expandhtmlindex{210}
+  \item pattern variable \expandhtmlindex{1132}
+  \item \texttt{peek-char} \expandhtmlindex{812}, \expandhtmlindex{814}
+  \item port \expandhtmlindex{562}
+  \item \texttt{port-eof?} \expandhtmlindex{666}
+  \item \texttt{port-has-port-position?} \expandhtmlindex{652}
+  \item \texttt{port-has-set-port-position!?} \expandhtmlindex{656}
+  \item \texttt{port-position} \expandhtmlindex{654}
+  \item \texttt{port-transcoder} \expandhtmlindex{644}
+  \item \texttt{port?} \expandhtmlindex{642}
+  \item position \expandhtmlindex{640}
+  \item promise \expandhtmlindex{1302}
+  \item protocol \expandhtmlindex{330}
+  \item \texttt{protocol} \expandhtmlindex{298}
+  \item \texttt{put-bytevector} \expandhtmlindex{744}, 
+		\expandhtmlindex{746}
+  \item \texttt{put-char} \expandhtmlindex{748}
+  \item \texttt{put-datum} \expandhtmlindex{756}
+  \item \texttt{put-string} \expandhtmlindex{750}, 
+		\expandhtmlindex{752}, \expandhtmlindex{754}
+  \item \texttt{put-u8} \expandhtmlindex{742}
+
+  \indexspace
+
+  \item \texttt{quasisyntax} \expandhtmlindex{1154}
+  \item \texttt{quotient} \expandhtmlindex{1290}
+
+  \indexspace
+
+  \item \texttt{raise} \expandhtmlindex{376}
+  \item \texttt{raise-continuable} \expandhtmlindex{378}
+  \item \texttt{read} \expandhtmlindex{816}, \expandhtmlindex{818}
+  \item \texttt{read-char} \expandhtmlindex{808}, \expandhtmlindex{810}
+  \item \texttt{real->flonum} \expandhtmlindex{952}
+  \item record \expandhtmlindex{264}
+  \item record constructor \expandhtmlindex{270}, \expandhtmlindex{328}
+  \item \texttt{record-accessor} \expandhtmlindex{336}
+  \item \texttt{record-constructor} \expandhtmlindex{332}
+  \item record-constructor descriptor \expandhtmlindex{324}
+  \item \texttt{record-constructor-descriptor} \expandhtmlindex{310}
+  \item \texttt{record-field-mutable?} \expandhtmlindex{360}
+  \item \texttt{record-mutator} \expandhtmlindex{338}
+  \item \texttt{record-predicate} \expandhtmlindex{334}
+  \item \texttt{record-rtd} \expandhtmlindex{344}
+  \item record-type descriptor \expandhtmlindex{268}, 
+		\expandhtmlindex{316}
+  \item \texttt{record-type-descriptor} \expandhtmlindex{308}
+  \item \texttt{record-type-descriptor?} \expandhtmlindex{320}
+  \item \texttt{record-type-field-names} \expandhtmlindex{358}
+  \item \texttt{record-type-generative?} \expandhtmlindex{352}
+  \item \texttt{record-type-name} \expandhtmlindex{346}
+  \item \texttt{record-type-opaque?} \expandhtmlindex{356}
+  \item \texttt{record-type-parent} \expandhtmlindex{348}
+  \item \texttt{record-type-sealed?} \expandhtmlindex{354}
+  \item \texttt{record-type-uid} \expandhtmlindex{350}
+  \item \texttt{record?} \expandhtmlindex{342}
+  \item region \expandhtmlindex{260}
+  \item \texttt{remainder} \expandhtmlindex{1292}
+  \item \texttt{remove} \expandhtmlindex{218}
+  \item \texttt{remp} \expandhtmlindex{216}
+  \item \texttt{remq} \expandhtmlindex{222}
+  \item \texttt{remv} \expandhtmlindex{220}
+  \item \texttt{(rnrs (6))} \expandhtmlindex{1264}
+  \item \texttt{(rnrs arithmetic bitwise (6))} \expandhtmlindex{1062}
+  \item \texttt{(rnrs arithmetic fixnums (6))} \expandhtmlindex{854}
+  \item \texttt{(rnrs arithmetic flonums (6))} \expandhtmlindex{948}
+  \item \texttt{(rnrs bytevectors (6))} \expandhtmlindex{62}
+  \item \texttt{(rnrs conditions (6))} \expandhtmlindex{382}
+  \item \texttt{(rnrs control (6))} \expandhtmlindex{252}
+  \item \texttt{(rnrs enums (6))} \expandhtmlindex{1226}
+  \item \texttt{(rnrs exceptions (6))} \expandhtmlindex{364}
+  \item \texttt{(rnrs files (6))} \expandhtmlindex{836}
+  \item \texttt{(rnrs hashtables (6))} \expandhtmlindex{1164}
+  \item \texttt{(rnrs io ports (6))} \expandhtmlindex{560}
+  \item \texttt{(rnrs io simple (6))} \expandhtmlindex{766}
+  \item \texttt{(rnrs lists (6))} \expandhtmlindex{200}
+  \item \texttt{(rnrs mutable-pairs (6))} \expandhtmlindex{1272}
+  \item \texttt{(rnrs mutable-strings (6))} \expandhtmlindex{1278}
+  \item \texttt{(rnrs programs (6))} \expandhtmlindex{842}
+  \item \texttt{(rnrs r5rs (6))} \expandhtmlindex{1284}
+  \item \texttt{(rnrs records inspection (6))} \expandhtmlindex{340}
+  \item \texttt{(rnrs records procedural (6))} \expandhtmlindex{312}
+  \item \texttt{(rnrs records syntactic (6))} \expandhtmlindex{286}
+  \item \texttt{(rnrs sorting (6))} \expandhtmlindex{244}
+  \item \texttt{(rnrs syntax-case (6))} \expandhtmlindex{1098}
+  \item \texttt{(rnrs unicode (6))} \expandhtmlindex{2}
+  \item rtd \expandhtmlindex{318}
+
+  \indexspace
+
+  \item \texttt{scheme-report-environment} \expandhtmlindex{1308}
+  \item sealed \expandhtmlindex{278}
+  \item \texttt{sealed} \expandhtmlindex{300}
+  \item \texttt{\&{}serious} \expandhtmlindex{420}
+  \item \texttt{serious-condition?} \expandhtmlindex{424}
+  \item \texttt{set-car!} \expandhtmlindex{1274}
+  \item \texttt{set-cdr!} \expandhtmlindex{1276}
+  \item \texttt{set-port-position!} \expandhtmlindex{658}
+  \item simple condition \expandhtmlindex{386}
+  \item \texttt{simple-conditions} \expandhtmlindex{396}
+  \item \texttt{sint-list->bytevector} \expandhtmlindex{122}
+  \item \texttt{standard-error-port} \expandhtmlindex{732}
+  \item \texttt{standard-input-port} \expandhtmlindex{676}
+  \item \texttt{standard-output-port} \expandhtmlindex{730}
+  \item \texttt{string->bytevector} \expandhtmlindex{632}
+  \item \texttt{string->utf16} \expandhtmlindex{186}, 
+		\expandhtmlindex{188}
+  \item \texttt{string->utf32} \expandhtmlindex{190}, 
+		\expandhtmlindex{192}
+  \item \texttt{string->utf8} \expandhtmlindex{184}
+  \item \texttt{string-ci-hash} \expandhtmlindex{1222}
+  \item \texttt{string-ci<=?} \expandhtmlindex{50}
+  \item \texttt{string-ci<?} \expandhtmlindex{46}
+  \item \texttt{string-ci=?} \expandhtmlindex{44}
+  \item \texttt{string-ci>=?} \expandhtmlindex{52}
+  \item \texttt{string-ci>?} \expandhtmlindex{48}
+  \item \texttt{string-downcase} \expandhtmlindex{38}
+  \item \texttt{string-fill!} \expandhtmlindex{1282}
+  \item \texttt{string-foldcase} \expandhtmlindex{42}
+  \item \texttt{string-hash} \expandhtmlindex{1220}
+  \item \texttt{string-normalize-nfc} \expandhtmlindex{58}
+  \item \texttt{string-normalize-nfd} \expandhtmlindex{54}
+  \item \texttt{string-normalize-nfkc} \expandhtmlindex{60}
+  \item \texttt{string-normalize-nfkd} \expandhtmlindex{56}
+  \item \texttt{string-set!} \expandhtmlindex{1280}
+  \item \texttt{string-titlecase} \expandhtmlindex{40}
+  \item \texttt{string-upcase} \expandhtmlindex{36}
+  \item substitution \expandhtmlindex{1102}
+  \item \texttt{symbol-hash} \expandhtmlindex{1224}
+  \item \texttt{\&{}syntax} \expandhtmlindex{478}
+  \item \texttt{syntax} \expandhtmlindex{1134}
+  \item syntax object \expandhtmlindex{1110}
+  \item \texttt{syntax->datum} \expandhtmlindex{1144}
+  \item \texttt{syntax-case} \expandhtmlindex{1124}
+  \item \texttt{syntax-violation} \expandhtmlindex{1160}, 
+		\expandhtmlindex{1162}
+  \item \texttt{syntax-violation-form} \expandhtmlindex{484}
+  \item \texttt{syntax-violation-subform} \expandhtmlindex{486}
+  \item \texttt{syntax-violation?} \expandhtmlindex{482}
+
+  \indexspace
+
+  \item textual port \expandhtmlindex{588}
+  \item textual ports \expandhtmlindex{570}
+  \item \texttt{textual-port?} \expandhtmlindex{646}
+  \item \texttt{transcoded-port} \expandhtmlindex{650}
+  \item transcoder \expandhtmlindex{584}
+  \item \texttt{transcoder-codec} \expandhtmlindex{624}
+  \item \texttt{transcoder-eol-style} \expandhtmlindex{626}
+  \item \texttt{transcoder-error-handling-mode} \expandhtmlindex{628}
+  \item transformation procedure \expandhtmlindex{1116}
+  \item transformer \expandhtmlindex{1112}
+
+  \indexspace
+
+  \item \texttt{u8-list->bytevector} \expandhtmlindex{106}
+  \item \texttt{uint-list->bytevector} \expandhtmlindex{120}
+  \item \texttt{\&{}undefined} \expandhtmlindex{488}
+  \item \texttt{undefined-violation?} \expandhtmlindex{492}
+  \item universe \expandhtmlindex{1232}
+  \item \texttt{unless} \expandhtmlindex{256}
+  \item \texttt{unsyntax} \expandhtmlindex{1156}
+  \item \texttt{unsyntax-splicing} \expandhtmlindex{1158}
+  \item \texttt{utf-16-codec} \expandhtmlindex{594}
+  \item \texttt{utf-8-codec} \expandhtmlindex{592}
+  \item \texttt{utf16->string} \expandhtmlindex{196}
+  \item \texttt{utf32->string} \expandhtmlindex{198}
+  \item \texttt{utf8->string} \expandhtmlindex{194}
+
+  \indexspace
+
+  \item variable transformer \expandhtmlindex{1118}, 
+		\expandhtmlindex{1122}
+  \item \texttt{vector-sort} \expandhtmlindex{248}
+  \item \texttt{vector-sort!} \expandhtmlindex{250}
+  \item \texttt{\&{}violation} \expandhtmlindex{432}
+  \item \texttt{violation?} \expandhtmlindex{436}
+
+  \indexspace
+
+  \item \texttt{\&{}warning} \expandhtmlindex{414}
+  \item \texttt{warning?} \expandhtmlindex{418}
+  \item \texttt{when} \expandhtmlindex{254}
+  \item \texttt{\&{}who} \expandhtmlindex{452}
+  \item \texttt{who-condition?} \expandhtmlindex{456}
+  \item \texttt{with-exception-handler} \expandhtmlindex{368}
+  \item \texttt{with-input-from-file} \expandhtmlindex{796}
+  \item \texttt{with-output-to-file} \expandhtmlindex{798}
+  \item \texttt{with-syntax} \expandhtmlindex{1152}
+  \item wrap \expandhtmlindex{1106}
+  \item wrapped syntax object \expandhtmlindex{1108}
+  \item \texttt{write} \expandhtmlindex{832}, \expandhtmlindex{834}
+  \item \texttt{write-char} \expandhtmlindex{820}, 
+		\expandhtmlindex{822}
+
+\end{theindex}

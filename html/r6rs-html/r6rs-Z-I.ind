@@ -1,0 +1,482 @@
+\begin{theindex}
+
+  \item \texttt{\#,\atsign} \expandhtmlindex{190}
+  \item \texttt{\sharpsign\backwhack} \expandhtmlindex{156}
+  \item \texttt{\sharpsign\verticalbar} \expandhtmlindex{140}
+  \item \texttt{\&} \expandhtmlindex{262}
+  \item \texttt{'} \expandhtmlindex{176}
+  \item \texttt{\#{}'} \expandhtmlindex{184}
+  \item \texttt{*} \expandhtmlindex{496}
+  \item {\texttt{*} (formal semantics)} \expandhtmlindex{840}, 
+		\expandhtmlindex{842}
+  \item \texttt{+} \expandhtmlindex{494}
+  \item {\texttt{+} (formal semantics)} \expandhtmlindex{830}, 
+		\expandhtmlindex{832}
+  \item \texttt{,\atsign} \expandhtmlindex{182}
+  \item \texttt{,} \expandhtmlindex{180}
+  \item \texttt{\#{},} \expandhtmlindex{188}
+  \item \texttt{-} \expandhtmlindex{498}, \expandhtmlindex{500}
+  \item {\texttt{-} (formal semantics)} \expandhtmlindex{834}, 
+		\expandhtmlindex{836}, \expandhtmlindex{838}
+  \item -0.0 \expandhtmlindex{100}
+  \item \texttt{...} \expandhtmlindex{784}, \expandhtmlindex{792}
+  \item \texttt{/} \expandhtmlindex{502}, \expandhtmlindex{504}
+  \item {\texttt{/} (formal semantics)} \expandhtmlindex{844}, 
+		\expandhtmlindex{846}, \expandhtmlindex{848}, 
+		\expandhtmlindex{850}
+  \item \texttt{;} \expandhtmlindex{136}
+  \item \texttt{\#{};} \expandhtmlindex{138}
+  \item \texttt{<} \expandhtmlindex{466}
+  \item \texttt{<=} \expandhtmlindex{470}
+  \item \texttt{=} \expandhtmlindex{464}
+  \item \texttt{=>} \expandhtmlindex{378}
+  \item \texttt{>} \expandhtmlindex{468}
+  \item \texttt{>=} \expandhtmlindex{472}
+  \item \texttt{\_} \expandhtmlindex{788}, \expandhtmlindex{790}
+  \item \texttt{\#{}`} \expandhtmlindex{186}
+  \item \texttt{`} \expandhtmlindex{178}
+  \item \texttt{\verticalbar\sharpsign} \expandhtmlindex{142}
+
+  \indexspace
+
+  \item \texttt{abs} \expandhtmlindex{506}
+  \item \texttt{acos} \expandhtmlindex{554}
+  \item \texttt{and} \expandhtmlindex{388}
+  \item \texttt{angle} \expandhtmlindex{576}
+  \item \texttt{append} \expandhtmlindex{634}
+  \item \texttt{apply} \expandhtmlindex{752}
+  \item {\texttt{apply} (formal semantics)} \expandhtmlindex{936}, 
+		\expandhtmlindex{938}, \expandhtmlindex{940}, 
+		\expandhtmlindex{942}, \expandhtmlindex{944}, 
+		\expandhtmlindex{946}, \expandhtmlindex{948}
+  \item argument checking \expandhtmlindex{226}
+  \item \texttt{asin} \expandhtmlindex{552}
+  \item \texttt{assert} \expandhtmlindex{750}
+  \item \texttt{assertion-violation} \expandhtmlindex{748}
+  \item assignment \expandhtmlindex{46}
+  \item \texttt{atan} \expandhtmlindex{556}, \expandhtmlindex{558}
+
+  \indexspace
+
+  \item \texttt{\#{}b} \expandhtmlindex{126}, \expandhtmlindex{160}
+  \item backquote \expandhtmlindex{774}
+  \item \texttt{begin} \expandhtmlindex{418}, \expandhtmlindex{420}
+  \item {\texttt{begin} (formal semantics)} \expandhtmlindex{856}, 
+		\expandhtmlindex{860}, \expandhtmlindex{976}
+  \item {\texttt{begin0} (formal semantics)} \expandhtmlindex{862}, 
+		\expandhtmlindex{866}, \expandhtmlindex{980}, 
+		\expandhtmlindex{984}, \expandhtmlindex{988}
+  \item binding \expandhtmlindex{28}, \expandhtmlindex{206}
+  \item binding construct \expandhtmlindex{208}
+  \item body \expandhtmlindex{360}
+  \item boolean \expandhtmlindex{4}
+  \item \texttt{boolean=?} \expandhtmlindex{598}
+  \item \texttt{boolean?} \expandhtmlindex{328}, \expandhtmlindex{596}
+  \item bound \expandhtmlindex{216}
+
+  \indexspace
+
+  \item \texttt{caar} \expandhtmlindex{616}
+  \item \texttt{cadr} \expandhtmlindex{618}
+  \item call \expandhtmlindex{298}
+  \item \texttt{call-with-current-continuation} \expandhtmlindex{754}
+  \item \texttt{call-with-values} \expandhtmlindex{762}
+  \item {\texttt{call-with-values} (formal semantics)} 
+		\expandhtmlindex{808}, \expandhtmlindex{810}
+  \item \texttt{call/cc} \expandhtmlindex{756}
+  \item {\texttt{call/cc} (formal semantics)} \expandhtmlindex{960}
+  \item \texttt{car} \expandhtmlindex{612}
+  \item {\texttt{car} (formal semantics)} \expandhtmlindex{876}, 
+		\expandhtmlindex{894}
+  \item \texttt{case} \expandhtmlindex{384}
+  \item \texttt{cdddar} \expandhtmlindex{620}
+  \item \texttt{cddddr} \expandhtmlindex{622}
+  \item \texttt{cdr} \expandhtmlindex{614}
+  \item {\texttt{cdr} (formal semantics)} \expandhtmlindex{878}, 
+		\expandhtmlindex{896}
+  \item \texttt{ceiling} \expandhtmlindex{530}
+  \item \texttt{char->integer} \expandhtmlindex{670}
+  \item \texttt{char<=?} \expandhtmlindex{680}
+  \item \texttt{char<?} \expandhtmlindex{676}
+  \item \texttt{char=?} \expandhtmlindex{674}
+  \item \texttt{char>=?} \expandhtmlindex{682}
+  \item \texttt{char>?} \expandhtmlindex{678}
+  \item \texttt{char?} \expandhtmlindex{336}, \expandhtmlindex{668}
+  \item character \expandhtmlindex{8}
+  \item Characters \expandhtmlindex{658}
+  \item code point \expandhtmlindex{664}
+  \item comment \expandhtmlindex{120}, \expandhtmlindex{134}
+  \item \texttt{complex?} \expandhtmlindex{442}
+  \item \texttt{cond} \expandhtmlindex{376}
+  \item {\texttt{condition?} (formal semantics)} \expandhtmlindex{822}, 
+		\expandhtmlindex{824}
+  \item \texttt{cons} \expandhtmlindex{610}
+  \item {\texttt{cons} (formal semantics)} \expandhtmlindex{872}
+  \item {\texttt{consi} (formal semantics)} \expandhtmlindex{874}
+  \item constant \expandhtmlindex{244}
+  \item continuable exception \expandhtmlindex{222}
+  \item continuation \expandhtmlindex{56}
+  \item core form \expandhtmlindex{322}
+  \item \texttt{cos} \expandhtmlindex{548}
+
+  \indexspace
+
+  \item \texttt{\#{}d} \expandhtmlindex{164}
+  \item datum \expandhtmlindex{102}, \expandhtmlindex{114}
+  \item datum value \expandhtmlindex{52}, \expandhtmlindex{108}
+  \item \texttt{define} \expandhtmlindex{352}, \expandhtmlindex{354}
+  \item \texttt{define-syntax} \expandhtmlindex{358}
+  \item definition \expandhtmlindex{32}, \expandhtmlindex{210}, 
+		\expandhtmlindex{272}, \expandhtmlindex{348}, 
+		\expandhtmlindex{350}, \expandhtmlindex{356}
+  \item \texttt{denominator} \expandhtmlindex{526}
+  \item derived form \expandhtmlindex{48}
+  \item \texttt{div} \expandhtmlindex{510}
+  \item \texttt{div-and-mod} \expandhtmlindex{508}
+  \item \texttt{div0} \expandhtmlindex{516}
+  \item \texttt{div0-and-mod0} \expandhtmlindex{514}
+  \item {\texttt{dot} (formal semantics)} \expandhtmlindex{916}, 
+		\expandhtmlindex{930}
+  \item {\texttt{dw} (formal semantics)} \expandhtmlindex{956}, 
+		\expandhtmlindex{978}
+  \item dynamic environment \expandhtmlindex{258}
+  \item dynamic extent \expandhtmlindex{256}
+  \item \texttt{dynamic-wind} \expandhtmlindex{764}
+  \item {\texttt{dynamic-wind} (formal semantics)} 
+		\expandhtmlindex{950}, \expandhtmlindex{952}, 
+		\expandhtmlindex{954}
+
+  \indexspace
+
+  \item \texttt{\#{}e} \expandhtmlindex{124}, \expandhtmlindex{168}
+  \item \texttt{else} \expandhtmlindex{380}, \expandhtmlindex{386}
+  \item empty list \expandhtmlindex{174}, \expandhtmlindex{344}, 
+		\expandhtmlindex{592}, \expandhtmlindex{602}, 
+		\expandhtmlindex{604}, \expandhtmlindex{626}
+  \item \texttt{eq?} \expandhtmlindex{434}
+  \item \texttt{equal?} \expandhtmlindex{436}
+  \item equivalence predicate \expandhtmlindex{426}
+  \item \texttt{eqv?} \expandhtmlindex{428}
+  \item {\texttt{eqv?} (formal semantics)} \expandhtmlindex{902}, 
+		\expandhtmlindex{904}, \expandhtmlindex{906}, 
+		\expandhtmlindex{908}, \expandhtmlindex{972}
+  \item \texttt{error} \expandhtmlindex{746}
+  \item escape procedure \expandhtmlindex{58}, \expandhtmlindex{758}
+  \item escape sequence \expandhtmlindex{158}
+  \item \texttt{even?} \expandhtmlindex{482}
+  \item exact \expandhtmlindex{82}, \expandhtmlindex{430}
+  \item \texttt{exact} \expandhtmlindex{462}
+  \item \texttt{exact-integer-sqrt} \expandhtmlindex{562}
+  \item \texttt{exact?} \expandhtmlindex{456}
+  \item exactness \expandhtmlindex{80}
+  \item exceptional situation \expandhtmlindex{218}
+  \item \texttt{exp} \expandhtmlindex{540}
+  \item \texttt{export} \expandhtmlindex{270}
+  \item expression \expandhtmlindex{22}, \expandhtmlindex{274}
+  \item \texttt{expt} \expandhtmlindex{564}
+  \item external representation \expandhtmlindex{106}
+
+  \indexspace
+
+  \item \texttt{\#{}f} \expandhtmlindex{154}, \expandhtmlindex{590}
+  \item false \expandhtmlindex{236}
+  \item \texttt{finite?} \expandhtmlindex{484}
+  \item fixnum \expandhtmlindex{86}
+  \item flonum \expandhtmlindex{88}
+  \item \texttt{floor} \expandhtmlindex{528}
+  \item \texttt{for-each} \expandhtmlindex{644}
+  \item form \expandhtmlindex{34}, \expandhtmlindex{110}
+
+  \indexspace
+
+  \item \texttt{gcd} \expandhtmlindex{520}
+
+  \indexspace
+
+  \item hole \expandhtmlindex{800}
+  \item hygienic \expandhtmlindex{318}
+
+  \indexspace
+
+  \item \texttt{\#{}i} \expandhtmlindex{122}, \expandhtmlindex{170}
+  \item identifier \expandhtmlindex{30}, \expandhtmlindex{118}, 
+		\expandhtmlindex{144}, \expandhtmlindex{198}
+  \item \texttt{identifier-syntax} \expandhtmlindex{796}
+  \item \texttt{if} \expandhtmlindex{366}, \expandhtmlindex{368}
+  \item {\texttt{if} (formal semantics)} \expandhtmlindex{852}, 
+		\expandhtmlindex{854}
+  \item \texttt{imag-part} \expandhtmlindex{572}
+  \item immutable \expandhtmlindex{248}
+  \item implementation restriction \expandhtmlindex{90}, 
+		\expandhtmlindex{224}
+  \item \texttt{import} \expandhtmlindex{268}
+  \item import level \expandhtmlindex{288}
+  \item improper list \expandhtmlindex{606}
+  \item inexact \expandhtmlindex{84}, \expandhtmlindex{432}
+  \item \texttt{inexact} \expandhtmlindex{460}
+  \item \texttt{inexact?} \expandhtmlindex{458}
+  \item \texttt{infinite?} \expandhtmlindex{486}
+  \item infinity \expandhtmlindex{92}
+  \item instance \expandhtmlindex{278}
+  \item instantiation \expandhtmlindex{280}
+  \item integer object \expandhtmlindex{78}
+  \item \texttt{integer->char} \expandhtmlindex{672}
+  \item \texttt{integer-valued?} \expandhtmlindex{454}
+  \item \texttt{integer?} \expandhtmlindex{448}
+
+  \indexspace
+
+  \item keyword \expandhtmlindex{200}, \expandhtmlindex{314}
+
+  \indexspace
+
+  \item \texttt{lambda} \expandhtmlindex{364}
+  \item {\texttt{lambda} (formal semantics)} \expandhtmlindex{806}, 
+		\expandhtmlindex{910}, \expandhtmlindex{912}, 
+		\expandhtmlindex{914}, \expandhtmlindex{918}, 
+		\expandhtmlindex{920}, \expandhtmlindex{928}, 
+		\expandhtmlindex{932}
+  \item \texttt{lcm} \expandhtmlindex{522}
+  \item \texttt{length} \expandhtmlindex{632}
+  \item \texttt{let} \expandhtmlindex{394}, \expandhtmlindex{766}
+  \item \texttt{let*} \expandhtmlindex{398}
+  \item \texttt{let*-values} \expandhtmlindex{414}
+  \item \texttt{let-syntax} \expandhtmlindex{776}
+  \item \texttt{let-values} \expandhtmlindex{410}
+  \item \texttt{letrec} \expandhtmlindex{402}
+  \item {\texttt{letrec} (formal semantics)} \expandhtmlindex{968}
+  \item \texttt{letrec*} \expandhtmlindex{406}
+  \item {\texttt{letrec*} (formal semantics)} \expandhtmlindex{970}
+  \item \texttt{letrec-syntax} \expandhtmlindex{782}
+  \item level \expandhtmlindex{286}
+  \item lexeme \expandhtmlindex{116}
+  \item library \expandhtmlindex{60}, \expandhtmlindex{194}, 
+		\expandhtmlindex{264}
+  \item \texttt{library} \expandhtmlindex{266}
+  \item list \expandhtmlindex{16}
+  \item \texttt{list} \expandhtmlindex{630}
+  \item {\texttt{list} (formal semantics)} \expandhtmlindex{868}, 
+		\expandhtmlindex{870}
+  \item \texttt{list->string} \expandhtmlindex{714}
+  \item \texttt{list->vector} \expandhtmlindex{738}
+  \item \texttt{list-ref} \expandhtmlindex{640}
+  \item \texttt{list-tail} \expandhtmlindex{638}
+  \item \texttt{list?} \expandhtmlindex{628}
+  \item literal \expandhtmlindex{292}
+  \item location \expandhtmlindex{242}
+  \item \texttt{log} \expandhtmlindex{542}, \expandhtmlindex{544}
+
+  \indexspace
+
+  \item macro \expandhtmlindex{50}, \expandhtmlindex{304}
+  \item macro keyword \expandhtmlindex{316}
+  \item macro transformer \expandhtmlindex{306}, \expandhtmlindex{780}
+  \item macro use \expandhtmlindex{310}
+  \item \texttt{magnitude} \expandhtmlindex{574}
+  \item \texttt{make-polar} \expandhtmlindex{568}
+  \item \texttt{make-rectangular} \expandhtmlindex{566}
+  \item \texttt{make-string} \expandhtmlindex{688}, 
+		\expandhtmlindex{690}
+  \item \texttt{make-vector} \expandhtmlindex{724}, 
+		\expandhtmlindex{726}
+  \item \texttt{map} \expandhtmlindex{642}
+  \item \texttt{max} \expandhtmlindex{490}
+  \item may \expandhtmlindex{72}
+  \item \texttt{min} \expandhtmlindex{492}
+  \item \texttt{mod} \expandhtmlindex{512}
+  \item \texttt{mod0} \expandhtmlindex{518}
+  \item must \expandhtmlindex{64}
+  \item must be \expandhtmlindex{260}
+  \item must not \expandhtmlindex{66}
+  \item mutable \expandhtmlindex{246}
+
+  \indexspace
+
+  \item NaN \expandhtmlindex{98}
+  \item \texttt{nan?} \expandhtmlindex{488}
+  \item negative infinity \expandhtmlindex{96}
+  \item \texttt{negative?} \expandhtmlindex{478}
+  \item \texttt{not} \expandhtmlindex{594}
+  \item {\texttt{null} (formal semantics)} \expandhtmlindex{884}, 
+		\expandhtmlindex{934}
+  \item \texttt{null?} \expandhtmlindex{346}, \expandhtmlindex{624}
+  \item {\texttt{null?} (formal semantics)} \expandhtmlindex{886}, 
+		\expandhtmlindex{888}
+  \item number \expandhtmlindex{6}, \expandhtmlindex{74}
+  \item \texttt{number->string} \expandhtmlindex{578}, 
+		\expandhtmlindex{580}, \expandhtmlindex{582}
+  \item \texttt{number?} \expandhtmlindex{334}, \expandhtmlindex{440}
+  \item \texttt{numerator} \expandhtmlindex{524}
+  \item numerical types \expandhtmlindex{76}
+
+  \indexspace
+
+  \item \texttt{\#{}o} \expandhtmlindex{128}, \expandhtmlindex{162}
+  \item object \expandhtmlindex{2}
+  \item \texttt{odd?} \expandhtmlindex{480}
+  \item \texttt{or} \expandhtmlindex{390}
+
+  \indexspace
+
+  \item pair \expandhtmlindex{14}, \expandhtmlindex{600}
+  \item \texttt{pair?} \expandhtmlindex{330}, \expandhtmlindex{608}
+  \item {\texttt{pair?} (formal semantics)} \expandhtmlindex{890}, 
+		\expandhtmlindex{892}
+  \item pattern variable \expandhtmlindex{794}
+  \item phase \expandhtmlindex{276}
+  \item positive infinity \expandhtmlindex{94}
+  \item \texttt{positive?} \expandhtmlindex{476}
+  \item predicate \expandhtmlindex{424}
+  \item prefix notation \expandhtmlindex{24}
+  \item procedure \expandhtmlindex{20}, \expandhtmlindex{38}
+  \item procedure call \expandhtmlindex{40}, \expandhtmlindex{300}
+  \item \texttt{procedure?} \expandhtmlindex{342}, 
+		\expandhtmlindex{438}
+  \item {\texttt{procedure?} (formal semantics)} \expandhtmlindex{924}, 
+		\expandhtmlindex{926}
+  \item proper tail recursion \expandhtmlindex{250}
+
+  \indexspace
+
+  \item \texttt{quasiquote} \expandhtmlindex{768}
+  \item \texttt{quote} \expandhtmlindex{362}
+
+  \indexspace
+
+  \item raise \expandhtmlindex{220}
+  \item {\texttt{raise} (formal semantics)} \expandhtmlindex{820}
+  \item {\texttt{raise-continuable} (formal semantics)} 
+		\expandhtmlindex{818}
+  \item \texttt{rational-valued?} \expandhtmlindex{452}
+  \item \texttt{rational?} \expandhtmlindex{446}
+  \item \texttt{rationalize} \expandhtmlindex{536}
+  \item \texttt{real-part} \expandhtmlindex{570}
+  \item \texttt{real-valued?} \expandhtmlindex{450}
+  \item \texttt{real?} \expandhtmlindex{444}
+  \item referentially transparent \expandhtmlindex{320}
+  \item region \expandhtmlindex{212}, \expandhtmlindex{374}, 
+		\expandhtmlindex{392}, \expandhtmlindex{396}, 
+		\expandhtmlindex{400}, \expandhtmlindex{404}, 
+		\expandhtmlindex{408}, \expandhtmlindex{412}, 
+		\expandhtmlindex{416}
+  \item responsibility \expandhtmlindex{228}
+  \item \texttt{reverse} \expandhtmlindex{636}
+  \item \texttt{(rnrs base (6))} \expandhtmlindex{324}
+  \item \texttt{round} \expandhtmlindex{534}
+
+  \indexspace
+
+  \item safe libraries \expandhtmlindex{232}
+  \item scalar value \expandhtmlindex{656}, \expandhtmlindex{662}
+  \item \texttt{set!} \expandhtmlindex{372}
+  \item {\texttt{set!} (formal semantics)} \expandhtmlindex{922}, 
+		\expandhtmlindex{964}, \expandhtmlindex{966}
+  \item {\texttt{set-car!} (formal semantics)} \expandhtmlindex{880}, 
+		\expandhtmlindex{898}
+  \item {\texttt{set-cdr!} (formal semantics)} \expandhtmlindex{882}, 
+		\expandhtmlindex{900}
+  \item should \expandhtmlindex{68}
+  \item should not \expandhtmlindex{70}
+  \item simplest rational \expandhtmlindex{538}
+  \item \texttt{sin} \expandhtmlindex{546}
+  \item special form \expandhtmlindex{44}
+  \item splicing \expandhtmlindex{422}
+  \item \texttt{sqrt} \expandhtmlindex{560}
+  \item standard library \expandhtmlindex{196}
+  \item string \expandhtmlindex{10}
+  \item \texttt{string} \expandhtmlindex{692}
+  \item \texttt{string->list} \expandhtmlindex{712}
+  \item \texttt{string->number} \expandhtmlindex{584}, 
+		\expandhtmlindex{586}
+  \item \texttt{string->symbol} \expandhtmlindex{652}
+  \item \texttt{string-append} \expandhtmlindex{710}
+  \item \texttt{string-copy} \expandhtmlindex{718}
+  \item \texttt{string-for-each} \expandhtmlindex{716}
+  \item \texttt{string-length} \expandhtmlindex{694}
+  \item \texttt{string-ref} \expandhtmlindex{696}
+  \item \texttt{string<=?} \expandhtmlindex{704}
+  \item \texttt{string<?} \expandhtmlindex{700}
+  \item \texttt{string=?} \expandhtmlindex{698}
+  \item \texttt{string>=?} \expandhtmlindex{706}
+  \item \texttt{string>?} \expandhtmlindex{702}
+  \item \texttt{string?} \expandhtmlindex{338}, \expandhtmlindex{686}
+  \item subform \expandhtmlindex{36}, \expandhtmlindex{112}
+  \item \texttt{substring} \expandhtmlindex{708}
+  \item surrogate \expandhtmlindex{666}
+  \item symbol \expandhtmlindex{12}, \expandhtmlindex{150}
+  \item \texttt{symbol->string} \expandhtmlindex{648}
+  \item \texttt{symbol=?} \expandhtmlindex{650}
+  \item \texttt{symbol?} \expandhtmlindex{332}, \expandhtmlindex{646}
+  \item syntactic abstraction \expandhtmlindex{302}
+  \item syntactic datum \expandhtmlindex{54}, \expandhtmlindex{104}, 
+		\expandhtmlindex{172}
+  \item syntactic keyword \expandhtmlindex{42}, \expandhtmlindex{148}, 
+		\expandhtmlindex{202}, \expandhtmlindex{312}
+  \item syntax violation \expandhtmlindex{230}
+  \item \texttt{syntax-rules} \expandhtmlindex{786}
+
+  \indexspace
+
+  \item \texttt{\#{}t} \expandhtmlindex{152}, \expandhtmlindex{588}
+  \item tail call \expandhtmlindex{254}, \expandhtmlindex{798}
+  \item tail context \expandhtmlindex{252}
+  \item \texttt{tan} \expandhtmlindex{550}
+  \item {\texttt{throw} (formal semantics)} \expandhtmlindex{962}
+  \item top-level program \expandhtmlindex{62}, \expandhtmlindex{192}, 
+		\expandhtmlindex{290}
+  \item transformer \expandhtmlindex{308}, \expandhtmlindex{778}
+  \item true \expandhtmlindex{234}, \expandhtmlindex{370}, 
+		\expandhtmlindex{382}
+  \item \texttt{truncate} \expandhtmlindex{532}
+  \item type \expandhtmlindex{326}
+
+  \indexspace
+
+  \item unbound \expandhtmlindex{214}, \expandhtmlindex{296}
+  \item Unicode \expandhtmlindex{654}
+  \item Unicode scalar value \expandhtmlindex{660}
+  \item \texttt{unquote} \expandhtmlindex{770}
+  \item \texttt{unquote-splicing} \expandhtmlindex{772}
+  \item unspecified behavior \expandhtmlindex{238}
+  \item unspecified values \expandhtmlindex{240}
+
+  \indexspace
+
+  \item valid indices \expandhtmlindex{684}, \expandhtmlindex{720}
+  \item \texttt{values} \expandhtmlindex{760}
+  \item {\texttt{values} (formal semantics)} \expandhtmlindex{802}, 
+		\expandhtmlindex{804}, \expandhtmlindex{826}, 
+		\expandhtmlindex{858}, \expandhtmlindex{864}, 
+		\expandhtmlindex{958}, \expandhtmlindex{974}, 
+		\expandhtmlindex{982}, \expandhtmlindex{986}
+  \item variable \expandhtmlindex{26}, \expandhtmlindex{146}, 
+		\expandhtmlindex{204}, \expandhtmlindex{294}
+  \item vector \expandhtmlindex{18}
+  \item \texttt{vector} \expandhtmlindex{728}
+  \item \texttt{vector->list} \expandhtmlindex{736}
+  \item \texttt{vector-fill!} \expandhtmlindex{740}
+  \item \texttt{vector-for-each} \expandhtmlindex{744}
+  \item \texttt{vector-length} \expandhtmlindex{730}
+  \item \texttt{vector-map} \expandhtmlindex{742}
+  \item \texttt{vector-ref} \expandhtmlindex{732}
+  \item \texttt{vector-set!} \expandhtmlindex{734}
+  \item \texttt{vector?} \expandhtmlindex{340}, \expandhtmlindex{722}
+  \item visit \expandhtmlindex{282}
+  \item visiting \expandhtmlindex{284}
+
+  \indexspace
+
+  \item Whitespace \expandhtmlindex{132}
+  \item {\texttt{with-exception-handler} (formal semantics)} 
+		\expandhtmlindex{812}, \expandhtmlindex{814}, 
+		\expandhtmlindex{816}, \expandhtmlindex{828}
+
+  \indexspace
+
+  \item \texttt{\#{}x} \expandhtmlindex{130}, \expandhtmlindex{166}
+
+  \indexspace
+
+  \item \texttt{zero?} \expandhtmlindex{474}
+
+\end{theindex}

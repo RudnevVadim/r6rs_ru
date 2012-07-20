@@ -1,0 +1,52 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-11.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-13.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_10"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_10">Chapter 10</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_10">Expansion process</a></h1>
+<p>The description of macro expansion in R<sup>6</sup>RS is considerably more involved than
+in R<sup>5</sup>RS: One reason is that the specification of
+expansion in R<sup>5</sup>RS is ambiguous in several important respects.  For
+example, R<sup>5</sup>RS does not specify whether <tt>define</tt> is a binding
+form.  Also, it was not clear whether definitions of macros had to
+precede their uses.  The fact that the set of available bindings may
+influence the matching process of macro expansion further complicates
+matters.  The specific algorithm R<sup>6</sup>RS describes is one of the
+simplest expansion strategies that addresses these questions.  It has
+the advantage that it visits every subform of the source code only
+once.</p>
+<p>
+The description of the expansion process specifically avoids
+specifying the recursive case, where a macro use expands into a
+definition whose binding would influence the expansion of the macro
+use after the fact, as this might lead to confusing programs.
+Implementations should detect such cases as syntax violations.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-11.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-13.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

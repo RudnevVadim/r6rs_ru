@@ -1,0 +1,58 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-app.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Rationale -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-app-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-7.html">previous</a></span><span>, <a href="r6rs-app-Z-H-9.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_F"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-app-Z-H-2.html#node_toc_node_chap_F">Appendix F</a></div><br>
+<a href="r6rs-app-Z-H-2.html#node_toc_node_chap_F">Use of library versions</a></h1>
+<p>Names for libraries may include a version.  An &lt;import spec&gt; may
+designate a set of acceptable versions that may be imported.
+Conversely, only one version of each library should be part of a
+program.  This allows using the &#8220;name part&#8221; of a &lt;library
+name&gt; for different purposes than the &lt;version&gt;. </p>
+<p>
+In particular, if several different variants of a library exists where
+it is feasible that they coexist in the same program, it is
+recommended that different names be used for the variants.  In
+contrast, for compatible versions of a library where coexistence of
+several versions is unnecessary and undesirable, it is recommended
+that the same name and different versions be used.  In particular, it
+is recommended that new versions of libraries that are conservative
+extensions of old ones differ only in the version, not in the name.</p>
+<p>
+Correspondingly, it is recommended that &lt;import spec&gt;s do not
+constrain an import to a single version, but instead specify a wide
+range of acceptable versions of a library.</p>
+<p>
+Implementations that allow two libraries of the same name with
+different versions to coexist in the same program should
+report when processing a program that actually makes use of this
+extension.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-7.html">previous</a></span><span>, <a href="r6rs-app-Z-H-9.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

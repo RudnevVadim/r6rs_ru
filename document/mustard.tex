@@ -1,0 +1,71 @@
+%\chapter{Requirement levels}
+\chapter{Уровни требований}
+\label{requirementchapter}
+
+%The key words ``must'', ``must not'', ``should'',
+%``should not'', ``recommended'', ``may'', and ``optional'' in this
+%report are to be interpreted as described in RFC~2119~\cite{mustard}.
+%Specifically:
+Ключевые слова, ``must'', ``must not'' ``should'', ``should not'', ``recommended'',
+``may'', и ``optional'' в данной работе должны интерпретироваться как описано в RFC~2119~\cite
+{mustard}. А именно:
+
+\begin{description}
+%\item[must]\mainindex{must} This word means that a statement is an absolute
+%  requirement of the specification.
+\item[must]\mainindex{must} Это слово означает, что инструкция является абсолютным требованием
+  спецификации.
+%\item[must not]\mainindex{must not} This phrase means that a statement is an absolute
+%  prohibition of the specification.
+\item[must not]\mainindex{must not} Эта фраза означает, что инструкция является абсолютным запрещением
+  спецификации.
+%\item[should]\mainindex{should} This word, or the adjective ``recommended'', means that
+%  valid reasons may exist in particular circumstances to ignore a
+%  statement, but that the implications must be understood and weighed
+%  before choosing a different course.
+\item[should]\mainindex{should} Это слово, или прилагательное ``recommended'', означают, что
+  в особых обстоятельствах могут существовать веские причины для игнорирования инструкции, но перед
+  выбором иной линии поведения последствия должны быть осознаны и взвешены.
+%\item[should not]\mainindex{should not} This phrase, or the phrase ``not recommended'', means
+%  that valid reasons may exist in particular circumstances when the
+%  behavior of a statement is acceptable, but that the implications
+%  should be understood and weighed before choosing the course described
+%  by the statement.
+\item[should not]\mainindex{should not} Эта фраза, или фраза ``not recommended'', означают, что
+  в особых обстоятельствах могут существовать веские причины для принятия функционирования
+  инструкции, но перед выбором описываемой инструкцией линии поведения последствия
+  должны быть осознаны и взвешены.
+%\item[may]\mainindex{may} This word, or the adjective ``optional'', means that an item
+%  is truly optional.
+\item[may]\mainindex{may} Это слово, или прилагательное ``optional'' означают, что
+  элемент является действительно дополнительным.
+\end{description}
+
+%In particular, this report occasionally uses ``should'' to designate
+%circumstances that are outside the specification of this report, but
+%cannot be practically detected by an implementation; see
+%section~\ref{argumentcheckingsection}.  In such circumstances, a
+%particular implementation may allow the programmer to ignore the
+%recommendation of the report and even exhibit reasonable behavior.
+%However, as the report does not specify the behavior,
+%these programs may be unportable, that is, their execution might
+%produce different results on different implementations.
+В частности, ``should'' в данной работе иногда используется для обозначения обстоятельств,
+лежащих вне спецификации данной работы, но не обнаруживаемых реализацией на практике;
+см. секцию~\ref{argumentcheckingsection}. При таких обстоятельствах конкретная реализация может
+позволить программисту игнорировать рекомендацию в данной работе и даже демонстрировать
+адекватное функционирование. Однако, поскольку данная работа не специфицирует функционирование,
+такие программы могут быть непортируемыми, то есть, их выполнение может привести к различным
+результатам в разных реализациях.
+
+\newpage
+
+%Moreover, this report occasionally uses the phrase ``not required'' to note the
+%absence of an absolute requirement.
+Кроме того, в данной работе иногда используется фраза ``not required'' для обозначения
+отсутствия абсолютного требования.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "r6rs"
+%%% End:

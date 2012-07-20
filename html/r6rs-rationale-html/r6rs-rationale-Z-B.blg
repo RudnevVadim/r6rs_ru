@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: r6rs-rationale-html/r6rs-rationale-Z-B.aux
+The style file: plain.bst
+Database file #1: abbrevs.bib
+Database file #2: rrs.bib
+You've used 39 entries,
+            2118 wiz_defined-function locations,
+            955 strings with 14012 characters,
+and the built_in function-call counts, 10872 in all, are:
+= -- 1064
+> -- 503
+< -- 8
++ -- 206
+- -- 162
+* -- 637
+:= -- 1810
+add.period$ -- 122
+call.type$ -- 39
+change.case$ -- 198
+chr.to.int$ -- 0
+cite$ -- 39
+duplicate$ -- 397
+empty$ -- 907
+format.name$ -- 162
+if$ -- 2318
+int.to.chr$ -- 0
+int.to.str$ -- 39
+missing$ -- 19
+newline$ -- 201
+num.names$ -- 72
+pop$ -- 264
+preamble$ -- 1
+purify$ -- 162
+quote$ -- 0
+skip$ -- 314
+stack$ -- 0
+substring$ -- 437
+swap$ -- 78
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 148
+warning$ -- 0
+while$ -- 92
+width$ -- 41
+write$ -- 424

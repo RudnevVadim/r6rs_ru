@@ -1,0 +1,82 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-4.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-6.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_3"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_3">Chapter 3</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_3">Numbers</a></h1>
+<p></p>
+<p>
+</p>
+<a name="node_sec_3.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_3.1">3.1&nbsp;&nbsp;Infinities, NaNs</a></h2>
+<p></p>
+<p>
+Infinities and NaNs are artifacts that help deal with the
+inexactness of binary floating-point arithmetic.  The semantics
+dealing with infinities and NaNs, or the circumstances leading to
+their generation are somewhat arbitrary.  However, as most Scheme
+implementation use an IEEE-754-conformant implementation&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_18">18</a>]
+of flonums, R<sup>6</sup>RS uses the particular semantics from this standard as
+the basis for the treatment of infinities and NaNs in the report.
+This is also the reason why infinities and NaNs are flonums and thus
+inexact real number objects, allowing Scheme systems to exploit the closure
+properties arising from their being part of the standard IEEE-754
+floating-point representation.  See
+section&nbsp;<a href="r6rs-rationale-Z-H-13.html#node_sec_11.6.6">11.6.6</a> for details on closure
+properties.</p>
+<p>
+Infinities and NaNs are not considered integers (or even rational) by
+R<sup>6</sup>RS.
+Despite this, the <tt>ceiling</tt>, <tt>floor</tt>, <tt>round</tt>, and
+<tt>truncate</tt> procedures (and their <tt>fl</tt>-prefixed counterparts) return an
+infinity or NaN when given an infinity or NaN as an argument.
+This has the advantage of allowing these procedures to take arbitrary
+real (or flonum) arguments but the disadvantage that they do not always
+return integer values.
+The integer values of the mathematical equivalents of
+these procedures are, in fact, infinite for infinite inputs.
+Also, while infinities are not considered integers, they might
+represent infinite integers.
+So the extension to infinities, at least, makes sense.
+The extension to NaNs is somewhat more arbitrary.</p>
+<p>
+R<sup>6</sup>RS intentionally does not require a Scheme implementation to use
+infinities and NaNs as specified in IEEE&nbsp;754.  Hence, support for them
+is optional.</p>
+<p>
+</p>
+<a name="node_sec_3.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_3.2">3.2&nbsp;&nbsp;Distinguished -0.0</a></h2>
+<p>A distinguished -0.0 is another artifact of IEEE&nbsp;754, which can be
+used to construct certain branch cuts.  A Scheme implementation is not
+required to distinguish -0.0.  If it does, however, the behavior of
+the transcendental functions is sensitive to the distinction.  </p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-4.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-6.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

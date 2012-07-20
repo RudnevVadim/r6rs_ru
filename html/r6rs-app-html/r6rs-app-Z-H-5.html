@@ -1,0 +1,120 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-app.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Rationale -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-app-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-4.html">previous</a></span><span>, <a href="r6rs-app-Z-H-6.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_C"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-app-Z-H-2.html#node_toc_node_chap_C">Appendix C</a></div><br>
+<a href="r6rs-app-Z-H-2.html#node_toc_node_chap_C">Use of square brackets</a></h1>
+<p>Even though matched square brackets are synonymous with parentheses in
+the syntax, many programmers use square brackets only in a few select
+places.  In particular, programmers should restrict use of
+square brackets to places in syntactic forms where two consecutive
+open parentheses would otherwise be common.  These are the applicable
+forms specified in the report and the library report:
+</p>
+<ul>
+<li><p>For <tt>cond</tt> forms (see report section&nbsp;on &#8220;Derived
+conditionals&#8221;), a &lt;cond clause&gt; may take one of the follow
+forms:
+</p>
+
+<tt>[&lt;test&gt;&nbsp;&lt;expression<sub>1</sub>&gt;&nbsp;<tt>...</tt>]<br>
+[&lt;test&gt;&nbsp;=&gt;&nbsp;&lt;expression&gt;]<br>
+[else&nbsp;&lt;expression<sub>1</sub>&gt;&nbsp;&lt;expression<sub>2</sub>&gt;&nbsp;<tt>...</tt>]<p></tt>
+</p>
+<li><p>For <tt>case</tt> forms (see report section&nbsp;on &#8220;Derived
+conditionals&#8221;), a &lt;case clause&gt; may take one of the follow
+forms:
+</p>
+
+<tt>[(&lt;datum<sub>1</sub>&gt;&nbsp;<tt>...</tt>)&nbsp;&lt;expression<sub>1</sub>&gt;&nbsp;&lt;expression<sub>2</sub>&gt;&nbsp;<tt>...</tt>]<br>
+[else&nbsp;&lt;expression<sub>1</sub>&gt;&nbsp;&lt;expression<sub>2</sub>&gt;&nbsp;<tt>...</tt>]<p></tt>
+</p>
+<li><p>For <tt>let</tt>, <tt>let*</tt>, <tt>letrec</tt>, <tt>letrec*</tt> forms
+(see report section&nbsp;on &#8220;Binding constructs&#8221;), 
+&lt;bindings&gt; may take the following form:
+</p>
+
+<tt>([&lt;variable<sub>1</sub>&gt;&nbsp;&lt;init<sub>1</sub>&gt;]&nbsp;<tt>...</tt>)<p></tt>
+</p>
+<li><p>For <tt>let-values</tt> and <tt>let-values*</tt> forms 
+(see report section&nbsp;on &#8220;Binding constructs&#8221;),
+&lt;mv-bindings&gt; may take the following form:
+</p>
+
+<tt>([&lt;formals<sub>1</sub>&gt;&nbsp;&lt;init<sub>1</sub>&gt;]&nbsp;<tt>...</tt>)<p></tt>
+</p>
+<li><p>For <tt>syntax-rules</tt> forms (see report
+section&nbsp;on &#8220;Macro transformers&#8221;), a
+&lt;syntax rule&gt; may take the following form:
+</p>
+
+<tt>[&lt;srpattern&gt;&nbsp;&lt;template&gt;]<p></tt>
+</p>
+<li><p>For <tt>identifier-syntax</tt> forms (see report
+section&nbsp;on &#8220;Macro transformers&#8221;), the two
+clauses may take the following form:
+</p>
+
+<tt>[&lt;id<sub>1</sub>&gt;&nbsp;&lt;template<sub>1</sub>&gt;]<br>
+[(set!&nbsp;&lt;id<sub>2</sub>&gt;&nbsp;&lt;pattern&gt;)&nbsp;&lt;template<sub>2</sub>&gt;]<p></tt>
+</p>
+<li><p>For <tt>do</tt> forms (see library
+section&nbsp;on &#8220;Control structures&#8221;), the variable bindings
+may take the following form:
+</p>
+
+<tt>([&lt;variable<sub>1</sub>&gt;&nbsp;&lt;init<sub>1</sub>&gt;&nbsp;&lt;step<sub>1</sub>&gt;]&nbsp;<tt>...</tt>)<p></tt>
+</p>
+<li><p>For <tt>case-lambda</tt> forms (see library
+section&nbsp;on &#8220;Control structures&#8221;), a
+&lt;case-lambda clause&gt; may take the following form:
+</p>
+
+<tt>[&lt;formals&gt;&nbsp;&lt;body&gt;]<p></tt>
+</p>
+<li><p>For <tt>guard</tt> forms (see library section&nbsp;on &#8220;Exceptions&#8221;),
+a &lt;cond clause&gt; may take one of the follow forms:
+</p>
+
+<tt>[&lt;test&gt;&nbsp;&lt;expression<sub>1</sub>&gt;&nbsp;<tt>...</tt>]<br>
+[&lt;test&gt;&nbsp;=&gt;&nbsp;&lt;expression&gt;]&nbsp;<br>
+[else&nbsp;&lt;expression<sub>1</sub>&gt;&nbsp;&lt;expression<sub>2</sub>&gt;&nbsp;<tt>...</tt>]<p></tt>
+</p>
+<li><p>For <tt>syntax-case</tt> forms (see library
+chapter&nbsp;on &#8220;<tt>syntax-case</tt>&#8221;), a
+&lt;syntax-case rule&gt; may take one of the following forms:
+</p>
+
+<tt>[&lt;pattern&gt;&nbsp;&lt;output&nbsp;expression&gt;]<br>
+[&lt;pattern&gt;&nbsp;&lt;fender&gt;&nbsp;&lt;output&nbsp;expression&gt;]<p></tt>
+</p>
+</ul><p></p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-4.html">previous</a></span><span>, <a href="r6rs-app-Z-H-6.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

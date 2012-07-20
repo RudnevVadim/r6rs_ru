@@ -1,0 +1,58 @@
+This is TeX2page, Version 20070803 (MzScheme 371, unix)
+(r6rs.t2p) (r6rs.tex (commands.tex
+l.228 {scheme} already defined
+(revision.tex)) (semantics-commands.tex) [0] (status.tex)
+[1] (intro.tex [2]) (struct.tex [3]) (mustard.tex [4]) (numbers.tex
+[5]) (lex.tex [6]) (basic.tex [7]) (entry.tex [8]) (library.tex
+[9] (r6rs-html/r6rs-Z-G-1.gif)) (programs.tex [10]) (syntax.tex
+[11]) (expansion.tex [12]) (base.tex [13] (r6rs-html/r6rs-Z-G-2.gif)
+(r6rs-html/r6rs-Z-G-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-4.gif) (r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-5.gif) (r6rs-html/r6rs-Z-G-D-3.gif) (r6rs-html/r6rs-Z-G-D-3.gif)
+(r6rs-html/r6rs-Z-G-D-1.gif)) [14] (semantics.tex (r6rs-html/r6rs-Z-G-D-11.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-12.gif)
+(r6rs-html/r6rs-Z-G-D-11.gif) (r6rs-html/r6rs-Z-G-D-10.gif)
+(r6rs-html/r6rs-Z-G-D-12.gif) (r6rs-html/r6rs-Z-G-D-11.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-15.gif)
+(r6rs-html/r6rs-Z-G-D-14.gif) (r6rs-html/r6rs-Z-G-D-10.gif)
+(r6rs-html/r6rs-Z-G-D-14.gif) (r6rs-html/r6rs-Z-G-D-15.gif)
+(r6rs-html/r6rs-Z-G-D-14.gif) (r6rs-html/r6rs-Z-G-D-15.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-11.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-10.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-14.gif)
+(r6rs-html/r6rs-Z-G-D-12.gif) (r6rs-html/r6rs-Z-G-D-15.gif)
+(r6rs-html/r6rs-Z-G-6.gif) (r6-fig-grammar-parti.tex (r6rs-html/r6rs-Z-G-7.gif))
+(r6rs-html/r6rs-Z-G-8.gif) (r6-fig-grammar-partii.tex (r6rs-html/r6rs-Z-G-9.gif))
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-14.gif)
+(r6rs-html/r6rs-Z-G-D-12.gif) (r6rs-html/r6rs-Z-G-D-13.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-14.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-12.gif)
+(r6rs-html/r6rs-Z-G-D-13.gif) (r6rs-html/r6rs-Z-G-D-12.gif)
+(r6rs-html/r6rs-Z-G-D-13.gif) (r6rs-html/r6rs-Z-G-10.gif)
+(r6rs-html/r6rs-Z-G-D-10.gif) (r6rs-html/r6rs-Z-G-D-10.gif)
+(r6-fig-Quote.tex (r6rs-html/r6rs-Z-G-11.gif)) (r6-fig-QtocQtoic.tex
+(r6rs-html/r6rs-Z-G-12.gif)) (r6-fig-Multiple--values--and--call-with-values.tex
+(r6rs-html/r6rs-Z-G-13.gif)) (r6rs-html/r6rs-Z-G-D-14.gif)
+(r6-fig-observable.tex (r6rs-html/r6rs-Z-G-14.gif)) (r6-fig-observable-value.tex
+(r6rs-html/r6rs-Z-G-15.gif)) (r6-fig-Exceptions.tex (r6rs-html/r6rs-Z-G-16.gif))
+(r6-fig-Arithmetic.tex (r6rs-html/r6rs-Z-G-17.gif)) (r6-fig-Basic--syntactic--forms.tex
+(r6rs-html/r6rs-Z-G-18.gif)) (r6-fig-Cons.tex (r6rs-html/r6rs-Z-G-19.gif))
+(r6-fig-Eqv.tex (r6rs-html/r6rs-Z-G-20.gif)) (r6-fig-Procedure--application.tex
+(r6rs-html/r6rs-Z-G-21.gif)) (r6-fig-Var-set!d_.tex (r6rs-html/r6rs-Z-G-22.gif))
+(r6-fig-Apply.tex (r6rs-html/r6rs-Z-G-23.gif)) (r6-fig-circular_.tex
+(r6rs-html/r6rs-Z-G-24.gif)) (r6-fig-Call-cc--and--dynamic-wind.tex
+(r6rs-html/r6rs-Z-G-25.gif)) (r6-fig-TrimpRepoSt.tex (r6rs-html/r6rs-Z-G-26.gif))
+(r6-fig-Letrec.tex (r6rs-html/r6rs-Z-G-27.gif)) (r6-fig-Underspecification.tex
+(r6rs-html/r6rs-Z-G-28.gif))) (derived.tex [15]) (repository.tex
+[16]) (example.tex [17]) (changes.tex [18]) [19] (r6rs-html/r6rs-Z-B.bbl
+[20]) (r6rs-html/r6rs-Z-I.ind)) [21]
+Output written on r6rs-html/r6rs.html, ... (22 pages, 43 images).

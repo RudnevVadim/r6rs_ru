@@ -1,0 +1,82 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-23.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-25.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_22"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_22">Chapter 22</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_22">Arithmetic</a></h1>
+<p></p>
+<a name="node_sec_22.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_22.1">22.1&nbsp;&nbsp;Fixnums and flonums</a></h2>
+<p>Fixnum and flonum arithmetic is already supported by many systems,
+mainly for efficiency. Standardization of fixnum and flonum arithmetic
+increases the portability of code that uses it.  Standardizing the
+precision of fixnum and flonum arithmetic would make it inefficient on
+some systems, which would defeat its purpose.  Therefore, R<sup>6</sup>RS
+specifies the syntax and much of the semantics of fixnum and flonum
+arithmetic, but makes the precision implementation-dependent.</p>
+<p>
+Existing implementations employ different implementation strategies
+for fixnums: Some implement the model specified by R<sup>6</sup>RS (overflows
+cause exceptions), some implement modular arithmetic (overflows &#8220;wrap
+around&#8221;), and others do not handle arithmetic overflows at all.  The
+latter model violates the safety requirement of R<sup>6</sup>RS.  In programs
+that use fixnums instead of generic arithmetic, overflows are
+typically programming mistakes.  The model chosen for R<sup>6</sup>RS has the
+advantage that such overflows do not get silently converted into
+meaningless number objects, and that the programs gets notified of the
+violation through the exception system.</p>
+<p>
+</p>
+<a name="node_sec_22.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_22.2">22.2&nbsp;&nbsp;Bitwise operations</a></h2>
+<p>The bitwise operations have been adapted from the operations described
+in SRFIs 33&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_31">31</a>] and 60&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_20">20</a>].</p>
+<p>
+</p>
+<a name="node_sec_22.3"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_22.3">22.3&nbsp;&nbsp;Notes on individual procedures</a></h2>
+<p></p>
+<dl><dt></dt><dd>
+</dd><dt><b><tt>fx+</tt> and <tt>fx*</tt></b></dt><dd>
+These procedures are restricted to two arguments, because their
+generalizations to three or more arguments would require
+precision proportional to the number of arguments.
+</dd><dt><b><tt>real-&gt;flonum</tt></b></dt><dd>
+This procedure is necessary, because not all real number objects are inexact, and
+because some inexact real number objects may not be flonums.
+</dd><dt><b><tt>flround</tt></b></dt><dd>
+The <tt>flround</tt> procedure rounds to even for consistency with the default rounding
+mode specified by the IEEE floating-point standard.
+</dd><dt><b><tt>flsqrt</tt></b></dt><dd>
+The behavior of <tt>flsqrt</tt> on  <tt>-</tt> 0.0 is consistent with the IEEE
+floating-point standard.
+</dd></dl><p></p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-23.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-25.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

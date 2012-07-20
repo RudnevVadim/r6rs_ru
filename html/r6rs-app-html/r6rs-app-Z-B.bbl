@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{JLS3}
+James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
+\newblock {\em The {Java$^{\textrm{TM}}$} Language Specification}.
+\newblock Addison-Wesley, third edition, 2005.
+
+\bibitem{R5RS}
+Richard Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^5$ report on the algorithmic language {Scheme}.
+\newblock {\em Higher-Order and Symbolic Computation}, 11(1):7--105, 1998.
+
+\bibitem{R6RS}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+  Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}.
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{R6RS-libraries}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+  Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}
+  ({Libraries}).
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\end{thebibliography}

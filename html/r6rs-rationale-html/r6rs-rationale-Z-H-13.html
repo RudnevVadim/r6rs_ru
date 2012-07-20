@@ -1,0 +1,670 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-12.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-14.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_11"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_11">Chapter 11</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_11">Base library</a></h1>
+<p></p>
+<a name="node_sec_11.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.1">11.1&nbsp;&nbsp;Library organization</a></h2>
+<p>The libraries of the Scheme standard are organized according to
+projected use.  Hence, the <tt>(rnrs base (6))</tt> library exports
+procedures and syntactic abstractions that are likely to be useful for
+most Scheme programs and libraries.  Conversely, each of the libraries
+relegated to the separate report on libraries is likely to be missing
+from the imports of a substantial number of programs and libraries.
+Naturally, the specific decisions about this organization and the
+separation of concerns of the libraries are debatable, and represent a
+best attempt of the editors.</p>
+<p>
+A number of secondary criteria were also used in choosing the exports
+of the base library.  In particular, macros transformers defined using
+the facilities of the base library are guaranteed to be hygienic;
+hygiene-breaking transformers are only available through the
+<tt>(rnrs syntax-case (6))</tt> library.</p>
+<p>
+Note that <tt>(rnrs base (6))</tt> is not a &#8220;primitive library&#8221; in the
+sense that all other libraries of the Scheme standard can be
+implemented portably using only its exports.  Moreover, the library
+organization is generally not layered from more primitive to more advanced
+libraries, even though some libraries can certainly be implemented in
+terms of others.
+Such an organization would have little benefit for users and may not
+reflect the internal organization of any particular implementation.
+Instead, libraries are organized by use.</p>
+<p>
+The distinction between primitive and derived features was removed from
+the report for similar reasons.</p>
+<p>
+</p>
+<a name="node_sec_11.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.2">11.2&nbsp;&nbsp;Bodies</a></h2>
+<p>In library bodies and local bodies, all definitions must precede all
+expressions. R<sup>6</sup>RS treats bodies in top-level programs as a special
+case.  Allowing definitions and expressions to be mixed in top-level
+programs has ugly semantics, and introduces a special case, but was
+allowed as a concession to convenience when constructing programs
+rapidly via cut and paste.</p>
+<p>
+Definitions are not interchangeable with expressions, so definitions
+cannot be allowed to appear wherever expressions can appear.
+Composition of definitions with expressions therefore must be
+restricted in some way.  The question is what those restrictions
+should be.</p>
+<p>
+Historically, top-level definitions in Scheme have had a different
+semantics from definitions in bodies.  In a body, definitions serve as
+syntactic sugar for the bindings of a <tt>letrec</tt> (or <tt>letrec*</tt>
+in R<sup>6</sup>RS) that is implicit at the head of every body.</p>
+<p>
+That semantics can be stretched to cover top-level programs by
+converting expressions to definitions of ignored variables, but does
+not easily generalize to allow definitions to be placed anywhere
+within expressions.  Different generalizations of definition placement
+are possible, however a survey of current Scheme code found
+surprisingly few places where such a generalization would be useful.</p>
+<p>
+If such a generalization were adopted, programmers who are
+familiar with Java and similar languages might expect definitions to
+be allowed in the same kinds of contexts that allow declarations in
+Java.  However, Scheme
+definitions have <tt>letrec*</tt> scope, while Java declarations (inside
+a method body) have <tt>let*</tt> scope and cannot be used to define
+recursive procedures.  Moreover, Scheme&#8217;s <tt>begin</tt> expressions do not introduce
+a new scope, while Java&#8217;s curly braces do introduce a new scope.  Also, 
+flow analysis is nontrivial in higher order languages, while Java can
+use a trivial flow analysis to reject programs with undefined
+variables.  Furthermore, Scheme&#8217;s macro expander must locate all definitions,
+while Java has no macro system.   And so on.  Rather than explain how
+those facts justify restricting definitions to appear as top-level
+forms of a body, it is simpler to explain that definitions are just
+syntactic sugar for the bindings of an implicit <tt>letrec*</tt> at the
+head of each body, and to explain that the relaxation of that
+restriction for top-level bodies is (like several other features of
+top-level programs) an ad-hoc special case.</p>
+<p>
+</p>
+<a name="node_sec_11.3"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.3">11.3&nbsp;&nbsp;Export levels</a></h2>
+<p>The <tt>syntax-rules</tt> and <tt>identifier-syntax</tt> forms are
+used to create macro transformers and are thus needed only at
+expansion time, i.e., meta level 1.  </p>
+<p>
+The identifiers <tt>unquote</tt>, <tt>unquote-splicing</tt>, <tt>=&gt;</tt>, and
+<tt>else</tt> serve as literals in the syntax of one or more
+syntactic forms; e.g., <tt>else</tt> serves as a
+literal in the syntax of <tt>cond</tt> and <tt>case</tt>.
+Bindings of these identifiers are exported from the base library so
+that they can be distinguished from other bindings of these identifiers
+or renamed on import.
+The identifiers <tt>...</tt>, <tt>_</tt>, and <tt>set!</tt> serve as
+literals in the syntax of <tt>syntax-rules</tt> and
+<tt>identifier-syntax</tt> forms and are thus exported along with those
+forms with level 1.</p>
+<p>
+</p>
+<a name="node_sec_11.4"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.4">11.4&nbsp;&nbsp;Binding forms</a></h2>
+<p>The <tt>let-values</tt> and <tt>let-values*</tt> forms are compatible with
+SRFI&nbsp;11&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_16">16</a>].</p>
+<p>
+</p>
+<a name="node_sec_11.5"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.5">11.5&nbsp;&nbsp;Equivalence predicates</a></h2>
+<p></p>
+<a name="node_sec_11.5.1"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.5.1">11.5.1&nbsp;&nbsp;Treatment of procedures</a></h3>
+<p>The definition of <tt>eqv?</tt> allows implementations latitude in
+their treatment of procedures: implementations are free either to
+detect or to fail to detect that two procedures are equivalent to each
+other, and can decide whether or not to merge representations of
+equivalent procedures by using the same pointer or bit pattern to
+represent both.  Moreover, they can use implementation techniques such
+as inlining and beta reduction that duplicate otherwise equivalent
+procedures.</p>
+<p>
+</p>
+<a name="node_sec_11.5.2"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.5.2">11.5.2&nbsp;&nbsp;Equivalence of NaNs</a></h3>
+<p>The basic reason why the behavior of <tt>eqv?</tt> is not specified on
+NaNs is that the IEEE-754 standard does not say much about how the
+bits of a NaN are to be interpreted, and explicitly allows
+implementations of that standard to use most of a NaN&#8217;s bits to encode
+implementation-dependent semantics.  The implementors of a Scheme
+system should therefore decide how <tt>eqv?</tt> should interpret those
+bits.</p>
+<p>
+Arguably, R<sup>6</sup>RS should require
+</p>
+
+<tt>(let&nbsp;((x&nbsp;&lt;expression&gt;))&nbsp;(eqv?&nbsp;x&nbsp;x))<p></tt>
+to evaluate to <tt>#t</tt> when &lt;expression&gt; evaluates to a number object;
+both R<sup>5</sup>RS and R<sup>6</sup>RS imply this for certain other types, and for
+most numbers objects, but not for NaNs.  Since the IEEE&nbsp;754 and draft
+IEEE&nbsp;754R&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_19">19</a>] both say that the interpretation of a NaN&#8217;s
+payload is left up to implementations, and implementations of Scheme
+often do not have much control over the implementation of IEEE
+arithmetic, it would be unwise for R<sup>6</sup>RS to insist upon the truth of
+</p>
+
+<tt>(let&nbsp;((x&nbsp;&lt;expression&gt;))<br>
+&nbsp;&nbsp;(or&nbsp;(not&nbsp;(number?&nbsp;x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(eqv?&nbsp;x&nbsp;x)))<p></tt>
+even though that expression is likely to evaluate to <tt>#t</tt> in most
+systems.  For example, a system with delayed boxing of inexact real
+number objects might box the two arguments to <tt>eqv?</tt> separately, the boxing
+process might involve a change of precision, and the two separate
+changes of precision may result in two different payloads.</p>
+<p>
+When <i>x</i> and <i>y</i> are flonums represented in IEEE floating
+point or similar, it is reasonable to implement <tt>(eqv? <i>x</i>
+<i>y</i>)</tt> by a bitwise comparison of the floating-point
+representations.  R<sup>6</sup>RS should not require this, however, because
+</p>
+<ol>
+<li><p>R<sup>6</sup>RS does not require that flonums be represented by a
+floating-point representation,
+</p>
+<li><p>the interpretation of a NaN&#8217;s payload is explicitly
+implementation-dependent according to both the IEEE-754 standard and
+the current draft of its proposed replacement, IEEE&nbsp;754R, and
+</p>
+<li><p>the semantics of Scheme should remain independent
+of bit-level representations.
+</p>
+</ol><p>
+For example, IEEE&nbsp;754, IEEE&nbsp;754R, and the draft R<sup>6</sup>RS all allow the
+external representation <tt>+nan.0</tt> to be read as a NaN whose payload
+encodes the input port and position at which <tt>+nan.0</tt> was read.
+This is no different from any other external representation such as
+<tt>()</tt>, <tt><tt>#</tt>()</tt>, or <tt>324</tt>.  An implementation can
+have arbitrarily many bit-level representations of the empty vector,
+for example, and some do.  That is why the behavior of the <tt>eq?</tt>
+and <tt>eqv?</tt> procedures on vectors cannot be defined by reference to
+bit-level representations, and must instead be defined explicitly.</p>
+<p>
+</p>
+<a name="node_sec_11.5.3"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.5.3">11.5.3&nbsp;&nbsp;<tt>eq?</tt></a></h3>
+<p>It is usually possible to implement <tt>eq?</tt> much more efficiently
+than <tt>eqv?</tt>, for example, as a simple pointer comparison instead
+of as some more complicated operation.  One reason is that it may not
+be possible to compute <tt>eqv?</tt> of two number objects in constant time,
+whereas <tt>eq?</tt> implemented as pointer comparison will always
+finish in constant time.  The <tt>eq?</tt> predicate may be used like
+<tt>eqv?</tt> in applications using procedures to implement objects with
+state since it obeys the same constraints as <tt>eqv?</tt>.</p>
+<p>
+</p>
+<a name="node_sec_11.6"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6">11.6&nbsp;&nbsp;Arithmetic</a></h2>
+<p></p>
+<a name="node_sec_11.6.1"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.1">11.6.1&nbsp;&nbsp;Full numerical tower</a></h3>
+<p>R<sup>5</sup>RS does not require implementations to support the full numeric
+tower.  Consequently, writing portable R<sup>5</sup>RS programs that
+perform substantial arithmetic is difficult; it is unnecessarily difficult even
+to write programs whose arithmetic is portable between different
+implementations in the same category.  The portability problems were
+most easily solved by requiring all implementations to support the
+full numerical tower.</p>
+<p>
+</p>
+<a name="node_sec_11.6.2"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.2">11.6.2&nbsp;&nbsp;IEEE-754 conformance</a></h3>
+<p>As mentioned in chapter&nbsp;<a href="r6rs-rationale-Z-H-5.html#node_chap_3">3</a>, the treatment of
+infinities, NaNs and -0.0, if present in a Scheme implementation, are
+in line with IEEE&nbsp;754&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_18">18</a>] and IEEE&nbsp;754R&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_19">19</a>].
+Analogously, the specification of branch cuts for certain
+transcendental functions have been changed from R<sup>5</sup>RS to conform to
+the IEEE standard.</p>
+<p>
+</p>
+<a name="node_sec_11.6.3"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.3">11.6.3&nbsp;&nbsp;Transcendental functions</a></h3>
+<p>The specification of the transcendental functions follows
+Steele&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_37">37</a>], which in turn cites Penfield&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_26">26</a>];
+refer to these sources for more detailed discussion of branch cuts,
+boundary conditions, and implementation of these functions.</p>
+<p>
+</p>
+<a name="node_sec_11.6.4"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.4">11.6.4&nbsp;&nbsp;Domains of numerical predicates</a></h3>
+<p>The domains of the <tt>finite?</tt>, <tt>infinite?</tt>, and <tt>nan?</tt>
+procedures could be expanded to include all number objects, or perhaps even
+all objects.  However, R<sup>6</sup>RS restricts them to real number objects.
+Expanding <tt>nan?</tt> to complex number objects would involve at least some
+arbitrariness; not expanding its domain while expanding the domains of
+the other two would introduce an irregularity into the domains of
+these three procedures, which are likely to be used together.  It is
+easier for programmers who wish to use these procedures with complex
+number objects to express their intent in terms of the real-only versions
+than it would be for the editors to guess their intent.</p>
+<p>
+</p>
+<a name="node_sec_11.6.5"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.5">11.6.5&nbsp;&nbsp;Numerical types</a></h3>
+<p>Scheme&#8217;s numerical types are the exactness types exact and inexact,
+the tower types integer, rational, real, complex, and number, and the
+Cartesian product of the exactness types with the tower types, where
+&lt; <em>t</em><sub>1</sub>, <em>t</em><sub>2</sub> &gt;; is regarded as a subtype of both <em>t</em><sub>1</sub> and
+<em>t</em><sub>2</sub>.</p>
+<p>
+These types have an aesthetic symmetry to them, but they are not equally
+important
+In practice,
+there is reason to believe that the most important numerical types are
+the exact integer objects, the exact rational number objects, the
+inexact real number objects, and the
+inexact complex number objects.  This section explores one of the reasons
+those four types are important in practice, and why real number objects have an
+exact zero as their imaginary part in R<sup>6</sup>RS (a change from R<sup>5</sup>RS).</p>
+<p>
+</p>
+<a name="node_sec_11.6.6"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.6">11.6.6&nbsp;&nbsp;Closure Properties</a></h3>
+<p></p>
+<p>
+Each of the four types mentioned above corresponds to
+a set of values that turns up repeatedly as the natural domain or
+range of the functions that are computed by Scheme&#8217;s standard
+procedures.  The reason these types turn up so often is that they are
+closed under certain sets of operations.</p>
+<p>
+The exact integer objects, for example, are closed under the integral
+operations of addition, subtraction, and multiplication.  The exact
+rational number objects are closed under the rational operations, which consist of
+the integral operations plus division (although division by zero is a special
+case).  The real number objects (and inexact real number objects) are closed
+under some (often inexact) interpretation of rational and irrational
+operations such as <tt>exp</tt> and <tt>sin</tt>, but are not closed under operations
+such as <tt>log</tt>, <tt>sqrt</tt>, and <tt>expt</tt>.  The complex (and
+inexact complex) number objects are closed under the largest set of
+operations.</p>
+<p>
+</p>
+<a name="node_sec_11.6.6.1"></a>
+<h4 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.6.1">11.6.6.1&nbsp;&nbsp;Representation-specific operations</a></h4>
+<p>A naive implementation of Scheme&#8217;s arithmetic operations is slow
+compared to the arithmetic operations of most other languages, mainly
+because most operations must perform case dispatch on the
+representation types of their arguments.  The potential for this case
+dispatch arises when the type of an operation&#8217;s argument is
+represented by a union of two or more representation types, or because
+the operation must raise an exception when given an argument of
+an incorrect type.  (The second reason can be regarded as a special
+case of the first.)</p>
+<p>
+To make Scheme&#8217;s arithmetic more efficient, many implementations
+provide sets of operations whose domain is restricted to a single
+representation type, and which are not expected to raise an exception
+when given arguments of incorrect type when used in an unsafe mode.</p>
+<p>
+Alternatively, or in addition, several compilers perform a
+flow analysis that attempts to infer the representation types of
+expressions.  When a single representation type can be inferred for
+each argument of an operation, and those types match the types
+expected by some representation-specific version of the operation,
+then the compiler can substitute the specific version for the more
+general version that was specified in the source code.</p>
+<p>
+</p>
+<a name="node_sec_11.6.6.2"></a>
+<h4 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.6.2">11.6.6.2&nbsp;&nbsp;Flow analysis</a></h4>
+<p>Flow analysis is performed by solving the type and interval
+constraints that arise from such things as:</p>
+<p>
+</p>
+<ul>
+<li><p>the types of literal constants, e.g. <tt>2</tt> is an exact
+integer object
+that is known to be within the interval [2,2]</p>
+<p>
+</p>
+<li><p>conditional control flow that is predicated on known
+inequalities, e.g., <tt>(if (&lt; i n) &lt;expression<sub>1</sub>&gt; &lt;expression<sub>2</sub>&gt;)</tt></p>
+<p>
+</p>
+<li><p>conditional control flow that is predicated on known type
+predicates, e.g., <tt>(if (real? x) &lt;expression<sub>1</sub>&gt; &lt;expression<sub>2</sub>&gt;)</tt></p>
+<p>
+</p>
+<li><p>the closure properties of known operations (for example, <tt>(+
+<i>flonum<sub>1</sub></i> <i>flonum<sub>2</sub></i>)</tt> always evaluates to a flonum)
+</p>
+</ul><p></p>
+<p>
+The purpose of flow analysis (as motivated in this section) is to infer a
+single representation type for each argument of an operation.  That
+places a premium on predicates and closure properties from which a
+single representation type can be inferred.</p>
+<p>
+In practice, the most important single representation types are
+fixnum, flonum, and compnum.  (A compnum is a pair of flonums,
+representing an inexact complex number object.)  These are the representation
+types for which a short sequence of machine code can be generated when
+the representation type is known, but for which considerably less
+efficient code will probably have to be generated when the
+representation type cannot be inferred.</p>
+<p>
+The fixnum representation type is not closed under any operation of
+R<sup>5</sup>RS, so it is hard for flow analysis to infer the fixnum type from
+portable code.  Sometimes the combination of a more general type (e.g.,
+exact integer object) and an interval (e.g., [0,<em>n</em>), where <em>n</em> is known to
+be a fixnum) can imply the fixnum representation type.  Adding
+fixnum-specific operations that map fixnums to fixnums 
+greatly increases the number of fixnum
+representation types that a compiler can infer.</p>
+<p>
+The flonum representation type is not closed under operations such as
+<tt>sqrt</tt> and <tt>expt</tt>, so flow analysis tends to break down in the
+presence of those operations.  This is unfortunate, because those
+operations are normally used only with arguments for which the result
+is expected to be a flonum.  Adding flonum-specific versions such as
+<tt>flsqrt</tt> and <tt>flexpt</tt> improves the effectiveness of flow
+analysis.</p>
+<p>
+R<sup>5</sup>RS creates a more insidious problem by defining <tt>(real?
+<i>z</i>)</tt> to be true if and only if <tt>(zero? (imag-part
+<i>z</i>))</tt> is true.  This means, for example, that <tt>-2.5+0.0i</tt>
+is real.  If <tt>-2.5+0.0i</tt> is represented as a compnum, then the
+compiler cannot rely on <tt>x</tt> being a flonum in the consequent
+of <tt>(if (real? x) &lt;expression<sub>1</sub>&gt; &lt;expression<sub>2</sub>&gt;)</tt>.  This
+problem could be fixed by writing all of the arithmetic operations so
+that any compnum with a zero imaginary part is converted to a flonum
+before it is returned, but that merely creates an analogous problem
+for compnum arithmetic, as explained below.  R<sup>6</sup>RS adopted a proposal
+by Brad Lucier to fix the problem: <tt>(real? <i>z</i>)</tt> is now true
+if and only if <tt>(imag-part <i>z</i>)</tt> is an exact zero.</p>
+<p>
+The compnum representation type is closed under virtually all
+operations, provided no operation that accepts two compnums as its
+argument ever returns a flonum.  To work around the problem described
+in the paragraph above, several implementations automatically convert
+compnums with a zero imaginary part to the flonum representation.
+This practice virtually destroys the effectiveness of flow analysis
+for inferring the compnum representation, so it is not a good
+workaround.  To improve the effectiveness of flow analysis, it is
+better to change the definition of Scheme&#8217;s real number objects as described
+in the paragraph above.</p>
+<p>
+</p>
+<a name="node_sec_11.6.6.3"></a>
+<h4 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.6.3">11.6.6.3&nbsp;&nbsp;div and mod</a></h4>
+<p>Given arithmetic on exact integer objects of arbitrary precision, it is a
+trivial matter to derive signed and unsigned integer types of finite
+range from it by modular reduction.  For example 32-bit signed
+two-complement arithmetic behaves like computing with the residue
+classes &#8220;mod 2<sup>32</sup>&#8221;, where the set { <tt>-</tt> 2<sup>31</sup>, <tt>...</tt>,
+2<sup>31</sup> <tt>-</tt> 1} has been chosen to represent the residue classes.
+Likewise, unsigned 32-bit arithmetic also behaves like computing &#8220;mod
+2<sup>32</sup>&#8221;, but with a different set of representatives {0, <tt>...</tt>,
+2<sup>32</sup> <tt>-</tt> 1}.</p>
+<p>
+Unfortunately, the R<sup>5</sup>RS operations <tt>quotient</tt>, <tt>remainder</tt>,
+and <tt>modulo</tt> are not ideal for this purpose.  In the following
+example, <tt>remainder</tt> fails to transport the additive group
+structure of the integers over to the residues modulo 3.
+</p>
+
+<tt>(remainder&nbsp;(+&nbsp;-2&nbsp;3)&nbsp;3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;&nbsp;1,<br>
+(remainder&nbsp;(+&nbsp;(remainder&nbsp;-2&nbsp;3)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(remainder&nbsp;3&nbsp;3))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;&nbsp;-2<p></tt>
+In fact, <tt>modulo</tt> should have been used, producing residues in
+{0,1,2}. For modular reduction with symmetric residues, i.e., in
+{ <tt>-</tt> 1,0,1} in the example, it is necessary to define a more
+complicated reduction altogether.</p>
+<p>
+Therefore, <tt>quotient</tt>, <tt>remainder</tt>, and <tt>modulo</tt> have been
+replaced in R<sup>6</sup>RS by the <tt>div</tt>, <tt>mod</tt>, <tt>div0</tt>, and <tt>mod0</tt> procedures, which are more useful when implementing modular
+reduction.  The underlying mathematical functions <em>d</em><em>i</em><em>v</em>,
+<em>m</em><em>o</em><em>d</em>, <em>d</em><em>i</em><em>v</em><sub>0</sub>, and <em>m</em><em>o</em><em>d</em><sub>0</sub> (see report
+section&nbsp;on &#8220;Integer division&#8221;) have been
+adapted from the <em>d</em><em>i</em><em>v</em> and <em>m</em><em>o</em><em>d</em> operations by Egner
+et al.&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_11">11</a>].  They differ in the representatives
+from the residue classes they return: <em>d</em><em>i</em><em>v</em> and <em>m</em><em>o</em><em>d</em>
+always compute a non-negative residue, whereas <em>d</em><em>i</em><em>v</em><sub>0</sub> and
+<em>m</em><em>o</em><em>d</em><sub>0</sub> compute a residue from a set centered on 0.  The
+former can be used, for example, to implement unsigned fixed-width
+arithmetic, whereas the latter correspond to two&#8217;s-complement arithmetic.</p>
+<p>
+These operations differ slightly from the <em>d</em><em>i</em><em>v</em> and
+<em>m</em><em>o</em><em>d</em> operations from Egner et al.  The latter make both operations
+available through a single pair of operations that distinguish
+between the two cases for residues by the sign of the divisor (as well
+as returning 0 for a zero divisor).  Splitting the operations into
+two sets of procedures avoids potential confusion.</p>
+<p>
+The procedures <tt>modulo</tt>, <tt>remainder</tt>, and <tt>quotient</tt> from
+R<sup>5</sup>RS can easily be defined in terms of <tt>div</tt> and <tt>mod</tt>.</p>
+<p>
+</p>
+<a name="node_sec_11.6.7"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.7">11.6.7&nbsp;&nbsp;Numerical predicates</a></h3>
+<p>The behavior of the numerical type predicates <tt>complex?</tt>, <tt>real?</tt>, <tt>rational?</tt>, and <tt>integer?</tt> is motivated by
+closure properties described in
+section&nbsp;<a href="#node_sec_11.6.6">11.6.6</a>.  Conversely, the procedures
+<tt>real-valued?</tt>, <tt>rational-valued?</tt>, and <tt>integer-valued?</tt>
+test whether a given number object can be coerced to the specified type
+without loss of numerical accuracy.</p>
+<p>
+</p>
+<a name="node_sec_11.6.8"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.6.8">11.6.8&nbsp;&nbsp;Notes on individual procedures</a></h3>
+<p></p>
+<dl><dt></dt><dd>
+</dd><dt><b><tt>round</tt></b></dt><dd>
+The <tt>round</tt> procedure rounds to even for consistency with the
+default rounding mode specified by the IEEE floating-point standard.
+</dd><dt><b><tt>sqrt</tt></b></dt><dd>
+The behavior of <tt>sqrt</tt> is consistent with the IEEE floating-point
+standard.
+</dd><dt><b><tt>number-&gt;string</tt></b></dt><dd>
+If <i>z</i> is an inexact number object represented using binary floating
+point, and the radix is 10, then the expression listed in the
+specification is normally satisfied by a result containing a decimal
+point.  The unspecified case allows for infinities, NaNs, and
+representations other than binary floating-point.
+</dd></dl><p></p>
+<p>
+</p>
+<a name="node_sec_11.7"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.7">11.7&nbsp;&nbsp;Characters and strings</a></h2>
+<p>While R<sup>5</sup>RS specifies characters and strings in terms of its own,
+limited character set, R<sup>6</sup>RS specifies characters and strings in
+terms of Unicode.  The primary goal of the design change was to
+improve the portability of Scheme programs that manipulate text, while
+preserving a maximum of backward compatibility with R<sup>5</sup>RS.</p>
+<p>
+R<sup>6</sup>RS defines characters to be representations of Unicode scalar
+values, and strings to be indexed sequences of characters.  This is a
+different representation for Unicode text than the representations
+chosen by some other programming languages such as Java or
+C<tt>#</tt>, which use UTF-16 code units as the basis for the type
+of characters.</p>
+<p>
+The representation of Unicode text corresponds to the lowest semantic
+level of the Unicode standard: The Unicode standard specifies most
+semantic properties in terms of Unicode scalar values.  Thus, Unicode
+strings in Scheme allow the straightforward implementation of
+semantically sensitive algorithms on strings in terms of these scalar
+values.</p>
+<p>
+In contrast, UTF-16 is a specific encoding for Unicode text, and
+performing semantic manipulation on UTF-16 representations of text is
+awkward.  Choosing UTF-16 as the basis for the string representation
+would have meant that a character object potentially carries no
+semantic information at all, as surrogates have to be combined
+pairwise to yield the corresponding Unicode scalar value.  (As a
+result, Java provides some semantic operations on Unicode text 
+in two overloadings, one for character objects and one for
+integers that are Unicode scalar values.)</p>
+<p>
+The surrogates cover a numerical range deliberately omitted from the
+set of Unicode scalar values.  Hence, surrogates have no
+representation as characters&#8212;they are merely an artifact of the
+design of UTF-16.  Including surrogates in the set of characters
+introduces complications similar to the complications of using UTF-16
+directly.  In particular, most Unicode consortium standards and
+recommendations explicitly prohibit unpaired surrogates, including the
+UTF-8 encoding, the UTF-16 encoding, the UTF-32 encoding, and
+recommendations for implementing the ANSI C <tt>wchar_t</tt> type.  Even
+UCS-4, which originally permitted a larger range of values that
+includes the surrogate range, has been redefined to match UTF-32
+exactly. That is, the original UCS-4 range was shrunk and surrogates
+were excluded.</p>
+<p>
+Arguably, a higher-level model for text could be used as the basis for
+Scheme&#8217;s character and string types, such as grapheme clusters.
+However, no design satisfying the goals stated above was available
+when the report was written.</p>
+<p>
+</p>
+<a name="node_sec_11.8"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.8">11.8&nbsp;&nbsp;Symbols</a></h2>
+<p>Symbols have exactly the properties needed to represent
+identifiers in programs, and so most implementations
+of Scheme use them internally for that purpose.  Symbols are useful
+for many other applications; for instance, they may be used the way
+enumerated values are used in C and Pascal.</p>
+<p>
+</p>
+<a name="node_sec_11.9"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.9">11.9&nbsp;&nbsp;Control features</a></h2>
+<p></p>
+<a name="node_sec_11.9.1"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.9.1">11.9.1&nbsp;&nbsp;<tt>call-with-current-continuation</tt></a></h3>
+<p>A common use of <tt>call-with-current-continuation</tt> is for
+structured, non-local exits from loops or procedure bodies, but in fact
+<tt>call-with-current-continuation</tt> is useful for implementing a
+wide variety of advanced control structures.</p>
+<p>
+Most programming languages incorporate one or more special-purpose
+escape constructs with names like <tt>exit</tt>, <tt>return</tt>, or
+even <tt>goto</tt>.  In 1965, however, Peter Landin&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_23">23</a>]
+invented a general-purpose escape operator called the J-operator.  John
+Reynolds&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_28">28</a>] described a simpler but equally powerful
+construct in 1972.  The <tt>catch</tt> special form described by Sussman
+and Steele in the 1975 report on Scheme is exactly the same as
+Reynolds&#8217;s construct, though its name came from a less general construct
+in MacLisp.  Several Scheme implementors noticed that the full power of the
+<tt>catch</tt> construct could be provided by a procedure instead of by a
+special syntactic construct, and the name
+<tt>call-with-current-continuation</tt> was coined in 1982.  This name is
+descriptive, but opinions differ on the merits of such a long name, and
+some people use the name <tt>call/cc</tt> instead.</p>
+<p>
+</p>
+<a name="node_sec_11.9.2"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.9.2">11.9.2&nbsp;&nbsp;<tt>dynamic-wind</tt></a></h3>
+<p>The <tt>dynamic-wind</tt> procedure was added more recently in R<sup>5</sup>RS.
+It enables implementing a number of abstractions related to
+continuations, such as implementing a general dynamic environment, and
+making sure that finalization code runs when some dynamic extent
+expires.  More generally, the <tt>dynamic-wind</tt> procedure provides a
+guarantee that
+</p>
+
+<tt>(dynamic-wind&nbsp;<i>before</i>&nbsp;<i>thunk</i>&nbsp;<i>after</i>)<p></tt>
+cannot call <i>thunk</i> unless <i>before</i> has been called, and it
+cannot leave the dynamic extent of the call to <i>thunk</i> without
+calling <i>after</i>. These evaluations are never nested.  As this
+guarantee is crucial for enabling many of the uses of <tt>call-with-current-continuation</tt> and <tt>dynamic-wind</tt>, both are
+specified jointly.</p>
+<p>
+</p>
+<a name="node_sec_11.9.3"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.9.3">11.9.3&nbsp;&nbsp;Multiple values</a></h3>
+<p>Many computations conceptually return several results.  Scheme
+expressions implementing such computations can return the results as
+several values using the <tt>values</tt> procedure.  Of course, such
+expressions could alternatively return the results as a single
+compound value, such as a list, vector, or a record.  However, values
+in programs usually represent conceptual wholes; in many cases,
+multiple results yielded by a computation lack this coherence.
+Moreover, this would be inefficient in many implementations, and a
+compiler would need to perform significant optimization to remove the
+boxing and unboxing inherent in packaging multiple results into a
+single values.  Most importantly, the mechanism for multiple values in
+Scheme establishes a standard policy for returning several results
+from an expression, which makes constructing interfaces and using them
+easier.</p>
+<p>
+R<sup>6</sup>RS does not specify the semantics of multiple values completely.
+In particular, it does not specify what happens when several
+(or zero) values are returned to a continuation that implicitly
+accepts only one value.  In particular:
+</p>
+
+<tt>((lambda&nbsp;(x)&nbsp;x)&nbsp;(values&nbsp;1&nbsp;2))&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;&nbsp;<i>unspecified</i><p></tt>
+Whether an implementation must raise an exception when evaluating such
+an expression, or should exhibit some other, non-exceptional behavior
+is a contentious issue.  Variations of two different and fundamentally
+incompatible positions on this issue exist, each with its own merits:
+</p>
+<ol>
+<li><p>Passing the wrong number of values to a continuation is
+typically a violation, one that implementations ideally detect and report.</p>
+<p>
+</p>
+<li><p>There is no such thing as returning the wrong number of values
+to a continuation.  In particular, continuations not created by <tt>begin</tt> or <tt>call-with-values</tt> should ignore all but the first
+value, and treat zero values as one unspecified value.
+</p>
+</ol><p>
+R<sup>6</sup>RS allows an implementation to take either position.  Moreover, it
+allows an implementation to let <tt>set!</tt>, <tt>vector-set!</tt>, and
+other effect-only operators to pass zero values to their
+continuations, preventing a program from making obscure use of the return
+value.  This causes a potential compatibility problem with R<sup>5</sup>RS,
+which specifies that such expression return a single unspecified
+value, but the benefits of the change were deemed to outweigh the costs.</p>
+<p>
+</p>
+<a name="node_sec_11.10"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.10">11.10&nbsp;&nbsp;Macro transformers</a></h2>
+<p></p>
+<a name="node_sec_11.10.1"></a>
+<h3 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_11.10.1">11.10.1&nbsp;&nbsp;<tt>syntax-rules</tt></a></h3>
+<p>While the first subform of &lt;srpattern&gt; of a &lt;syntax rule&gt;
+in a <tt>syntax-rules</tt> form (see report
+section&nbsp;on &#8220;Macro transformers&#8221;)
+may be an identifier, the
+identifier is not involved in the matching and is not considered a
+pattern variable or literal identifier.  This is actually important,
+as the identifier is most often the keyword used to identify the
+macro.  The scope of the keyword is determined by the binding form or
+syntax definition that binds it to the associated macro transformer.
+If the keyword were a pattern variable or literal identifier, then the
+template that follows the pattern would be within its scope regardless
+of whether the keyword were bound by <tt>let-syntax</tt>, <tt>letrec-syntax</tt>, or <tt>define-syntax</tt>.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-12.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-14.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

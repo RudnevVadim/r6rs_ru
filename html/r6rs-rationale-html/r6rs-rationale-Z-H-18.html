@@ -1,0 +1,54 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-17.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-19.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_16"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_16">Chapter 16</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_16">Sorting</a></h1>
+<p>The procedures of the <tt>(rnrs sorting (6))</tt> library provide simple
+interfaces to sorting algorithms useful to many programs.  In
+particular, <tt>list-sort</tt> and <tt>vector-sort</tt> guarantee stable
+sorting using <em>O</em>(<em>n</em> lg <em>n</em>) calls to the comparison procedure.
+Straightforward implementations of merge sort&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_7">7</a>] have
+the desired properties.  Note that, at least with merge sort,
+stability carries no significant implementation or performance burden.</p>
+<p>
+The choice of &#8220;strictly less than&#8221; for the comparison relation is
+consistent with the most common choice of existing Scheme libraries
+for sorting.  Moreover, using a procedure returning three possible
+values (for less than, equal, and greater than) instead of a boolean
+comparison procedure would make calling the sorting procedures less
+convenient, with no discernible performance advantage.</p>
+<p>
+The specification of the <tt>vector-sort!</tt> procedure is meant to
+allow an implementation using quicksort&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_17">17</a>], hence the <em>O</em>(<em>n</em><sup>2</sup>)
+bound on the number of calls to the comparison procedure, and the
+omission of the stability requirement.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-17.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-19.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

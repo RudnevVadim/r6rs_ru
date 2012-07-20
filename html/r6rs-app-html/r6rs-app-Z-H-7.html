@@ -1,0 +1,76 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-app.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Rationale -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-app-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-6.html">previous</a></span><span>, <a href="r6rs-app-Z-H-8.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_E"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-app-Z-H-2.html#node_toc_node_chap_E">Appendix E</a></div><br>
+<a href="r6rs-app-Z-H-2.html#node_toc_node_chap_E">Source code representation</a></h1>
+<p></p>
+<p>
+The report does not specify how source code is represented and stored.
+The only requirement the report imposes is that the source code of a
+top-level program (see report
+section&nbsp;on &#8220;Top-level program
+syntax&#8221;) or a script (see section&nbsp;<a href="r6rs-app-Z-H-6.html#node_sec_D.2">D.2</a>) be
+delimited.  The source code of a library is self-delimiting in the
+sense that, if the beginning of a library form can be identified, so
+can the end.</p>
+<p>
+Implementations may take radically different approaches to storing
+source code for libraries, among them: files in the file system where
+each file contains an arbitrary number of library forms, files in the
+file system where each file contains exactly one library form, records
+in a database, and data structures in memory.</p>
+<p>
+Similarly, programs and scripts may be stored in a variety of
+formats.  Platform constraints may restrict the choices available to
+an implementation, which is why the report neither mandates nor
+recommends a specific method for storage.</p>
+<p>
+Implementations may provide a means for importing libraries coming
+from the outside via an interface that accepts a UTF-8 text file in
+Unicode Normalization Form C where line endings are encoded as linefeed
+characters.  Such text files may contain an arbitrary number of
+library forms.  (Authors of such files should include an
+<tt>#!r6rs</tt> comment if the file is written purely with the lexical
+and datum syntax described in the report.  See report
+section&nbsp;on &#8220;Whitespace and
+comments&#8221;.)  After importing such a file, the libraries defined in
+it should be available to other libraries and files.  An
+implementation may store the file as is, or convert it to some storage
+format to achieve this.</p>
+<p>
+Similarly, implementations may provide a means for executing a program
+represented as a UTF-8 text file containing its source code.  Again,
+authors of such files should include an <tt>#!r6rs</tt>
+comment if the file is written purely with the lexical and datum syntax
+described in the report.  This report does not describe a file format
+that allows both libraries and programs to appear in the same file.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-app.html">first</a>, <a href="r6rs-app-Z-H-6.html">previous</a></span><span>, <a href="r6rs-app-Z-H-8.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-app-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

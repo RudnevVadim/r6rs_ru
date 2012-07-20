@@ -1,0 +1,180 @@
+\begin{thebibliography}{10}
+
+\bibitem{Naur63}
+J.~W. Backus, F.L. Bauer, J.Green, C.~Katz, J.~McCarthy~P. Naur, A.~J. Perlis,
+  H.~Rutishauser, K.~Samuelson, B.~Vauquois J.~H. Wegstein, A.~van Wijngaarden,
+  and M.~Woodger.
+\newblock Revised report on the algorithmic language {Algol 60}.
+\newblock {\em Communications of the {ACM}}, 6(1):1--17, 1963.
+
+\bibitem{Bawden88}
+Alan Bawden and Jonathan Rees.
+\newblock Syntactic closures.
+\newblock In {\em {ACM} Conference on {Lisp} and Functional Programming}, pages
+  86--95, Snowbird, Utah, 1988. {ACM} Press.
+
+\bibitem{mustard}
+Scott Bradner.
+\newblock Key words for use in {RFC}s to indicate requirement levels.
+\newblock \url{http://www.ietf.org/rfc/rfc2119.txt}, March 1997.
+\newblock RFC 2119.
+
+\bibitem{howtoprint}
+Robert~G. Burger and R.~Kent Dybvig.
+\newblock Printing floating-point numbers quickly and accurately.
+\newblock In {\em Proc.~of the {ACM SIGPLAN} '96 Conference on Programming
+  Language Design and Implementation}, pages 108--116, Philadelphia, PA, USA,
+  May 1996. {ACM} Press.
+
+\bibitem{propertailrecursion}
+William Clinger.
+\newblock Proper tail recursion and space efficiency.
+\newblock In Keith Cooper, editor, {\em Proceedings of the 1998 Conference on
+  Programming Language Design and Implementation}, pages 174--185, Montreal,
+  Canada, June 1998. ACM Press.
+\newblock Volume 33(5) of {SIGPLAN} Notices.
+
+\bibitem{macrosthatwork}
+William Clinger and Jonathan Rees.
+\newblock Macros that work.
+\newblock In {\em Proc.~ 1991 {ACM} SIGPLAN Symposium on Principles of
+  Programming Languages}, pages 155--162, Orlando, Florida, January 1991. {ACM}
+  Press.
+
+\bibitem{howtoread}
+William~D. Clinger.
+\newblock How to read floating point numbers accurately.
+\newblock In {\em Proc.~Conference on Programming Language Design and
+  Implementation '90}, pages 92--101, White Plains, New York, USA, June 1990.
+  {ACM}.
+
+\bibitem{csug7}
+R.~Kent Dybvig.
+\newblock {\em {Chez Scheme} Version 7 User's Guide}.
+\newblock Cadence Research Systems, 2005.
+\newblock \url{http://www.scheme.com/csug7/}.
+
+\bibitem{syntacticabstraction}
+R.~Kent Dybvig, Robert Hieb, and Carl Bruggeman.
+\newblock Syntactic abstraction in {Scheme}.
+\newblock {\em Lisp and Symbolic Computation}, 1(1):53--75, 1988.
+
+\bibitem{ff:monograph}
+Matthias Felleisen and Matthew Flatt.
+\newblock Programming languages and lambda calculi.
+\newblock {\url{http://www.cs.utah.edu/plt/publications/pllc.pdf}}, 2003.
+
+\bibitem{mzscheme352}
+Matthew Flatt.
+\newblock {\em {PLT MzScheme}: Language Manual}.
+\newblock Rice University, University of Utah, July 2006.
+\newblock \url{http://download.plt-scheme.org/doc/352/html/mzscheme/}.
+
+\bibitem{Scheme84}
+Daniel~P. Friedman, Christopher Haynes, Eugene Kohlbecker, and Mitchell Wand.
+\newblock {\em {Scheme} 84 interim reference manual}.
+\newblock Indiana University, January 1985.
+\newblock Indiana University Computer Science Technical Report 153.
+
+\bibitem{IEEE}
+{IEEE} standard 754-1985. {IEEE} standard for binary floating-point arithmetic,
+  1985.
+\newblock Reprinted in SIGPLAN Notices, 22(2):9-25, 1987.
+
+\bibitem{R5RS}
+Richard Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^5$ report on the algorithmic language {Scheme}.
+\newblock {\em Higher-Order and Symbolic Computation}, 11(1):7--105, 1998.
+
+\bibitem{hygienic}
+Eugene~E. Kohlbecker, Daniel~P. Friedman, Matthias Felleisen, and Bruce Duba.
+\newblock Hygienic macro expansion.
+\newblock In {\em Proceedings of the 1986 {ACM} Conference on {Lisp} and
+  Functional Programming}, pages 151--161, 1986.
+
+\bibitem{Kohlbecker86}
+Eugene~E. {Kohlbecker Jr.}
+\newblock {\em Syntactic Extensions in the Programming Language Lisp}.
+\newblock PhD thesis, Indiana University, August 1986.
+
+\bibitem{mf:op-r5rs}
+Jacob Matthews and Robert~Bruce Findler.
+\newblock An operational semantics for {R5RS Scheme}.
+\newblock In J.~Michael Ashley and Michael Sperber, editors, {\em Proceedings
+  of the Sixth Workshop on Scheme and Functional Programming}, pages 41--54,
+  Tallin, Estonia, September 2005.
+\newblock Indiana University Technical Report TR619.
+
+\bibitem{mf:scheme-op-sem}
+Jacob Matthews and Robert~Bruce Findler.
+\newblock An operational semantics for {S}cheme.
+\newblock {\em Journal of Functional Programming}, 2007.
+\newblock
+  {\href{http://journals.cambridge.org/action/displayAbstract?fromPage=online&%
+aid=1268564&fulltextType=RA&fileId=S0956796807006478}{From
+  \url{http://www.cambridge.org/journals/JFP/}}}.
+
+\bibitem{mfff:plt-redex}
+Jacob Matthews, Robert~Bruce Findler, Matthew Flatt, and Matthias Felleisen.
+\newblock A visual environment for developing context-sensitive term rewriting
+  systems.
+\newblock In {\em Proc.~15th Conference on Rewriting Techniques and
+  Applications}, Aachen, June 2004. Springer-Verlag.
+
+\bibitem{MITScheme}
+MIT Department of Electrical Engineering and Computer Science.
+\newblock {\em {Scheme} manual, seventh edition}, September 1984.
+
+\bibitem{Rees84}
+Jonathan~A. Rees, Norman I.~Adams IV, and James~R. Meehan.
+\newblock {\em The {T} manual}.
+\newblock Yale University Computer Science Department, fourth edition, January
+  1984.
+
+\bibitem{R6RS-appendices}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, and Anton van Straaten.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}
+  ({Non-Normative} appendices).
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{R6RS-rationale}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, and Anton van Straaten.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}
+  ({Rationale}).
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{R6RS-libraries}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+  Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}
+  ({Libraries}).
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{CLtL}
+Guy~Lewis {Steele Jr.}
+\newblock {\em {Common Lisp}: The Language}.
+\newblock Digital Press, Burlington, MA, second edition, 1990.
+
+\bibitem{TImanual85}
+Texas Instruments, Inc.
+\newblock {\em {TI Scheme} Language Reference Manual}, November 1985.
+\newblock Preliminary version 1.0.
+
+\bibitem{Unicode}
+The {Unicode Consortium}.
+\newblock The {Unicode} standard, version 5.0.0.
+\newblock defined by: {\em The Unicode Standard, Version 5.0} (Boston, MA,
+  Addison-Wesley, 2007. ISBN 0-321-48091-0), 2007.
+
+\bibitem{WaiteGoos}
+William~M. Waite and Gerhard Goos.
+\newblock {\em Compiler Construction}.
+\newblock Springer-Verlag, 1984.
+
+\bibitem{wf:type-soundness}
+Andrew Wright and Matthias Felleisen.
+\newblock A syntactic approach to type soundness.
+\newblock {\em Information and Computation}, 115(1):38--94, 1994.
+\newblock {F}irst appeared as Technical Report TR160, Rice University, 1991.
+
+\end{thebibliography}

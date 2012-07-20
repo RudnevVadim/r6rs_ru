@@ -1,0 +1,14 @@
+This is TeX2page, Version 20070803 (MzScheme 371, unix)
+(r6rs-lib.t2p) (r6rs-lib.tex (commands.tex
+l.228 {scheme} already defined
+(revision.tex)) (status.tex) [0] (unicode.tex [1]) (bytevector.tex
+[2] (r6rs-lib-html/r6rs-lib-Z-G-1.gif) (r6rs-lib-html/r6rs-lib-Z-G-2.gif))
+(list.tex [3]) (sort.tex [4]) (control.tex [5]) (records.tex
+[6]) (exc.tex [7] (r6rs-lib-html/r6rs-lib-Z-G-3.gif)) (io.tex
+[8] (iocond.tex) (portio.tex) (convio.tex)) (files.tex [9])
+(programlib.tex [10]) (arith.tex [11] (r6rs-lib-html/r6rs-lib-Z-G-4.gif))
+(syntax-case.tex [12]) (hashtable.tex [13]) (enum.tex [14])
+(complib.tex [15]) (eval.tex [16]) (setcar.tex [17]) (stringset.tex
+[18]) (r5rscompat.tex [19]) (r6rs-lib-html/r6rs-lib-Z-B.bbl
+[20]) (r6rs-lib-html/r6rs-lib-Z-I.ind)) [21]
+Output written on r6rs-lib-html/r6rs-lib.html, ... (22 pages, 4 images).

@@ -1,0 +1,102 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-2.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-4.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_1"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_1">Chapter 1</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_1">Historical background</a></h1>
+<p>The <i>Revised<sup>6</sup> Report on the Algorithmic Language Scheme</i>
+(R<sup>6</sup>RS for short) is the sixth of the Revised Reports on Scheme.</p>
+<p>
+The first description of Scheme was written by Gerald Jay
+Sussman and Guy Lewis Steele Jr. in
+1975&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_39">39</a>].  A revised report by Steele and
+Sussman&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_38">38</a>]
+appeared in 1978 and described the evolution
+of the language as its MIT implementation was upgraded to support an
+innovative compiler&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_36">36</a>].  Three distinct projects began in
+1981 and 1982 to use variants of Scheme for courses at MIT, Yale, and
+Indiana University&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_27">27</a>,&nbsp;<a href="r6rs-rationale-Z-H-31.html#node_bib_25">25</a>,&nbsp;<a href="r6rs-rationale-Z-H-31.html#node_bib_12">12</a>].  An introductory
+computer science textbook using Scheme was published in
+1984&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_1">1</a>].  A number of textbooks describing and using Scheme
+have been published since&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_8">8</a>].</p>
+<p>
+As Scheme became more widespread,
+local dialects began to diverge until students and researchers
+occasionally found it difficult to understand code written at other
+sites.
+Fifteen representatives of the major implementations of Scheme therefore
+met in October 1984 to work toward a better and more widely accepted
+standard for Scheme.
+Participating in this workshop were Hal Abelson, Norman Adams, David
+Bartley, Gary Brooks, William Clinger, Daniel Friedman, Robert Halstead,
+Chris Hanson, Christopher Haynes, Eugene Kohlbecker, Don Oxley, Jonathan Rees,
+Guillermo Rozas, Gerald Jay Sussman, and Mitchell Wand.
+Their report&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_3">3</a>], edited by Will Clinger,
+was published at MIT and Indiana University in the summer of 1985.
+Further revision took place in the spring of 1986&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_4">4</a>] (edited
+by Jonathan Rees and Will Clinger),
+and in the spring of 1988&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_5">5</a>] (also edited by Will Clinger and
+Jonathan Rees).  Another revision published in 1998, edited
+by Richard Kelsey, Will Clinger and Jonathan Rees,
+reflected further revisions agreed upon in a meeting at Xerox PARC in
+June 1992&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_21">21</a>].</p>
+<p>
+Attendees of the Scheme Workshop in Pittsburgh in October 2002 formed
+a Strategy Committee to discuss a process for producing new revisions
+of the report.  The strategy committee drafted a charter for Scheme
+standardization.  This charter, together with a process for selecting
+editorial committees for producing new revisions of the report, was
+confirmed by the attendees of the Scheme Workshop in Boston in
+November 2003.  Subsequently, a Steering Committee according to the
+charter was selected, consisting of Alan Bawden, Guy L. Steele Jr.,
+and Mitch Wand.  An editors&#8217; committee charged with producing a new
+revision of the report was
+also formed at the end of 2003, consisting of Will Clinger,
+R. Kent Dybvig, Marc Feeley, Matthew Flatt, Richard Kelsey, Manuel
+Serrano, and Mike Sperber, with Marc Feeley acting as Editor-in-Chief.
+Richard Kelsey resigned from the committee in April 2005, and was
+replaced by Anton van Straaten.  
+Marc Feeley and Manuel Serrano
+resigned from the committee in January 2006.  Subsequently, the charter
+was revised to reduce the size of the editors&#8217; committee to five and
+to replace the office of Editor-in-Chief by a Chair and a Project
+Editor&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_29">29</a>].  R. Kent Dybvig served as Chair, and
+Mike Sperber served as Project Editor.  Will Clinger resigned from the
+committee in May 2007.
+Parts of the report were posted as Scheme Requests for Implementation
+(SRFIs, see <a href="http://srfi.schemers.org/">http://srfi.schemers.org/</a>)
+and discussed by the community before being revised and finalized for
+the report&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_14">14</a>,&nbsp;<a href="r6rs-rationale-Z-H-31.html#node_bib_2">2</a>,&nbsp;<a href="r6rs-rationale-Z-H-31.html#node_bib_6">6</a>,&nbsp;<a href="r6rs-rationale-Z-H-31.html#node_bib_13">13</a>,&nbsp;<a href="r6rs-rationale-Z-H-31.html#node_bib_9">9</a>].
+Jacob Matthews and Robby
+Findler wrote the operational semantics for the language core,
+based on an earlier semantics for the language of the
+&#8220;Revised<sup>5</sup> Report&#8221;&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_24">24</a>].</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-2.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-4.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

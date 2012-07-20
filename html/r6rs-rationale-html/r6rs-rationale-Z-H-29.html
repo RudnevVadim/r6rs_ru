@@ -1,0 +1,57 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-28.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-30.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_27"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_27">Chapter 27</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_27">Mutable pairs</a></h1>
+<p>The presence of mutable pairs causes numerous problems:
+</p>
+<ul>
+<li><p>It complicates the specification of higher-order procedures that
+operate on lists.
+</p>
+<li><p>It inhibits certain compiler optimizations such as
+deforestation.
+</p>
+<li><p>It complicates reasoning about programs that use lists.
+</p>
+<li><p>It complicates the implementation of procedures that accept
+variable numbers of arguments.
+</p>
+</ul><p>
+However, removing mutable pairs from the language entirely would have
+caused significant compatibility problems for existing code.  As a
+compromise, the <tt>set-car!</tt> and <tt>set-cdr!</tt> procedures were
+moved to a separate library.  This facilitates statically determining
+if a program ever mutates pairs, encourages writing programs that do
+not mutate pairs, and may help deprecating or removing mutable pairs
+in the future.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-28.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-30.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

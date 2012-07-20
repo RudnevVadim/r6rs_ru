@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{barendregt}
+Henk~P. Barendregt.
+\newblock Introduction to the lambda calculus.
+\newblock {\em Nieuw Archief voor Wisenkunde}, 4(2):337--372, 1984.
+
+\bibitem{bawdenquasiquote}
+Alan Bawden.
+\newblock Quasiquotation in {Lisp}.
+\newblock In Olivier Danvy, editor, {\em Proc.~ ACM SIGPLAN Workshop on Partial
+  Evaluation and Semantics-Based Program Manipulation PEPM '99}, pages 4--12,
+  San Antonio, Texas, USA, January 1999.
+\newblock BRICS Notes Series NS-99-1.
+
+\bibitem{macrosthatwork}
+William Clinger and Jonathan Rees.
+\newblock Macros that work.
+\newblock In {\em Proc.~ 1991 {ACM} SIGPLAN Symposium on Principles of
+  Programming Languages}, pages 155--162, Orlando, Florida, January 1991. {ACM}
+  Press.
+
+\bibitem{IEN137}
+Danny Cohen.
+\newblock On holy wars and a plea for peace.
+\newblock \url{http://www.ietf.org/rfc/ien/ien137.txt}, April 1980.
+\newblock Internet Engineering Note 137.
+
+\bibitem{UnicodeUAX29}
+Mark Davis.
+\newblock {Unicode} {Standard} {Annex} \#29: Text boundaries.
+\newblock \url{http://www.unicode.org/reports/tr29/}, 2006.
+
+\bibitem{syntacticabstraction}
+R.~Kent Dybvig, Robert Hieb, and Carl Bruggeman.
+\newblock Syntactic abstraction in {Scheme}.
+\newblock {\em Lisp and Symbolic Computation}, 1(1):53--75, 1988.
+
+\bibitem{IEEE}
+{IEEE} standard 754-1985. {IEEE} standard for binary floating-point arithmetic,
+  1985.
+\newblock Reprinted in SIGPLAN Notices, 22(2):9-25, 1987.
+
+\bibitem{R5RS}
+Richard Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^5$ report on the algorithmic language {Scheme}.
+\newblock {\em Higher-Order and Symbolic Computation}, 11(1):7--105, 1998.
+
+\bibitem{hygienic}
+Eugene~E. Kohlbecker, Daniel~P. Friedman, Matthias Felleisen, and Bruce Duba.
+\newblock Hygienic macro expansion.
+\newblock In {\em Proceedings of the 1986 {ACM} Conference on {Lisp} and
+  Functional Programming}, pages 151--161, 1986.
+
+\bibitem{RFC4122}
+P.~Leach, M.~Mealling, and R.~Salz.
+\newblock A {Universally} {Unique} {IDentifier} ({UUID}) {URN} namespace.
+\newblock \url{http://www.ietf.org/rfc/rfc4122.txt}, July 2005.
+\newblock RFC 4122.
+
+\bibitem{R6RS}
+Michael Sperber, R.~Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+  Kelsey, William Clinger, and Jonathan Rees.
+\newblock Revised$^6$ report on the algorithmic language {Scheme}.
+\newblock \url{http://www.r6rs.org/}, 2007.
+
+\bibitem{Unicode}
+The {Unicode Consortium}.
+\newblock The {Unicode} standard, version 5.0.0.
+\newblock defined by: {\em The Unicode Standard, Version 5.0} (Boston, MA,
+  Addison-Wesley, 2007. ISBN 0-321-48091-0), 2007.
+
+\bibitem{Waddellphd}
+Oscar Waddell.
+\newblock {\em Extending the Scope of Syntactic Abstraction}.
+\newblock PhD thesis, Indiana University, August 1999.
+\newblock \url{http://www.cs.indiana.edu/~owaddell/papers/thesis.ps.gz}.
+
+\end{thebibliography}

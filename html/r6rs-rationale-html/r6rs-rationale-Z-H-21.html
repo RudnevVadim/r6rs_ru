@@ -1,0 +1,101 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-20.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-22.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_19"></a>
+<h1 class=chapter>
+<div class=chapterheading><a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_19">Chapter 19</a></div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_19">Conditions and exceptions</a></h1>
+<p></p>
+<a name="node_sec_19.1"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_19.1">19.1&nbsp;&nbsp;Exceptions</a></h2>
+<p>The goals of the exception mechanism are to help programmers share
+code which relies on exception handling, and to provide information on
+violations of specifications of procedures and syntactic forms.  This
+exception mechanism is an extension of SRFI&nbsp;34&nbsp;[<a href="r6rs-rationale-Z-H-31.html#node_bib_22">22</a>], which
+was primarily designed to meet the first goal.  However, it has proven
+suitable for addressing the second goal of dealing with violations as
+well.   (More on the second goal below in the discussion of the
+condition system.)</p>
+<p>
+For some violations such the use of unsupported NaNs or infinities, as
+well as other applications, an exception handler may be able to
+repair the cause of the exception, for example by substituting a
+suitable object for the NaN or infinity.  Therefore, the exception
+mechanism extends SRFI&nbsp;34 by continuable exceptions, and specifies the
+continuation of an exception handler</p>
+<p>
+</p>
+<a name="node_sec_19.2"></a>
+<h2 class=section><a href="r6rs-rationale-Z-H-2.html#node_toc_node_sec_19.2">19.2&nbsp;&nbsp;Conditions</a></h2>
+<p>Conditions are values that communicate information about exceptional
+situations between parts of a program. Code that detects an exception
+may be in a different part of the program than the code that handles
+it. In fact, the former may have been written independently from the
+latter.  Consequently, to facilitate effective handling of exceptions,
+conditions should communicate as much information as possible as
+accurately as possible, and still allow effective handling by code
+that did not precisely anticipate the nature of the exception that has
+occurred.</p>
+<p>
+The <tt>(rnrs conditions (6))</tt> library provides two mechanisms to
+enable this kind of communication:
+</p>
+<ul>
+<li><p>subtyping (through record types) among condition types allows
+handling code to determine the general nature of an exception even
+though it does not anticipate its exact nature,
+</p>
+<li><p>compound conditions allow an exceptional situation to be
+described in multiple ways.
+</p>
+</ul><p>
+As an example, a networking error that occurs during a file operation
+on a remote drive fits two descriptions: &#8220;networking error&#8221; and
+&#8220;file-system error&#8221;.  An exception handler might only look for one of
+the two.  Compound conditions are a simple solution to this problem.
+Moreover, compound conditions also make providing auxiliary
+information as part of the condition object, such as an error message,
+easier.</p>
+<p>
+The standard condition hierarchy makes an important distinction
+between <em>errors</em> and <em>violations</em>: An error is an
+exceptional situation in the environment, which the program cannot
+avoid or prevent.  For example, I/O errors are represented by
+condition types that are subtypes of <tt>&amp;error</tt>.  Violations, on the
+other hand, are exceptional situations that the program could have
+avoided.  Violations are typically programming mistakes.  The
+distinction between the two is not always clear, and it may be possible
+but inordinately difficult or expensive to detect certain violations.
+The use of <tt>eval</tt> also blurs the distinction.  Nevertheless, many
+cases do allow distinguishing between errors and violations.
+Consequently, exception handlers that handle errors are common,
+whereas programmers should introduce exception handlers that handle
+violations with great care.</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-20.html">previous</a></span><span>, <a href="r6rs-rationale-Z-H-22.html">next</a></span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>

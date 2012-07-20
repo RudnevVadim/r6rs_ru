@@ -1,0 +1,296 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--
+
+Generated from r6rs-rationale.tex by tex2page, v 20070803
+(running on MzScheme 371, unix), 
+(c) Dorai Sitaram, 
+http://www.ccs.neu.edu/~dorai/tex2page/tex2page-doc.html
+
+-->
+<head>
+<title>
+Revised^6 Report on the Algorithmic Language Scheme - Non-Normative Appendices -
+</title>
+<link rel="stylesheet" type="text/css" href="r6rs-rationale-Z-S.css" title=default>
+<meta name=robots content="index,follow">
+</head>
+<body>
+<div id=slidecontent>
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-30.html">previous</a></span><span class=disable>, next</span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+<p></p>
+<a name="node_chap_Temp_3"></a>
+<h1 class=chapter>
+<div class=chapterheading>&nbsp;</div><br>
+<a href="r6rs-rationale-Z-H-2.html#node_toc_node_chap_Temp_3">References</a></h1>
+<p></p>
+<table>
+<p>
+</p>
+<tr><td align=right valign=top><a name="node_bib_1"></a>[1]&nbsp;&nbsp;</td><td valign=top>
+Harold Abelson, Gerald&nbsp;Jay Sussman, and Julie Sussman.
+ <i>Structure and Interpretation of Computer Programs</i>.
+ MIT Press, Cambridge, Mass., second edition, 1996.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_2"></a>[2]&nbsp;&nbsp;</td><td valign=top>
+Will Clinger, R.&nbsp;Kent Dybvig, Michael Sperber, and Anton van Straaten.
+ SRFI&nbsp;76: R6RS records.
+ <a href="http://srfi.schemers.org/srfi-76/">http://srfi.schemers.org/srfi-76/</a>, 2005.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_3"></a>[3]&nbsp;&nbsp;</td><td valign=top>
+William Clinger.
+ The revised revised report on Scheme, or an uncommon Lisp.
+ Technical Report MIT Artificial Intelligence Memo 848, MIT, 1985
+1985.
+ Also published as Computer Science Department Technical Report 174,
+Indiana University, June 1985.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_4"></a>[4]&nbsp;&nbsp;</td><td valign=top>
+William Clinger and Jonathan Rees.
+ Revised<sup>3</sup> report on the algorithmic language Scheme.
+ <i>SIGPLAN Notices</i>, 21(12):37&#8211;79, December 1986.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_5"></a>[5]&nbsp;&nbsp;</td><td valign=top>
+William Clinger and Jonathan Rees.
+ Revised<sup>4</sup> report on the algorithmic language Scheme.
+ <i>Lisp Pointers</i>, IV(3):1&#8211;55, July&#8211;September 1991.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_6"></a>[6]&nbsp;&nbsp;</td><td valign=top>
+William&nbsp;D Clinger and Michael Sperber.
+ SRFI&nbsp;77: Preliminary proposal for R6RS arithmetic.
+ <a href="http://srfi.schemers.org/srfi-77/">http://srfi.schemers.org/srfi-77/</a>, 2005.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_7"></a>[7]&nbsp;&nbsp;</td><td valign=top>
+Thomas&nbsp;H. Cormen, Charles&nbsp;E. Leiserson, Ronald&nbsp;L. Rivest, and Clifford Stein.
+ <i>Introduction to Algorithms</i>.
+ MIT Press and McGraw-Hill, second edition, 2001.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_8"></a>[8]&nbsp;&nbsp;</td><td valign=top>
+R.&nbsp;Kent Dybvig.
+ <i>The Scheme Programming Language</i>.
+ MIT Press, Cambridge, third edition, 2003.
+ <a href="http://www.scheme.com/tspl3/">http://www.scheme.com/tspl3/</a>.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_9"></a>[9]&nbsp;&nbsp;</td><td valign=top>
+R.&nbsp;Kent Dybvig.
+ SRFI&nbsp;93: R6RS <a href="syntax-case">syntax-case</a> macros.
+ <a href="http://srfi.schemers.org/srfi-93/">http://srfi.schemers.org/srfi-93/</a>, 2006.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_10"></a>[10]&nbsp;&nbsp;</td><td valign=top>
+R.&nbsp;Kent Dybvig, Robert Hieb, and Carl Bruggeman.
+ Syntactic abstraction in Scheme.
+ <i>Lisp and Symbolic Computation</i>, 1(1):53&#8211;75, 1988.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_11"></a>[11]&nbsp;&nbsp;</td><td valign=top>
+Sebastian Egner, Richard Kelsey, and Michael Sperber.
+ Cleaning up the tower: Numbers in Scheme.
+ In Olin Shivers and Oscar Waddell, editors, <i>Proceedings of the
+Fifth Workshop on Scheme and Functional Programming</i>, pages 109&#8211;120,
+Snowbird, October 2004.
+ Indiana University Technical Report TR600.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_12"></a>[12]&nbsp;&nbsp;</td><td valign=top>
+Carol Fessenden, William Clinger, Daniel&nbsp;P. Friedman, and Christopher Haynes.
+ <i>Scheme 311 version 4 reference manual</i>.
+ Indiana University, 1983.
+ Indiana University Computer Science Technical Report 137, Superseded
+by&nbsp;[<a href="#node_bib_15">15</a>].<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_13"></a>[13]&nbsp;&nbsp;</td><td valign=top>
+Matthew Flatt and Kent Dybvig.
+ SRFI&nbsp;83: R6RS library syntax.
+ <a href="http://srfi.schemers.org/srfi-83/">http://srfi.schemers.org/srfi-83/</a>, 2005.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_14"></a>[14]&nbsp;&nbsp;</td><td valign=top>
+Matthew Flatt and Marc Feeley.
+ SRFI&nbsp;75: R6RS unicode data.
+ <a href="http://srfi.schemers.org/srfi-75/">http://srfi.schemers.org/srfi-75/</a>, 2005.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_15"></a>[15]&nbsp;&nbsp;</td><td valign=top>
+Daniel&nbsp;P. Friedman, Christopher Haynes, Eugene Kohlbecker, and Mitchell Wand.
+ <i>Scheme 84 interim reference manual</i>.
+ Indiana University, January 1985.
+ Indiana University Computer Science Technical Report 153.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_16"></a>[16]&nbsp;&nbsp;</td><td valign=top>
+Lars&nbsp;T Hansen.
+ SRFI&nbsp;11: Syntax for receiving multiple values.
+ <a href="http://srfi.schemers.org/srfi-11/">http://srfi.schemers.org/srfi-11/</a>, 2000.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_17"></a>[17]&nbsp;&nbsp;</td><td valign=top>
+C.&nbsp;A.&nbsp;R. Hoare.
+ Algorithm 63 (partition); 64 (quicksort); 65 (find).
+ <i>Communications of the ACM</i>, 4(7):321&#8211;322, 1961.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_18"></a>[18]&nbsp;&nbsp;</td><td valign=top>
+IEEE standard 754-1985. IEEE standard for binary floating-point arithmetic,
+1985.
+ Reprinted in SIGPLAN Notices, 22(2):9-25, 1987.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_19"></a>[19]&nbsp;&nbsp;</td><td valign=top>
+IEEE 754 revision work.
+ <a href="http://grouper.ieee.org/groups/754/revision.html">http://grouper.ieee.org/groups/754/revision.html</a>, 2006.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_20"></a>[20]&nbsp;&nbsp;</td><td valign=top>
+Aubrey Jaffer.
+ SRFI&nbsp;60: Integers as bits.
+ <a href="http://srfi.schemers.org/srfi-60/">http://srfi.schemers.org/srfi-60/</a>, 2005.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_21"></a>[21]&nbsp;&nbsp;</td><td valign=top>
+Richard Kelsey, William Clinger, and Jonathan Rees.
+ Revised<sup>5</sup> report on the algorithmic language Scheme.
+ <i>Higher-Order and Symbolic Computation</i>, 11(1):7&#8211;105, 1998.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_22"></a>[22]&nbsp;&nbsp;</td><td valign=top>
+Richard Kelsey and Michael Sperber.
+ SRFI&nbsp;34: Exception handling for programs.
+ <a href="http://srfi.schemers.org/srfi-34/">http://srfi.schemers.org/srfi-34/</a>, 2002.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_23"></a>[23]&nbsp;&nbsp;</td><td valign=top>
+Peter Landin.
+ A correspondence between Algol 60 and Church&#8217;s lambda notation:
+Part I.
+ <i>Communications of the ACM</i>, 8(2):89&#8211;101, February 1965.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_24"></a>[24]&nbsp;&nbsp;</td><td valign=top>
+Jacob Matthews and Robert&nbsp;Bruce Findler.
+ An operational semantics for Scheme.
+ <i>Journal of Functional Programming</i>, 2007.
+ <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=1268564&fulltextType=RA&fileId=S0956796807006478">From
+<a href="http://www.cambridge.org/journals/JFP/">http://www.cambridge.org/journals/JFP/</a></a>.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_25"></a>[25]&nbsp;&nbsp;</td><td valign=top>
+MIT Department of Electrical Engineering and Computer Science.
+ <i>Scheme manual, seventh edition</i>, September 1984.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_26"></a>[26]&nbsp;&nbsp;</td><td valign=top>
+Paul Penfield Jr.
+ Principal values and branch cuts in complex APL.
+ In <i>APL &#8217;81 Conference Proceedings</i>, pages 248&#8211;256, San
+Francisco, September 1981. ACM SIGAPL.
+ Proceedings published as <i>APL Quote Quad</i> 12(1).<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_27"></a>[27]&nbsp;&nbsp;</td><td valign=top>
+Jonathan&nbsp;A. Rees and Norman I.&nbsp;Adams IV.
+ T: a dialect of lisp or lambda: The ultimate software tool.
+ In <i>ACM Conference on Lisp and Functional Programming</i>, pages
+114&#8211;122, Pittsburgh, Pennsylvania, 1982. ACM Press.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_28"></a>[28]&nbsp;&nbsp;</td><td valign=top>
+John&nbsp;C. Reynolds.
+ Definitional interpreters for higher-order programming languages.
+ In <i>ACM Annual Conference</i>, pages 717&#8211;740, July 1972.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_29"></a>[29]&nbsp;&nbsp;</td><td valign=top>
+Scheme standardization charter.
+ <a href="http://www.schemers.org/Documents/Standards/Charter/mar-2006.txt">http://www.schemers.org/Documents/Standards/Charter/mar-2006.txt</a>, March
+2006.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_30"></a>[30]&nbsp;&nbsp;</td><td valign=top>
+Olin Shivers.
+ SRFI&nbsp;1: List library.
+ <a href="http://srfi.schemers.org/srfi-1/">http://srfi.schemers.org/srfi-1/</a>, 1999.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_31"></a>[31]&nbsp;&nbsp;</td><td valign=top>
+Olin Shivers.
+ SRFI&nbsp;33: Integer bitwise-operation library.
+ <a href="http://srfi.schemers.org/srfi-33/">http://srfi.schemers.org/srfi-33/</a>, 2002.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_32"></a>[32]&nbsp;&nbsp;</td><td valign=top>
+Michael Sperber.
+ SRFI&nbsp;74: Octet-addressed binary blocks.
+ <a href="http://srfi.schemers.org/srfi-74/">http://srfi.schemers.org/srfi-74/</a>, 2005.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_33"></a>[33]&nbsp;&nbsp;</td><td valign=top>
+Michael Sperber, R.&nbsp;Kent Dybvig, Matthew Flatt, and Anton van Straaten.
+ Revised<sup>6</sup> report on the algorithmic language Scheme
+(Non-Normative appendices).
+ <a href="http://www.r6rs.org/">http://www.r6rs.org/</a>, 2007.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_34"></a>[34]&nbsp;&nbsp;</td><td valign=top>
+Michael Sperber, R.&nbsp;Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+Kelsey, William Clinger, and Jonathan Rees.
+ Revised<sup>6</sup> report on the algorithmic language Scheme.
+ <a href="http://www.r6rs.org/">http://www.r6rs.org/</a>, 2007.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_35"></a>[35]&nbsp;&nbsp;</td><td valign=top>
+Michael Sperber, R.&nbsp;Kent Dybvig, Matthew Flatt, Anton van Straaten, Richard
+Kelsey, William Clinger, and Jonathan Rees.
+ Revised<sup>6</sup> report on the algorithmic language Scheme
+(Libraries).
+ <a href="http://www.r6rs.org/">http://www.r6rs.org/</a>, 2007.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_36"></a>[36]&nbsp;&nbsp;</td><td valign=top>
+Guy&nbsp;Lewis Steele Jr.
+ Rabbit: a compiler for Scheme.
+ Technical Report MIT Artificial Intelligence Laboratory Technical
+Report 474, MIT, May 1978.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_37"></a>[37]&nbsp;&nbsp;</td><td valign=top>
+Guy&nbsp;Lewis Steele Jr.
+ <i>Common Lisp: The Language</i>.
+ Digital Press, Burlington, MA, second edition, 1990.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_38"></a>[38]&nbsp;&nbsp;</td><td valign=top>
+Guy&nbsp;Lewis Steele Jr. and Gerald&nbsp;Jay Sussman.
+ The revised report on Scheme, a dialect of Lisp.
+ Technical Report MIT Artificial Intelligence Memo 452, MIT, January
+1978.<p>
+</p>
+</td></tr>
+<tr><td align=right valign=top><a name="node_bib_39"></a>[39]&nbsp;&nbsp;</td><td valign=top>
+Gerald&nbsp;Jay Sussman and Guy Lewis&nbsp;Steele Jr.
+ Scheme: an interpreter for extended lambda calculus.
+ Technical Report MIT Artificial Intelligence Memo 349, MIT, December
+1975.<p>
+</p>
+</table><p>
+
+</p>
+<p>
+</p>
+<div class=smallskip></div>
+<p style="margin-top: 0pt; margin-bottom: 0pt">
+<div align=right class=navigation>[Go to <span><a href="r6rs-rationale.html">first</a>, <a href="r6rs-rationale-Z-H-30.html">previous</a></span><span class=disable>, next</span> page<span>; &nbsp;&nbsp;</span><span><a href="r6rs-rationale-Z-H-2.html#node_toc_start">contents</a></span>]</div>
+</p>
+<p></p>
+</div>
+</body>
+</html>
