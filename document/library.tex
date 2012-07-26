@@ -336,183 +336,292 @@ rename} как описано ниже.
 \item Форма {\cf\bfseries only} порождает подмножество привязок из иного \hyper{import~set},
   содержащее только перечисленные \hyper{identifier}. Включенные \hyper{identifier} должны
   существовать в исходном \hyper{import~set}.
-\item An {\cf except} form produces a subset of the bindings from another
-\hyper{import~set}, including all but the listed
-\hyper{identifier}s.
-All of the excluded \hyper{identifier}s must be in
-the original \hyper{import~set}.
-\item A {\cf prefix} form adds the \hyper{identifier} prefix to each
-name from another \hyper{import~set}.
-\item A {\cf rename} form, {\cf (rename (\hyperi{identifier} \hyperii{identifier}) \ldots)},
-removes the bindings for {\cf \hyperi{identifier} \ldots} to form an
-intermediate \hyper{import~set}, then adds the bindings back for the
-corresponding {\cf \hyperii{identifier} \ldots} to form the final
-\hyper{import~set}.
-Each \hyperi{identifier} must be in the original \hyper{import~set},
-each \hyperii{identifier} must not be in the intermediate \hyper{import~set},
-and the \hyperii{identifier}s must be distinct.
+\newpage
+%\item An {\cf except} form produces a subset of the bindings from another
+%\hyper{import~set}, including all but the listed
+%\hyper{identifier}s.
+%All of the excluded \hyper{identifier}s must be in
+%the original \hyper{import~set}.
+\item Форма {\cf\bfseries except} порождает подмножество привязок из другого \hyper{import~set},
+  содержащее все \hyper{identifier}, кроме перечисленных. Включенные \hyper{identifier} должны
+  существовать в исходном \hyper{import~set}.
+%\item A {\cf prefix} form adds the \hyper{identifier} prefix to each
+%name from another \hyper{import~set}.
+\item Форма {\cf\bfseries prefix} форма добавляет приставку \hyper{identifier} к каждому
+  имени из другого \hyper{import~set}.
+%\item A {\cf rename} form, {\cf (rename (\hyperi{identifier} \hyperii{identifier}) \ldots)},
+%removes the bindings for {\cf \hyperi{identifier} \ldots} to form an
+%intermediate \hyper{import~set}, then adds the bindings back for the
+%corresponding {\cf \hyperii{identifier} \ldots} to form the final
+%\hyper{import~set}.
+%Each \hyperi{identifier} must be in the original \hyper{import~set},
+%each \hyperii{identifier} must not be in the intermediate \hyper{import~set},
+%and the \hyperii{identifier}s must be distinct.
+\item Форма {\cf\bfseries rename}, {\cf \textbf{(rename (}\hyperi{identifier}
+  \hyperii{identifier}\textbf{)} \ldots\textbf{)}}, удаляет привязки для {\cf
+  \hyperi{identifier} \ldots} для формирования промежуточного \hyper{import~set}, затем
+  добавляет привязки назад для соответствующего {\cf \hyperii{identifier} \ldots} для
+  формирования конечного \hyper{import~set}. Каждый \hyperi{identifier} должен быть в исходном
+  \hyper{import~set}, каждый \hyperii{identifier} не должен быть в промежуточном
+  \hyper{import~set}, а все \hyperii{identifier} должны быть разными.
 \end{itemize}
-It is a syntax violation if a constraint given above is not met.
+%It is a syntax violation if a constraint given above is not met.
+Невыполнение приведённого выше ограничения является синтаксическим нарушением.\vspace{1mm}
 
 \label{librarybodysection}
-The \hyper{library~body} of a {\cf library} form consists of forms
-that are classified as
-\textit{definitions}\mainindex{definition} or
-\textit{expressions}\mainindex{expression}.  Which forms belong to
-which class depends on the imported libraries and the result of
-expansion---see chapter~\ref{expansionchapter}.  Generally, forms that
-are not
-definitions (see section~\ref{defines} for definitions available
-through the base library) are expressions.
+%The \hyper{library~body} of a {\cf library} form consists of forms
+%that are classified as
+%\textit{definitions}\mainindex{definition} or
+%\textit{expressions}\mainindex{expression}.  Which forms belong to
+%which class depends on the imported libraries and the result of
+%expansion---see chapter~\ref{expansionchapter}.  Generally, forms that
+%are not
+%definitions (see section~\ref{defines} for definitions available
+%through the base library) are expressions.
+\hyper{library~body} формы {\cf\bfseries library} состоит из форм, классифицируемых как
+\textit{определения}\mainindex{definition} или
+\textit{выражения}\mainindex{expression}. Принадлежность конкретной формы конкретному классу
+зависит от импортированных библиотек и результата
+расширения---см. главу~\ref{expansionchapter}. В общем случае формы, не являющиеся
+определениями (о доступных посредством базовой
+библиотеки определениях см. секцию ~\ref {определяют}), являются выражениями.\vspace{1mm}
 
-A \hyper{library~body} is like a \hyper{body} (see section~\ref{bodiessection}) except that
-a \hyper{library~body}s need not include any expressions.  It must
-have the following form:
+%A \hyper{library~body} is like a \hyper{body} (see section~\ref{bodiessection}) except that
+%a \hyper{library~body}s need not include any expressions.  It must
+%have the following form:
+\hyper{library~body} похоже на \hyper{body} (см. секцию ~\ref{bodiessection}) за исключением
+того, что в \hyper{library~body} не обязаны содержаться выражения. Оно должно иметь следующую
+форму:\vspace{1mm}
 
 \begin{scheme}
 \hyper{definition} \ldots \hyper{expression} \ldots%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
-When {\cf begin}, {\cf let-syntax}, or {\cf letrec-syntax} forms
-occur in a top-level body prior to the first
-expression, they are spliced into the body; see section~\ref{begin}.
-Some or all of the body, including portions wrapped in {\cf begin},
-{\cf let-syntax}, or {\cf letrec-syntax}
-forms, may be specified by a syntactic abstraction
-(see section~\ref{macrosection}).
+%When {\cf begin}, {\cf let-syntax}, or {\cf letrec-syntax} forms
+%occur in a top-level body prior to the first
+%expression, they are spliced into the body; see section~\ref{begin}.
+%Some or all of the body, including portions wrapped in {\cf begin},
+%{\cf let-syntax}, or {\cf letrec-syntax}
+%forms, may be specified by a syntactic abstraction
+%(see section~\ref{macrosection}).
+Если формы {\cf\bfseries begin}, {\cf\bfseries let-syntax} или {\cf\bfseries letrec-syntax}
+находятся в теле верхнего уровня до первого выражения, они встраиваются в тело; см.
+секцию ~\ref{begin}. Всё тело или его часть, включая части, обёрнутые в формы {\cf\bfseries begin},
+{\cf\bfseries let-syntax} или {\cf\bfseries letrec-syntax}, может быть определено
+синтаксической абстракцией (см. секцию~\ref{macrosection}).\vspace{1mm}
 
-The transformer expressions and bindings are evaluated and created
-from left to right, as described in chapter~\ref{expansionchapter}.
-The expressions of variable definitions are evaluated
-from left to right, as if in an implicit {\cf letrec*},
-and the body expressions are also evaluated from left to right
-after the expressions of the variable definitions.
-A fresh location is created for each exported variable and initialized
-to the value of its local counterpart.
-The effect of returning twice to the continuation of the last body
-expression is unspecified.
+%The transformer expressions and bindings are evaluated and created
+%from left to right, as described in chapter~\ref{expansionchapter}.
+%The expressions of variable definitions are evaluated
+%from left to right, as if in an implicit {\cf letrec*},
+%and the body expressions are also evaluated from left to right
+%after the expressions of the variable definitions.
+%A fresh location is created for each exported variable and initialized
+%to the value of its local counterpart.
+%The effect of returning twice to the continuation of the last body
+%expression is unspecified.
+Преобразующие выражения и привязки вычисляются и создаются слева направо, как описано в главе
+~\ref{expansionchapter}. Выражения определений переменных вычисляются слева направо, как будто в
+неявном {\cf\bfseries letrec*}, и выражения тела также вычисляются слева направо после выражений
+определений переменных. Для каждой экспортируемой переменной создаётся новая ячейка и
+инициализируется значением её локальной копии. Эффект возвращения дважды к продолжению
+последнего выражения тела не определён.\vspace{1mm}
 
 \begin{note}
-The names {\cf library}, {\cf export}, {\cf import},
-{\cf for}, {\cf run}, {\cf expand}, {\cf meta},
-{\cf import}, {\cf export}, {\cf only}, {\cf except}, {\cf
-  prefix}, {\cf rename}, {\cf and}, {\cf or}, {\cf not}, {\cf >=}, and {\cf <=}
-appearing in the library syntax are part of the
-syntax and are not reserved, i.e., the same names can be used for other
-purposes within the library or even exported from or imported
-into a library with different meanings, without affecting their
-use in the {\cf library} form.
+%The names {\cf library}, {\cf export}, {\cf import},
+%{\cf for}, {\cf run}, {\cf expand}, {\cf meta},
+%{\cf import}, {\cf export}, {\cf only}, {\cf except}, {\cf
+%  prefix}, {\cf rename}, {\cf and}, {\cf or}, {\cf not}, {\cf >=}, and {\cf <=}
+%appearing in the library syntax are part of the
+%syntax and are not reserved, i.e., the same names can be used for other
+%purposes within the library or even exported from or imported
+%into a library with different meanings, without affecting their
+%use in the {\cf library} form.
+Имена {\cf\bfseries library}, {\cf\bfseries export}, {\cf\bfseries import}, {\cf\bfseries for},
+{\cf\bfseries run}, {\cf\bfseries expand}, {\cf\bfseries meta}, {\cf\bfseries import},
+{\cf\bfseries export}, {\cf\bfseries only}, {\cf\bfseries except}, {\cf\bfseries prefix},
+{\cf\bfseries rename}, {\cf\bfseries and}, {\cf\bfseries or}, {\cf\bfseries not}, {\cf\bfseries
+  >=} и {\cf\bfseries <=}, входящие в библиотечный синтаксис, являются частью синтаксиса и не
+зарезервированы, то есть, те же имена могут использоваться в других целях внутри
+библиотеки или даже экспортироваться из библиотеки или импортироваться в библиотеку с другим
+смысловым содержанием, не затрагивая их использование в форме {\cf\bfseries library}.
 \end{note}
 
-Bindings defined with a library are not visible in code
-outside of the library, unless the bindings are explicitly exported from the
-library.
-An exported macro may, however, \emph{implicitly export} an otherwise
-unexported identifier defined within or imported into the library.
-That is, it may insert a reference to that identifier into the output code
-it produces.
+%Bindings defined with a library are not visible in code
+%outside of the library, unless the bindings are explicitly exported from the
+%library.
+%An exported macro may, however, \emph{implicitly export} an otherwise
+%unexported identifier defined within or imported into the library.
+%That is, it may insert a reference to that identifier into the output code
+%it produces.
+Определённые с библиотекой привязки невидимы в коде вне библиотеки, если они явно не
+экспортированы из библиотеки. Однако экспортируемый макрос может \emph{неявно экспортировать}
+в иных случаях неэкспортируемый идентификатор, определённый в библиотеке или
+импортированный в неё. Иными словами, он может вставить обращение к этому идентификатору
+в генерируемый им выходной код.\vspace{-1.2mm}
 
 \label{importsareimmutablesection}
-All explicitly exported variables are immutable in both the
-exporting and importing libraries.
-It is thus a syntax violation if an
-explicitly exported variable appears on the left-hand side of a {\cf set!}
-expression, either in the exporting or importing libraries.
+%All explicitly exported variables are immutable in both the
+%exporting and importing libraries.
+%It is thus a syntax violation if an
+%explicitly exported variable appears on the left-hand side of a {\cf set!}
+%expression, either in the exporting or importing libraries.
+Все явно экспортированные переменные являются неизменяемыми и в экспортируемых, и в импортируемых
+библиотеках. Таким образом, наличие явно экспортированной переменной в левой части выражения
+{\cf\bfseries set!} является нарушением синтаксиса как в экспортируемых, так и в импортируемых
+библиотеках.\vspace{-1.2mm}
 
-All implicitly exported variables are also immutable in both the
-exporting and importing libraries.
-It is thus a syntax violation if a
-variable appears on the left-hand side of a {\cf set!}
-expression in any code produced by an exported macro outside of the
-library in which the variable is defined.
-It is also a syntax violation if a
-reference to an assigned variable appears in any code produced by
-an exported macro outside of the library in which the variable is defined,
-where an assigned variable is one that appears on the left-hand
-side of a {\cf set!} expression in the exporting library.
+%All implicitly exported variables are also immutable in both the
+%exporting and importing libraries.
+%It is thus a syntax violation if a
+%variable appears on the left-hand side of a {\cf set!}
+%expression in any code produced by an exported macro outside of the
+%library in which the variable is defined.
+%It is also a syntax violation if a
+%reference to an assigned variable appears in any code produced by
+%an exported macro outside of the library in which the variable is defined,
+%where an assigned variable is one that appears on the left-hand
+%side of a {\cf set!} expression in the exporting library.
+Все неявно экспортированные переменные также являются неизменяемыми и в экспортируемых, и в
+импортируемых библиотеках. Таким образом, наличие переменной в левой части выражения
+{\cf\bfseries set!} в любом коде, сгенерированном экспортируемым макросом вне библиотеки, в
+которой определена переменная, является нарушением синтаксиса. Также является нарушением
+синтаксиса наличие обращения к присваиваемой переменной в любом коде, сгенерированном
+экспортируемым макросом вне библиотеки, в которой определена переменная, где присваиваемой
+переменной является находящаяся в левой части выражения {\cf\bfseries set!} переменная в
+экспортируемой библиотеке.\vspace{-1.2mm}
 
-All other variables defined within a library are mutable.
+%All other variables defined within a library are mutable.
+Все остальные определённые в библиотеке переменные являются изменяемыми.\vspace{-6mm}
 
-\section{Import and export levels}
+%\section{Import and export levels}
+\section{Уровни экспорта и импорта}\vspace{-3.8mm}
 \label{phasessection}
 
-Expanding a library may require run-time information from another
-library.  For example, if a macro transformer calls a
-procedure from library $A$, then the library $A$ must be
-instantiated before expanding any use of the macro in library $B$.  Library $A$ may
-not be
-needed when library $B$ is eventually run as part of a program, or it
-may be needed for run time of library $B$, too.  The library
-mechanism distinguishes these times by phases, which are explained in
-this section.
+%Expanding a library may require run-time information from another
+%library.  For example, if a macro transformer calls a
+%procedure from library $A$, then the library $A$ must be
+%instantiated before expanding any use of the macro in library $B$.  Library $A$ may
+%not be
+%needed when library $B$ is eventually run as part of a program, or it
+%may be needed for run time of library $B$, too.  The library
+%mechanism distinguishes these times by phases, which are explained in
+%this section.
+При разворачивании библиотеки может потребоваться информация этапа выполнения из другой
+библиотеки. Например, при вызове макропреобразователем процедуры из библиотеки $A$, библиотека
+$A$ должна быть инстанцирована перед разворачиванием любого применения макроса в библиотеке
+$B$. Библиотека $A$ в итоге может и не потребоваться при выполнении библиотеки $B$ как части
+программы, или же она может потребоваться библиотеке $B$ также и для этапа выполнения.
+Механизм библиотек характеризует эти этапы фазами, описанными в данной секции.\vspace{-1.2mm}
 
-Every library can be characterized by expand-time information (minimally,
-its imported libraries, a list of the exported keywords, a list of the
-exported variables, and code to evaluate the transformer expressions) and
-run-time information (minimally, code to evaluate the variable definition
-right-hand-side expressions, and code to evaluate the body expressions).
-The expand-time information must be available to expand references to
-any exported binding, and the run-time information must be available to
-evaluate references to any exported variable binding.
+%Every library can be characterized by expand-time information (minimally,
+%its imported libraries, a list of the exported keywords, a list of the
+%exported variables, and code to evaluate the transformer expressions) and
+%run-time information (minimally, code to evaluate the variable definition
+%right-hand-side expressions, and code to evaluate the body expressions).
+%The expand-time information must be available to expand references to
+%any exported binding, and the run-time information must be available to
+%evaluate references to any exported variable binding.
+Каждая библиотека может характеризоваться информацией этапа разворачивания (как минимум, её
+импортированные библиотеки, список экспортируемых ключевых слов, список экспортируемых
+переменных и код вычисления преобразовательных выражений) и информацией этапа выполнения
+(как минимум, код вычисления выражений правой части определений переменных и код
+вычисления выражений тела). Информация этапа разворачивания должна быть доступна для раскрытия
+обращений к любым экспортируемым привязкам, а информация этапа выполнения -
+для вычисления обращений к любым экспортированным привязкам переменных.\vspace{-1.2mm}
 
 \mainindex{phase}
 %
-A \emph{phase} is a time at which the expressions within a library are
-evaluated.
-Within a library body, top-level expressions and
-the right-hand sides of {\cf define} forms are evaluated at run time,
-i.e., phase $0$, and the right-hand
-sides of {\cf define-syntax} forms are evaluated at expand time, i.e.,
-phase $1$.
-When {\cf define-syntax},
-{\cf let-syntax}, or {\cf letrec-syntax}
-forms appear within code evaluated at phase $n$, the right-hand sides
-are evaluated at phase $n+1$.
+%A \emph{phase} is a time at which the expressions within a library are
+%evaluated.
+%Within a library body, top-level expressions and
+%the right-hand sides of {\cf define} forms are evaluated at run time,
+%i.e., phase $0$, and the right-hand
+%sides of {\cf define-syntax} forms are evaluated at expand time, i.e.,
+%phase $1$.
+%When {\cf define-syntax},
+%{\cf let-syntax}, or {\cf letrec-syntax}
+%forms appear within code evaluated at phase $n$, the right-hand sides
+%are evaluated at phase $n+1$.
+\emph{Фаза} -- это этап, в течение которого вычисляются выражения в библиотеке. Внутри тела
+библиотеки выражения верхнего уровня и правые части форм {\cf\bfseries define} вычисляются на
+этапе выполнения, то есть, в фазе $0$, а правые части форм {\cf\bfseries define-syntax} -- на этапе
+разворачивания, то есть, в фазе $1$. Если формы {\cf\bfseries define-syntax}, {\cf\bfseries
+  let-syntax} или {\cf\bfseries letrec-syntax} находятся внутри кода, вычисляемого в фазе $n$,
+правые части вычисляются в фазе $n+1$.
 
-These phases are relative to the phase in which the library itself is
-used.
-An \defining{instance} of a library corresponds to an evaluation of its
-variable definitions and expressions in a particular phase relative to another
-library---a process called \defining{instantiation}.
-For example, if a top-level expression in a library $B$ refers to
-a variable export from another library $A$, then it refers to the export from an
-instance of $A$ at phase $0$ (relative to the phase of $B$).
-But if a phase $1$ expression within $B$ refers to the same binding from
-$A$, then it refers to the export from an instance of $A$ at phase $1$
-(relative to the phase of $B$).
+%These phases are relative to the phase in which the library itself is
+%used.
+%An \defining{instance} of a library corresponds to an evaluation of its
+%variable definitions and expressions in a particular phase relative to another
+%library---a process called \defining{instantiation}.
+%For example, if a top-level expression in a library $B$ refers to
+%a variable export from another library $A$, then it refers to the export from an
+%instance of $A$ at phase $0$ (relative to the phase of $B$).
+%But if a phase $1$ expression within $B$ refers to the same binding from
+%$A$, then it refers to the export from an instance of $A$ at phase $1$
+%(relative to the phase of $B$).
+Эти фазы связаны с фазой, в которой используется сама библиотека. \defining{Экземпляр}
+библиотеки соответствует вычислению её определений переменных и выражений в конкретной фазе
+относительно другой библиотеки---процессу, называемому \defining{инстанцированием}. Например,
+если выражение верхнего уровня библиотеки $B$ обращается к переменной, экспортируемой из
+другой библиотеки $A$, то оно обращается к экспорту из экземпляра $A$ в фазе $0$ (относительно
+фазы $B$). Но если выражение фазы $1$ внутри $B$ обращается к тому же связыванию из
+$A$, то оно обращается к экспорту из экземпляра $A$ в фазе $1$ (относительно фазы $B$).
 
-A \defining{visit} of a library corresponds to the evaluation of its syntax
-definitions in a particular phase relative to another
-library---a process called \defining{visiting}.
-For example, if a top-level expression in a library $B$ refers to
-a macro export from another library $A$, then it refers to the export from a
-visit of $A$ at phase $0$ (relative to the phase of $B$), which corresponds
-to the evaluation of the macro's transformer expression at phase $1$.
-
+%A \defining{visit} of a library corresponds to the evaluation of its syntax
+%definitions in a particular phase relative to another
+%library---a process called \defining{visiting}.
+%For example, if a top-level expression in a library $B$ refers to
+%a macro export from another library $A$, then it refers to the export from a
+%visit of $A$ at phase $0$ (relative to the phase of $B$), which corresponds
+%to the evaluation of the macro's transformer expression at phase $1$.
+\defining{Посещение} библиотеки соответствует вычислению её определений синтаксиса
+в конкретной фазе относительно другой библиотеки---процессу, называемому \defining
+{посещением}. Например, если выражение верхнего уровня библиотеки $B$ обращается к
+макро-экспорту из другой библиотеки $A$, то оно обращается к экспорту из посещения
+$A$ в фазе $0$ (относительно фазы $B$), которая соответствует вычислению выражения
+макропреобразователя в фазе $1$.
 
 \mainindex{level}\mainindex{import level}
 %
-A \emph{level} is a lexical property of an identifier that determines
-in which phases it can be referenced. The level for each identifier
-bound by a definition within a library is $0$; that is, the identifier
-can be referenced only at phase $0$ within the library.
-The level for each imported binding is determined by the enclosing {\cf
-  for} form of the {\cf import} in the importing library, in
-addition to the levels of the identifier in the exporting
-library. Import and export levels are combined by pairwise addition of
-all level combinations.  For example, references to an imported
-identifier exported for levels $p_a$ and $p_b$ and imported for levels
-$q_a$, $q_b$, and $q_c$ are valid at levels $p_a+q_a$, $p_a+q_b$,
-$p_a+q_c$, $p_b+q_a$, $p_b+q_b$, and $p_b+q_c$. An \hyper{import~set}
-without an enclosing {\cf for} is equivalent to {\cf (for
-  \hyper{import~set} run)}, which is the same as {\cf (for
-  \hyper{import~set} (meta 0))}.
+%A \emph{level} is a lexical property of an identifier that determines
+%in which phases it can be referenced. The level for each identifier
+%bound by a definition within a library is $0$; that is, the identifier
+%can be referenced only at phase $0$ within the library.
+%The level for each imported binding is determined by the enclosing {\cf
+%  for} form of the {\cf import} in the importing library, in
+%addition to the levels of the identifier in the exporting
+%library. Import and export levels are combined by pairwise addition of
+%all level combinations.  For example, references to an imported
+%identifier exported for levels $p_a$ and $p_b$ and imported for levels
+%$q_a$, $q_b$, and $q_c$ are valid at levels $p_a+q_a$, $p_a+q_b$,
+%$p_a+q_c$, $p_b+q_a$, $p_b+q_b$, and $p_b+q_c$. An \hyper{import~set}
+%without an enclosing {\cf for} is equivalent to {\cf (for
+%  \hyper{import~set} run)}, which is the same as {\cf (for
+%  \hyper{import~set} (meta 0))}.
+\emph{Уровень} -- это лексическое свойство идентификатора, определяющее, в каких фазах допускаются
+обращения к нему. Уровнем каждого идентификатора, привязанного определением внутри
+библиотеки, является $0$; то есть, к идентификатору допускается обращение только в фазе $0$ внутри
+библиотеки. Уровень каждой импортированной привязки определяется не только ограничивающей формой
+{\cf\bfseries for} формы {\cf\bfseries import} в импортируемой библиотеке, но и уровнями
+идентификаторов в экспортируемой библиотеке. Уровни импорта и экспорта объединяются попарным
+суммированием всех комбинаций уровней. Например, обращения к импортируемому идентификатору,
+экспортируемому для уровней $p_a$ и $p_b$ и импортированному для уровней $q_a$, $q_b$, и $q_c$,
+применимы на уровнях $p_a+q_a$, $p_a+q_b$, $p_a+q_c$, $p_b+q_a$, $p_b+q_b$ и
+$p_b+q_c$. \hyper{import~set} без ограничивающего {\cf\bfseries for} эквивалентен {\cf \textbf{(for}
+  \hyper {import~set} \textbf{run)}}, что тождественно {\cf \textbf{(for}
+  \hyper{import~set} \bfseries(meta 0))}.
 
-The export level of an exported binding is $0$ for all bindings
-that are defined within the exporting library. The export levels of a
-reexported binding, i.e., an export imported from another library, are the
-same as the effective import levels of that binding within the reexporting
-library.
+%The export level of an exported binding is $0$ for all bindings
+%that are defined within the exporting library. The export levels of a
+%reexported binding, i.e., an export imported from another library, are the
+%same as the effective import levels of that binding within the reexporting
+%library.
+Уровень экспорта экспортируемой привязки - $0$ для всех привязок, которые определены в
+пределах библиотеки экспорта. Экспортные уровни реэкспортированного закрепления, то есть,
+экспорт, импортированный от другой библиотеки, являются тем же самым как эффективные уровни
+импорта того закрепления в пределах реэкспортирующей библиотеки.
 
 For the libraries defined in the library report, the export level is
 $0$ for nearly all bindings. The exceptions are {\cf syntax-rules},

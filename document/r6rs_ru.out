@@ -3,14 +3,14 @@
 \BOOKMARK [0][-]{chapter.1}{Введение в Scheme}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Основные типы}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Выражения}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Переменные и компоновка}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Переменные и привязка}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.4}{Определения}{chapter.1}% 7
 \BOOKMARK [1][-]{section.1.5}{Формы}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.6}{Процедуры}{chapter.1}% 9
 \BOOKMARK [1][-]{section.1.7}{Вызовы процедур и синтаксические ключевые слова}{chapter.1}% 10
 \BOOKMARK [1][-]{section.1.8}{Присваивание}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.9}{Производные формы и макросы}{chapter.1}% 12
-\BOOKMARK [1][-]{section.1.10}{Синтаксические данные и базисные значения}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.10}{Синтаксические данные и значения datum}{chapter.1}% 13
 \BOOKMARK [1][-]{section.1.11}{Продолжения}{chapter.1}% 14
 \BOOKMARK [1][-]{section.1.12}{Библиотеки}{chapter.1}% 15
 \BOOKMARK [1][-]{section.1.13}{Программы верхнего уровня}{chapter.1}% 16
@@ -49,7 +49,7 @@
 \BOOKMARK [1][-]{section.6.7}{Naming\040conventions}{chapter.6}% 49
 \BOOKMARK [0][-]{chapter.7}{Библиотеки}{}% 50
 \BOOKMARK [1][-]{section.7.1}{Библиотечная форма}{chapter.7}% 51
-\BOOKMARK [1][-]{section.7.2}{Import\040and\040export\040levels}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.2}{Уровни экспорта и импорта}{chapter.7}% 52
 \BOOKMARK [1][-]{section.7.3}{Examples}{chapter.7}% 53
 \BOOKMARK [0][-]{chapter.8}{Top-level\040programs}{}% 54
 \BOOKMARK [1][-]{section.8.1}{Top-level\040program\040syntax}{chapter.8}% 55

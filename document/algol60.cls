@@ -1,4 +1,4 @@
-%% 
+%%
 %% This is file `algol60.cls',
 %% NOT generated with the (ludicrous) docstrip utility, but instead hacked
 %% from a file that was.
@@ -6,21 +6,21 @@
 %% Modified from `report.cls' by Richard A. Kelsey.  This is an attempt to
 %% bring Jonathan Rees's ALGOL 60 style into the brave new world of 2e.
 %% Changes marked with !!.  All comments after this initial block are mine.
-%% 
-%% Portions Copyright 1993 1994 1995 1996 
-%% The LaTeX3 Project and any individual authors listed elsewhere 
-%% in this file. 
-%% 
-%% For further copyright information, and conditions for modification 
-%% and distribution, see the file legal.txt, and any other copyright 
-%% notices in this file. 
-%% 
-%% This file is NOT part of the LaTeX2e system. 
-%% ---------------------------------------- 
-%% This system is distributed in the hope that it will be useful, 
-%% but WITHOUT ANY WARRANTY; without even the implied warranty of 
-%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-%% 
+%%
+%% Portions Copyright 1993 1994 1995 1996
+%% The LaTeX3 Project and any individual authors listed elsewhere
+%% in this file.
+%%
+%% For further copyright information, and conditions for modification
+%% and distribution, see the file legal.txt, and any other copyright
+%% notices in this file.
+%%
+%% This file is NOT part of the LaTeX2e system.
+%% ----------------------------------------
+%% This system is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%%
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{algol60}[2006/12/04 Algol 60 document class]      % !!
@@ -131,7 +131,7 @@
 %!!        ##1}}{}}%
         ##1}{}}%
     \def\sectionmark##1{%
-	}
+  }
 %!!      \markright {\MakeUppercase{%
 %!!        \ifnum \c@secnumdepth >\z@
 %!!          \thesection. \ %
@@ -756,21 +756,22 @@
 \pdfpageheight\paperheight
 \fi
 
-\parskip 5pt plus 2pt minus 2pt %!! 0pt plus 1pt % Extra vertical space between paragraphs.
+\parskip 4pt plus 1.6pt minus 1.6pt %!! 0pt plus 1pt % Extra vertical space between paragraphs.
 \parindent 0pt %!! 15pt                    % Width of paragraph indentation.
 \topmargin -.375in       %    Nominal distance from top of page to top of
                          %    box containing running head.
 \headsep 15pt            %    Space between running head and text.
 
-\textheight 663pt        % Height of text (including footnotes and figures, 
+\textheight 663pt        % Height of text (including footnotes and figures,
                          % excluding running head and foot).
 
-\textwidth 523pt         % Width of text line.
+%\textwidth 523pt         % Width of text line.
+\textwidth 532pt         % Width of text line.
 
 \oddsidemargin  -.5in    % Left margin on odd-numbered pages.
 \evensidemargin -.5in    % Left margin on even-numbered pages.
 
-\topsep 0pt plus 2pt            % Extra vertical space, in addition to 
+\topsep 0pt plus 2pt            % Extra vertical space, in addition to
                                 % \parskip, added above and below list and
                                 % paragraphing environments.
 
