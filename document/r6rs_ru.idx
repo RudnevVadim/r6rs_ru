@@ -105,21 +105,21 @@
 \indexentry{binding|hyperpage}{19}
 \indexentry{binding construct|hyperpage}{19}
 \indexentry{definition|hyperpage}{19}
-\indexentry{region|hyperpage}{19}
-\indexentry{unbound|hyperpage}{19}
+\indexentry{регион|hyperpage}{19}
+\indexentry{несвязанным|hyperpage}{19}
 \indexentry{bound|hyperpage}{19}
 \indexentry{exceptional situation|hyperpage}{19}
 \indexentry{raise|hyperpage}{19}
 \indexentry{continuable exception|hyperpage}{19}
-\indexentry{implementation restriction|hyperpage}{19}
+\indexentry{ограничения реализации|hyperpage}{19}
 \indexentry{argument checking|hyperpage}{19}
-\indexentry{responsibility|hyperpage}{19}
-\indexentry{syntax violation|hyperpage}{20}
-\indexentry{safe libraries|hyperpage}{20}
+\indexentry{responsibility|hyperpage}{20}
+\indexentry{Нарушение синтаксиса|hyperpage}{20}
+\indexentry{безопасными библиотеками|hyperpage}{20}
 \indexentry{true|hyperpage}{20}
 \indexentry{false|hyperpage}{20}
-\indexentry{unspecified behavior|hyperpage}{20}
-\indexentry{unspecified values|hyperpage}{20}
+\indexentry{unspecified behavior|hyperpage}{21}
+\indexentry{unspecified values|hyperpage}{21}
 \indexentry{location|hyperpage}{21}
 \indexentry{eqv?@\texttt  {eqv?}|hyperpage}{21}
 \indexentry{constant|hyperpage}{21}
@@ -129,7 +129,7 @@
 \indexentry{proper tail recursion|hyperpage}{21}
 \indexentry{tail context|hyperpage}{21}
 \indexentry{tail call|hyperpage}{21}
-\indexentry{dynamic extent|hyperpage}{21}
+\indexentry{динамическим экстентом|hyperpage}{21}
 \indexentry{dynamic environment|hyperpage}{21}
 \indexentry{must be|hyperpage}{22}
 \indexentry{!@\texttt  {!}|hyperpage}{24}
@@ -145,93 +145,93 @@
 \indexentry{export@\texttt  {export}|hyperpage}{24}
 \indexentry{definition|hyperpage}{26}
 \indexentry{expression|hyperpage}{26}
-\indexentry{phase|hyperpage}{26}
+\indexentry{phase|hyperpage}{27}
 \indexentry{Экземпляр|hyperpage}{27}
 \indexentry{инстанцированием|hyperpage}{27}
 \indexentry{Посещение|hyperpage}{27}
 \indexentry{посещением|hyperpage}{27}
 \indexentry{level|hyperpage}{27}
 \indexentry{import level|hyperpage}{27}
-\indexentry{top-level program|hyperpage}{28}
+\indexentry{top-level program|hyperpage}{29}
 \indexentry{literal|hyperpage}{29}
 \indexentry{variable|hyperpage}{29}
-\indexentry{unbound|hyperpage}{29}
-\indexentry{call|hyperpage}{29}
-\indexentry{procedure call|hyperpage}{29}
-\indexentry{syntactic abstraction|hyperpage}{29}
-\indexentry{macro|hyperpage}{29}
-\indexentry{macro transformer|hyperpage}{29}
-\indexentry{transformer|hyperpage}{29}
-\indexentry{macro use|hyperpage}{29}
-\indexentry{syntactic keyword|hyperpage}{29}
-\indexentry{keyword|hyperpage}{29}
-\indexentry{macro keyword|hyperpage}{29}
+\indexentry{unbound|hyperpage}{30}
+\indexentry{call|hyperpage}{30}
+\indexentry{procedure call|hyperpage}{30}
+\indexentry{syntactic abstraction|hyperpage}{30}
+\indexentry{macro|hyperpage}{30}
+\indexentry{macro transformer|hyperpage}{30}
+\indexentry{transformer|hyperpage}{30}
+\indexentry{macro use|hyperpage}{30}
+\indexentry{syntactic keyword|hyperpage}{30}
+\indexentry{keyword|hyperpage}{30}
+\indexentry{macro keyword|hyperpage}{30}
 \indexentry{hygienic|hyperpage}{30}
 \indexentry{referentially transparent|hyperpage}{30}
 \indexentry{core form|hyperpage}{30}
-\indexentry{rnrs base (6)@\texttt  {(rnrs base (6))}|hyperpage}{31}
-\indexentry{type|hyperpage}{31}
-\indexentry{boolean?@\texttt  {boolean?}|hyperpage}{31}
-\indexentry{pair?@\texttt  {pair?}|hyperpage}{31}
-\indexentry{symbol?@\texttt  {symbol?}|hyperpage}{31}
-\indexentry{number?@\texttt  {number?}|hyperpage}{31}
-\indexentry{char?@\texttt  {char?}|hyperpage}{31}
-\indexentry{string?@\texttt  {string?}|hyperpage}{31}
-\indexentry{vector?@\texttt  {vector?}|hyperpage}{31}
-\indexentry{procedure?@\texttt  {procedure?}|hyperpage}{31}
-\indexentry{empty list|hyperpage}{31}
-\indexentry{null?@\texttt  {null?}|hyperpage}{31}
-\indexentry{definition|hyperpage}{31}
-\indexentry{definition|hyperpage}{31}
-\indexentry{define@\texttt  {define}|hyperpage}{31}
+\indexentry{rnrs base (6)@\texttt  {(rnrs base (6))}|hyperpage}{32}
+\indexentry{type|hyperpage}{32}
+\indexentry{boolean?@\texttt  {boolean?}|hyperpage}{32}
+\indexentry{pair?@\texttt  {pair?}|hyperpage}{32}
+\indexentry{symbol?@\texttt  {symbol?}|hyperpage}{32}
+\indexentry{number?@\texttt  {number?}|hyperpage}{32}
+\indexentry{char?@\texttt  {char?}|hyperpage}{32}
+\indexentry{string?@\texttt  {string?}|hyperpage}{32}
+\indexentry{vector?@\texttt  {vector?}|hyperpage}{32}
+\indexentry{procedure?@\texttt  {procedure?}|hyperpage}{32}
+\indexentry{empty list|hyperpage}{32}
+\indexentry{null?@\texttt  {null?}|hyperpage}{32}
+\indexentry{definition|hyperpage}{32}
+\indexentry{definition|hyperpage}{32}
+\indexentry{define@\texttt  {define}|hyperpage}{32}
 \indexentry{definition|hyperpage}{32}
 \indexentry{define-syntax@\texttt  {define-syntax}|hyperpage}{32}
-\indexentry{body|hyperpage}{32}
-\indexentry{lambda@\texttt  {lambda}|hyperpage}{32}
-\indexentry{let@\texttt  {let}|hyperpage}{32}
-\indexentry{let*@\texttt  {let*}|hyperpage}{32}
-\indexentry{let-values@\texttt  {let-values}|hyperpage}{32}
-\indexentry{let*-values@\texttt  {let*-values}|hyperpage}{32}
-\indexentry{letrec@\texttt  {letrec}|hyperpage}{32}
-\indexentry{letrec*@\texttt  {letrec*}|hyperpage}{32}
+\indexentry{body|hyperpage}{33}
+\indexentry{lambda@\texttt  {lambda}|hyperpage}{33}
+\indexentry{let@\texttt  {let}|hyperpage}{33}
+\indexentry{let*@\texttt  {let*}|hyperpage}{33}
+\indexentry{let-values@\texttt  {let-values}|hyperpage}{33}
+\indexentry{let*-values@\texttt  {let*-values}|hyperpage}{33}
+\indexentry{letrec@\texttt  {letrec}|hyperpage}{33}
+\indexentry{letrec*@\texttt  {letrec*}|hyperpage}{33}
 \indexentry{quote@\texttt  {quote}|hyperpage}{33}
 \indexentry{lambda@\texttt  {lambda}|hyperpage}{33}
-\indexentry{if@\texttt  {if}|hyperpage}{33}
-\indexentry{true|hyperpage}{33}
-\indexentry{set!@\texttt  {set!}|hyperpage}{33}
-\indexentry{region|hyperpage}{33}
+\indexentry{if@\texttt  {if}|hyperpage}{34}
+\indexentry{true|hyperpage}{34}
+\indexentry{set!@\texttt  {set!}|hyperpage}{34}
+\indexentry{region|hyperpage}{34}
 \indexentry{cond@\texttt  {cond}|hyperpage}{34}
 \indexentry{=>@\texttt  {=>}|hyperpage}{34}
 \indexentry{else@\texttt  {else}|hyperpage}{34}
 \indexentry{true|hyperpage}{34}
 \indexentry{=>@\texttt  {=>}|hyperpage}{34}
 \indexentry{case@\texttt  {case}|hyperpage}{34}
-\indexentry{else@\texttt  {else}|hyperpage}{34}
-\indexentry{and@\texttt  {and}|hyperpage}{34}
+\indexentry{else@\texttt  {else}|hyperpage}{35}
+\indexentry{and@\texttt  {and}|hyperpage}{35}
 \indexentry{and@\texttt  {and}|hyperpage}{35}
 \indexentry{or@\texttt  {or}|hyperpage}{35}
 \indexentry{or@\texttt  {or}|hyperpage}{35}
 \indexentry{region|hyperpage}{35}
 \indexentry{let@\texttt  {let}|hyperpage}{35}
-\indexentry{region|hyperpage}{35}
-\indexentry{let*@\texttt  {let*}|hyperpage}{35}
-\indexentry{region|hyperpage}{35}
-\indexentry{letrec@\texttt  {letrec}|hyperpage}{35}
+\indexentry{region|hyperpage}{36}
+\indexentry{let*@\texttt  {let*}|hyperpage}{36}
+\indexentry{region|hyperpage}{36}
+\indexentry{letrec@\texttt  {letrec}|hyperpage}{36}
 \indexentry{region|hyperpage}{36}
 \indexentry{letrec*@\texttt  {letrec*}|hyperpage}{36}
 \indexentry{region|hyperpage}{36}
-\indexentry{let-values@\texttt  {let-values}|hyperpage}{36}
-\indexentry{region|hyperpage}{36}
-\indexentry{let*-values@\texttt  {let*-values}|hyperpage}{36}
+\indexentry{let-values@\texttt  {let-values}|hyperpage}{37}
+\indexentry{region|hyperpage}{37}
+\indexentry{let*-values@\texttt  {let*-values}|hyperpage}{37}
 \indexentry{region|hyperpage}{37}
 \indexentry{begin@\texttt  {begin}|hyperpage}{37}
 \indexentry{splicing|hyperpage}{37}
 \indexentry{predicate|hyperpage}{37}
 \indexentry{equivalence predicate|hyperpage}{37}
 \indexentry{eqv?@\texttt  {eqv?}|hyperpage}{37}
-\indexentry{exact|hyperpage}{37}
-\indexentry{inexact|hyperpage}{37}
-\indexentry{eq?@\texttt  {eq?}|hyperpage}{38}
+\indexentry{exact|hyperpage}{38}
+\indexentry{inexact|hyperpage}{38}
+\indexentry{eq?@\texttt  {eq?}|hyperpage}{39}
 \indexentry{equal?@\texttt  {equal?}|hyperpage}{39}
 \indexentry{procedure?@\texttt  {procedure?}|hyperpage}{39}
 \indexentry{number?@\texttt  {number?}|hyperpage}{41}
@@ -242,10 +242,10 @@
 \indexentry{real-valued?@\texttt  {real-valued?}|hyperpage}{41}
 \indexentry{rational-valued?@\texttt  {rational-valued?}|hyperpage}{41}
 \indexentry{integer-valued?@\texttt  {integer-valued?}|hyperpage}{41}
-\indexentry{exact?@\texttt  {exact?}|hyperpage}{41}
-\indexentry{inexact?@\texttt  {inexact?}|hyperpage}{41}
-\indexentry{inexact@\texttt  {inexact}|hyperpage}{41}
-\indexentry{exact@\texttt  {exact}|hyperpage}{41}
+\indexentry{exact?@\texttt  {exact?}|hyperpage}{42}
+\indexentry{inexact?@\texttt  {inexact?}|hyperpage}{42}
+\indexentry{inexact@\texttt  {inexact}|hyperpage}{42}
+\indexentry{exact@\texttt  {exact}|hyperpage}{42}
 \indexentry{=@\texttt  {=}|hyperpage}{42}
 \indexentry{<@\texttt  {<}|hyperpage}{42}
 \indexentry{>@\texttt  {>}|hyperpage}{42}
@@ -259,21 +259,21 @@
 \indexentry{finite?@\texttt  {finite?}|hyperpage}{42}
 \indexentry{infinite?@\texttt  {infinite?}|hyperpage}{42}
 \indexentry{nan?@\texttt  {nan?}|hyperpage}{42}
-\indexentry{max@\texttt  {max}|hyperpage}{42}
-\indexentry{min@\texttt  {min}|hyperpage}{42}
-\indexentry{+@\texttt  {+}|hyperpage}{42}
-\indexentry{*@\texttt  {*}|hyperpage}{42}
+\indexentry{max@\texttt  {max}|hyperpage}{43}
+\indexentry{min@\texttt  {min}|hyperpage}{43}
+\indexentry{+@\texttt  {+}|hyperpage}{43}
+\indexentry{*@\texttt  {*}|hyperpage}{43}
 \indexentry{-@\texttt  {-}|hyperpage}{43}
 \indexentry{/@\texttt  {/}|hyperpage}{43}
-\indexentry{abs@\texttt  {abs}|hyperpage}{43}
-\indexentry{div-and-mod@\texttt  {div-and-mod}|hyperpage}{43}
-\indexentry{div@\texttt  {div}|hyperpage}{43}
-\indexentry{mod@\texttt  {mod}|hyperpage}{43}
-\indexentry{div0-and-mod0@\texttt  {div0-and-mod0}|hyperpage}{43}
-\indexentry{div0@\texttt  {div0}|hyperpage}{43}
-\indexentry{mod0@\texttt  {mod0}|hyperpage}{43}
-\indexentry{gcd@\texttt  {gcd}|hyperpage}{43}
-\indexentry{lcm@\texttt  {lcm}|hyperpage}{43}
+\indexentry{abs@\texttt  {abs}|hyperpage}{44}
+\indexentry{div-and-mod@\texttt  {div-and-mod}|hyperpage}{44}
+\indexentry{div@\texttt  {div}|hyperpage}{44}
+\indexentry{mod@\texttt  {mod}|hyperpage}{44}
+\indexentry{div0-and-mod0@\texttt  {div0-and-mod0}|hyperpage}{44}
+\indexentry{div0@\texttt  {div0}|hyperpage}{44}
+\indexentry{mod0@\texttt  {mod0}|hyperpage}{44}
+\indexentry{gcd@\texttt  {gcd}|hyperpage}{44}
+\indexentry{lcm@\texttt  {lcm}|hyperpage}{44}
 \indexentry{numerator@\texttt  {numerator}|hyperpage}{44}
 \indexentry{denominator@\texttt  {denominator}|hyperpage}{44}
 \indexentry{floor@\texttt  {floor}|hyperpage}{44}
@@ -282,15 +282,15 @@
 \indexentry{round@\texttt  {round}|hyperpage}{44}
 \indexentry{rationalize@\texttt  {rationalize}|hyperpage}{44}
 \indexentry{simplest rational|hyperpage}{44}
-\indexentry{exp@\texttt  {exp}|hyperpage}{44}
-\indexentry{log@\texttt  {log}|hyperpage}{44}
-\indexentry{sin@\texttt  {sin}|hyperpage}{44}
-\indexentry{cos@\texttt  {cos}|hyperpage}{44}
-\indexentry{tan@\texttt  {tan}|hyperpage}{44}
-\indexentry{asin@\texttt  {asin}|hyperpage}{44}
-\indexentry{acos@\texttt  {acos}|hyperpage}{44}
-\indexentry{atan@\texttt  {atan}|hyperpage}{44}
-\indexentry{sqrt@\texttt  {sqrt}|hyperpage}{44}
+\indexentry{exp@\texttt  {exp}|hyperpage}{45}
+\indexentry{log@\texttt  {log}|hyperpage}{45}
+\indexentry{sin@\texttt  {sin}|hyperpage}{45}
+\indexentry{cos@\texttt  {cos}|hyperpage}{45}
+\indexentry{tan@\texttt  {tan}|hyperpage}{45}
+\indexentry{asin@\texttt  {asin}|hyperpage}{45}
+\indexentry{acos@\texttt  {acos}|hyperpage}{45}
+\indexentry{atan@\texttt  {atan}|hyperpage}{45}
+\indexentry{sqrt@\texttt  {sqrt}|hyperpage}{45}
 \indexentry{exact-integer-sqrt@\texttt  {exact-integer-sqrt}|hyperpage}{45}
 \indexentry{expt@\texttt  {expt}|hyperpage}{45}
 \indexentry{make-rectangular@\texttt  {make-rectangular}|hyperpage}{45}
@@ -299,7 +299,7 @@
 \indexentry{imag-part@\texttt  {imag-part}|hyperpage}{45}
 \indexentry{magnitude@\texttt  {magnitude}|hyperpage}{45}
 \indexentry{angle@\texttt  {angle}|hyperpage}{45}
-\indexentry{number->string@\texttt  {number->string}|hyperpage}{45}
+\indexentry{number->string@\texttt  {number->string}|hyperpage}{46}
 \indexentry{string->number@\texttt  {string->number}|hyperpage}{46}
 \indexentry{t@\texttt  {\#{}t}|hyperpage}{46}
 \indexentry{f@\texttt  {\#{}f}|hyperpage}{46}
@@ -308,11 +308,11 @@
 \indexentry{not@\texttt  {not}|hyperpage}{46}
 \indexentry{boolean?@\texttt  {boolean?}|hyperpage}{46}
 \indexentry{boolean=?@\texttt  {boolean=?}|hyperpage}{46}
-\indexentry{pair|hyperpage}{46}
-\indexentry{empty list|hyperpage}{46}
-\indexentry{empty list|hyperpage}{46}
-\indexentry{improper list|hyperpage}{46}
-\indexentry{pair?@\texttt  {pair?}|hyperpage}{46}
+\indexentry{pair|hyperpage}{47}
+\indexentry{empty list|hyperpage}{47}
+\indexentry{empty list|hyperpage}{47}
+\indexentry{improper list|hyperpage}{47}
+\indexentry{pair?@\texttt  {pair?}|hyperpage}{47}
 \indexentry{cons@\texttt  {cons}|hyperpage}{47}
 \indexentry{car@\texttt  {car}|hyperpage}{47}
 \indexentry{cdr@\texttt  {cdr}|hyperpage}{47}
@@ -326,20 +326,20 @@
 \indexentry{list@\texttt  {list}|hyperpage}{47}
 \indexentry{length@\texttt  {length}|hyperpage}{47}
 \indexentry{append@\texttt  {append}|hyperpage}{47}
-\indexentry{reverse@\texttt  {reverse}|hyperpage}{47}
-\indexentry{list-tail@\texttt  {list-tail}|hyperpage}{47}
-\indexentry{list-ref@\texttt  {list-ref}|hyperpage}{47}
-\indexentry{map@\texttt  {map}|hyperpage}{47}
+\indexentry{reverse@\texttt  {reverse}|hyperpage}{48}
+\indexentry{list-tail@\texttt  {list-tail}|hyperpage}{48}
+\indexentry{list-ref@\texttt  {list-ref}|hyperpage}{48}
+\indexentry{map@\texttt  {map}|hyperpage}{48}
 \indexentry{for-each@\texttt  {for-each}|hyperpage}{48}
 \indexentry{symbol?@\texttt  {symbol?}|hyperpage}{48}
 \indexentry{symbol->string@\texttt  {symbol->string}|hyperpage}{48}
-\indexentry{symbol=?@\texttt  {symbol=?}|hyperpage}{48}
-\indexentry{string->symbol@\texttt  {string->symbol}|hyperpage}{48}
-\indexentry{Unicode|hyperpage}{48}
-\indexentry{scalar value|hyperpage}{48}
-\indexentry{Characters|hyperpage}{48}
-\indexentry{Unicode scalar value|hyperpage}{48}
-\indexentry{scalar value|hyperpage}{48}
+\indexentry{symbol=?@\texttt  {symbol=?}|hyperpage}{49}
+\indexentry{string->symbol@\texttt  {string->symbol}|hyperpage}{49}
+\indexentry{Unicode|hyperpage}{49}
+\indexentry{scalar value|hyperpage}{49}
+\indexentry{Characters|hyperpage}{49}
+\indexentry{Unicode scalar value|hyperpage}{49}
+\indexentry{scalar value|hyperpage}{49}
 \indexentry{code point|hyperpage}{49}
 \indexentry{surrogate|hyperpage}{49}
 \indexentry{char?@\texttt  {char?}|hyperpage}{49}
@@ -356,15 +356,15 @@
 \indexentry{string@\texttt  {string}|hyperpage}{49}
 \indexentry{string-length@\texttt  {string-length}|hyperpage}{49}
 \indexentry{string-ref@\texttt  {string-ref}|hyperpage}{49}
-\indexentry{string=?@\texttt  {string=?}|hyperpage}{49}
-\indexentry{string<?@\texttt  {string<?}|hyperpage}{49}
-\indexentry{string>?@\texttt  {string>?}|hyperpage}{49}
-\indexentry{string<=?@\texttt  {string<=?}|hyperpage}{49}
-\indexentry{string>=?@\texttt  {string>=?}|hyperpage}{49}
-\indexentry{substring@\texttt  {substring}|hyperpage}{49}
-\indexentry{string-append@\texttt  {string-append}|hyperpage}{49}
-\indexentry{string->list@\texttt  {string->list}|hyperpage}{49}
-\indexentry{list->string@\texttt  {list->string}|hyperpage}{49}
+\indexentry{string=?@\texttt  {string=?}|hyperpage}{50}
+\indexentry{string<?@\texttt  {string<?}|hyperpage}{50}
+\indexentry{string>?@\texttt  {string>?}|hyperpage}{50}
+\indexentry{string<=?@\texttt  {string<=?}|hyperpage}{50}
+\indexentry{string>=?@\texttt  {string>=?}|hyperpage}{50}
+\indexentry{substring@\texttt  {substring}|hyperpage}{50}
+\indexentry{string-append@\texttt  {string-append}|hyperpage}{50}
+\indexentry{string->list@\texttt  {string->list}|hyperpage}{50}
+\indexentry{list->string@\texttt  {list->string}|hyperpage}{50}
 \indexentry{string-for-each@\texttt  {string-for-each}|hyperpage}{50}
 \indexentry{string-copy@\texttt  {string-copy}|hyperpage}{50}
 \indexentry{valid indices|hyperpage}{50}
@@ -373,47 +373,47 @@
 \indexentry{vector@\texttt  {vector}|hyperpage}{50}
 \indexentry{vector-length@\texttt  {vector-length}|hyperpage}{50}
 \indexentry{vector-ref@\texttt  {vector-ref}|hyperpage}{50}
-\indexentry{vector-set!@\texttt  {vector-set!}|hyperpage}{50}
-\indexentry{vector->list@\texttt  {vector->list}|hyperpage}{50}
-\indexentry{list->vector@\texttt  {list->vector}|hyperpage}{50}
-\indexentry{vector-fill!@\texttt  {vector-fill!}|hyperpage}{50}
-\indexentry{vector-map@\texttt  {vector-map}|hyperpage}{50}
+\indexentry{vector-set!@\texttt  {vector-set!}|hyperpage}{51}
+\indexentry{vector->list@\texttt  {vector->list}|hyperpage}{51}
+\indexentry{list->vector@\texttt  {list->vector}|hyperpage}{51}
+\indexentry{vector-fill!@\texttt  {vector-fill!}|hyperpage}{51}
+\indexentry{vector-map@\texttt  {vector-map}|hyperpage}{51}
 \indexentry{vector-for-each@\texttt  {vector-for-each}|hyperpage}{51}
 \indexentry{error@\texttt  {error}|hyperpage}{51}
 \indexentry{assertion-violation@\texttt  {assertion-violation}|hyperpage}{51}
-\indexentry{assert@\texttt  {assert}|hyperpage}{51}
-\indexentry{apply@\texttt  {apply}|hyperpage}{51}
-\indexentry{call-with-current-continuation@\texttt  {call-with-current-continuation}|hyperpage}{51}
-\indexentry{call/cc@\texttt  {call/cc}|hyperpage}{51}
+\indexentry{assert@\texttt  {assert}|hyperpage}{52}
+\indexentry{apply@\texttt  {apply}|hyperpage}{52}
+\indexentry{call-with-current-continuation@\texttt  {call-with-current-continuation}|hyperpage}{52}
+\indexentry{call/cc@\texttt  {call/cc}|hyperpage}{52}
 \indexentry{escape procedure|hyperpage}{52}
 \indexentry{dynamic-wind@\texttt  {dynamic-wind}|hyperpage}{52}
 \indexentry{values@\texttt  {values}|hyperpage}{52}
 \indexentry{call-with-values@\texttt  {call-with-values}|hyperpage}{52}
-\indexentry{dynamic-wind@\texttt  {dynamic-wind}|hyperpage}{52}
+\indexentry{dynamic-wind@\texttt  {dynamic-wind}|hyperpage}{53}
 \indexentry{let@\texttt  {let}|hyperpage}{53}
-\indexentry{quasiquote@\texttt  {quasiquote}|hyperpage}{53}
-\indexentry{unquote@\texttt  {unquote}|hyperpage}{53}
-\indexentry{unquote-splicing@\texttt  {unquote-splicing}|hyperpage}{53}
-\indexentry{backquote|hyperpage}{53}
 \indexentry{quasiquote@\texttt  {quasiquote}|hyperpage}{54}
 \indexentry{unquote@\texttt  {unquote}|hyperpage}{54}
 \indexentry{unquote-splicing@\texttt  {unquote-splicing}|hyperpage}{54}
-\indexentry{let-syntax@\texttt  {let-syntax}|hyperpage}{54}
-\indexentry{transformer|hyperpage}{54}
-\indexentry{macro transformer|hyperpage}{54}
+\indexentry{backquote|hyperpage}{54}
+\indexentry{quasiquote@\texttt  {quasiquote}|hyperpage}{54}
+\indexentry{unquote@\texttt  {unquote}|hyperpage}{54}
+\indexentry{unquote-splicing@\texttt  {unquote-splicing}|hyperpage}{54}
+\indexentry{let-syntax@\texttt  {let-syntax}|hyperpage}{55}
+\indexentry{transformer|hyperpage}{55}
+\indexentry{macro transformer|hyperpage}{55}
 \indexentry{letrec-syntax@\texttt  {letrec-syntax}|hyperpage}{55}
-\indexentry{...@\texttt  {...}|hyperpage}{55}
-\indexentry{syntax-rules@\texttt  {syntax-rules}|hyperpage}{55}
-\indexentry{\_@\texttt  {\_}|hyperpage}{55}
-\indexentry{\_@\texttt  {\_}|hyperpage}{55}
-\indexentry{...@\texttt  {...}|hyperpage}{55}
+\indexentry{...@\texttt  {...}|hyperpage}{56}
+\indexentry{syntax-rules@\texttt  {syntax-rules}|hyperpage}{56}
+\indexentry{\_@\texttt  {\_}|hyperpage}{56}
+\indexentry{\_@\texttt  {\_}|hyperpage}{56}
+\indexentry{...@\texttt  {...}|hyperpage}{56}
 \indexentry{pattern variable|hyperpage}{56}
 \indexentry{let@\texttt  {let}|hyperpage}{57}
 \indexentry{cond@\texttt  {cond}|hyperpage}{57}
 \indexentry{identifier-syntax@\texttt  {identifier-syntax}|hyperpage}{57}
 \indexentry{tail call|hyperpage}{57}
 \indexentry{hole|hyperpage}{59}
-\indexentry{cond@\texttt  {cond}|hyperpage}{66}
+\indexentry{cond@\texttt  {cond}|hyperpage}{65}
 \indexentry{case@\texttt  {case}|hyperpage}{66}
 \indexentry{let*@\texttt  {let*}|hyperpage}{66}
 \indexentry{letrec@\texttt  {letrec}|hyperpage}{66}

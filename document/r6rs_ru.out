@@ -29,16 +29,16 @@
 \BOOKMARK [0][-]{chapter.5}{Семантические концепции}{}% 29
 \BOOKMARK [1][-]{section.5.1}{Программы и библиотеки}{chapter.5}% 30
 \BOOKMARK [1][-]{section.5.2}{Переменные, ключевые слова и регионы}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.3}{Exceptional\040situations}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.4}{Argument\040checking}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.5}{Syntax\040violations}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.6}{Safety}{chapter.5}% 35
-\BOOKMARK [1][-]{section.5.7}{Boolean\040values}{chapter.5}% 36
-\BOOKMARK [1][-]{section.5.8}{Multiple\040return\040values}{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.9}{Unspecified\040behavior}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.10}{Storage\040model}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.11}{Proper\040tail\040recursion}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.12}{Dynamic\040extent\040and\040the\040dynamic\040environment}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.3}{Исключительные ситуации}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.4}{Проверка аргументов}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.5}{Нарушения синтаксиса}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.6}{Безопасность}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.7}{Булевы значения}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.8}{Несколько возвращаемых значений}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.9}{Неопределённое поведение}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.10}{Модель памяти}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.11}{Чистая хвостовая рекурсия}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.12}{Динамический экстент и динамическое окружение}{chapter.5}% 41
 \BOOKMARK [0][-]{chapter.6}{Entry\040format}{}% 42
 \BOOKMARK [1][-]{section.6.1}{Syntax\040entries}{chapter.6}% 43
 \BOOKMARK [1][-]{section.6.2}{Procedure\040entries}{chapter.6}% 44
@@ -50,7 +50,7 @@
 \BOOKMARK [0][-]{chapter.7}{Библиотеки}{}% 50
 \BOOKMARK [1][-]{section.7.1}{Библиотечная форма}{chapter.7}% 51
 \BOOKMARK [1][-]{section.7.2}{Уровни экспорта и импорта}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.3}{Examples}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.3}{Примеры}{chapter.7}% 53
 \BOOKMARK [0][-]{chapter.8}{Top-level\040programs}{}% 54
 \BOOKMARK [1][-]{section.8.1}{Top-level\040program\040syntax}{chapter.8}% 55
 \BOOKMARK [1][-]{section.8.2}{Top-level\040program\040semantics}{chapter.8}% 56

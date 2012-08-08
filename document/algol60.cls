@@ -762,7 +762,9 @@
                          %    box containing running head.
 \headsep 15pt            %    Space between running head and text.
 
-\textheight 663pt        % Height of text (including footnotes and figures,
+%\textheight 663pt        % Height of text (including footnotes and figures,
+                         % excluding running head and foot).
+\textheight 670pt        % Height of text (including footnotes and figures,
                          % excluding running head and foot).
 
 %\textwidth 523pt         % Width of text line.

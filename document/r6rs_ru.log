@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.20)  27 JUL 2012 00:04
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.20)  8 AUG 2012 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1508,8 +1508,8 @@ Underfull \hbox (badness 1418) in paragraph at lines 516--520
 \hbox(4.60938+2.13866)x258.5, glue set 2.4211 []
 
 
-Underfull \vbox (badness 2368) has occurred while \output is active
-\vbox(663.0+0.0)x258.5, glue set 2.87296 []
+Underfull \vbox (badness 3189) has occurred while \output is active
+\vbox(670.0+0.0)x258.5, glue set 3.17294 []
 
  [15]
 Underfull \hbox (badness 10000) in paragraph at lines 643--647
@@ -1631,219 +1631,266 @@ Underfull \hbox (badness 1308) in paragraph at lines 121--129
 \hbox(6.94336+2.13866)x258.5, glue set 2.36015 []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 137--142
+[]\EU1/TimesNewRoman(0)/m/n/10 Выражения, привязывающие �
+�лючевые слова, включа-
+
+\hbox(6.6211+2.13866)x258.5, glue set 4.88066 []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 137--142
+\EU1/TimesNewRoman(0)/m/n/10 ют формы \EU1/CourierNew(0)/bx/n/10 let-syn
+tax \EU1/TimesNewRoman(0)/m/n/10 и \EU1/CourierNew(0)/bx/n/10 letrec-syntax \E
+U1/TimesNewRoman(0)/m/n/10 (см. сек-
+
+\hbox(6.94336+2.13866)x258.5, glue set 3.3677 []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 137--142
+\EU1/TimesNewRoman(0)/m/n/10 цию []11.2.1[]), а форма \EU1/CourierNew(
+0)/bx/n/10 define-syntax \EU1/TimesNewRoman(0)/m/n/10 - определение�
+�,
+
+\hbox(6.94336+2.13866)x258.5, glue set 2.59688 []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 159--170
+[]\EU1/TimesNewRoman(0)/m/n/10 Scheme – язык со статическим�
+� областями видимости и
+
+\hbox(6.94336+1.24022)x258.5, glue set 2.29453 []
+
+
 LaTeX Warning: Reference `lib:exceptionssection' on page 19 undefined on input 
-line 167.
+line 191.
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 158--168
-\EU1/TimesNewRoman(0)/m/n/10 specification, violations of implementation restri
-ctions, and
-
-\hbox(6.94336+2.13866)x258.5, glue set 3.28032 []
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 158--168
-\EU1/TimesNewRoman(0)/m/n/10 situation is detected by the implementation, an \E
-U1/TimesNewRoman(0)/m/it/10 exception is
-
-\hbox(6.94336+2.15819)x258.5, glue set 2.21768 []
-
-
-Underfull \hbox (badness 2753) in paragraph at lines 158--168
-\EU1/TimesNewRoman(0)/m/it/10 exception handler \EU1/TimesNewRoman(0)/m/n/10 is
- called. A program can also raise an
-
-\hbox(6.94336+2.15819)x258.5, glue set 3.02109 []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active
-\vbox(663.0+0.0)x258.5, glue set 5.12529 []
+Underfull \vbox (badness 1867) has occurred while \output is active
+\vbox(670.0+0.0)x258.5, glue set 2.65656 []
 
 
 
 LaTeX Warning: Reference `lib:conditionssection' on page 19 undefined on input 
-line 171.
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 169--173
-\EU1/TimesNewRoman(0)/m/n/10 the nature of the exceptional situation. The repor
-t uses the
-
-\hbox(6.94336+2.13866)x258.5, glue set 2.34279 []
+line 199.
 
 
 LaTeX Warning: Reference `lib:exceptionssection' on page 19 undefined on input 
-line 183.
+line 219.
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 193--198
-\EU1/TimesNewRoman(0)/m/n/10 raise an exception of the appropriate condition ty
-pe if they
+Underfull \hbox (badness 6641) in paragraph at lines 228--233
+\EU1/TimesNewRoman(0)/m/n/10 ной программы из-за некотор
+ого []\EU1/TimesNewRoman(0)/m/it/10 ограничения реализа-
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.17049 []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 211--226
-\EU1/TimesNewRoman(0)/m/n/10 Many procedures specified in this report or as par
-t of a
-
-\hbox(6.94336+2.15819)x258.5, glue set 3.13039 []
+\hbox(6.64551+2.13866)x258.5, glue set 4.05296 []
 
 
-Underfull \hbox (badness 5245) in paragraph at lines 211--226
-\EU1/TimesNewRoman(0)/m/n/10 a procedure accepts only specific numbers and type
-s of
+Underfull \hbox (badness 1442) in paragraph at lines 228--233
+\EU1/TimesNewRoman(0)/m/n/10 ность, должна возбудить иск
+лючение с типом состояния
 
-\hbox(6.94336+2.15819)x258.5, glue set 3.74747 []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 211--226
-\EU1/TimesNewRoman(0)/m/n/10 that the restrictions in the specification are ind
-eed met, to
-
-\hbox(6.94336+2.13866)x258.5, glue set 2.58975 []
+\hbox(6.94336+2.15819)x258.5, glue set 2.43607 []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 211--226
-\EU1/TimesNewRoman(0)/m/n/10 the extent that it is reasonable, possible, and ne
-cessary to
+Underfull \hbox (badness 10000) in paragraph at lines 239--243
+[]\EU1/TimesNewRoman(0)/m/n/10 Некоторые возможные огран
+ичения реализации, типа
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.71216 []
+\hbox(6.6211+2.13866)x258.5, glue set 5.87383 []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 211--226
-\EU1/TimesNewRoman(0)/m/n/10 allow the specified operation to complete successf
-ully. The
+Underfull \hbox (badness 1783) in paragraph at lines 239--243
+\EU1/TimesNewRoman(0)/m/n/10 нехватки представлений для
+ NaN и бесконечностей (см.
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.51495 []
+\hbox(6.94336+2.13866)x258.5, glue set 2.61293 []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 239--243
+\EU1/TimesNewRoman(0)/m/n/10 работой, и реализации, как п
+равило, должны возбуждать
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.22969 []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 239--243
+\EU1/TimesNewRoman(0)/m/n/10 исключение соответствующе�
+�о типа состояния, если они
+
+\hbox(4.60938+2.15819)x258.5, glue set 2.47719 []
 
 [19]
 
 LaTeX Warning: Reference `lib:pairmutationchapter' on page 20 undefined on inpu
-t line 234.
+t line 313.
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 227--247
-\EU1/TimesNewRoman(0)/m/n/10 in general. Similarly, some operations accept both
- lists and
+Underfull \hbox (badness 3128) in paragraph at lines 338--341
+\EU1/TimesNewRoman(0)/m/n/10 ся некоторым синтаксически
+м ограничениям. Поскольку
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.30948 []
-
-
-Underfull \hbox (badness 3861) in paragraph at lines 255--259
-\EU1/TimesNewRoman(0)/m/n/10 syntactic restrictions. As forms may be subject to
- macro
-
-\hbox(6.94824+2.15819)x258.5, glue set 3.3837 []
+\hbox(6.6211+2.15819)x258.5, glue set 3.15312 []
 
 
-Underfull \hbox (badness 3758) in paragraph at lines 270--274
-\EU1/TimesNewRoman(0)/m/n/10 condition type \EU1/CourierNew(0)/m/n/10 &syntax\E
-U1/TimesNewRoman(0)/m/n/10 , and execution of that top-level
+Underfull \hbox (badness 1286) in paragraph at lines 375--378
+\EU1/TimesNewRoman(0)/m/n/10 документе, называются []\EU1/Ti
+mesNewRoman(0)/m/it/10 безопасными библиотеками\EU1/Time
+sNewRoman(0)/m/n/10 . Биб-
 
-\hbox(6.94336+2.15819)x258.5, glue set 3.35146 []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 278--281
-\EU1/TimesNewRoman(0)/m/n/10 The standard libraries whose exports are described
- by this
-
-\hbox(6.94336+2.15819)x258.5, glue set 2.63516 []
+\hbox(6.94336+2.15819)x258.5, glue set 2.34648 []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--296
-[]\EU1/TimesNewRoman(0)/m/n/10 Violations of an implementation restriction must
- raise
+Underfull \hbox (badness 1931) in paragraph at lines 375--378
+\EU1/TimesNewRoman(0)/m/n/10 лиотеки и программы верхне�
+�о уровня, импортирующие
 
-\hbox(6.94336+2.13866)x258.5, glue set 5.73814 []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--296
-\EU1/TimesNewRoman(0)/m/n/10 an exception with condition type \EU1/CourierNew(0
-)/m/n/10 &implementation-
-
-\hbox(6.94336+2.15819)x258.5, glue set 4.62485 []
+\hbox(4.60938+2.15819)x258.5, glue set 2.68578 []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 318--333
-\EU1/TimesNewRoman(0)/m/n/10 is guaranteed to accept exactly one value. The eff
-ect of
+Underfull \hbox (badness 2042) in paragraph at lines 398--402
+[]\EU1/TimesNewRoman(0)/m/n/10 Нарушения ограничений реа
+лизации должны возбуждать
 
-\hbox(6.94336+2.15819)x258.5, glue set 3.39922 []
+\hbox(6.94336+2.15819)x258.5, glue set 2.73613 []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 334--338
-[]\EU1/TimesNewRoman(0)/m/n/10 A number of forms in the base library have seque
-nces of
+Underfull \hbox (badness 10000) in paragraph at lines 398--402
+\EU1/TimesNewRoman(0)/m/n/10 исключение с типом состоян�
+�я \EU1/CourierNew(0)/bx/n/10 &implementation-
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.55292 []
+\hbox(6.33301+2.08983)x258.5, glue set 5.48418 []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 398--402
+\EU1/CourierNew(0)/bx/n/10 restriction\EU1/TimesNewRoman(0)/m/n/10 , как д�
+�лжны все нарушения и ошибки,
+
+\hbox(6.94336+2.15819)x258.5, glue set 3.34622 []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 398--402
+\EU1/TimesNewRoman(0)/m/n/10 которые в противном случае 
+угрожали бы целостности
+
+\hbox(6.94336+2.15819)x258.5, glue set 3.1522 []
+
+
+Underfull \hbox (badness 6758) in paragraph at lines 407--410
+[]\EU1/TimesNewRoman(0)/m/n/10 Вышеупомянутые свойства б
+езопасности гарантируются
+
+\hbox(6.94336+2.15819)x258.5, glue set 4.07657 []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 433--435
+\EU1/TimesNewRoman(0)/m/n/10 конечное количество значен
+ий. Эти значения передаются
+
+\hbox(6.77246+2.13866)x258.5, glue set 2.26234 []
 
 [20]
+Underfull \hbox (badness 2005) in paragraph at lines 508--512
+\EU1/TimesNewRoman(0)/m/n/10 ременной или процедурой ти�
+�а \EU1/CourierNew(0)/bx/n/10 car\EU1/TimesNewRoman(0)/m/n/10 , \EU1/CourierNe
+w(0)/bx/n/10 vector-ref \EU1/TimesNewRoman(0)/m/n/10 или
+
+\hbox(6.64551+2.15819)x258.5, glue set 2.71732 []
+
 
 LaTeX Warning: Citation `propertailrecursion' on page 21 undefined on input lin
-e 405.
+e 578.
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 391--408
-\EU1/TimesNewRoman(0)/m/n/10 Implementations of Scheme must be \EU1/TimesNewRom
-an(0)/m/it/10 properly tail-recursive[]\EU1/TimesNewRoman(0)/m/n/10 .
+Underfull \hbox (badness 10000) in paragraph at lines 568--580
+\EU1/TimesNewRoman(0)/m/n/10 Реализации Scheme должны быть 
+\EU1/TimesNewRoman(0)/m/it/10 чистыми хвост-
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.31367 []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
-[]\EU1/TimesNewRoman(0)/bx/n/12 Dynamic extent and the dynamic
-
-\hbox(8.13281+2.58983)x258.5, glue set 9.97298 []
+\hbox(6.94336+1.24022)x258.5, glue set 6.74516 []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 412--418
-\EU1/TimesNewRoman(0)/m/n/10 For a procedure call, the time between when it is 
-initiated
+Underfull \hbox (badness 2351) in paragraph at lines 568--580
+\EU1/TimesNewRoman(0)/m/n/10 Scheme обладает свойством чис�
+�ой хвостовой рекурсии,
 
-\hbox(6.94336+2.13866)x258.5, glue set 2.26398 []
+\hbox(6.94336+2.15819)x258.5, glue set 2.86546 []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--418
-\EU1/CourierNew(0)/m/n/10 call-with-current-continuation \EU1/TimesNewRoman(0)/
-m/n/10 (section []11.15[])
+Underfull \hbox (badness 4872) in paragraph at lines 568--580
+\EU1/TimesNewRoman(0)/m/n/10 если она поддерживает неог�
+�аниченное количество ак-
 
-\hbox(6.94336+2.13866)x258.5, glue set 6.54257 []
+\hbox(4.60938+2.13866)x258.5, glue set 3.65375 []
+
+
+Underfull \hbox (badness 4229) in paragraph at lines 568--580
+\EU1/TimesNewRoman(0)/m/n/10 тивных хвостовых вызовов. В
+ызов является \EU1/TimesNewRoman(0)/m/it/10 активным\EU1/Ti
+mesNewRoman(0)/m/n/10 ,
+
+\hbox(6.6211+1.66502)x258.5, glue set 3.48578 []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--580
+\EU1/CourierNew(0)/bx/n/10 call-with-current-continuation\EU1/TimesNewRoman(0)/
+m/n/10 , вызываемые
+
+\hbox(6.33301+1.66502)x258.5, glue set 16.32735 []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 568--580
+\EU1/TimesNewRoman(0)/m/n/10 позже. В отсутствии захваче
+нных продолжений, вызовы
+
+\hbox(6.64551+2.15819)x258.5, glue set 2.98326 []
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 582--582
+[]\EU1/TimesNewRoman(0)/bx/n/12 Динамический экстент и ди
+намическое
+
+\hbox(8.10938+2.3203)x258.5, glue set 2.95877 []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 591--596
+\EU1/TimesNewRoman(0)/m/it/10 том\EU1/TimesNewRoman(0)/m/n/10 . В Scheme, \
+EU1/CourierNew(0)/bx/n/10 call-with-current-continuation
+
+\hbox(6.94336+1.66502)x258.5, glue set 2.5136 []
 
 
 LaTeX Warning: Reference `lib:exceptionssection' on page 21 undefined on input 
-line 425.
+line 603.
 
 
-Underfull \hbox (badness 4217) in paragraph at lines 419--434
+Underfull \hbox (badness 4217) in paragraph at lines 597--612
 \EU1/TimesNewRoman(0)/m/n/10 in addition to their explicit arguments from the [
 ]\EU1/TimesNewRoman(0)/m/it/10 dynamic
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.48477 []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--434
+Underfull \hbox (badness 10000) in paragraph at lines 597--612
 \EU1/TimesNewRoman(0)/m/it/10 environment\EU1/TimesNewRoman(0)/m/n/10 . For exa
 mple, \EU1/CourierNew(0)/m/n/10 call-with-current-
 
 \hbox(6.94336+2.13866)x258.5, glue set 10.82787 []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 419--434
+Underfull \hbox (badness 6944) in paragraph at lines 597--612
 \EU1/CourierNew(0)/m/n/10 continuation \EU1/TimesNewRoman(0)/m/n/10 accesses an
  implicit context established
 
 \hbox(6.94336+2.13866)x258.5, glue set 4.11313 []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 419--434
+Underfull \hbox (badness 2096) in paragraph at lines 597--612
 \EU1/TimesNewRoman(0)/m/n/10 (library section []) accesses the current exceptio
 n handler.
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.7605 []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--434
+Underfull \hbox (badness 10000) in paragraph at lines 597--612
 \EU1/TimesNewRoman(0)/m/n/10 like \EU1/CourierNew(0)/m/n/10 dynamic-wind \EU1/T
 imesNewRoman(0)/m/n/10 or \EU1/CourierNew(0)/m/n/10 with-exception-handler\EU1/
 TimesNewRoman(0)/m/n/10 .
@@ -1851,7 +1898,7 @@ TimesNewRoman(0)/m/n/10 .
 \hbox(6.94336+1.88475)x258.5, glue set 5.63776 []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 419--434
+Underfull \hbox (badness 3128) in paragraph at lines 597--612
 \EU1/CourierNew(0)/m/n/10 call-with-current-continuation\EU1/TimesNewRoman(0)/m
 /n/10 , and restored by
 
@@ -1903,11 +1950,6 @@ LaTeX Warning: Reference `lib:bytevectorschapter' on page 22 undefined on input
  line 130.
 
 
-Underfull \vbox (badness 1038) has occurred while \output is active
-\vbox(663.0+0.0)x258.5, glue set 2.18346 []
-
-
-
 LaTeX Warning: Reference `lib:numberchapter' on page 22 undefined on input line
  137.
 
@@ -1932,7 +1974,7 @@ erform its
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.746 []
 
-
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 160--175
 \EU1/TimesNewRoman(0)/m/n/10 an entry may list additional explicit restrictions
 . These
@@ -2002,7 +2044,7 @@ ubforms or
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.63344 []
 
-[22]
+
 Underfull \hbox (badness 10000) in paragraph at lines 182--184
 
 
@@ -2065,7 +2107,7 @@ Underfull \hbox (badness 1173) in paragraph at lines 57--60
 
 \hbox(6.94336+2.13866)x216.49997, glue set 2.27437 []
 
-
+[24]
 Underfull \hbox (badness 1527) in paragraph at lines 132--137
 []\EU1/TimesNewRoman(0)/m/n/10 В [], [] именует одиночную пр
 ивязку,
@@ -2079,7 +2121,7 @@ Underfull \hbox (badness 1400) in paragraph at lines 132--137
 
 \hbox(7.5+2.5)x258.5, glue set 2.41132 []
 
-[24]
+
 Underfull \hbox (badness 1092) in paragraph at lines 201--207
 []\EU1/TimesNewRoman(0)/m/n/10 , чьим первым [] является \EU1
 /CourierNew(0)/bx/n/10 for\EU1/TimesNewRoman(0)/m/n/10 ,
@@ -2131,7 +2173,7 @@ New(0)/bx/n/10 not [] \EU1/TimesNewRoman(0)/m/n/10 соответ-
 
 \hbox(7.5+2.5)x258.5, glue set 2.66321 []
 
-
+[25]
 Underfull \hbox (badness 2689) in paragraph at lines 336--339
 []\EU1/TimesNewRoman(0)/m/n/10 Форма \EU1/CourierNew(0)/bx/n/10 only \EU1/
 TimesNewRoman(0)/m/n/10 порождает подмножество привя�
@@ -2139,7 +2181,7 @@ TimesNewRoman(0)/m/n/10 порождает подмножество привя�
 
 \hbox(6.6211+2.13866)x238.49997, glue set 2.99983 []
 
-[25]
+
 Underfull \hbox (badness 1442) in paragraph at lines 360--367
 \EU1/TimesNewRoman(0)/m/n/10 рования промежуточного [], з
 атем добавля-
@@ -2174,16 +2216,59 @@ ine 387.
 [26]
 
 LaTeX Warning: Reference `lib:complibchapter' on page 27 undefined on input lin
-e 633.
+e 641.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 709--719
+[]\EU1/TimesNewRoman(0)/m/n/10 Реализация может разделят
+ь экземпляры/посещения
+
+\hbox(6.94336+2.13866)x258.5, glue set 9.15079 []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 652--666
-\EU1/TimesNewRoman(0)/m/n/10 from another library, then before the referencing 
-library is
+Underfull \hbox (badness 3724) in paragraph at lines 709--719
+\EU1/TimesNewRoman(0)/m/n/10 библиотек для различных фа�
+� или использовать экзем-
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.6752 []
+\hbox(6.94336+2.13866)x258.5, glue set 3.34102 []
 
-[27]) (./programs.tex
+
+Underfull \hbox (badness 1014) in paragraph at lines 709--719
+\EU1/TimesNewRoman(0)/m/n/10 любой другой фазе. Реализац
+ия может также раскрывать
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.16783 []
+
+
+Underfull \hbox (badness 5802) in paragraph at lines 709--719
+\EU1/TimesNewRoman(0)/m/n/10 библиотек в любой фазе и/ил�
+� экземпляры библиотек
+
+\hbox(6.94336+2.13866)x258.5, glue set 3.87227 []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 709--719
+\EU1/TimesNewRoman(0)/m/n/10 в фазах выше $\OT1/cmr/m/n/10 0$\EU1/Tim
+esNewRoman(0)/m/n/10 . Реализация может создавать эк�
+�емпля-
+
+\hbox(6.94336+2.13866)x258.5, glue set 2.65558 []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 709--719
+\EU1/TimesNewRoman(0)/m/n/10 щение. Таким образом, библи�
+�тека, содержание которой
+
+\hbox(6.94336+2.13866)x258.5, glue set 2.78578 []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 709--719
+\EU1/TimesNewRoman(0)/m/n/10 зависит от того, различаютс
+я ли экземпляры библиотек,
+
+\hbox(6.94336+2.13866)x258.5, glue set 2.61185 []
+
+[28]) (./programs.tex
  8.
 
 Underfull \hbox (badness 1953) in paragraph at lines 4--9
@@ -2219,14 +2304,13 @@ Underfull \hbox (badness 1019) in paragraph at lines 66--72
 
 \hbox(7.5+2.5)x258.5, glue set 2.171 []
 
-[28]
 
 LaTeX Warning: Reference `lib:command-line' on page 29 undefined on input line 
 75.
 
 ) (./syntax.tex
  9.
-
+[29]
 Underfull \hbox (badness 1308) in paragraph at lines 76--80
 \EU1/TimesNewRoman(0)/m/n/10 expressions are evaluated (in an unspecified order
 ) and the
@@ -2248,11 +2332,11 @@ ewRoman(0)/m/n/10 .[][] A syntactic abstraction is created by binding a
 \hbox(6.94336+2.15819)x258.5, glue set 2.57225 []
 
 
-LaTeX Warning: Reference `lib:make-variable-transformer' on page 29 undefined o
+LaTeX Warning: Reference `lib:make-variable-transformer' on page 30 undefined o
 n input line 140.
 
 
-LaTeX Warning: Reference `lib:syntaxcasechapter' on page 29 undefined on input 
+LaTeX Warning: Reference `lib:syntaxcasechapter' on page 30 undefined on input 
 line 155.
 
 
@@ -2270,7 +2354,6 @@ syntax-case \EU1/TimesNewRoman(0)/m/n/10 form, described in
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.28242 []
 
-[29]
 
 LaTeX Warning: Citation `Kohlbecker86' on page 30 undefined on input line 167.
 
@@ -2342,7 +2425,7 @@ rms
 
 \hbox(6.94336+2.15819)x238.49997, glue set 2.69408 []
 
-
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 46--49
 []\EU1/TimesNewRoman(0)/m/n/10 The expander
 
@@ -2368,7 +2451,7 @@ efine any
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.19585 []
 
-[30]) (./base.tex
+[31]) (./base.tex
  11.
 
 Underfull \hbox (badness 1728) in paragraph at lines 26--33
@@ -2381,7 +2464,7 @@ wRoman(0)/m/n/10 .
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.58638 []
 
-[31]
+
 Underfull \hbox (badness 1292) in paragraph at lines 94--98
 \EU1/TimesNewRoman(0)/m/n/10 followed by a dot \EU1/CourierNew(0)/m/n/10 . \EU1
 /TimesNewRoman(0)/m/n/10 and another variable (as in a lambda
@@ -2446,7 +2529,7 @@ Underfull \hbox (badness 4291) in paragraph at lines 138--140
 
 \hbox(7.5+2.5)x258.5, glue set 3.50214 []
 
-
+[32]
 Underfull \hbox (badness 2635) in paragraph at lines 177--182
 \EU1/CourierNew(0)/m/n/10 values\EU1/TimesNewRoman(0)/m/n/10 , []\EU1/CourierNe
 w(0)/m/n/10 letrec\EU1/TimesNewRoman(0)/m/n/10 , or []\EU1/CourierNew(0)/m/n/10
@@ -2499,7 +2582,7 @@ Underfull \hbox (badness 1430) in paragraph at lines 223--228
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.42847 []
 
-[32]
+
 Underfull \hbox (badness 1067) in paragraph at lines 282--295
 \EU1/TimesNewRoman(0)/m/n/10 see section []11.3[]) are evaluated sequentially i
 n the extended
@@ -2513,7 +2596,7 @@ d by the
 
 \hbox(6.94824+2.15819)x258.5, glue set 2.49844 []
 
-
+[34]
 Underfull \hbox (badness 1571) in paragraph at lines 565--567
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 and \EU1/TimesNewR
 oman(0)/m/n/10 keyword could be defined in terms of \EU1/CourierNew(0)/m/n/10 i
@@ -2521,7 +2604,7 @@ f \EU1/TimesNewRoman(0)/m/n/10 using
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.50578 []
 
-[34]
+
 Underfull \hbox (badness 2334) in paragraph at lines 623--641
 \EU1/TimesNewRoman(0)/m/n/10 bindings for variables that are visible only in a 
 delimited
@@ -2551,14 +2634,14 @@ let-values \EU1/TimesNewRoman(0)/m/n/10 expression, the initial
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.37099 []
 
-
+[35]
 Underfull \hbox (badness 1603) in paragraph at lines 736--745
 []\EU1/TimesNewRoman(0)/m/n/10 s are evaluated in the resulting environment (in
  some
 
 \hbox(7.5+2.5)x258.5, glue set 2.5229 []
 
-[35]
+
 Underfull \hbox (badness 1102) in paragraph at lines 773--784
 []\EU1/TimesNewRoman(0)/m/it/10 Implementation responsibilities: \EU1/TimesNewR
 oman(0)/m/n/10 Implementations must detect
@@ -2608,7 +2691,7 @@ evaluated and bindings created
 
 \hbox(7.5+2.5)x258.5, glue set 2.1728 []
 
-
+[37]
 Underfull \hbox (badness 1571) in paragraph at lines 995--998
 [][] \EU1/TimesNewRoman(0)/m/n/10 and [] are both exact[] number objects and ar
 e
@@ -2630,23 +2713,23 @@ nite
 \hbox(6.94336+2.15819)x238.49997, glue set 2.28741 []
 
 
-LaTeX Warning: Reference `lib:bytevectorschapter' on page 37 undefined on input
+LaTeX Warning: Reference `lib:bytevectorschapter' on page 38 undefined on input
  line 1014.
 
 
-LaTeX Warning: Reference `lib:recordschapter' on page 37 undefined on input lin
+LaTeX Warning: Reference `lib:recordschapter' on page 38 undefined on input lin
 e 1016.
 
 
-LaTeX Warning: Reference `lib:portsiosection' on page 37 undefined on input lin
+LaTeX Warning: Reference `lib:portsiosection' on page 38 undefined on input lin
 e 1017.
 
 
-LaTeX Warning: Reference `lib:hashtablechapter' on page 37 undefined on input l
+LaTeX Warning: Reference `lib:hashtablechapter' on page 38 undefined on input l
 ine 1018.
 
 
-LaTeX Warning: Reference `lib:recordsproceduralsection' on page 37 undefined on
+LaTeX Warning: Reference `lib:recordsproceduralsection' on page 38 undefined on
  input line 1023.
 
 
@@ -2656,7 +2739,7 @@ New(0)/m/n/10 symbol=?
 
 \hbox(6.94336+2.15819)x238.49997, glue set 2.54408 []
 
-[37]
+
 Underfull \hbox (badness 2762) in paragraph at lines 1049--1051
 [][] \EU1/TimesNewRoman(0)/m/n/10 and [] are characters for which the \EU1/Cour
 ierNew(0)/m/n/10 char=?
@@ -2679,7 +2762,7 @@ e 1059.
 LaTeX Warning: Reference `lib:hashtablechapter' on page 38 undefined on input l
 ine 1060.
 
-
+[38]
 Underfull \hbox (badness 1629) in paragraph at lines 1170--1178
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 eq? \EU1/TimesNewR
 oman(0)/m/n/10 and \EU1/CourierNew(0)/m/n/10 eqv? \EU1/TimesNewRoman(0)/m/n/10 
@@ -2694,7 +2777,6 @@ Underfull \hbox (badness 1596) in paragraph at lines 1170--1178
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.52042 []
 
-[38]
 
 LaTeX Warning: Reference `lib:bytevectorschapter' on page 39 undefined on input
  line 1214.
@@ -2731,7 +2813,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 1267--1274
 LaTeX Warning: Reference `lib:numberchapter' on page 39 undefined on input line
  1275.
 
-
+[39]
 Underfull \hbox (badness 1442) in paragraph at lines 1306--1317
 \EU1/TimesNewRoman(0)/m/n/10 exact result when all of their arguments are exact
  and the
@@ -2739,7 +2821,7 @@ Underfull \hbox (badness 1442) in paragraph at lines 1306--1317
 \hbox(6.94336+2.15819)x258.5, glue set 2.43585 []
 
 
-LaTeX Warning: Reference `lib:flonumssection' on page 39 undefined on input lin
+LaTeX Warning: Reference `lib:flonumssection' on page 40 undefined on input lin
 e 1335.
 
 
@@ -2784,21 +2866,21 @@ on with
 
 \hbox(6.94336+2.13866)x258.5, glue set 2.5981 []
 
-[39]
+[40]
 Underfull \hbox (badness 1708) in paragraph at lines 1455--1458
 \EU1/TimesNewRoman(0)/m/n/10 (*) indicates that the entry applies to implementa
 tions that
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.57852 []
 
-[40]
+[41]
 Underfull \hbox (badness 1472) in paragraph at lines 1591--1598
 \EU1/TimesNewRoman(0)/m/it/9 Note:  \EU1/TimesNewRoman(0)/m/n/9 These procedure
 s test whether a given number object can
 
 \hbox(6.25342+1.94237)x258.5, glue set 2.4524 []
 
-[41]
+
 Underfull \hbox (badness 1571) in paragraph at lines 1642--1649
 \EU1/TimesNewRoman(0)/m/n/10 should be numerically equal to its argument. If an
  inexact
@@ -2861,7 +2943,7 @@ ception
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.4145 []
 
-
+[43]
 Underfull \hbox (badness 5231) in paragraph at lines 1928--1933
 \EU1/TimesNewRoman(0)/m/n/10 and return the results of the corresponding mathem
 atical
@@ -2875,7 +2957,7 @@ t was
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.13881 []
 
-[43]
+
 Underfull \hbox (badness 2027) in paragraph at lines 1982--1992
 []\EU1/TimesNewRoman(0)/m/n/10 These procedures return inexact integer objects 
 for inexact
@@ -2903,21 +2985,21 @@ imesNewRoman(0)/m/n/10 procedure returns the a number object
 
 \hbox(6.94824+2.15819)x258.5, glue set 2.29286 []
 
-
+[44]
 Underfull \hbox (badness 3049) in paragraph at lines 2065--2074
 \EU1/TimesNewRoman(0)/m/n/10 respectively. The two-argument variant of \EU1/Cou
 rierNew(0)/m/n/10 atan \EU1/TimesNewRoman(0)/m/n/10 computes
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.12747 []
 
-[44]
+
 Underfull \hbox (badness 3989) in paragraph at lines 2115--2118
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 exact-integer-sqrt
  \EU1/TimesNewRoman(0)/m/n/10 procedure returns two non-
 
 \hbox(6.94336+2.13866)x258.5, glue set 3.41782 []
 
-
+[45]
 Underfull \hbox (badness 4096) in paragraph at lines 2241--2244
 \EU1/TimesNewRoman(0)/m/n/10 is true. If no possible result makes this expressi
 on true,
@@ -2938,7 +3020,6 @@ ional real or
 
 \hbox(6.25342+1.94237)x258.5, glue set 2.32959 []
 
-[45]
 
 LaTeX Warning: Citation `howtoprint' on page 46 undefined on input line 2261.
 
@@ -2959,8 +3040,9 @@ oman(0)/m/n/10 The implementation should
 
 \hbox(6.94336+2.13866)x258.5, glue set 3.33672 []
 
+[48]
 
-LaTeX Warning: Citation `Unicode' on page 48 undefined on input line 2767.
+LaTeX Warning: Citation `Unicode' on page 49 undefined on input line 2767.
 
 
 Underfull \hbox (badness 1184) in paragraph at lines 2769--2781
@@ -2976,7 +3058,7 @@ are subtle and
 
 \hbox(6.24902+1.94237)x258.5, glue set 2.88239 []
 
-[48]
+[49]
 Underfull \hbox (badness 1629) in paragraph at lines 2920--2926
 \EU1/TimesNewRoman(0)/m/n/10 of the corresponding orderings on characters. For 
 example,
@@ -2997,7 +3079,7 @@ st->string \EU1/TimesNewRoman(0)/m/n/10 procedure returns a
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.4625 []
 
-[49]
+
 Underfull \hbox (badness 2213) in paragraph at lines 3032--3035
 \EU1/TimesNewRoman(0)/m/n/10 argument is given, then each element is initialize
 d to [].
@@ -3024,7 +3106,7 @@ ion-
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.51161 []
 
-
+[51]
 Underfull \hbox (badness 3557) in paragraph at lines 3251--3253
 \EU1/TimesNewRoman(0)/m/n/10 This chapter describes various primitive procedure
 s which
@@ -3038,7 +3120,7 @@ CourierNew(0)/m/n/10 call-
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.39218 []
 
-[51]
+
 Underfull \hbox (badness 1184) in paragraph at lines 3306--3310
 \EU1/CourierNew(0)/m/n/10 with-current-continuation \EU1/TimesNewRoman(0)/m/n/1
 0 is used. If all real uses
@@ -3054,7 +3136,7 @@ esNewRoman(0)/m/n/10 , \EU1/CourierNew(0)/m/n/10 let\EU1/TimesNewRoman(0)/m/n/1
 
 \hbox(6.94336+2.13866)x258.5, glue set 2.85538 []
 
-
+[52]
 Underfull \hbox (badness 2865) in paragraph at lines 3397--3401
 []\EU1/TimesNewRoman(0)/m/it/10 Implementation responsibilities: \EU1/TimesNewR
 oman(0)/m/n/10 After [] returns, the
@@ -3110,14 +3192,14 @@ erNew(0)/m/n/10 dynamic-wind \EU1/TimesNewRoman(0)/m/n/10 calls [], [], and
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.22093 []
 
-[52]
+
 Underfull \hbox (badness 1308) in paragraph at lines 3507--3515
 \EU1/TimesNewRoman(0)/m/n/10 whose parameters are the bound variables and whose
  body
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.35782 []
 
-
+[53]
 Underfull \hbox (badness 10000) in paragraph at lines 3543--3546
 []\EU1/TimesNewRoman(0)/m/n/10 “Backquote” or “quasiquote”[] expression
 s are useful for
@@ -3144,7 +3226,6 @@ Underfull \hbox (badness 1226) in paragraph at lines 3571--3578
 
 \hbox(7.5+2.5)x258.5, glue set 2.30768 []
 
-[53]
 Missing character: There is no ^^R in font Courier New/ICU:mapping=tex-text;!
 Missing character: There is no ^^R in font Courier New/ICU:mapping=tex-text;!
 Missing character: There is no ^^R in font Courier New/ICU:mapping=tex-text;!
@@ -3175,7 +3256,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3671--3676
 
 \hbox(7.5+2.5)x258.5, glue set 7.55493 []
 
-
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 3682--3691
 \EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 let-syntax \EU1/Time
 sNewRoman(0)/m/n/10 and \EU1/CourierNew(0)/m/n/10 letrec-syntax \EU1/TimesNewRo
@@ -3184,7 +3265,7 @@ man(0)/m/n/10 forms bind
 \hbox(6.94336+1.88475)x258.5, glue set 5.90141 []
 
 
-LaTeX Warning: Reference `lib:syntaxcasechapter' on page 54 undefined on input 
+LaTeX Warning: Reference `lib:syntaxcasechapter' on page 55 undefined on input 
 line 3706.
 
 
@@ -3220,7 +3301,7 @@ Underfull \hbox (badness 4291) in paragraph at lines 3724--3726
 
 \hbox(7.5+2.5)x258.5, glue set 3.50214 []
 
-[54]
+
 Underfull \hbox (badness 10000) in paragraph at lines 3762--3773
 []\EU1/TimesNewRoman(0)/m/it/10 Semantics: \EU1/TimesNewRoman(0)/m/n/10 The []s
  are expanded in the syntactic
@@ -3247,7 +3328,7 @@ rNew(0)/m/n/10 let-syntax \EU1/TimesNewRoman(0)/m/n/10 and
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.13594 []
 
-
+[55]
 Underfull \hbox (badness 2119) in paragraph at lines 3848--3852
 []\EU1/TimesNewRoman(0)/m/n/10 An [] is a restricted form of [], namely, a
 
@@ -3274,7 +3355,7 @@ acro
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.28775 []
 
-[55]
+[56]
 Underfull \hbox (badness 1259) in paragraph at lines 4003--4012
 \EU1/CourierNew(0)/m/n/10 (... ...) \EU1/TimesNewRoman(0)/m/n/10 produces a sin
 gle ellipsis, \EU1/CourierNew(0)/m/n/10 ...\EU1/TimesNewRoman(0)/m/n/10 . This 
@@ -3282,7 +3363,7 @@ allows
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.32695 []
 
-[56]
+
 Underfull \hbox (badness 1259) in paragraph at lines 4036--4040
 []\EU1/TimesNewRoman(0)/m/n/10 The macro transformer for \EU1/CourierNew(0)/m/n
 /10 cond \EU1/TimesNewRoman(0)/m/n/10 recognizes \EU1/CourierNew(0)/m/n/10 => \
@@ -3303,7 +3384,7 @@ ntifier-syntax\EU1/TimesNewRoman(0)/m/n/10 , references to
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.46138 []
 
-
+[57]
 Underfull \hbox (badness 1997) in paragraph at lines 4178--4183
 []\EU1/TimesNewRoman(0)/m/n/10 If a \EU1/CourierNew(0)/m/n/10 cond \EU1/TimesNe
 wRoman(0)/m/n/10 expression is in a tail context, and has a
@@ -3317,7 +3398,7 @@ lts
 
 \hbox(6.94336+2.13866)x238.49997, glue set 3.63466 []
 
-[57]) [58
+) [58
 
 ]
 Приложение A.
@@ -3591,10 +3672,6 @@ egin
 \hbox(7.28027+2.15819)x258.5, glue set 3.38907 []
 
 (./r6-fig-Underspecification.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active
-\vbox(511.45021+0.0)x258.5, glue set 6.03143 []
-
-
 Underfull \hbox (badness 1838) in paragraph at lines 706--707
 \EU1/TimesNewRoman(0)/m/n/10 we know that a value or values must have and other
 wise
@@ -3657,9 +3734,9 @@ sNewRoman(0)/m/n/10 using \EU1/CourierNew(0)/m/n/10 syntax-
 LaTeX Warning: Reference `lib:syntaxcasechapter' on page 66 undefined on input 
 line 137.
 
-[66] [67]) (./repository.tex
+[66]) (./repository.tex
 Приложение C.
-
+[67]
 Underfull \hbox (badness 1184) in paragraph at lines 19--21
 \EU1/TimesNewRoman(0)/m/n/10 contain extensive Scheme bibliographies, as well a
 s papers,
@@ -3832,7 +3909,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--128
 LaTeX Warning: Citation `R6RS-libraries' on page 69 undefined on input line 130
 .
 
-[69]
+
 Underfull \hbox (badness 4621) in paragraph at lines 140--142
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 let-syntax \EU1/Ti
 mesNewRoman(0)/m/n/10 and \EU1/CourierNew(0)/m/n/10 letrec-syntax \EU1/TimesNew
@@ -3840,7 +3917,7 @@ Roman(0)/m/n/10 no longer
 
 \hbox(6.94336+2.15819)x238.49997, glue set 3.59125 []
 
-
+[69]
 Underfull \hbox (badness 4454) in paragraph at lines 145--148
 []\EU1/TimesNewRoman(0)/m/n/10 For implementations that support a distinct -0.0
 , the
@@ -3897,10 +3974,10 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  20833 strings out of 494123
  403170 string characters out of 3154017
- 474666 words of memory out of 3000000
+ 476679 words of memory out of 3000000
  23634 multiletter control sequences out of 15000+200000
  13975 words of font info for 132 fonts, out of 3000000 for 9000
  1019 hyphenation exceptions out of 8191
- 44i,14n,45p,1128b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,14n,45p,1128b,557s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on r6rs_ru.pdf (71 pages).

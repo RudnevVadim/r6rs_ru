@@ -618,67 +618,107 @@ $p_b+q_c$. \hyper{import~set} без ограничивающего {\cf\bfserie
 %reexported binding, i.e., an export imported from another library, are the
 %same as the effective import levels of that binding within the reexporting
 %library.
-Уровень экспорта экспортируемой привязки - $0$ для всех привязок, которые определены в
-пределах библиотеки экспорта. Экспортные уровни реэкспортированного закрепления, то есть,
-экспорт, импортированный от другой библиотеки, являются тем же самым как эффективные уровни
-импорта того закрепления в пределах реэкспортирующей библиотеки.
+Уровнем экспорта экспортируемой привязки является $0$ для всех привязок, определённых внутри
+экспортируемой библиотеки. Уровни зкспорта реэкспортированной привязки, то есть, экспорта,
+импортированного из другой библиотеки, являются такими же, как и эффективные уровни импорта этой
+привязки внутри реэкспортируемой библиотеки.
 
-For the libraries defined in the library report, the export level is
-$0$ for nearly all bindings. The exceptions are {\cf syntax-rules},
-{\cf identifier-syntax}, {\cf ...}, and {\cf \_} from the
-\rsixlibrary{base} library, which are exported with level $1$, {\cf
-  set!} from the \rsixlibrary{base} library, which is exported with
-levels $0$ and $1$, and all bindings from the composite
-\thersixlibrary{} library (see library
-chapter~\extref{lib:complibchapter}{Composite library}), which are
-exported with levels $0$ and $1$.
+%For the libraries defined in the library report, the export level is
+%$0$ for nearly all bindings. The exceptions are {\cf syntax-rules},
+%{\cf identifier-syntax}, {\cf ...}, and {\cf \_} from the
+%\rsixlibrary{base} library, which are exported with level $1$, {\cf
+%  set!} from the \rsixlibrary{base} library, which is exported with
+%levels $0$ and $1$, and all bindings from the composite
+%\thersixlibrary{} library (see library
+%chapter~\extref{lib:complibchapter}{Composite library}), which are
+%exported with levels $0$ and $1$.
+Для библиотек, определённых в библиотечном документе, экспортным уровнем практически всех
+привязок является $0$. Исключениями являются {\cf\bfseries syntax-rules}, {\cf\bfseries
+  identifier-syntax}, {\cf\bfseries ...} и {\cf\bfseries \_} из библиотеки
+\textbf{\rsixlibrary{base}}, экспортируемые с уровнем $1$, {\cf\bfseries set!} из библиотеки
+\textbf{\rsixlibrary{base}}, экспортируемая с уровнями $0$ и $1$, и все привязки из композитной
+библиотеки \textbf{\thersixlibrary{}} (см. библиотечную
+главу~\extref{lib:complibchapter}{Composite library}), экспортируемые с уровнями $0$ и $1$.
 
-Macro expansion within a library can introduce a reference to an
-identifier that is not explicitly imported into the library. In that
-case, the phase of the reference must match the identifier's level as
-shifted by the difference between the phase of the source library
-(i.e., the library that supplied the identifier's lexical context) and
-the library that encloses the reference. For example, suppose that
-expanding a library invokes a macro transformer, and the evaluation of
-the macro transformer refers to an identifier that is exported from
-another library (so the phase-$1$ instance of the library is used);
-suppose further that the value of the binding is a syntax object
-representing an identifier with only a level-$n$ binding; then, the
-identifier must be used only at phase $n+1$ in the
-library being expanded. This combination of levels and phases is why
-negative levels on identifiers can be useful, even though libraries
-exist only at non-negative phases.
+%Macro expansion within a library can introduce a reference to an
+%identifier that is not explicitly imported into the library. In that
+%case, the phase of the reference must match the identifier's level as
+%shifted by the difference between the phase of the source library
+%(i.e., the library that supplied the identifier's lexical context) and
+%the library that encloses the reference. For example, suppose that
+%expanding a library invokes a macro transformer, and the evaluation of
+%the macro transformer refers to an identifier that is exported from
+%another library (so the phase-$1$ instance of the library is used);
+%suppose further that the value of the binding is a syntax object
+%representing an identifier with only a level-$n$ binding; then, the
+%identifier must be used only at phase $n+1$ in the
+%library being expanded. This combination of levels and phases is why
+%negative levels on identifiers can be useful, even though libraries
+%exist only at non-negative phases.
+Раскрытие макроса в библиотеке может привести к обращению к идентификатору, явно не
+импортированному в библиотеку. В этом случае фаза обращения должна соответствовать уровню
+идентификатора, сдвинутому на разность фаз исходной библиотеки (то есть, библиотеки,
+предоставляющей лексический контекст идентификатора) и библиотеки, содержащей
+обращение. Например, предположим, что при разворачивании библиотеки активизируется
+макропреобразователь, и при вычислении макропреобразователя происходит обращение к
+идентификатору, экспортируемому из другой библиотеки (таким образом, используется экземпляр
+библиотеки фазы $1$); предположим также, что значением привязки является синтаксический объект,
+представляющий идентификатор с привязкой только уровня $n$; тогда, в разворачиваемой библиотеке
+идентификатор должен использоваться только в фазе $n+1$. Поэтому при такой комбинации уровней и
+фаз могут применяться отрицательные уровни идентификаторов несмотря на то, что библиотеки
+существуют только в неотрицательных фазах.
 
-If any of a library's definitions are referenced at phase $0$ in the
-expanded form of a program, then an instance of the referenced library
-is created for phase $0$ before the program's definitions and
-expressions are evaluated. This rule applies transitively: if the
-expanded form of one library references at phase $0$ an identifier
-from another library, then before the referencing library is
-instantiated at phase $n$, the referenced library must be instantiated
-at phase $n$. When an identifier is referenced at any phase $n$
-greater than $0$, in contrast, then the defining library is
-instantiated at phase $n$ at some unspecified time before the
-reference is evaluated. Similarly, when a macro keyword is referenced at
-phase $n$ during the expansion of a library, then the
-defining library is visited at phase $n$ at some unspecified time
-before the reference is evaluated.
+%If any of a library's definitions are referenced at phase $0$ in the
+%expanded form of a program, then an instance of the referenced library
+%is created for phase $0$ before the program's definitions and
+%expressions are evaluated. This rule applies transitively: if the
+%expanded form of one library references at phase $0$ an identifier
+%from another library, then before the referencing library is
+%instantiated at phase $n$, the referenced library must be instantiated
+%at phase $n$. When an identifier is referenced at any phase $n$
+%greater than $0$, in contrast, then the defining library is
+%instantiated at phase $n$ at some unspecified time before the
+%reference is evaluated. Similarly, when a macro keyword is referenced at
+%phase $n$ during the expansion of a library, then the
+%defining library is visited at phase $n$ at some unspecified time
+%before the reference is evaluated.
+При обращении из развёрнутой формы программы к какому-либо библиотечному определению в фазе $0$,
+перед вычислением определений и выражений программы создаётся экземпляр адресуемой библиотеки
+для фазы $0$. Это правило применяется транзитивно: при обращении из развёрнутой формы некоторой
+библиотеки в фазе $0$ к идентификатору из другой библиотеки, перед инстанцированием библиотеки
+обращения в фазе $n$, должна инстанцироваться адресуемая библиотека в фазе $n$. При обращении к
+идентификатору в некоторой фазе $n$, большей чем $0$, напротив, библиотека определения
+инстанцируется в фазе $n$ в произвольное неспецифицированное время до вычисления
+обращения. Аналогично, при обращении к макро-ключевому слову в фазе $n$ в течение разворачивания
+библиотеки, библиотека определения посещается в фазе $n$ в произвольное неспецифицированное
+время до вычисления обращения.
 
-An implementation may distinguish instances/visits of a library for
-different phases or to use an instance/visit at any phase as an instance/visit at
-any other phase. An implementation may further
-expand each {\cf library} form with distinct
-visits of libraries in any phase and/or instances of
-libraries in phases above $0$. An implementation may
-create instances/visits of more libraries at more phases than required to
-satisfy references. When an identifier appears as an expression in a
-phase that is inconsistent with the identifier's level, then an
-implementation may raise an exception either at expand time or run
-time, or it may allow the reference. Thus, a library whose meaning depends on whether the
-instances of a library are distinguished or shared across phases or
-{\cf library} expansions may be unportable.
+%An implementation may distinguish instances/visits of a library for
+%different phases or to use an instance/visit at any phase as an instance/visit at
+%any other phase. An implementation may further
+%expand each {\cf library} form with distinct
+%visits of libraries in any phase and/or instances of
+%libraries in phases above $0$. An implementation may
+%create instances/visits of more libraries at more phases than required to
+%satisfy references. When an identifier appears as an expression in a
+%phase that is inconsistent with the identifier's level, then an
+%implementation may raise an exception either at expand time or run
+%time, or it may allow the reference. Thus, a library whose meaning depends on whether the
+%instances of a library are distinguished or shared across phases or
+%{\cf library} expansions may be unportable.
+Реализация может разделять экземпляры/посещения библиотек для различных фаз или
+использовать экземпляр/посещение в любой фазе как экземпляр/посещение в любой другой
+фазе. Реализация может также раскрывать каждую форму {\cf\bfseries library} с неодинаковыми
+посещениями библиотек в любой фазе и/или экземпляры библиотек в фазах выше $0$. Реализация
+может создавать экземпляры/посещения большего количества библиотек в большем количестве фаз, чем
+необходимо для удовлетворения обращений. Когда идентификатор находится как выражение в фазе,
+противоречащей уровню идентификатора, реализация может поднять исключение или на этапе разворачивания,
+или на этапе выполнения, или она может позволить обращение. Таким образом, библиотека,
+содержание которой зависит от того, различаются ли экземпляры библиотек, или же разделяется при
+разворачивания фаз или {\cf\bfseries library}, может быть непортируемой.\vspace{-4mm}
 
-\section{Examples}
+%\section{Examples}
+\section{Примеры}
 
 Examples for various \hyper{import~spec}s and \hyper{export~spec}s:
 
@@ -693,7 +733,9 @@ Examples for various \hyper{import~spec}s and \hyper{export~spec}s:
                      (set-car! s (cdar s))
                      v))
   (define (empty! s) (set-car! s '())))
+\end{scheme}
 
+\begin{scheme}
 (library (balloons)
   (export make push pop)
   (import (rnrs))
