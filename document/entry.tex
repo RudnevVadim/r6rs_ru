@@ -1,275 +1,436 @@
 %\vfill\eject
-\chapter{Entry format}
+%\chapter{Entry format}
+\chapter{Формат записи}
 \label{entryformatchapter}
 
-The chapters that describe bindings in the base library and the standard
-libraries are organized
-into entries.  Each entry describes one language feature or a group of
-related features, where a feature is either a syntactic construct or a
-built-in procedure.  An entry begins with one or more header lines of the form
+%The chapters that describe bindings in the base library and the standard
+%libraries are organized
+%into entries.  Each entry describes one language feature or a group of
+%related features, where a feature is either a syntactic construct or a
+%built-in procedure.  An entry begins with one or more header lines of the form
+Главы, описывающие привязки в основной и стандартных библиотеках,
+упорядочены записями. Каждая запись описывает одну языковую характеристику или группу
+связанных характеристик, где характеристика является или синтаксической конструкцией, или
+встроенной процедурой. Запись начинается с одной или более строки заголовка вида
+
+\newpage
 
 \noindent\pproto{\var{template}}{\var{category}}\unpenalty
 
-The \var{category} defines the kind of binding described by the entry,
-typically either ``\exprtype'' or ``procedure''.
-An entry may specify various restrictions on subforms or arguments.
-For background on this, see section~\ref{argumentcheckingsection}.
+%The \var{category} defines the kind of binding described by the entry,
+%typically either ``\exprtype'' or ``procedure''.
+%An entry may specify various restrictions on subforms or arguments.
+%For background on this, see section~\ref{argumentcheckingsection}.
+\var{category} определяет вид привязки, описываемой записью, обычно или ``\exprtype'', или
+``procedure''. В записи могут указываться различные ограничения подформ или аргументов. Вводную
+информацию о них см. в секции~\ref{argumentcheckingsection}.\vspace{2mm}
 
-\section{Syntax entries}
+%\section{Syntax entries}
+\section{Запись синтаксиса}\vspace{2mm}
 
-If \var{category} is ``\exprtype'', the entry describes a
-special syntactic construct, and the template gives the syntax of the
-forms of the construct.
-The template is written in a notation similar to a right-hand
-side of the BNF rules in chapter~\ref{readsyntaxchapter}, and describes
-the set of forms equivalent to the forms matching the
-template as syntactic data.  Some ``\exprtype'' entries carry a
-suffix ({\cf expand}), specifying that the syntactic keyword of the
-construct is exported with level
-$1$.  Otherwise, the syntactic keyword is exported with level $0$; see
-section~\ref{phasessection}.
+%If \var{category} is ``\exprtype'', the entry describes a
+%special syntactic construct, and the template gives the syntax of the
+%forms of the construct.
+%The template is written in a notation similar to a right-hand
+%side of the BNF rules in chapter~\ref{readsyntaxchapter}, and describes
+%the set of forms equivalent to the forms matching the
+%template as syntactic data.  Some ``\exprtype'' entries carry a
+%suffix ({\cf expand}), specifying that the syntactic keyword of the
+%construct is exported with level
+%$1$.  Otherwise, the syntactic keyword is exported with level $0$; see
+%section~\ref{phasessection}.
+Если \var{category} -- ``\exprtype'', запись описывает специальную синтаксическую
+конструкцию, а шаблон демонстрирует синтаксис форм конструкции. Шаблон записывается в
+нотации, аналогичной правой часть правил BNF в главе~\ref{readsyntaxchapter}, и описывает
+набор форм, эквивалентных формам, соответствующим шаблону в качестве синтаксических
+данных. Некоторые записи ``\exprtype'' содержат суффикс ({\bfseries\cf expand}), что указывает
+на экспорт синтаксического ключевого слова конструкции с уровнем $1$. В противном случае
+синтаксическое ключевое слово экспортируется с уровнем $0$; см. секцию~\ref{phasessection}.\vspace{2mm}
 
-Components of the form described by a template are designated
-by syntactic variables, which are written using angle brackets, for
-example, \hyper{expression}, \hyper{variable}.  Case is insignificant
-in syntactic variables.  Syntactic variables
-stand for other forms, or
-sequences of them.  A syntactic variable may refer to a non-terminal
-in the grammar for syntactic data (see section~\ref{datumsyntax}),
-in which case only forms matching
-that non-terminal are permissible in that position.
-For example, \hyper{identifier} stands for a form which must be an
-identifier.
-Also,
-\hyper{expression} stands for any form which is a
-syntactically valid expression.  Other non-terminals that are used in
-templates are defined as part of the specification.
+%Components of the form described by a template are designated
+%by syntactic variables, which are written using angle brackets, for
+%example, \hyper{expression}, \hyper{variable}.  Case is insignificant
+%in syntactic variables.  Syntactic variables
+%stand for other forms, or
+%sequences of them.  A syntactic variable may refer to a non-terminal
+%in the grammar for syntactic data (see section~\ref{datumsyntax}),
+%in which case only forms matching
+%that non-terminal are permissible in that position.
+%For example, \hyper{identifier} stands for a form which must be an
+%identifier.
+%Also,
+%\hyper{expression} stands for any form which is a
+%syntactically valid expression.  Other non-terminals that are used in
+%templates are defined as part of the specification.
+Компоненты описываемой шаблоном формы устанавливаются синтаксическими переменными, заключёнными
+в угловые скобки, например, \hyper{expression}, \hyper{variable}. В синтаксических переменных
+регистр является незначащим. Синтаксические переменные представляют другие формы или их
+последовательности. Синтаксическая переменная может обращаться к нетерминальному символу в
+грамматике синтаксических данных (см. секцию~\ref{datumsyntax}) только в случае, если формы,
+соответствующие нетерминальному символу, допустимы в этой позиции. Например, \hyper{identifier}
+представляет форму, которая должна быть идентификатором. Кроме того, \hyper{expression}
+представляет любую форму, являющуюся синтаксически верным выражением. Другие используемые
+в шаблонах нетерминальные символы определены как часть спецификации.\vspace{2mm}
 
-The notation
+%The notation
+Нотация
 \begin{tabbing}
 \qquad \hyperi{thing} $\ldots$
 \end{tabbing}
-indicates zero or more occurrences of a \hyper{thing}, and
+%indicates zero or more occurrences of a \hyper{thing}, and
+означает ноль или более вхождений \hyper{thing}, а
 \begin{tabbing}
 \qquad \hyperi{thing} \hyperii{thing} $\ldots$
 \end{tabbing}
-indicates one or more occurrences of a \hyper{thing}.
+%indicates one or more occurrences of a \hyper{thing}.
+означает одно или более вхождение \hyper{thing}\vspace{2mm}
 
-It is the programmer's responsibility to ensure that each component of
-a form has the shape specified by a template.  Descriptions of syntax
-may express other restrictions on the components of a form.
-Typically, such a restriction is formulated as a phrase of the form
-``\hyper{x} must be\mainindex{must be} a \ldots''.  Again, these
-specify the programmer's responsibility.  It is the implementation's
-responsibility to check that these restrictions are satisfied, as long
-as the macro transformers involved in expanding the form terminate.
-If the implementation detects that a component does not meet the
-restriction, an exception with condition type {\cf\&syntax} is raised.
+%It is the programmer's responsibility to ensure that each component of
+%a form has the shape specified by a template.  Descriptions of syntax
+%may express other restrictions on the components of a form.
+%Typically, such a restriction is formulated as a phrase of the form
+%``\hyper{x} must be\mainindex{must be} a \ldots''.  Again, these
+%specify the programmer's responsibility.  It is the implementation's
+%responsibility to check that these restrictions are satisfied, as long
+%as the macro transformers involved in expanding the form terminate.
+%If the implementation detects that a component does not meet the
+%restriction, an exception with condition type {\cf\&syntax} is raised.
+Обеспечение каждого компонента формы шейпом, определённым в шаблоне, является компетенцией
+программиста. В описании синтаксиса могут формулироваться другие ограничения на компоненты формы.
+Обычно такое ограничение формулируется фразой вида ``\hyper{x} должен быть\mainindex{must be}
+\ldots''. Опять же, это подразумевает компетенцию программиста. Обязанностью реализации является
+проверка удовлетворения этих ограничений при условии завершения работы участвующих в
+разворачивании формы макротрансформеров. При обнаружении реализацией невыполнения компонентом
+ограничения генерируется исключение с типом состояния {\bfseries\cf\&syntax}.\vspace{2mm}
 
-\section{Procedure entries}
+%\newpage
 
-If \var{category} is ``procedure'', then the entry describes a procedure, and
-the header line gives a template for a call to the procedure.  Parameter
-names in the template are \var{italicized}.  Thus the header line
+%\section{Procedure entries}
+\section{Запись процедур}
 
-\noindent\pproto{(vector-ref \var{vector} \var{k})}{procedure}\unpenalty
+%If \var{category} is ``procedure'', then the entry describes a procedure, and
+%the header line gives a template for a call to the procedure.  Parameter
+%names in the template are \var{italicized}.  Thus the header line
+Если \var{category} -- ``procedure'', запись описывает процедуру, а строка заголовка
+демонстрирует шаблон вызова процедуры. Имена параметров в шаблоне выделены \var{курсивом}.
+Таким образом, строка заголовка\vspace{1mm}
 
-indicates that the built-in procedure {\tt vector-ref} takes
-two arguments, a vector \var{vector} and an exact non-negative integer
-object \var{k} (see below).  The header lines
+%\noindent\pproto{(vector-ref \var{vector} \var{k})}{procedure}\unpenalty
+\noindent\pproto{\textbf{(vector-ref} \var{vector} \var{k}\textbf{)}}{procedure}\unpenalty
+
+%indicates that the built-in procedure {\tt vector-ref} takes
+%two arguments, a vector \var{vector} and an exact non-negative integer
+%object \var{k} (see below).  The header lines
+указывает, что встроенная процедура {\bfseries\tt vector-ref} принимает два аргумента, вектор
+\var{vector} и точный неотрицательный целый объект \var{k} (см. ниже). Строки заголовка
 
 \noindent%
-\pproto{(make-vector \var{k})}{procedure}
-\pproto{(make-vector \var{k} \var{fill})}{procedure}\unpenalty
+%\pproto{(make-vector \var{k})}{procedure}
+%\pproto{(make-vector \var{k} \var{fill})}{procedure}\unpenalty
+\pproto{\textbf{(make-vector} \var{k}\textbf{)}}{procedure}
+\pproto{\textbf{(make-vector} \var{k} \var{fill}\textbf{)}}{procedure}\unpenalty
 
-indicate that the {\tt make-vector} procedure takes
-either one or two arguments.  The parameter names are
-case-insensitive: \var{Vector} is the same as \var{vector}.
+%indicate that the {\tt make-vector} procedure takes
+%either one or two arguments.  The parameter names are
+%case-insensitive: \var{Vector} is the same as \var{vector}.
+указывает, что процедура {\bfseries\tt make-vector} принимает один или два
+аргумента. Имена параметров нечувствительны к регистру: \var{Vector} тождественен
+\var{vector}.
 
-As with syntax templates, an ellipsis \dotsfoo{} at the end of a header
-line, as in
+%As with syntax templates, an ellipsis \dotsfoo{} at the end of a header
+%line, as in
+Как и в случае синтаксических шаблонов, многоточие \dotsfoo{} в конце строки заголовка, как например
 
-\noindent\pproto{(= \vari{z} \varii{z} \variii{z} \dotsfoo)}{procedure}\unpenalty
+\noindent\pproto{\textbf{(=} \vari{z} \varii{z} \variii{z} \dotsfoo\textbf{)}}{procedure}\unpenalty
 
-indicates that the procedure takes arbitrarily many arguments of the
-same type as specified for the last parameter name.  In this case,
-{\cf =} accepts two or more arguments that must all be complex
-number objects.
+%indicates that the procedure takes arbitrarily many arguments of the
+%same type as specified for the last parameter name.  In this case,
+%{\cf =} accepts two or more arguments that must all be complex
+%number objects.
+указывает, что процедура принимает произвольное количество аргументов того же типа, который
+указан для последнего имени параметра. В данном случае {\bfseries\cf =} принимает два или более
+аргумента, которые должны быть комплексными числовыми объектами.\vspace{1mm}
 
 \label{typeconventions}
-A procedure that detects an argument that it is not specified to
-handle must raise an exception with condition type
-{\cf\&assertion}.  Also, the argument specifications are exhaustive: if the
-number of arguments provided in a procedure call does not match
-any number of arguments accepted by the procedure, an exception with
-condition type {\cf\&assertion} must be raised.
+%A procedure that detects an argument that it is not specified to
+%handle must raise an exception with condition type
+%{\cf\&assertion}.  Also, the argument specifications are exhaustive: if the
+%number of arguments provided in a procedure call does not match
+%any number of arguments accepted by the procedure, an exception with
+%condition type {\cf\&assertion} must be raised.
+Процедура, обнаружившая не определённый для обработки аргумент, должна возбудить
+исключение с типом состояния {\bfseries\cf\&assertion}. Кроме того, спецификации аргументов
+являются полными: если количество аргументов, предоставляемых в вызове процедуры, не
+соответствует любому принимаемому процедурой количеству аргументов, должно быть возбуждено
+исключение с типом состояния {\bfseries\cf\&assertion}.\vspace{1mm}
 
-For succinctness, the report follows the convention
-that if a parameter name is also the name of a type, then the corresponding argument must be of the named type.
-For example, the header line for {\tt vector-ref} given above dictates that the
-first argument to {\tt vector-ref} must be a vector.  The following naming
-conventions imply type restrictions:
+%For succinctness, the report follows the convention
+%that if a parameter name is also the name of a type, then the corresponding argument must be of the named type.
+%For example, the header line for {\tt vector-ref} given above dictates that the
+%first argument to {\tt vector-ref} must be a vector.  The following naming
+%conventions imply type restrictions:
+Для краткости в работе выполняется соглашение, что если имя параметра является также и
+именем типа, соответствующий аргумент должен иметь именованный тип. Например, строка
+заголовка для {\bfseries\tt vector-ref}, приведённая выше, предписывает, что первый аргумент
+{\bfseries\tt vector-ref} должен быть вектором. Следующие соглашения именования
+подразумевают ограничения типа:\vspace{1mm}
 
+%\texonly\begin{center}\endtexonly
+%  \begin{tabular}{ll}
+%    \var{obj}&any object\\
+%    \var{z}&complex number object\\
+%    \var{x}&real number object\\
+%    \var{y}&real number object\\
+%    \var{q}&rational number object\\
+%    \var{n}&integer object\\
+%    \var{k}&exact non-negative integer object\\
+%    \var{bool}&boolean (\schfalse{} or \schtrue{})\\
+%    \var{octet}&exact integer object in $\{0, \ldots, 255\}$\\
+%    \var{byte}&exact integer object in $\{-128, \ldots, 127\}$\\
+%    \var{char}&character (see section~\ref{charactersection})\\
+%    \var{pair}&pair (see section~\ref{listsection})\\
+%    \var{vector}&vector (see section~\ref{vectorsection})\\
+%    \var{string}&string (see section~\ref{stringsection})\\
+%    \var{condition}&condition (see library section~\extref{lib:conditionssection}{Conditions})\\
+%    \var{bytevector}&bytevector (see library chapter~\extref{lib:bytevectorschapter}{Bytevectors})\\
+%    \var{proc}&procedure (see section~\ref{proceduressection})
+%  \end{tabular}
+%\texonly\end{center}\endtexonly
 \texonly\begin{center}\endtexonly
   \begin{tabular}{ll}
-    \var{obj}&any object\\
-    \var{z}&complex number object\\
-    \var{x}&real number object\\
-    \var{y}&real number object\\
-    \var{q}&rational number object\\
-    \var{n}&integer object\\
-    \var{k}&exact non-negative integer object\\
-    \var{bool}&boolean (\schfalse{} or \schtrue{})\\
-    \var{octet}&exact integer object in $\{0, \ldots, 255\}$\\
-    \var{byte}&exact integer object in $\{-128, \ldots, 127\}$\\
-    \var{char}&character (see section~\ref{charactersection})\\
-    \var{pair}&pair (see section~\ref{listsection})\\
-    \var{vector}&vector (see section~\ref{vectorsection})\\
-    \var{string}&string (see section~\ref{stringsection})\\
-    \var{condition}&condition (see library section~\extref{lib:conditionssection}{Conditions})\\
-    \var{bytevector}&bytevector (see library chapter~\extref{lib:bytevectorschapter}{Bytevectors})\\
-    \var{proc}&procedure (see section~\ref{proceduressection})
+    \var{obj}&любой объект\\
+    \var{z}&комплексный числовой объект\\
+    \var{x}&действительный числовой объект\\
+    \var{y}&действительный числовой объект\\
+    \var{q}&рациональный числовой объект\\
+    \var{n}&целый объект\\
+    \var{k}&точный неотрицательный целый объект\\
+    \var{bool}&булево значение ({\bfseries\schfalse{}} или \bfseries\schtrue{})\\
+    \var{octet}&точный целый объект диапазона $\{0, \ldots, 255\}$\\
+    \var{byte}&точный целый объект диапазона $\{-128, \ldots, 127\}$\\
+    \var{char}&символ (см. секцию~\ref{charactersection})\\
+    \var{pair}&пара (см. секцию~\ref{listsection})\\
+    \var{vector}&вектор (см. секцию~\ref{vectorsection})\\
+    \var{string}&строка (см. секцию~\ref{stringsection})\\
+    \var{condition}&условие (см. библиотечную секцию~\extref{lib:conditionssection}{Conditions})\\
+    \var{bytevector}&байт-вектор (см. библиотецный раздел~\extref{lib:bytevectorschapter}{Bytevectors})\\
+    \var{proc}&процедура (см. секцию~\ref{proceduressection})
   \end{tabular}
 \texonly\end{center}\endtexonly
 
-Other type restrictions are expressed through parameter-naming
-conventions that are described in specific chapters.  For example,
-library chapter~\extref{lib:numberchapter}{Arithmetic} uses a number of special
-parameter variables for the various subsets of the numbers.
+%Other type restrictions are expressed through parameter-naming
+%conventions that are described in specific chapters.  For example,
+%library chapter~\extref{lib:numberchapter}{Arithmetic} uses a number of special
+%parameter variables for the various subsets of the numbers.
+Другие ограничения типа выражаются посредством соглашений именований параметров, описанных в
+конкретных главах. Например, в библиотечной главе~\extref{lib:numberchapter}{Arithmetic}
+используется множество специальных переменных параметра для различных подмножеств чисел.\vspace{1.5mm}
 
-With the listed type restrictions, it is the programmer's responsibility to
-ensure that the corresponding argument is of the specified type.
-It is the implementation's responsibility to check for
-that type.
+%With the listed type restrictions, it is the programmer's responsibility to
+%ensure that the corresponding argument is of the specified type.
+%It is the implementation's responsibility to check for
+%that type.
+При перечисленных ограничениях типа обязанностью программиста является гарантия, что
+соответствующий аргумент имеет указанный тип. Проверка этого типа является обязанностью
+реализации.\vspace{1.6mm}
 
-A parameter called \var{list} means that it is the
-programmer's responsibility to pass an argument that is a list (see
-section~\ref{listsection}).  It is the implementation's responsibility
-to check that the argument is appropriately structured for the
-operation to perform its function, to the extent that this is possible
-and reasonable.  The implementation must at least check that the
-argument is either an empty list or a pair.
+%A parameter called \var{list} means that it is the
+%programmer's responsibility to pass an argument that is a list (see
+%section~\ref{listsection}).  It is the implementation's responsibility
+%to check that the argument is appropriately structured for the
+%operation to perform its function, to the extent that this is possible
+%and reasonable.  The implementation must at least check that the
+%argument is either an empty list or a pair.
+Параметр, называемый \var{list}, означает, что обязанностью программиста является передача
+аргумента, который является списком (см. секцию~\ref{listsection}). Обязанностью реализации
+является проверка, что аргумент должным образом структурирован для операции, чтобы выполнить её
+функцию, до степени, что это возможно и разумно. Реализация должна по крайней мере проверить,
+что аргумент является или пустым списком или парой.\vspace{1.6mm}
 
-Descriptions of procedures may express other restrictions on the
-arguments of a procedure.  Typically, such a restriction is formulated
-as a phrase of the form ``\var{x} must be a \ldots'' (or otherwise
-using the word ``must'').
+%Descriptions of procedures may express other restrictions on the
+%arguments of a procedure.  Typically, such a restriction is formulated
+%as a phrase of the form ``\var{x} must be a \ldots'' (or otherwise
+%using the word ``must'').
+Описания процедур могут выражать другие ограничения аргументов процедур. Обычно такое
+ограничение формулируется фразой вида ``\var{x} должна быть \ldots'' (или иначе
+с помощью слова ``должна'').\vspace{1.6mm}
 
-\section{Implementation responsibilities}
+%\section{Implementation responsibilities}
+\section{Обязанности реализации}\vspace{1.6mm}
 
-In addition to the restrictions implied by naming conventions, an
-entry may list additional explicit restrictions.
-These explicit restrictions usually describe both the
-programmer's responsibilities, who must ensure that the subforms of a
-form are appropriate, or that an appropriate
-argument is passed, and the implementation's responsibilities, which
-must check that subform adheres to the specified restrictions (if
-macro expansion terminates), or if the argument is appropriate.  A description
-may explicitly list the implementation's responsibilities for some
-arguments or subforms in a paragraph labeled ``\textit{Implementation
-  responsibilities}''.  In this case, the responsibilities specified
-for these subforms or arguments in the rest of the description are only for the
-programmer.  A paragraph describing implementation responsibility does not
-affect the implementation's responsibilities for checking subforms or arguments not
-mentioned in the paragraph.
+%In addition to the restrictions implied by naming conventions, an
+%entry may list additional explicit restrictions.
+%These explicit restrictions usually describe both the
+%programmer's responsibilities, who must ensure that the subforms of a
+%form are appropriate, or that an appropriate
+%argument is passed, and the implementation's responsibilities, which
+%must check that subform adheres to the specified restrictions (if
+%macro expansion terminates), or if the argument is appropriate.  A description
+%may explicitly list the implementation's responsibilities for some
+%arguments or subforms in a paragraph labeled ``\textit{Implementation
+%  responsibilities}''.  In this case, the responsibilities specified
+%for these subforms or arguments in the rest of the description are only for the
+%programmer.  A paragraph describing implementation responsibility does not
+%affect the implementation's responsibilities for checking subforms or arguments not
+%mentioned in the paragraph.
+Кроме ограничений, подразумеваемых соглашениями именования, в записи могут перечисляться
+дополнительные явные ограничения. Эти явные ограничения обычно описывают и обязанности
+программиста, который должен гарантировать, что подформы формы являются соответствующими, или
+что передаётся соответствующий аргумент, и обязанности реализаций, которые должны проверить, что
+подформа соблюдает указанные ограничения (если разворачивание макросов завершено), или если
+аргумент является соответствующим. В описании могут явно перечисляться обязанности реализации
+для некоторых аргументов или подформ в параграфе, помеченном ``\textit {Обязанности
+  реализации}''. В этом случае обязанности, указанные для этих подформ или аргументов в
+остальной части описания, касаются только программиста. Параграф, описывающий обязанность
+реализации, не затрагивает обязанности реализации по проверке подформ или аргументов, не
+упомянутых в параграфе.\vspace{1.6mm}
 
-\section{Other kinds of entries}
+%\section{Other kinds of entries}
+\section{Другие виды записей}\vspace{1.6mm}
 
-If \var{category} is something other than ``syntax'' and
-``procedure'', then the entry describes a non-procedural value, and
-the \var{category} describes the type of that value.  The header line
+%If \var{category} is something other than ``syntax'' and
+%``procedure'', then the entry describes a non-procedural value, and
+%the \var{category} describes the type of that value.  The header line
+Если \var{category} -- нечто иное, чем ``syntax'' и ``procedure'', запись описывает
+непроцедурное значение, и \var{category} описывает тип этого значения. Строка
+заголовка\vspace{1.6mm}
 
-\noindent\rvproto{\&who}{condition type}\\
-indicates that {\cf\&who} is a condition type.  The header line
+\noindent\rvproto{\bfseries\&who}{condition type}\\
+%indicates that {\cf\&who} is a condition type.  The header line
+указывает, что {\bfseries\cf\&who} является типом условий. Строка заголовка
 
-\noindent\rvproto{unquote}{auxiliary syntax}\\
-indicates that {\cf unquote} is a syntax binding that may occur
-only as part of specific surrounding expressions.  Any use as an
-independent syntactic construct or identifier is a syntax violation.
-As with ``\exprtype'' entries, some ``auxiliary syntax'' entries  carry a
-suffix ({\cf expand}), specifying that the syntactic keyword of the
-construct is exported with level $1$.
-\section{Equivalent entries}
+\noindent\rvproto{\bfseries unquote}{auxiliary syntax}\\
+%indicates that {\cf unquote} is a syntax binding that may occur
+%only as part of specific surrounding expressions.  Any use as an
+%independent syntactic construct or identifier is a syntax violation.
+%As with ``\exprtype'' entries, some ``auxiliary syntax'' entries  carry a
+%suffix ({\cf expand}), specifying that the syntactic keyword of the
+%construct is exported with level $1$.
+%\section{Equivalent entries}
+указывает, что {\bfseries\cf unquote} является синтаксической привязкой, которая может
+фигурировать только как часть конкретных окружающих выражений. Любое применение
+в качестве независимой синтаксической конструкции или идентификатора является нарушением
+синтаксиса. Как и в случае с записями ``\exprtype'', некоторые записи ``вспомогательного синтаксиса''
+содержат суффикс ({\bfseries\cf expand}), что указывает на экспорт синтаксического ключевого слова
+конструкции с уровнем $1$.\vspace{1mm}
 
-The description of an entry occasionally states that it is \textit{the
-  same} as another entry.  This means that both entries are
-equivalent.  Specifically, it means that if both entries have the same
-name and are thus exported from different libraries, the entries from
-both libraries can be imported under the same name without conflict.
+\section {Эквивалентные записи}\vspace{1mm}
 
-\section{Evaluation examples}
+%The description of an entry occasionally states that it is \textit{the
+%  same} as another entry.  This means that both entries are
+%equivalent.  Specifically, it means that if both entries have the same
+%name and are thus exported from different libraries, the entries from
+%both libraries can be imported under the same name without conflict.
+В описании записи иногда утверждается, что она \textit{аналогична} другой записи. Это
+означает, что обе записи эквивалентны. Реально это означает, что, если обе записи имеют
+одинаковые имена и при этом экспортируются из различных библиотек, записи
+могут импортироваться из обеих библиотек под одинаковыми именами без конфликта.\vspace{1mm}
 
-The symbol ``\evalsto'' used in program examples can be read
-``evaluates to''.  For example,
+%\section{Evaluation examples}
+\section{Примеры вычислений}\vspace{1mm}
+
+%The symbol ``\evalsto'' used in program examples can be read
+%``evaluates to''.  For example,
+Символ ``\evalsto'' применяется в примерах программ и может быть прочитан ``вычисляется
+как''. Например,\vspace{1mm}
 
 \begin{scheme}
-(* 5 8)      \ev  40%
-\end{scheme}
+\bfseries(* 5 8)      \ev\bfseries  40%
+\end{scheme}\vspace{1mm}
 
-means that the expression {\tt(* 5 8)} evaluates to the object {\tt 40}.
-Or, more precisely:  the expression given by the sequence of characters
-``{\tt(* 5 8)}'' evaluates, in an environment that imports the relevant library, to an object
-that may be represented externally by the sequence of characters ``{\tt
-40}''.  See section~\ref{datumsyntaxsection} for a discussion of external
-representations of objects.
+%means that the expression {\tt(* 5 8)} evaluates to the object {\tt 40}.
+%Or, more precisely:  the expression given by the sequence of characters
+%``{\tt(* 5 8)}'' evaluates, in an environment that imports the relevant library, to an object
+%that may be represented externally by the sequence of characters ``{\tt
+%40}''.  See section~\ref{datumsyntaxsection} for a discussion of external
+%representations of objects.
+означает, что выражение {\bfseries\tt (* 5 8)} вычисляется как объект {\bfseries\tt 40}. Или,
+точнее: заданное последовательностью символов выражение ``{\bfseries\tt (* 5 8)}'' в окружении,
+импортирующем релевантную библиотеку, вычисляется как объект, который может быть представлен
+внешне последовательностью символов ``{\bfseries\tt 40}''. См. секцию ~\ref{datumsyntaxsection},
+где рассматриваются внешние представления объектов.\vspace{1mm}
 
-The ``\evalsto'' symbol is also used when the evaluation of an
-expression causes a violation.  For example,
+%The ``\evalsto'' symbol is also used when the evaluation of an
+%expression causes a violation.  For example,
+Символ ``\evalsto'' также применяется, если вычисление выражения приводит к нарушению. Например,\vspace{1mm}
 
 \begin{scheme}
-(integer->char \sharpsign{}xD800) \xev \exception{\&assertion}%
-\end{scheme}
+\bfseries(integer->char \sharpsign{}xD800) \xev \exception{\bfseries\&assertion}%
+\end{scheme}\vspace{1mm}
 %
-means that the evaluation of the expression {\cf (integer->char
-  \sharpsign{}xD800)} must raise an exception with condition type
-{\cf\&assertion}.
+%means that the evaluation of the expression {\cf (integer->char
+%  \sharpsign{}xD800)} must raise an exception with condition type
+%{\cf\&assertion}.
+означает, что вычисление выражения {\bfseries\cf (integer->char \sharpsign{}xD800)}
+должно возбудить исключение с типом состояния {\bfseries\cf\&assertion}.\vspace{1mm}
 
-Moreover, the ``\evalsto'' symbol is also used to explicitly say that
-the value of an expression in unspecified.  For example:
+%Moreover, the ``\evalsto'' symbol is also used to explicitly say that
+%the value of an expression in unspecified.  For example:
+Кроме того, символ ``\evalsto'' также используется для явного указания, что значение выражения
+не определено. Например:\vspace{1mm}
 %
 \begin{scheme}
-(eqv? "" "")             \ev  \unspecified%
-\end{scheme}
+\bfseries(eqv? "" "")             \ev  \unspecified%
+\end{scheme}\vspace{1mm}
 
-Mostly, examples merely illustrate the behavior specified in the
-entry.  In some cases, however, they disambiguate otherwise ambiguous
-specifications and are thus normative.  Note that, in some cases,
-specifically in the case of inexact number objects, the return value is only
-specified conditionally or approximately.  For example:
+%Mostly, examples merely illustrate the behavior specified in the
+%entry.  In some cases, however, they disambiguate otherwise ambiguous
+%specifications and are thus normative.  Note that, in some cases,
+%specifically in the case of inexact number objects, the return value is only
+%specified conditionally or approximately.  For example:
+В основном примеры просто демонстрируют определённую записью функциональность. Однако в
+некоторых случаях они устраняют неоднозначность двусмысленных в ином случае спецификаций и,
+таким образом, нормативны. Необходимо отметить, что в некоторых случаях, как правило в случае
+неточных числовых объектов, возвращаемое значение указывается только условно или
+приблизительно. Например:\vspace{1mm}
 %
 \begin{scheme}
-(atan -inf.0)                  \lev -1.5707963267948965 ; \textrm{approximately}%
+\bfseries(atan -inf.0)                  \lev \textbf{-1.5707963267948965} ; \textrm{approximately}%
 \end{scheme}
 
-\newpage
-~\newpage
+%\section{Naming conventions}
+\section{Соглашения по именованию}
 
-\section{Naming conventions}
+%By convention, the names of procedures that store values into previously
+%allocated locations (see section~\ref{storagemodel}) usually end in
+%``\ide{!}''.
+В соответствии с соглашением имена процедур, сохраняющих значения в отведённых ранее
+областях памяти (см. секцию ~\ref{storagemodel}), обычно завершаются ``\ide{\bfseries !}''.
 
-By convention, the names of procedures that store values into previously
-allocated locations (see section~\ref{storagemodel}) usually end in
-``\ide{!}''.
+%By convention, ``\ide{->}'' appears within the names of procedures that
+%take an object of one type and return an analogous object of another type.
+%For example, {\cf list->vector} takes a list and returns a vector whose
+%elements are the same as those of the list.
+В соответствии с соглашением ``\ide{\bfseries ->}'' присутствует внутри имён процедур,
+принимающих объект одного типа и возвращающих аналогичный объект другого типа. Например,
+{\cf\bfseries list->vector} принимает список и возвращает вектор, элементы которого совпадают с
+таковыми из списка.
 
-By convention, ``\ide{->}'' appears within the names of procedures that
-take an object of one type and return an analogous object of another type.
-For example, {\cf list->vector} takes a list and returns a vector whose
-elements are the same as those of the list.
+%By convention, the names of predicates---procedures that always return
+%a boolean value---end in ``\ide{?}'' when the name contains any
+%letters; otherwise, the predicate's name does not end with a question
+%mark.
+В соответствии с соглашением имена предикатов --- процедур, всегда возвращающих
+булево значение --- завершаются ``\ide{\bfseries ?}'', когда имя содержит произвольные буквы; в
+противном случае имя предиката не завершается вопросительным знаком.
 
-By convention, the names of predicates---procedures that always return
-a boolean value---end in ``\ide{?}'' when the name contains any
-letters; otherwise, the predicate's name does not end with a question
-mark.
+%By convention, the components of compound names are separated by ``\ide{-}''
+%In particular, prefixes that are actual words or can be pronounced as
+%though they were actual words are followed by a hyphen, except when
+%the first character following the hyphen would be something other than
+%a letter, in which case the hyphen is omitted.  Short,
+%unpronounceable prefixes (``\ide{fx}'' and ``\ide{fl}'') are not
+%followed by a hyphen.
+В соответствии с соглашением компоненты составных имён разделяются ``\ide{\bfseries -}''. В
+частности, после приставок, являющихся фактическими словами или которые могут быть произнесены,
+как если бы они были фактическими словами, ставится дефис, кроме тех случаев, когда первый
+символ после дефиса не является буквой, в этом случае дефис не ставится. После коротких,
+труднопроизносимых приставок (``\ide{\bfseries fx}'' и ``\ide{\bfseries fl}'') дефис не
+ставится.
 
-By convention, the components of compound names are separated by ``\ide{-}''
-In particular, prefixes that are actual words or can be pronounced as
-though they were actual words are followed by a hyphen, except when
-the first character following the hyphen would be something other than
-a letter, in which case the hyphen is omitted.  Short,
-unpronounceable prefixes (``\ide{fx}'' and ``\ide{fl}'') are not
-followed by a hyphen.
-
-By convention, the names of condition types start with
-``{\cf\&}''\index{&@\texttt{\&}}.
+%By convention, the names of condition types start with
+В соответствии с соглашением имена типов состояния начинаются с
+``{\bfseries\cf\&}''\index{&@\texttt{\&}}.
 
 %%% Local Variables:
 %%% mode: latex

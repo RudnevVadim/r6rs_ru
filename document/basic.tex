@@ -542,10 +542,10 @@ Scheme. В отдельной работе~\cite{R6RS-libraries} описаны 
 явно определённые неизменяемыми являются неизменяемыми объектами, в то время как все объекты,
 созданные другими процедурами, перечисленными в данной работе - изменяемыми. Попытка сохранить
 новое значение в области памяти, адресуемое неизменяемым объектом, должна возбудить исключение с
-типом состояния {\bfseries\cf\&assertion}.
+типом состояния {\bfseries\cf\&assertion}.\vspace{-2mm}
 
 %\section{Proper tail recursion}
-\section{Чистая хвостовая рекурсия}
+\section{Чистая хвостовая рекурсия}\vspace{-1mm}
 \label{proper tail recursion}
 
 %Implementations of Scheme must be
@@ -576,10 +576,10 @@ Scheme. В отдельной работе~\cite{R6RS-libraries} описаны 
 продолжений, вызовы могли возвратиться максимум один раз, и активными будут вызовы, которые еще
 не возвратились. Формальное определение чистой хвостовой рекурсии может быть найдено в газете
 Клайнджера~\cite{propertailrecursion}. Правила идентификации хвостовых вызовов в конструкциях из
-библиотеки \textbf{\rsixlibrary{base}} описаны в секции ~\ref{basetailcontextsection}.
+библиотеки \textbf{\rsixlibrary{base}} описаны в секции ~\ref{basetailcontextsection}.\vspace{-2mm}
 
 %\section{Dynamic extent and the dynamic environment}
-\section{Динамический экстент и динамическое окружение}
+\section{Динамический экстент и динамическое окружение}\vspace{-1mm}
 \label{dynamicenvironmentsection}
 
 %For a procedure call, the time between when it is initiated and when
@@ -588,27 +588,39 @@ Scheme. В отдельной работе~\cite{R6RS-libraries} описаны 
 %(section~\ref{call-with-current-continuation}) allows reentering a
 %dynamic extent after its procedure call has returned.  Thus, the
 %dynamic extent of a call may not be a single, connected time period.
-Для вызова процедуры, интервал между её началом и возвращением,
-называют её \defining {динамическим экстентом}. В Scheme, {\cf\bfseries call-with-current-continuation}
-(секция~\ref{call-with-current-continuation}) позволяет повторно войти динамическую экстент после
-того, как ее вызов процедуры возвратился. Таким образом, динамический экстент вызова может не быть
+Для вызова процедуры, интервал между её запуском и возвращением, называется её \defining
+{динамическим экстентом}. В Scheme, {\cf\bfseries call-with-current-continuation}
+(секция~\ref{call-with-current-continuation}) позволяет ввести заново динамический экстент после
+возвращения вызова её процедуры. Таким образом, динамический экстент вызова может не быть
 единственным, связанным периодом времени.
 
-Some operations described in the report acquire information in
-addition to their explicit arguments from the \defining{dynamic
-  environment}.  For example, {\cf call-\hp{}with-\hp{}current-\hp{}continuation}
-accesses an implicit context established
-by {\cf dynamic-wind} (section~\ref{dynamic-wind}), and the {\cf
-  raise} procedure (library
-section~\extref{lib:exceptionssection}{Exceptions}) accesses the
-current exception handler.  The operations that modify the dynamic
-environment do so dynamically, for the dynamic extent of a call to a
-procedure like {\cf dynamic-wind} or {\cf with-exception-handler}.
-When such a call returns, the previous dynamic environment is
-restored.  The dynamic environment can be thought of as part of the
-dynamic extent of a call.  Consequently, it is captured by {\cf
-  call-with-current-continuation}, and restored by invoking the escape
-procedure it creates.
+%Some operations described in the report acquire information in
+%addition to their explicit arguments from the \defining{dynamic
+%  environment}.  For example, {\cf call-\hp{}with-\hp{}current-\hp{}continuation}
+%accesses an implicit context established
+%by {\cf dynamic-wind} (section~\ref{dynamic-wind}), and the {\cf
+%  raise} procedure (library
+%section~\extref{lib:exceptionssection}{Exceptions}) accesses the
+%current exception handler.  The operations that modify the dynamic
+%environment do so dynamically, for the dynamic extent of a call to a
+%procedure like {\cf dynamic-wind} or {\cf with-exception-handler}.
+%When such a call returns, the previous dynamic environment is
+%restored.  The dynamic environment can be thought of as part of the
+%dynamic extent of a call.  Consequently, it is captured by {\cf
+%  call-with-current-continuation}, and restored by invoking the escape
+%procedure it creates.
+Некоторые операции, описанные в работе, помимо своих явных аргументов, получают информацию
+из \defining{динамического окружения}. Например, {\bfseries\cf
+  call-\hp{}with-\hp{}current-\hp{}continuation} получает доступ к неявному контексту,
+установленному {\bfseries\cf dynamic-wind} (секция~\ref{dynamic-wind}), а процедура {\bfseries\cf raise}
+(библиотечная секция~\extref{lib:exceptionssection}{Exceptions}) получает доступ к текущему
+обработчику исключения. Операции, изменяющие динамическое окружение, делают
+это динамически, для динамического экстента вызова процедуры типа {\bfseries\cf dynamic-wind} или
+{\bfseries\cf with-exception-handler}. При возвращении такого вызова восстанавливается предыдущее динамическое
+окружение. Динамическое окружение можно считать частью
+динамического экстента вызова. Следовательно, оно захватывается {\bfseries\cf call-with-current-continuation},
+и восстанавливается вызывом создающей его управляющей процедуры.\vspace{-2mm}
+
 
 %%% Local Variables:
 %%% mode: latex
