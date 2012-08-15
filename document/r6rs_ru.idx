@@ -73,7 +73,7 @@
 \indexentry{...@\texttt  {...}|hyperpage}{15}
 \indexentry{->@\texttt  {->}|hyperpage}{15}
 \indexentry{variable|hyperpage}{15}
-\indexentry{ |hyperpage}{15}
+\indexentry{syntactic keyword|hyperpage}{15}
 \indexentry{symbol|hyperpage}{15}
 \indexentry{t@\texttt  {\#{}t}|hyperpage}{15}
 \indexentry{f@\texttt  {\#{}f}|hyperpage}{15}
@@ -152,7 +152,7 @@
 \indexentry{посещением|hyperpage}{27}
 \indexentry{level|hyperpage}{27}
 \indexentry{import level|hyperpage}{27}
-\indexentry{top-level program|hyperpage}{28}
+\indexentry{Программа верхнего уровня|hyperpage}{28}
 \indexentry{literal|hyperpage}{29}
 \indexentry{variable|hyperpage}{29}
 \indexentry{unbound|hyperpage}{29}
@@ -163,9 +163,9 @@
 \indexentry{macro transformer|hyperpage}{29}
 \indexentry{transformer|hyperpage}{29}
 \indexentry{macro use|hyperpage}{29}
-\indexentry{syntactic keyword|hyperpage}{29}
-\indexentry{keyword|hyperpage}{29}
-\indexentry{macro keyword|hyperpage}{29}
+\indexentry{syntactic keyword|hyperpage}{30}
+\indexentry{keyword|hyperpage}{30}
+\indexentry{macro keyword|hyperpage}{30}
 \indexentry{hygienic|hyperpage}{30}
 \indexentry{referentially transparent|hyperpage}{30}
 \indexentry{core form|hyperpage}{30}
@@ -182,8 +182,8 @@
 \indexentry{empty list|hyperpage}{31}
 \indexentry{null?@\texttt  {null?}|hyperpage}{31}
 \indexentry{definition|hyperpage}{31}
-\indexentry{definition|hyperpage}{31}
-\indexentry{define@\texttt  {define}|hyperpage}{31}
+\indexentry{definition|hyperpage}{32}
+\indexentry{define@\texttt  {define}|hyperpage}{32}
 \indexentry{definition|hyperpage}{32}
 \indexentry{define-syntax@\texttt  {define-syntax}|hyperpage}{32}
 \indexentry{body|hyperpage}{32}
@@ -198,8 +198,8 @@
 \indexentry{lambda@\texttt  {lambda}|hyperpage}{33}
 \indexentry{if@\texttt  {if}|hyperpage}{33}
 \indexentry{true|hyperpage}{33}
-\indexentry{set!@\texttt  {set!}|hyperpage}{33}
-\indexentry{region|hyperpage}{33}
+\indexentry{set!@\texttt  {set!}|hyperpage}{34}
+\indexentry{region|hyperpage}{34}
 \indexentry{cond@\texttt  {cond}|hyperpage}{34}
 \indexentry{=>@\texttt  {=>}|hyperpage}{34}
 \indexentry{else@\texttt  {else}|hyperpage}{34}
@@ -208,8 +208,8 @@
 \indexentry{case@\texttt  {case}|hyperpage}{34}
 \indexentry{else@\texttt  {else}|hyperpage}{34}
 \indexentry{and@\texttt  {and}|hyperpage}{34}
-\indexentry{and@\texttt  {and}|hyperpage}{34}
-\indexentry{or@\texttt  {or}|hyperpage}{34}
+\indexentry{and@\texttt  {and}|hyperpage}{35}
+\indexentry{or@\texttt  {or}|hyperpage}{35}
 \indexentry{or@\texttt  {or}|hyperpage}{35}
 \indexentry{region|hyperpage}{35}
 \indexentry{let@\texttt  {let}|hyperpage}{35}
@@ -217,13 +217,13 @@
 \indexentry{let*@\texttt  {let*}|hyperpage}{35}
 \indexentry{region|hyperpage}{35}
 \indexentry{letrec@\texttt  {letrec}|hyperpage}{35}
-\indexentry{region|hyperpage}{35}
+\indexentry{region|hyperpage}{36}
 \indexentry{letrec*@\texttt  {letrec*}|hyperpage}{36}
 \indexentry{region|hyperpage}{36}
 \indexentry{let-values@\texttt  {let-values}|hyperpage}{36}
 \indexentry{region|hyperpage}{36}
 \indexentry{let*-values@\texttt  {let*-values}|hyperpage}{36}
-\indexentry{region|hyperpage}{36}
+\indexentry{region|hyperpage}{37}
 \indexentry{begin@\texttt  {begin}|hyperpage}{37}
 \indexentry{splicing|hyperpage}{37}
 \indexentry{predicate|hyperpage}{37}
@@ -232,13 +232,13 @@
 \indexentry{exact|hyperpage}{37}
 \indexentry{inexact|hyperpage}{37}
 \indexentry{eq?@\texttt  {eq?}|hyperpage}{38}
-\indexentry{equal?@\texttt  {equal?}|hyperpage}{38}
+\indexentry{equal?@\texttt  {equal?}|hyperpage}{39}
 \indexentry{procedure?@\texttt  {procedure?}|hyperpage}{39}
-\indexentry{number?@\texttt  {number?}|hyperpage}{40}
-\indexentry{complex?@\texttt  {complex?}|hyperpage}{40}
-\indexentry{real?@\texttt  {real?}|hyperpage}{40}
-\indexentry{rational?@\texttt  {rational?}|hyperpage}{40}
-\indexentry{integer?@\texttt  {integer?}|hyperpage}{40}
+\indexentry{number?@\texttt  {number?}|hyperpage}{41}
+\indexentry{complex?@\texttt  {complex?}|hyperpage}{41}
+\indexentry{real?@\texttt  {real?}|hyperpage}{41}
+\indexentry{rational?@\texttt  {rational?}|hyperpage}{41}
+\indexentry{integer?@\texttt  {integer?}|hyperpage}{41}
 \indexentry{real-valued?@\texttt  {real-valued?}|hyperpage}{41}
 \indexentry{rational-valued?@\texttt  {rational-valued?}|hyperpage}{41}
 \indexentry{integer-valued?@\texttt  {integer-valued?}|hyperpage}{41}
@@ -274,8 +274,8 @@
 \indexentry{mod0@\texttt  {mod0}|hyperpage}{43}
 \indexentry{gcd@\texttt  {gcd}|hyperpage}{43}
 \indexentry{lcm@\texttt  {lcm}|hyperpage}{43}
-\indexentry{numerator@\texttt  {numerator}|hyperpage}{43}
-\indexentry{denominator@\texttt  {denominator}|hyperpage}{43}
+\indexentry{numerator@\texttt  {numerator}|hyperpage}{44}
+\indexentry{denominator@\texttt  {denominator}|hyperpage}{44}
 \indexentry{floor@\texttt  {floor}|hyperpage}{44}
 \indexentry{ceiling@\texttt  {ceiling}|hyperpage}{44}
 \indexentry{truncate@\texttt  {truncate}|hyperpage}{44}
@@ -291,7 +291,7 @@
 \indexentry{acos@\texttt  {acos}|hyperpage}{44}
 \indexentry{atan@\texttt  {atan}|hyperpage}{44}
 \indexentry{sqrt@\texttt  {sqrt}|hyperpage}{44}
-\indexentry{exact-integer-sqrt@\texttt  {exact-integer-sqrt}|hyperpage}{44}
+\indexentry{exact-integer-sqrt@\texttt  {exact-integer-sqrt}|hyperpage}{45}
 \indexentry{expt@\texttt  {expt}|hyperpage}{45}
 \indexentry{make-rectangular@\texttt  {make-rectangular}|hyperpage}{45}
 \indexentry{make-polar@\texttt  {make-polar}|hyperpage}{45}

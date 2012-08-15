@@ -1,5 +1,5 @@
 \select@language {russian}
-\contentsline {chapter}{Introduction}{4}{chapter*.2}
+\contentsline {chapter}{Введение}{4}{chapter*.2}
 \contentsline {chaptergroup}{Описание языка}{6}{section*.4}
 \contentsline {chapter}{\numberline {1}Введение в Scheme}{6}{chapter.1}
 \contentsline {section}{\numberline {1.1}Основные типы}{6}{section.1.1}
@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Окончание строки}{14}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Пробельные символы и комментарии}{14}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Идентификаторы}{15}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Booleans}{15}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Булевы значения}{15}{subsection.4.2.5}
 \contentsline {subsection}{\numberline {4.2.6}Символы}{15}{subsection.4.2.6}
 \contentsline {subsection}{\numberline {4.2.7}Строки}{16}{subsection.4.2.7}
 \contentsline {subsection}{\numberline {4.2.8}Числа}{16}{subsection.4.2.8}
@@ -73,9 +73,9 @@
 \contentsline {section}{\numberline {7.1}Библиотечная форма}{24}{section.7.1}
 \contentsline {section}{\numberline {7.2}Уровни экспорта и импорта}{26}{section.7.2}
 \contentsline {section}{\numberline {7.3}Примеры}{27}{section.7.3}
-\contentsline {chapter}{\numberline {8}Top-level programs}{28}{chapter.8}
-\contentsline {section}{\numberline {8.1}Top-level program syntax}{28}{section.8.1}
-\contentsline {section}{\numberline {8.2}Top-level program semantics}{28}{section.8.2}
+\contentsline {chapter}{\numberline {8}Программы верхнего уровня}{28}{chapter.8}
+\contentsline {section}{\numberline {8.1}Синтаксис программ верхнего уровня}{28}{section.8.1}
+\contentsline {section}{\numberline {8.2}Семантика программы верхнего уровня}{29}{section.8.2}
 \contentsline {chapter}{\numberline {9}Primitive syntax}{29}{chapter.9}
 \contentsline {section}{\numberline {9.1}Primitive expression types}{29}{section.9.1}
 \contentsline {section}{\numberline {9.2}Macros}{29}{section.9.2}
@@ -83,14 +83,14 @@
 \contentsline {chapter}{\numberline {11}Base library}{31}{chapter.11}
 \contentsline {section}{\numberline {11.1}Base types}{31}{section.11.1}
 \contentsline {section}{\numberline {11.2}Definitions}{31}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Variable definitions}{31}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.1}Variable definitions}{32}{subsection.11.2.1}
 \contentsline {subsection}{\numberline {11.2.2}Syntax definitions}{32}{subsection.11.2.2}
 \contentsline {section}{\numberline {11.3}Bodies}{32}{section.11.3}
-\contentsline {section}{\numberline {11.4}Expressions}{32}{section.11.4}
+\contentsline {section}{\numberline {11.4}Expressions}{33}{section.11.4}
 \contentsline {subsection}{\numberline {11.4.1}Quotation}{33}{subsection.11.4.1}
 \contentsline {subsection}{\numberline {11.4.2}Procedures}{33}{subsection.11.4.2}
 \contentsline {subsection}{\numberline {11.4.3}Conditionals}{33}{subsection.11.4.3}
-\contentsline {subsection}{\numberline {11.4.4}Assignments}{33}{subsection.11.4.4}
+\contentsline {subsection}{\numberline {11.4.4}Assignments}{34}{subsection.11.4.4}
 \contentsline {subsection}{\numberline {11.4.5}Derived conditionals}{34}{subsection.11.4.5}
 \contentsline {subsection}{\numberline {11.4.6}Binding constructs}{35}{subsection.11.4.6}
 \contentsline {subsection}{\numberline {11.4.7}Sequencing}{37}{subsection.11.4.7}
@@ -99,11 +99,11 @@
 \contentsline {section}{\numberline {11.7}Arithmetic}{39}{section.11.7}
 \contentsline {subsection}{\numberline {11.7.1}Propagation of exactness and inexactness}{39}{subsection.11.7.1}
 \contentsline {subsection}{\numberline {11.7.2}Representability of infinities and NaNs}{39}{subsection.11.7.2}
-\contentsline {subsection}{\numberline {11.7.3}Semantics of common operations}{39}{subsection.11.7.3}
-\contentsline {subsubsection}{Integer division}{39}{section*.16}
+\contentsline {subsection}{\numberline {11.7.3}Semantics of common operations}{40}{subsection.11.7.3}
+\contentsline {subsubsection}{Integer division}{40}{section*.16}
 \contentsline {subsubsection}{Transcendental functions}{40}{section*.17}
-\contentsline {subsection}{\numberline {11.7.4}Numerical operations}{40}{subsection.11.7.4}
-\contentsline {subsubsection}{Numerical type predicates}{40}{section*.18}
+\contentsline {subsection}{\numberline {11.7.4}Numerical operations}{41}{subsection.11.7.4}
+\contentsline {subsubsection}{Numerical type predicates}{41}{section*.18}
 \contentsline {subsubsection}{Generic conversions}{41}{section*.19}
 \contentsline {subsubsection}{Arithmetic operations}{42}{section*.20}
 \contentsline {subsubsection}{Numerical Input and Output}{45}{section*.21}

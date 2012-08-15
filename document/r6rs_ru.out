@@ -1,4 +1,4 @@
-\BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Введение}{}% 1
 \BOOKMARK [0][-]{section*.4}{Описание языка}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Введение в Scheme}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Основные типы}{chapter.1}% 4
@@ -51,9 +51,9 @@
 \BOOKMARK [1][-]{section.7.1}{Библиотечная форма}{chapter.7}% 51
 \BOOKMARK [1][-]{section.7.2}{Уровни экспорта и импорта}{chapter.7}% 52
 \BOOKMARK [1][-]{section.7.3}{Примеры}{chapter.7}% 53
-\BOOKMARK [0][-]{chapter.8}{Top-level\040programs}{}% 54
-\BOOKMARK [1][-]{section.8.1}{Top-level\040program\040syntax}{chapter.8}% 55
-\BOOKMARK [1][-]{section.8.2}{Top-level\040program\040semantics}{chapter.8}% 56
+\BOOKMARK [0][-]{chapter.8}{Программы верхнего уровня}{}% 54
+\BOOKMARK [1][-]{section.8.1}{Синтаксис программ верхнего уровня}{chapter.8}% 55
+\BOOKMARK [1][-]{section.8.2}{Семантика программы верхнего уровня}{chapter.8}% 56
 \BOOKMARK [0][-]{chapter.9}{Primitive\040syntax}{}% 57
 \BOOKMARK [1][-]{section.9.1}{Primitive\040expression\040types}{chapter.9}% 58
 \BOOKMARK [1][-]{section.9.2}{Macros}{chapter.9}% 59

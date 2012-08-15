@@ -1,63 +1,87 @@
-\chapter{Top-level programs}
+%\chapter{Top-level programs}
+\chapter{Программы верхнего уровня}
 \label{programchapter}
 
-A \defining{top-level program} specifies an entry point for defining and running
-a Scheme program.  A top-level program specifies a set of libraries to import and
-code to run.  Through the imported libraries, whether directly or through the
-transitive closure of importing, a top-level program defines a complete Scheme
-program.
+%A \defining{top-level program} specifies an entry point for defining and running
+%a Scheme program.  A top-level program specifies a set of libraries to import and
+%code to run.  Through the imported libraries, whether directly or through the
+%transitive closure of importing, a top-level program defines a complete Scheme
+%program.
+\defining{Программа верхнего уровня} задаёт точку входа для определения и выполнения программы
+Scheme. В программе верхнего уровня указывается набор библиотек для импорта и код для
+выполнения. (Через импортированные библиотеки, или непосредственно или через переходное закрытие
+импортирования ?), программа верхнего уровня определяет полную программу Scheme.
 
-\section{Top-level program syntax}
+%\section{Top-level program syntax}
+\section{Синтаксис программ верхнего уровня}
 \label{programsyntaxsection}
 
-A top-level program is a delimited piece of text, typically a file, that 
-has the following form:
+%A top-level program is a delimited piece of text, typically a file, that
+%has the following form:
+Программа верхнего уровня является ограниченной частью текста, обычно файлом, имеющим следующую
+форму:
 %
 \begin{scheme}
 \hyper{import form} \hyper{top-level body}%
 \end{scheme}
 %
-An \hyper{import form} has the following form:
+%An \hyper{import form} has the following form:
+\hyper{import form} имеет следующую форму:
 %
 \begin{scheme}
-(import \hyper{import spec} \dotsfoo)%
+(\textbf{import} \hyper{import spec} \dotsfoo)%
 \end{scheme}
 %
-A \hyper{top-level body} has the following form:
+%A \hyper{top-level body} has the following form:
+\hyper{top-level body} имеет следующую форму:
 \begin{scheme}
 \hyper{top-level body form} \dotsfoo%
 \end{scheme}
 %
-A \hyper{top-level body form} is either a \hyper{definition} or an
+%A \hyper{top-level body form} is either a \hyper{definition} or an
+%\hyper{expression}.
+\hyper{top-level body form} является или \hyper{definition} или
 \hyper{expression}.
 
-The \hyper{import form} is identical to the import clause in
-libraries (see section~\ref{librarysyntaxsection}), 
-and specifies a set of libraries to import.  A \hyper{top-level 
- body} is like a \hyper{library body} (see
-section~\ref{librarybodysection}), except that 
-definitions and expressions may occur in any order.  Thus, the syntax
-specified by \hyper{top-level body form} refers to the result of macro
-expansion.
+%The \hyper{import form} is identical to the import clause in
+%libraries (see section~\ref{librarysyntaxsection}),
+%and specifies a set of libraries to import.  A \hyper{top-level
+% body} is like a \hyper{library body} (see
+%section~\ref{librarybodysection}), except that
+%definitions and expressions may occur in any order.  Thus, the syntax
+%specified by \hyper{top-level body form} refers to the result of macro
+%expansion.
+\hyper{import form} идентичен разделу import в библиотеках
+(см. секцию~\ref{librarysyntaxsection}) и задаёт ряд библиотек импорта. \hyper{top-level body}
+похож на \hyper{library body} (см. секцию~\ref{librarybodysection}), за исключением того, что
+определения и выражения могут находиться в произвольном порядке. Таким образом, синтаксис,
+задаваемый \hyper{top-level body form} относится к результату разворачивания макросов.
 
-When uses of {\cf begin}, {\cf let-syntax}, or {\cf letrec-syntax}
-from the \rsixlibrary{base} library
-occur in a top-level body prior to the first
-expression, they are spliced into the body; see section~\ref{begin}.
-Some or all of the body, including portions wrapped in {\cf begin},
-{\cf let-syntax}, or {\cf letrec-syntax}
-forms, may be specified by a syntactic abstraction
-(see section~\ref{macrosection}).
+%When uses of {\cf begin}, {\cf let-syntax}, or {\cf letrec-syntax}
+%from the \rsixlibrary{base} library
+%occur in a top-level body prior to the first
+%expression, they are spliced into the body; see section~\ref{begin}.
+%Some or all of the body, including portions wrapped in {\cf begin},
+%{\cf let-syntax}, or {\cf letrec-syntax}
+%forms, may be specified by a syntactic abstraction
+%(see section~\ref{macrosection}).
+При использовании {\bfseries\cf begin}, {\bfseries\cf let-syntax} или {\bfseries\cf
+  letrec-syntax} из библиотеки \rsixlibrary{base} происходит{встречается} в теле верхнего уровня
+до первого выражения, они соединены в тело; см. секцию~\ref{begin}. Некоторые или все тело,
+включая части, обернутые в формы {\bfseries\cf begin}, {\bfseries\cf let-syntax} или
+{\bfseries\cf letrec-syntax}, может быть определен синтаксической абстракцией
+(см. секцию~\ref{macrosection}).
 
-\section{Top-level program semantics}
+%\section{Top-level program semantics}
+\section{Семантика программы верхнего уровня}
 
 A top-level program is executed by treating the program similarly to a library, and
 evaluating its definitions and expressions.
 The semantics of a top-level body may be roughly explained by
-a simple translation into a library body: 
+a simple translation into a library body:
 Each \hyper{expression} that appears before a
 definition in
-the top-level body is converted into a dummy definition 
+the top-level body is converted into a dummy definition
 %
 \begin{scheme}
 (define \hyper{variable} (begin \hyper{expression} \hyper{unspecified}))%
@@ -65,16 +89,16 @@ the top-level body is converted into a dummy definition
 %
 where \hyper{variable} is a fresh identifier and \hyper{unspecified}
 is a side-effect-free expression returning an unspecified value.
-(It is generally impossible to determine which forms are 
+(It is generally impossible to determine which forms are
 definitions and expressions without concurrently expanding the body, so
 the actual translation is somewhat more complicated; see
 chapter~\ref{expansionchapter}.)
 
-On platforms that support it, a top-level program may access its command line 
-by calling the {\cf command-line} procedure (see library 
+On platforms that support it, a top-level program may access its command line
+by calling the {\cf command-line} procedure (see library
 section~\extref{lib:command-line}{Command-line access and exit values}).
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "r6rs"
-%%% End: 
+%%% End:

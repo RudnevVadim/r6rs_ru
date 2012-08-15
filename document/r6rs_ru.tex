@@ -32,8 +32,10 @@
 \externaldocument[lib:]{r6rs-lib}
 \endtexonly
 
-\def\headertitle{Revised$^{\rnrsrevision}$ Scheme}
-\def\TZPtitle{Revised^\rnrsrevision{} Report on the Algorithmic Language Scheme}
+%\def\headertitle{Revised$^{\rnrsrevision}$ Scheme}
+\def\headertitle{Редакция$^{\rnrsrevision}$ Scheme}
+%\def\TZPtitle{Revised^\rnrsrevision{} Report on the Algorithmic Language Scheme}
+\def\TZPtitle{Редакция^\rnrsrevision{} Стандарта Алгоритмического Языка Scheme}
 
 \begin{document}
 
@@ -41,7 +43,7 @@
 
 \topnewpage[{
 \begin{center}   {\huge\bf
-        Revised{\Huge$^{\mathbf{\htmlonly\tiny\endhtmlonly{}\rnrsrevision}}$} Report on the Algorithmic Language \\
+        Редакция{\Huge$^{\mathbf{\htmlonly\tiny\endhtmlonly{}\rnrsrevision}}$} Стандарта Алгоритмического Языка \\
                               \vskip 3pt
                                 Scheme}
 
@@ -54,15 +56,19 @@ $$
   M\authorsc{ATTHEW} F\authorsc{LATT},
   A\authorsc{NTON} \authorsc{VAN} S\authorsc{TRAATEN}}
 \\
-\multicolumn{4}{c}{(\textit{Editors})} \\
+%\multicolumn{4}{c}{(\textit{Editors})} \\
+\multicolumn{4}{c}{(\textit{Редакторы})} \\
 \multicolumn{4}{c}{
   R\authorsc{ICHARD} K\authorsc{ELSEY}, W\authorsc{ILLIAM} C\authorsc{LINGER},
   J\authorsc{ONATHAN} R\authorsc{EES}} \\
-\multicolumn{4}{c}{(\textit{Editors, Revised\itspace{}$^5$ Report on the
-    Algorithmic Language Scheme})} \\
+%\multicolumn{4}{c}{(\textit{Editors, Revised\itspace{}$^5$ Report on the
+%    Algorithmic Language Scheme})} \\
+\multicolumn{4}{c}{(\textit{Редакторы, Редакция\itspace{}$^5$ Стандарт
+    Алгоритмического Языка Scheme})} \\
 \multicolumn{4}{c}{
   R\authorsc{OBERT} B\authorsc{RUCE} F\authorsc{INDLER}, J\authorsc{ACOB} M\authorsc{ATTHEWS}} \\
-\multicolumn{4}{c}{(\textit{Authors, formal semantics})} \\[1ex]
+%\multicolumn{4}{c}{(\textit{Authors, formal semantics})} \\[1ex]
+\multicolumn{4}{c}{(\textit{Авторы, формальная семантика})} \\[1ex]
 \multicolumn{4}{c}{\bf \rnrsrevisiondate}
 \end{tabular}
 $$
@@ -71,51 +77,79 @@ $$
 
 \end{center}
 
-\chapter*{Summary}
+%\chapter*{Summary}
+\chapter*{Предисловие}
 \medskip
 
 {\parskip 1ex
-The report gives a defining description of the programming language
-Scheme.  Scheme is a statically scoped and properly tail-recursive
-dialect of the Lisp programming language invented by Guy Lewis
-Steele~Jr.\ and Gerald Jay~Sussman.  It was designed to have an
-exceptionally clear and simple semantics and few different ways to
-form expressions.  A wide variety of programming paradigms, including
-functional, imperative, and message passing styles, find convenient
-expression in Scheme.
+%The report gives a defining description of the programming language
+%Scheme.  Scheme is a statically scoped and properly tail-recursive
+%dialect of the Lisp programming language invented by Guy Lewis
+%Steele~Jr.\ and Gerald Jay~Sussman.  It was designed to have an
+%exceptionally clear and simple semantics and few different ways to
+%form expressions.  A wide variety of programming paradigms, including
+%functional, imperative, and message passing styles, find convenient
+%expression in Scheme.
+Стандарт предоставляет описание определения языка программирования Scheme. Scheme -- это чистый
+хвост-рекурсивный диалект языка программирования Lisp со статическими областями видимости,
+созданный Guy Lewis Steele~Jr.\ и Gerald Jay~Sussman. Он был разработан для использования
+исключительно ясной и простой семантики и несколько иных способов формирования выражений. Большое
+разнообразие парадигм программирования, включая функциональный и императивный стили, а также
+стиль обмена сообщениями, получили в Scheme удобное представление.
 
-This report is accompanied by a report describing standard
-libraries~\cite{R6RS-libraries}; references to this document are
-identified by designations such as ``library section'' or ``library
-chapter''.  It is also accompanied by a report containing
-non-normative appendices~\cite{R6RS-appendices}.  A fourth report gives
-some historical background and rationales for many aspects of the
-language and its libraries~\cite{R6RS-rationale}.
+%This report is accompanied by a report describing standard
+%libraries~\cite{R6RS-libraries}; references to this document are
+%identified by designations such as ``library section'' or ``library
+%chapter''.  It is also accompanied by a report containing
+%non-normative appendices~\cite{R6RS-appendices}.  A fourth report gives
+%some historical background and rationales for many aspects of the
+%language and its libraries~\cite{R6RS-rationale}.
+К данному стандарту прилагается стандарт, описывающий стандартные
+библиотеки~\cite{R6RS-libraries}; ссылки на этот документ идентифицированы обозначениями,
+такими, как ``библиотечная секция'' или ``библиотечная глава''. К нему также прилагается
+стандарт, содержащий ненормативные приложения~\cite{R6RS-appendices}. Четвертый стандарт
+предоставляет несколько исторических справок и логическое обоснование многих аспектов языка и
+его библиотек~\cite{R6RS-rationale}.
 
 \medskip
 
-The individuals listed above are not the sole authors of the text of
-the report.  Over the years, the following individuals were involved
-in discussions contributing to the design of the Scheme language, and
-were listed as authors of prior reports:
+%The individuals listed above are not the sole authors of the text of
+%the report.  Over the years, the following individuals were involved
+%in discussions contributing to the design of the Scheme language, and
+%were listed as authors of prior reports:
+Перечисленные выше люди не являются единственными авторами текста стандарта. За все эти годы
+следующие люди участвовали в обсуждениях, содействующих разработке языка Scheme, и перечислялись
+в качестве авторов предыдущих стандартов:
 
+%Hal Abelson, Norman Adams, David Bartley, Gary Brooks, William
+%Clinger, R.\ Kent Dybvig, Daniel Friedman, Robert Halstead, Chris
+%Hanson, Christopher Haynes, Eugene Kohlbecker, Don Oxley, Kent Pitman,
+%Jonathan Rees, Guillermo Rozas, Guy L.\ Steele Jr., Gerald Jay Sussman, and
+%Mitchell Wand.
 Hal Abelson, Norman Adams, David Bartley, Gary Brooks, William
 Clinger, R.\ Kent Dybvig, Daniel Friedman, Robert Halstead, Chris
 Hanson, Christopher Haynes, Eugene Kohlbecker, Don Oxley, Kent Pitman,
-Jonathan Rees, Guillermo Rozas, Guy L.\ Steele Jr., Gerald Jay Sussman, and
+Jonathan Rees, Guillermo Rozas, Guy L.\ Steele Jr., Gerald Jay Sussman и
 Mitchell Wand.
 
-In order to highlight recent contributions, they are not listed as
-authors of this version of the report.  However, their contribution
-and service is gratefully acknowledged.
+%In order to highlight recent contributions, they are not listed as
+%authors of this version of the report.  However, their contribution
+%and service is gratefully acknowledged.
+Чтобы подчеркнуть последние дополнения, они не перечислены в качестве авторов данной версии
+стандарта. Однако их вклад и работа с благодарностью принимается.
 
 \medskip
 
-We intend this report to belong to the entire Scheme community, and so
-we grant permission to copy it in whole or in part without fee.  In
-particular, we encourage implementors of Scheme to use this report as
-a starting point for manuals and other documentation, modifying it as
-necessary.
+%We intend this report to belong to the entire Scheme community, and so
+%we grant permission to copy it in whole or in part without fee.  In
+%particular, we encourage implementors of Scheme to use this report as
+%a starting point for manuals and other documentation, modifying it as
+%necessary.
+Мы подразумеваем, что данный стандарт принадлежит всему сообществу Scheme, и таким образом, мы
+официально даём разрешение на его безвозмездное полное или частичное копирование. В частности,
+мы настоятельно рекомендуем разработчикам реализаций Scheme использовать данный стандарт в
+качестве отправной точки для руководств и другой документации, изменяя его по мере
+необходимости.
 }
 
 \bigskip
@@ -125,7 +159,8 @@ necessary.
 
 \texonly\clearpage\endtexonly
 
-\chapter*{Contents}
+%\chapter*{Contents}
+\chapter*{Содержание}
 \addvspace{3.5pt}                  % don't shrink this gap
 \renewcommand{\tocshrink}{-4.0pt}  % value determined experimentally
 {

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.20)  11 AUG 2012 20:40
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.20)  16 AUG 2012 01:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,30 +852,30 @@ LABELS NOT IMPORTED.
 (./r6rs_ru.aux)
 \openout1 = `r6rs_ru.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 38.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 40.
  (/opt/texlive/2011/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -883,63 +883,63 @@ LaTeX Font Info:    ... okay on input line 38.
 .................................................
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 38.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 38.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 38.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 38.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 38.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 38.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 38.
-LaTeX Font Info:    Redeclaring math accent \check on input line 38.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 38.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 38.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 38.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 38.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 38.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 40.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 40.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 40.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 40.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 40.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 40.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 40.
+LaTeX Font Info:    Redeclaring math accent \check on input line 40.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 40.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 40.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 40.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 40.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 38.
+(Font)              `operators' in the math version `normal' on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 38.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 40.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 38.
+(Font)              `operators' in the math version `bold' on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 38.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 38.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 38.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 38.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 38.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 38.
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 38.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 38.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 38.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 38.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 38.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 38.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 40.
 \AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 40.
 
 (/opt/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -949,54 +949,54 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count189
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 
 (./r6rs_ru.out) (./r6rs_ru.out)
 \@outlinefile=\write4
 \openout4 = `r6rs_ru.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 124.
+(Font)              <24.88> on input line 158.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 124.
+(Font)              <20.74> on input line 158.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 124.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 124.
+(Font)              <17.28> on input line 158.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 158.
 
 (/opt/texlive/2011/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 124.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 158.
 
 (/opt/texlive/2011/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 124.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 158.
 
 
 (/opt/texlive/2011/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 124.
+(Font)              <7> on input line 158.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 124.
+(Font)              <5> on input line 158.
 
 
 LaTeX Font Warning: Font shape `EU1/TimesNewRoman(0)/m/sc' undefined
-(Font)              using `EU1/TimesNewRoman(0)/m/n' instead on input line 124.
+(Font)              using `EU1/TimesNewRoman(0)/m/n' instead on input line 158.
 
 
 
-LaTeX Warning: Citation `R6RS-libraries' on page 1 undefined on input line 124.
+LaTeX Warning: Citation `R6RS-libraries' on page 1 undefined on input line 158.
 
 
 
-LaTeX Warning: Citation `R6RS-appendices' on page 1 undefined on input line 124
+LaTeX Warning: Citation `R6RS-appendices' on page 1 undefined on input line 158
 .
 
 
-LaTeX Warning: Citation `R6RS-rationale' on page 1 undefined on input line 124.
+LaTeX Warning: Citation `R6RS-rationale' on page 1 undefined on input line 158.
 
 
 (./status.tex)
@@ -1016,128 +1016,176 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
  (./intro.tex [3
 
 ]
+Underfull \hbox (badness 5817) in paragraph at lines 38--51
+[]\EU1/TimesNewRoman(0)/m/n/10 Scheme был одним из первых яз�
+�ков программирова-
 
-LaTeX Warning: Citation `R5RS' on page 4 undefined on input line 62.
-
-
-Underfull \hbox (badness 3525) in paragraph at lines 72--75
-[]\EU1/TimesNewRoman(0)/m/n/10 derive its power from simplicity, a small number
- of
-
-\hbox(6.94336+2.15819)x238.49997, glue set 3.28065 []
+\hbox(6.94336+2.13866)x258.5, glue set 3.87813 []
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 85--88
-[]\EU1/TimesNewRoman(0)/m/n/10 allow interesting, purely functional programs to
- run
+Underfull \hbox (badness 1264) in paragraph at lines 38--51
+\EU1/TimesNewRoman(0)/m/n/10 ной арифметики Common Lisp. Позж�
+� Scheme стал пер-
 
-\hbox(6.94336+2.15819)x238.49997, glue set 4.21407 []
-
-
-Underfull \hbox (badness 7064) in paragraph at lines 89--92
-\EU1/TimesNewRoman(0)/m/n/10 effectively, at various levels and with a variety 
-of
-
-\hbox(6.94336+2.15819)x238.49997, glue set 4.13515 []
+\hbox(6.94336+2.13866)x258.5, glue set 2.33081 []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 100--104
-[]\EU1/TimesNewRoman(0)/m/n/10 allow programmers to create and distribute subst
-antial
-
-\hbox(6.94336+2.15819)x238.49997, glue set 2.84557 []
+LaTeX Warning: Citation `R5RS' on page 4 undefined on input line 60.
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 105--109
-\EU1/TimesNewRoman(0)/m/n/10 hygiene-breaking syntactic abstractions and new un
-ique
+Underfull \hbox (badness 1127) in paragraph at lines 59--62
+\EU1/TimesNewRoman(0)/m/n/10 Для содействия в проведени�
+� работы по стандартизации
 
-\hbox(6.94336+2.15819)x238.49997, glue set 2.30531 []
-
-
-Underfull \hbox (badness 6608) in paragraph at lines 113--116
-\EU1/TimesNewRoman(0)/m/n/10 requiring programmers to use implementation-specif
-ic
-
-\hbox(6.94336+2.15819)x238.49997, glue set 4.04668 []
+\hbox(6.94336+2.13866)x258.5, glue set 2.24532 []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 130--137
-\EU1/TimesNewRoman(0)/m/n/10 backward compatible with programs written in Schem
-e as
+Underfull \hbox (badness 2781) in paragraph at lines 67--69
+[]\EU1/TimesNewRoman(0)/m/n/10 предоставления программи�
+�там возможности чтения
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.97925 []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 130--137
-\EU1/TimesNewRoman(0)/m/n/10 described in \EU1/TimesNewRoman(0)/m/it/10 Revised
-$[]$ Report on the Algorithmic Language
-
-\hbox(8.14003+2.15819)x258.5, glue set 2.52792 []
+\hbox(4.60938+2.13866)x238.49997, glue set 3.03098 []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 140--150
-\EU1/TimesNewRoman(0)/m/n/10 Martin Gasbichler, Aubrey Jaffer, Lars T Hansen, R
-ichard
+Underfull \hbox (badness 3815) in paragraph at lines 101--103
+[]\EU1/TimesNewRoman(0)/m/n/10 предоставления педагогам 
+возможности применения
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.93501 []
+\hbox(4.60938+2.13866)x238.49997, glue set 3.36952 []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 118--121
+\EU1/TimesNewRoman(0)/m/n/10 лиотек, например, реализаци
+й Scheme Requests for
+
+\hbox(6.94336+2.13866)x238.49997, glue set 3.63187 []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 140--142
+[]\EU1/TimesNewRoman(0)/m/n/10 предоставления реализаци�
+�м возможности генерации
+
+\hbox(4.60938+2.13866)x238.49997, glue set 2.39035 []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 161--165
+[]\EU1/TimesNewRoman(0)/m/n/10 В общем случае Scheme должен �
+�одержать стандартные
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.54457 []
 
 [4
 
 ]
-Underfull \hbox (badness 1881) in paragraph at lines 151--168
-\EU1/TimesNewRoman(0)/m/n/10 Shapiro, Jens Axel Søgaard, Jay Sulzberger, Pinku
- Surana,
+Underfull \hbox (badness 1596) in paragraph at lines 193--201
+\EU1/TimesNewRoman(0)/m/n/10 John Cowan, Sebastian Egner, Aubrey Jaffer, Shiro 
+Kawai,
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.66171 []
-
-
-Underfull \hbox (badness 1184) in paragraph at lines 169--177
-\EU1/TimesNewRoman(0)/m/n/10 Feeley, Andy Freeman, Richard Gabriel, Yekta Gürs
-el, Ken
-
-\hbox(6.94336+2.15819)x258.5, glue set 2.28003 []
+\hbox(6.94336+2.15819)x258.5, glue set 2.51886 []
 
 
-LaTeX Warning: Citation `TImanual85' on page 5 undefined on input line 181.
+Underfull \hbox (badness 1354) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 их помощь в создании данног
+о стандарта: Lauri Alanko,
+
+\hbox(6.94336+2.13866)x258.5, glue set 2.38716 []
 
 
-LaTeX Warning: Citation `MITScheme' on page 5 undefined on input line 182.
+Underfull \hbox (badness 1983) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 Eli Barzilay, Alan Bawden, Brian C. Barnes, Per Bo
+thner,
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.71036 []
 
 
-LaTeX Warning: Citation `Rees84' on page 5 undefined on input line 183.
+Underfull \hbox (badness 4995) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 Trent Buck, Thomas Bushnell, Taylor Campbell, Ludo
+vic
+
+\hbox(6.94336+2.15819)x258.5, glue set 3.68672 []
 
 
-LaTeX Warning: Citation `Scheme84' on page 5 undefined on input line 183.
+Underfull \hbox (badness 2418) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 Courtès, Pascal Costanza, John Cowan, Ray Dilling
+er, Jed
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.89442 []
 
 
-LaTeX Warning: Citation `CLtL' on page 5 undefined on input line 183.
+Underfull \hbox (badness 1400) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 Ghuloum, Dave Gurnell, Lars T Hansen, Ben Harris, 
+Sven
+
+\hbox(6.94336+1.66502)x258.5, glue set 2.41133 []
 
 
-LaTeX Warning: Citation `csug7' on page 5 undefined on input line 184.
+Underfull \hbox (badness 1968) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 Hartrumpf, Dave Herman, Nils M. Holm, Stanislav Ie
+vlev,
+
+\hbox(6.94336+2.13866)x258.5, glue set 2.70245 []
 
 
-LaTeX Warning: Citation `mzscheme352' on page 5 undefined on input line 184.
+Underfull \hbox (badness 1360) in paragraph at lines 219--232
+\EU1/TimesNewRoman(0)/m/n/10 Marcin Kowalczyk, Thomas Lord, Bradley Lucier, Pau
+lo J.
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.38995 []
 
 
-LaTeX Warning: Citation `Naur63' on page 5 undefined on input line 185.
+LaTeX Warning: Citation `TImanual85' on page 5 undefined on input line 259.
 
 
-Underfull \hbox (badness 2503) in paragraph at lines 178--186
-\EU1/TimesNewRoman(0)/m/n/10 4 reference manual. We thank Texas Instruments, In
-c. for
-
-\hbox(6.94336+1.66502)x258.5, glue set 2.92667 []
+LaTeX Warning: Citation `MITScheme' on page 5 undefined on input line 260.
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 191--201
+LaTeX Warning: Citation `Rees84' on page 5 undefined on input line 261.
+
+
+LaTeX Warning: Citation `Scheme84' on page 5 undefined on input line 261.
+
+
+LaTeX Warning: Citation `CLtL' on page 5 undefined on input line 261.
+
+
+LaTeX Warning: Citation `csug7' on page 5 undefined on input line 262.
+
+
+LaTeX Warning: Citation `mzscheme352' on page 5 undefined on input line 262.
+
+
+LaTeX Warning: Citation `Naur63' on page 5 undefined on input line 263.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--264
+[]\EU1/TimesNewRoman(0)/m/n/10 Мы благодарим Carol Fessenden, Danie
+l Friedman и
+
+\hbox(6.94336+2.13866)x258.5, glue set 5.619 []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 256--264
+\EU1/TimesNewRoman(0)/m/n/10 Christopher Haynes за разрешение ис�
+�ользовать текст из
+
+\hbox(6.94336+2.15819)x258.5, glue set 2.68216 []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 256--264
+\EU1/TimesNewRoman(0)/m/n/10 Instruments, Inc. за разрешение исп
+ользовать текст из \EU1/TimesNewRoman(0)/m/it/10 TI
+
+\hbox(6.6211+2.13866)x258.5, glue set 2.39386 []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 272--282
 []\EU1/TimesNewRoman(0)/m/n/10 The Artificial Intelligence Laboratory of the Ma
 ssachusetts
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.84883 []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 191--201
+Underfull \hbox (badness 1902) in paragraph at lines 272--282
 \EU1/TimesNewRoman(0)/m/n/10 Indiana University, the Computer and Information S
 ciences
 
@@ -1501,15 +1549,8 @@ Underfull \hbox (badness 1057) in paragraph at lines 488--490
 \hbox(6.94336+2.15819)x258.5, glue set 2.19707 []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 516--520
-\EU1/TimesNewRoman(0)/m/n/10 зоваться как переменная[] и�
-�и как синтаксическое ключе-
-
-\hbox(4.60938+2.13866)x258.5, glue set 2.4211 []
-
-
-Underfull \vbox (badness 3189) has occurred while \output is active
-\vbox(670.0+0.0)x258.5, glue set 3.17294 []
+Underfull \vbox (badness 4899) has occurred while \output is active
+\vbox(670.0+0.0)x258.5, glue set 3.6615 []
 
  [15]
 Underfull \hbox (badness 10000) in paragraph at lines 643--647
@@ -2161,42 +2202,28 @@ Underfull \hbox (badness 1776) in paragraph at lines 709--719
 [27]) (./programs.tex
  8.
 
-Underfull \hbox (badness 1953) in paragraph at lines 4--9
-\EU1/TimesNewRoman(0)/m/n/10 importing, a top-level program defines a complete 
-Scheme
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+[] \EU1/TimesNewRoman(0)/m/n/10 является или [] или
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.69464 []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-\EU1/TimesNewRoman(0)/m/n/10 A [] is either a [] or an
-
-\hbox(7.5+2.5)x258.5, glue set 5.45447 []
+\hbox(7.5+2.5)x258.5, glue set 9.18947 []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 43--51
-\EU1/TimesNewRoman(0)/m/n/10 body prior to the first expression, they are splic
-ed into the
+Underfull \hbox (badness 1292) in paragraph at lines 68--74
+[]\EU1/TimesNewRoman(0)/m/n/10 При использовании \EU1/CourierNe
+w(0)/bx/n/10 begin\EU1/TimesNewRoman(0)/m/n/10 , \EU1/CourierNew(0)/bx/n/10 let
+-syntax \EU1/TimesNewRoman(0)/m/n/10 или \EU1/CourierNew(0)/bx/n/10 letrec-
 
-\hbox(6.94336+2.15819)x258.5, glue set 2.17336 []
-
-
-Underfull \hbox (badness 2941) in paragraph at lines 43--51
-\EU1/TimesNewRoman(0)/m/n/10 portions wrapped in \EU1/CourierNew(0)/m/n/10 begi
-n\EU1/TimesNewRoman(0)/m/n/10 , \EU1/CourierNew(0)/m/n/10 let-syntax\EU1/TimesN
-ewRoman(0)/m/n/10 , or \EU1/CourierNew(0)/m/n/10 letrec-
-
-\hbox(6.94336+2.13866)x258.5, glue set 3.08841 []
+\hbox(6.6211+2.13866)x258.5, glue set 2.34828 []
 
 [28]
-Underfull \hbox (badness 1019) in paragraph at lines 66--72
+Underfull \hbox (badness 1019) in paragraph at lines 90--96
 \EU1/TimesNewRoman(0)/m/n/10 where [] is a fresh identifier and [] is a
 
 \hbox(7.5+2.5)x258.5, glue set 2.171 []
 
 
 LaTeX Warning: Reference `lib:command-line' on page 29 undefined on input line 
-75.
+99.
 
 ) (./syntax.tex
  9.
@@ -2221,11 +2248,11 @@ ewRoman(0)/m/n/10 .[][] A syntactic abstraction is created by binding a
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.57225 []
 
+[29]
 
-LaTeX Warning: Reference `lib:make-variable-transformer' on page 29 undefined o
+LaTeX Warning: Reference `lib:make-variable-transformer' on page 30 undefined o
 n input line 140.
 
-[29]
 
 LaTeX Warning: Reference `lib:syntaxcasechapter' on page 30 undefined on input 
 line 155.
@@ -2487,7 +2514,7 @@ d by the
 
 \hbox(6.94824+2.15819)x258.5, glue set 2.49844 []
 
-
+[34]
 Underfull \hbox (badness 1571) in paragraph at lines 565--567
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 and \EU1/TimesNewR
 oman(0)/m/n/10 keyword could be defined in terms of \EU1/CourierNew(0)/m/n/10 i
@@ -2495,7 +2522,7 @@ f \EU1/TimesNewRoman(0)/m/n/10 using
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.50578 []
 
-[34]
+
 Underfull \hbox (badness 2334) in paragraph at lines 623--641
 \EU1/TimesNewRoman(0)/m/n/10 bindings for variables that are visible only in a 
 delimited
@@ -2567,7 +2594,7 @@ ition type
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.3402 []
 
-
+[36]
 Underfull \hbox (badness 3977) in paragraph at lines 896--904
 []\EU1/TimesNewRoman(0)/m/it/10 Semantics: \EU1/TimesNewRoman(0)/m/n/10 The \EU
 1/CourierNew(0)/m/n/10 let*-values \EU1/TimesNewRoman(0)/m/n/10 form is similar
@@ -2582,7 +2609,7 @@ evaluated and bindings created
 
 \hbox(7.5+2.5)x258.5, glue set 2.1728 []
 
-[36]
+
 Underfull \hbox (badness 1571) in paragraph at lines 995--998
 [][] \EU1/TimesNewRoman(0)/m/n/10 and [] are both exact[] number objects and ar
 e
@@ -2630,7 +2657,7 @@ New(0)/m/n/10 symbol=?
 
 \hbox(6.94336+2.15819)x238.49997, glue set 2.54408 []
 
-
+[37]
 Underfull \hbox (badness 2762) in paragraph at lines 1049--1051
 [][] \EU1/TimesNewRoman(0)/m/n/10 and [] are characters for which the \EU1/Cour
 ierNew(0)/m/n/10 char=?
@@ -2638,22 +2665,22 @@ ierNew(0)/m/n/10 char=?
 \hbox(6.94336+2.15819)x238.49997, glue set 3.02602 []
 
 
-LaTeX Warning: Reference `lib:bytevectorschapter' on page 37 undefined on input
+LaTeX Warning: Reference `lib:bytevectorschapter' on page 38 undefined on input
  line 1056.
 
 
-LaTeX Warning: Reference `lib:recordschapter' on page 37 undefined on input lin
+LaTeX Warning: Reference `lib:recordschapter' on page 38 undefined on input lin
 e 1058.
 
 
-LaTeX Warning: Reference `lib:portsiosection' on page 37 undefined on input lin
+LaTeX Warning: Reference `lib:portsiosection' on page 38 undefined on input lin
 e 1059.
 
 
-LaTeX Warning: Reference `lib:hashtablechapter' on page 37 undefined on input l
+LaTeX Warning: Reference `lib:hashtablechapter' on page 38 undefined on input l
 ine 1060.
 
-[37]
+
 Underfull \hbox (badness 1629) in paragraph at lines 1170--1178
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 eq? \EU1/TimesNewR
 oman(0)/m/n/10 and \EU1/CourierNew(0)/m/n/10 eqv? \EU1/TimesNewRoman(0)/m/n/10 
@@ -2668,8 +2695,9 @@ Underfull \hbox (badness 1596) in paragraph at lines 1170--1178
 
 \hbox(6.94336+2.15819)x258.5, glue set 2.52042 []
 
+[38]
 
-LaTeX Warning: Reference `lib:bytevectorschapter' on page 38 undefined on input
+LaTeX Warning: Reference `lib:bytevectorschapter' on page 39 undefined on input
  line 1214.
 
 
@@ -2693,7 +2721,7 @@ imesNewRoman(0)/m/n/10 to compare bytevectors (see library
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.09557 []
 
-[38]
+
 Underfull \hbox (badness 1394) in paragraph at lines 1267--1274
 \EU1/TimesNewRoman(0)/m/n/10 The procedures described here implement arithmetic
  that is
@@ -2771,7 +2799,7 @@ s test whether a given number object can
 
 \hbox(6.25342+1.94237)x258.5, glue set 2.4524 []
 
-
+[41]
 Underfull \hbox (badness 1571) in paragraph at lines 1642--1649
 \EU1/TimesNewRoman(0)/m/n/10 should be numerically equal to its argument. If an
  inexact
@@ -2799,7 +2827,7 @@ reasing,
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.99199 []
 
-[41] [42]
+[42]
 Underfull \hbox (badness 3503) in paragraph at lines 1847--1850
 []\EU1/TimesNewRoman(0)/m/n/10 With two or more arguments, this procedures retu
 rns the
@@ -2848,14 +2876,14 @@ t was
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.13881 []
 
-
+[43]
 Underfull \hbox (badness 2027) in paragraph at lines 1982--1992
 []\EU1/TimesNewRoman(0)/m/n/10 These procedures return inexact integer objects 
 for inexact
 
 \hbox(6.94824+2.15819)x258.5, glue set 2.7298 []
 
-[43]
+
 Underfull \hbox (badness 1348) in paragraph at lines 1999--2002
 []\EU1/TimesNewRoman(0)/m/n/10 Although infinities and NaNs are not integer obj
 ects, these
@@ -2883,14 +2911,14 @@ rierNew(0)/m/n/10 atan \EU1/TimesNewRoman(0)/m/n/10 computes
 
 \hbox(6.94336+2.15819)x258.5, glue set 3.12747 []
 
-
+[44]
 Underfull \hbox (badness 3989) in paragraph at lines 2115--2118
 []\EU1/TimesNewRoman(0)/m/n/10 The \EU1/CourierNew(0)/m/n/10 exact-integer-sqrt
  \EU1/TimesNewRoman(0)/m/n/10 procedure returns two non-
 
 \hbox(6.94336+2.13866)x258.5, glue set 3.41782 []
 
-[44]
+
 Underfull \hbox (badness 4096) in paragraph at lines 2241--2244
 \EU1/TimesNewRoman(0)/m/n/10 is true. If no possible result makes this expressi
 on true,
@@ -3844,14 +3872,14 @@ an
 )
 No file r6rs_ru.bbl.
 No file r6rs_ru.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
 [69
 
 ] [70]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
  (./r6rs_ru.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 181.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 216.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 216.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3863,10 +3891,10 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  20833 strings out of 494123
  403170 string characters out of 3154017
- 475645 words of memory out of 3000000
+ 473669 words of memory out of 3000000
  23634 multiletter control sequences out of 15000+200000
  13975 words of font info for 132 fonts, out of 3000000 for 9000
  1019 hyphenation exceptions out of 8191
- 44i,14n,45p,1128b,536s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,14n,45p,1128b,538s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on r6rs_ru.pdf (70 pages).
