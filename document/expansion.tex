@@ -1,114 +1,160 @@
-\chapter{Expansion process}
+%\chapter{Expansion process}
+\chapter{Процесс разворачивания}
 \label{expansionchapter}
 
-Macro uses (see section~\ref{macrosection}) are expanded into \textit{core
-forms}\mainindex{core form} at the start of evaluation (before compilation or interpretation)
-by a syntax \emph{expander}.
-The set of core forms is implementation-dependent, as is the
-representation of these forms in the expander's output.
-If the expander encounters a syntactic abstraction, it invokes
-the associated transformer to expand the syntactic abstraction, then
-repeats the expansion process for the form returned by the transformer.
-If the expander encounters a core form, it recursively
-processes its subforms that are in expression or definition context,
-if any, and reconstructs the form from the
-expanded subforms.
-Information about identifier bindings is maintained during expansion
-to enforce lexical scoping for variables and keywords.
+%Macro uses (see section~\ref{macrosection}) are expanded into \textit{core
+%forms}\mainindex{core form} at the start of evaluation (before compilation or interpretation)
+%by a syntax \emph{expander}.
+%The set of core forms is implementation-dependent, as is the
+%representation of these forms in the expander's output.
+%If the expander encounters a syntactic abstraction, it invokes
+%the associated transformer to expand the syntactic abstraction, then
+%repeats the expansion process for the form returned by the transformer.
+%If the expander encounters a core form, it recursively
+%processes its subforms that are in expression or definition context,
+%if any, and reconstructs the form from the
+%expanded subforms.
+%Information about identifier bindings is maintained during expansion
+%to enforce lexical scoping for variables and keywords.
+Макроприменения (см. секцию~\ref{macrosection}) разворачиваются в \textit{основные формы}
+\mainindex{core form} в начале вычисления (до компиляции или интерпретации)
+синтаксическим \emph{экспандером}. Набор основных форм зависит от реализации, как и
+представление этих форм на выходе экспандера. Если экспандер
+встречает синтаксическую абстракцию, он запускает ассоциированный трансформер для
+разворачивания синтаксической абстракции, затем повторяет процесс разворачивания формы, возвращённой
+трансформером. Если экспандер встречает основную форму, он рекурсивно
+обрабатывает её подформы, находящиеся в выражении или контексте определения, если таковые
+имеются, и восстанавливает форму из развёрнутых подформ. Информация о привязках
+идентификаторов сохраняется в течение разворачивания для обеспечения лексической сферы действия
+переменных и ключевых слов.
 
-To handle definitions, the expander processes the initial
-forms in a \hyper{body} (see section~\ref{bodiessection}) or
-\hyper{library body} (see section~\ref{librarybodysection})
-from left to
-right.  How the expander processes each form encountered 
-depends upon the kind of form.
+%To handle definitions, the expander processes the initial
+%forms in a \hyper{body} (see section~\ref{bodiessection}) or
+%\hyper{library body} (see section~\ref{librarybodysection})
+%from left to
+%right.  How the expander processes each form encountered
+%depends upon the kind of form.
+Для обработки определений экспандер обрабатывает начальные формы в \hyper{body}
+(см. секцию~\ref{bodiessection}) или \hyper{library body} (см. секцию~\ref{librarybodysection})
+слева направо. То, как экспандер обрабатывает каждую обнаруженную форму, зависит от
+вида формы.
 
 \begin{description}
-\item[macro use]
-The expander invokes the associated transformer to transform the macro
-use, then recursively performs whichever of these actions are appropriate
-for the resulting form.
+%\item[macro use]
+%The expander invokes the associated transformer to transform the macro
+%use, then recursively performs whichever of these actions are appropriate
+%for the resulting form.
+\item[макроприменение]
+  Экспандер активизирует ассоциированный трансформер для преобразования макроприменения, затем
+  рекурсивно выполняет одно из этих действий, соответствующее полученной форме.
 
-\item[{\cf define-syntax} form]
-The expander expands and evaluates the right-hand-side expression and binds the
-keyword to the resulting transformer.
+%\item[{\cf define-syntax} form]
+%The expander expands and evaluates the right-hand-side expression and binds the
+%keyword to the resulting transformer.
+\item[{\cf форма define-syntax}]
+  Экспандер разворачивает и вычисляет выражение правой части и связывает ключевое слово
+  с полученным трансформером.
 
-\item[{\cf define} form]
-The expander records the fact that the defined identifier is a variable but defers
-expansion of the right-hand-side expression until after all of the
-definitions have been processed.
+%\item[{\cf define} form]
+%The expander records the fact that the defined identifier is a variable but defers
+%expansion of the right-hand-side expression until after all of the
+%definitions have been processed.
+\item[{\cf форма define}]
+  Экспандер фиксирует факт, что определённый идентификатор является переменной, но
+  откладывает разворачивание выражения правой части до обработки всех определений.
 
-\item[{\cf begin} form]
-The expander splices the subforms into the list of body forms it is
-processing.  (See section~\ref{begin}.)
+%\item[{\cf begin} form]
+%The expander splices the subforms into the list of body forms it is
+%processing.  (See section~\ref{begin}.)
+\item[{\cf форма begin}]
+  Экспандер соединяет подформы в обрабатываемый список форм тела. (См. секцию~\ref{begin}.)
 
-\item[{\cf let-syntax} or {\cf letrec-syntax} form]
-The expander splic\-es the inner body forms into the list of (outer) body forms it is
-processing, arranging for the keywords bound by the {\cf let-syntax}
-and {\cf letrec-syntax} to be visible only in the inner body forms.
+%\item[{\cf let-syntax} or {\cf letrec-syntax} form]
+%The expander splic\-es the inner body forms into the list of (outer) body forms it is
+%processing, arranging for the keywords bound by the {\cf let-syntax}
+%and {\cf letrec-syntax} to be visible only in the inner body forms.
+\item[{\cf формы let-syntax} or {\cf letrec-syntax}]
+  Экспандер соединяет внутренние формы тела в обрабатываемый список (внешних) форм тела,
+  обеспечивая видимость ключевых слов, привязанных посредством {\cf\bfseries let-syntax} и
+  {\cf\bfseries letrec-syntax}, только во внутренних формах тела.
 
-\item[expression, i.e., nondefinition]
-The expander completes the expansion of the deferred right-hand-side expressions
-and the current and remaining expressions in the body, and then
-creates the equivalent of a {\cf letrec*} form from the defined variables,
-expanded right-hand-side expressions, and expanded body expressions.
-\end{description}
+%\newpage
 
-For the right-hand side of the definition of a variable, expansion is
-deferred until after all of the definitions have been seen.  Consequently,
-each keyword and variable reference within the right-hand side
-resolves to the local binding, if any.
+%\item[expression, i.e., nondefinition]
+%The expander completes the expansion of the deferred right-hand-side expressions
+%and the current and remaining expressions in the body, and then
+%creates the equivalent of a {\cf letrec*} form from the defined variables,
+%expanded right-hand-side expressions, and expanded body expressions.
+\item[выражение, т.е. не определение]
+  Экспандер завершает разворачивание отложеннных выражений правой части, а также текущих и
+  оставшихся выражений в теле, и затем создает эквивалент формы {\cf\bfseries letrec*} из
+  определённых переменных, развёрнутых выражений правой стороны и развёрнутых выражений тела.
+\end{description}\vspace{1mm}
 
-A definition in the sequence of forms must not define any identifier whose
-binding is used to determine the meaning of the undeferred portions of the
-definition or any definition that precedes it in the sequence of forms.
-For example, the bodies of the following expressions violate this
-restriction.
+%For the right-hand side of the definition of a variable, expansion is
+%deferred until after all of the definitions have been seen.  Consequently,
+%each keyword and variable reference within the right-hand side
+%resolves to the local binding, if any.
+Разворачивание правой части определения переменной откладывается до обнаружения всех
+определений. Следовательно, каждое ключевое слово и обращение к переменной внутри правой части
+разрешается локальной привязкой, если таковые имеются.\vspace{1mm}
+
+%A definition in the sequence of forms must not define any identifier whose
+%binding is used to determine the meaning of the undeferred portions of the
+%definition or any definition that precedes it in the sequence of forms.
+%For example, the bodies of the following expressions violate this
+%restriction.
+Определение в последовательности форм не должно определять никакого идентификатора, привязка
+которого используется для определения смысла неотложенных частей определения или любого
+определения, предшествующего ему в последовательности форм. Например, в телах следующих
+выражений это ограничение нарушается.\vspace{1mm}
 
 \begin{scheme}
-(let ()
-  (define define 17)
-  (list define))
+\bfseries (let ()
+\bfseries   (define define 17)
+\bfseries   (list define))
+\bfseries
+\bfseries (let-syntax ([def0 (syntax-rules ()
+\bfseries                      [(\_ x) (define x 0)])])
+\bfseries   (let ([z 3])
+\bfseries     (def0 z)
+\bfseries     (define def0 list)
+\bfseries     (list z)))
 
-(let-syntax ([def0 (syntax-rules ()
-                     [(\_ x) (define x 0)])])
-  (let ([z 3])
-    (def0 z)
-    (define def0 list)
-    (list z)))
+\bfseries (let ()
+\bfseries   (define-syntax foo
+\bfseries     (lambda (e)
+\bfseries       (+ 1 2)))
+\bfseries   (define + 2)
+\bfseries   (foo))%
+\end{scheme}\vspace{2mm}
 
-(let ()
-  (define-syntax foo
-    (lambda (e)
-      (+ 1 2)))
-  (define + 2)
-  (foo))%
-\end{scheme}
-
-The following do not violate the restriction.
+%The following do not violate the restriction.
+Ниже ограничение не нарушается.\vspace{1mm}
 
 \begin{scheme}
-(let ([x 5])
-  (define lambda list)
-  (lambda x x))         \ev  (5 5)
+\bfseries (let ([x 5])
+\bfseries   (define lambda list)
+\bfseries   (lambda x x))         \ev\bfseries  (5 5)
 
-(let-syntax ([def0 (syntax-rules ()
-                     [(\_ x) (define x 0)])])
-  (let ([z 3])
-    (define def0 list)
-    (def0 z)
-    (list z)))          \ev  (3)
+\bfseries (let-syntax ([def0 (syntax-rules ()
+\bfseries                      [(\_ x) (define x 0)])])
+\bfseries   (let ([z 3])
+\bfseries     (define def0 list)
+\bfseries     (def0 z)
+\bfseries     (list z)))          \ev\bfseries  (3)
 
-(let ()
-  (define-syntax foo
-    (lambda (e)
-      (let ([+ -]) (+ 1 2))))
-  (define + 2)
-  (foo))                \ev  -1%
-\end{scheme}
+\bfseries (let ()
+\bfseries   (define-syntax foo
+\bfseries     (lambda (e)
+\bfseries       (let ([+ -]) (+ 1 2))))
+\bfseries   (define + 2)
+\bfseries   (foo))                \ev\bfseries  -1%
+\end{scheme}\vspace{2mm}
 
-The implementation should treat a violation of the restriction as a
-syntax violation.
+%The implementation should treat a violation of the restriction as a
+%syntax violation.
+Реализация должна трактовать нарушение ограничения как нарушение синтаксиса.
 
 % Andre's proposed implementation:
 % To detect this violation, the expander can record each
@@ -120,79 +166,111 @@ syntax violation.
 % to determine if its current denotation has already been used
 % during the expansion of the body.
 
-Note that this algorithm does not directly reprocess any form.
-It requires a single left-to-right pass over the definitions followed by a
-single pass (in any order) over the body expressions and deferred
-right-hand sides.
+%Note that this algorithm does not directly reprocess any form.
+%It requires a single left-to-right pass over the definitions followed by a
+%single pass (in any order) over the body expressions and deferred
+%right-hand sides.
+Следует отметить, что данный алгоритм непосредственно не обрабатывает повторно какую-либо
+форму. Он требует единственного прохода слева направо по определениям и следующего за ним
+отдельного прохода (в любом порядке) по выражениям тела и отложенным правым частям.
 
-Example:
-
-\begin{scheme}
-(lambda (x)
-  (define-syntax defun
-    (syntax-rules ()
-      [(\_ x a e) (define x (lambda a e))]))
-  (defun even? (n) (or (= n 0) (odd? (- n 1))))
-  (define-syntax odd?
-    (syntax-rules () [(\_ n) (not (even? n))]))
-  (odd? (if (odd? x) (* x x) x)))%
-\end{scheme}
-
-In the example, the definition of {\cf defun} is encountered first, and the keyword
-{\cf defun} is associated with the transformer resulting from
-the expansion and evaluation of the corresponding right-hand side.
-A use of {\cf defun} is encountered next and expands into a
-{\cf define} form.
-Expansion of the right-hand side of this define form is deferred.
-The definition of {\cf odd?} is next and results in the association
-of the keyword {\cf odd?} with the transformer resulting from
-expanding and evaluating the corresponding right-hand side.
-A use of {\cf odd?} appears next and is expanded; the resulting
-call to {\cf not} is recognized as an expression
-because {\cf not} is bound as a variable.
-At this point, the expander completes the expansion of the current
-expression (the call to {\cf not}) and the deferred right-hand side of the
-{\cf even?} definition;
-the uses of {\cf odd?} appearing in these expressions are expanded
-using the transformer associated with the keyword {\cf odd?}.
-The final output is the equivalent of
+%Example:
+Примеры:\vspace{2.4mm}
 
 \begin{scheme}
-(lambda (x)
-  (letrec* ([even?
-              (lambda (n)
-                (or (= n 0)
-                    (not (even? (- n 1)))))])
-    (not (even? (if (not (even? x)) (* x x) x)))))%
-\end{scheme}
+\bfseries (lambda (x)
+\bfseries   (define-syntax defun
+\bfseries     (syntax-rules ()
+\bfseries       [(\_ x a e) (define x (lambda a e))]))
+\bfseries   (defun even? (n) (or (= n 0) (odd? (- n 1))))
+\bfseries   (define-syntax odd?
+\bfseries     (syntax-rules () [(\_ n) (not (even? n))]))
+\bfseries   (odd? (if (odd? x) (* x x) x)))%
+\end{scheme}\vspace{2.4mm}
 
-although the structure of the output is implementation-dependent.
+%In the example, the definition of {\cf defun} is encountered first, and the keyword
+%{\cf defun} is associated with the transformer resulting from
+%the expansion and evaluation of the corresponding right-hand side.
+%A use of {\cf defun} is encountered next and expands into a
+%{\cf define} form.
+%Expansion of the right-hand side of this define form is deferred.
+%The definition of {\cf odd?} is next and results in the association
+%of the keyword {\cf odd?} with the transformer resulting from
+%expanding and evaluating the corresponding right-hand side.
+%A use of {\cf odd?} appears next and is expanded; the resulting
+%call to {\cf not} is recognized as an expression
+%because {\cf not} is bound as a variable.
+%At this point, the expander completes the expansion of the current
+%expression (the call to {\cf not}) and the deferred right-hand side of the
+%{\cf even?} definition;
+%the uses of {\cf odd?} appearing in these expressions are expanded
+%using the transformer associated with the keyword {\cf odd?}.
+%The final output is the equivalent of
+В начале примера обнаруживается определение {\cf\bfseries defun}, и ключевое слово {\cf\bfseries
+  defun} ассоциируется с трансформером, являющимся результатом разворачивания и вычисления
+соответствующей правой стороны. Далее обнаруживается применение {\cf\bfseries defun} и
+разворачивается в форму {\cf\bfseries define}. Разворачивание правой части этой формы defun
+откладывается. Определение {\cf\bfseries odd?} является следующим и приводит к ассоциации
+ключевого слова {\cf\bfseries odd?} с трансформером, полученным в результате разворачивания и
+вычисления соответствующей правой части. Далее обнаруживается и разворачивается применение
+{\cf\bfseries odd?}; полученный в результате вызов {\cf\bfseries not} распознаётся как
+выражение, так как {\cf\bfseries not} привязан как переменная. В этой точке экспандер
+завершает разворачивание текущего выражения (вызов {\cf\bfseries not}) и отложенной правой части
+определения {\cf\bfseries even?}; применения {\cf\bfseries odd?}, фигурирующие в этих
+выражениях, разворачиваются с помощью трансформера, связанного с ключевым словом {\cf\bfseries
+  odd?}. Окончательный вывод эквивалентен\vspace{2.4mm}
 
-Because definitions and expressions can be interleaved in a
-\hyper{top-level body} (see chapter~\ref{programchapter}),
-the expander's processing of a \hyper{top-level body} is somewhat
-more complicated.
-It behaves as described above for a \hyper{body} or
-\hyper{library body} with the following exceptions:
-When the expander finds a nondefinition,
-it defers its expansion and continues scanning for definitions.
-Once it reaches the end of the set of forms, it processes the
-deferred right-hand-side and body expressions, then
-generates the equivalent of a {\cf letrec*} form from the defined variables,
-expanded right-hand-side expressions, and expanded body expressions.
-For each body expression \hyper{expression} that appears before a variable definition
-in the body, a dummy binding is created at the corresponding place within
-the set of {\cf letrec*} bindings, with a fresh temporary variable on the
-left-hand side and the equivalent of {\cf (begin \hyper{expression}
-  \hyper{unspecified})},
-where \hyper{unspecified} is a side-effect-free expression returning
-an unspecified value,
-on the right-hand side, so that
-left-to-right evaluation order is preserved.
-The {\cf begin} wrapper allows \hyper{expression} to evaluate to an
-arbitrary number of values.
+\begin{scheme}
+\bfseries (lambda (x)
+\bfseries   (letrec* ([even?
+\bfseries               (lambda (n)
+\bfseries                 (or (= n 0)
+\bfseries                     (not (even? (- n 1)))))])
+\bfseries     (not (even? (if (not (even? x)) (* x x) x)))))%
+\end{scheme}\vspace{2.4mm}
 
-%%% Local Variables: 
+%although the structure of the output is implementation-dependent.
+несмотря на то, что структура выхода зависит от реализации.\vspace{2.4mm}
+
+%Because definitions and expressions can be interleaved in a
+%\hyper{top-level body} (see chapter~\ref{programchapter}),
+%the expander's processing of a \hyper{top-level body} is somewhat
+%more complicated.
+%It behaves as described above for a \hyper{body} or
+%\hyper{library body} with the following exceptions:
+%When the expander finds a nondefinition,
+%it defers its expansion and continues scanning for definitions.
+%Once it reaches the end of the set of forms, it processes the
+%deferred right-hand-side and body expressions, then
+%generates the equivalent of a {\cf letrec*} form from the defined variables,
+%expanded right-hand-side expressions, and expanded body expressions.
+%For each body expression \hyper{expression} that appears before a variable definition
+%in the body, a dummy binding is created at the corresponding place within
+%the set of {\cf letrec*} bindings, with a fresh temporary variable on the
+%left-hand side and the equivalent of {\cf (begin \hyper{expression}
+%  \hyper{unspecified})},
+%where \hyper{unspecified} is a side-effect-free expression returning
+%an unspecified value,
+%on the right-hand side, so that
+%left-to-right evaluation order is preserved.
+%The {\cf begin} wrapper allows \hyper{expression} to evaluate to an
+%arbitrary number of values.
+Поскольку определения и выражения в \hyper{top-level body} могут чередоваться
+(см. главу~\ref{programchapter}), обработка экспандером \hyper{top-level body} несколько
+сложнее. Она происходит так, как описано выше для \hyper{body} или \hyper{library body} со
+следующими исключениями: При нахождении экспандером неопределения, он откладывает его
+разворачивание и продолжает сканировать определения. Как только он достигает конца набора форм,
+он обрабатывает отложенные выражения правой части и тела, затем генерирует эквивалент формы
+{\cf\bfseries letrec*} из определённых переменных, развёрнутых выражений правой части и
+развёрнутых выражений тела. Для каждого выражения тела \hyper{expression}, находящегося в теле
+перед определением переменной, создаётся фиктивная привязка в соответствующем месте внутри
+набора привязок {\cf\bfseries letrec*}, с новой временной переменной в левой части и
+эквивалентом {\cf \textbf{(begin} \hyper{expression} \hyper{unspecified}\textbf{)}}, где
+\hyper{unspecified} -- выражение без побочного эффекта, возвращающее неопределённое значение
+правой части, так, чтобы порядок вычисления слева направо сохранялся. Обёртка {\cf\bfseries
+  begin} позволяет \hyper{expression} вычисляться к произвольному количеству значений.
+
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "r6rs"
-%%% End: 
+%%% End:

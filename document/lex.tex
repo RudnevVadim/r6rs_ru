@@ -117,7 +117,7 @@ Datum-значение может иметь несколько различны
 лексического стандарта или datum-синтаксиса. Синтаксис {\cf \sharpsign \bfseries{}!r6rs} может
 применяться для указания, что последующий ввод записан с лексическим и datum-синтаксисом,
 описанным в данной работе. В противном случае {\cf \sharpsign\bfseries {}!r6rs} считается
-комментарием; см. секцию~\ref{whitespaceandcomments}.
+комментарием; см. секцию~\ref{whitespaceandcomments}.\vspace{-1mm}
 
 %\section{Notation}
 \section{Нотация}
@@ -151,7 +151,7 @@ Datum-значение может иметь несколько различны
 \meta{character tabulation} (U+0009), \meta{linefeed} (U+000A), \meta{carriage return} (U+000D),
 \meta{line tabulation} (U+000B), \meta{form feed} (U+000C), \meta{carriage return} (U+000D),
 \meta{space (U+0020)}, \meta{next line} (U+0085), \meta{line separator} (U+2028) и
-\meta{paragraph separator} (U+2029).
+\meta{paragraph separator} (U+2029).\vspace{-1mm}
 
 %\section{Lexical syntax}
 \section{Лексический синтаксис}
@@ -197,19 +197,22 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
 
 %\meta{Interlexeme space} may occur on either side of any lexeme, but not
 %within a lexeme.
-\meta{Interlexeme space} может находиться с любой стороны лексемы, но не внутри лексемы
+\meta{Interlexeme space} может находиться с любой стороны лексемы, но не внутри лексемы\vspace{1mm}
 
 %\hyper{Identifier}s, {\cf .}, \hyper{number}s, \hyper{character}s, and
 %\hyper{boolean}s, must be terminated by a \meta{delimiter} or by the
 %end of the input.
 \hyper{Identifier}, {\cf .}, \hyper{number}, \hyper{character} и
-\hyper{boolean} могут заканчиваться \meta{delimiter} или концом ввода.
+\hyper{boolean} могут заканчиваться \meta{delimiter} или концом ввода.\vspace{1mm}
 
 %The following two characters are reserved for future extensions to the
 %language: {\tt \verb"{" \verb"}"}
 Следующие два знака зарезервированы для будущих расширений языка:
-{\tt \verb"{" \verb"}"}
+{\tt \verb"{" \verb"}"}\vspace{1mm}
 
+{%
+\renewcommand{\baselinestretch}{1.1}
+\selectfont
 \begin{grammar}%
 \meta{lexeme} \: \meta{identifier} \| \meta{boolean} \| \meta{number}\index{identifier}
 \>  \| \meta{character} \| \meta{string}
@@ -255,11 +258,11 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
  \> \| $\langle${\rm any character whose Unicode scalar value is greater than}
  \> \quad {\rm 127, and whose category is Lu, Ll, Lt, Lm, Lo, Mn,}
  \> \quad {\rm Nl, No, Pd, Pc, Po, Sc, Sm, Sk, So, or Co}$\rangle$
-\end{grammar}
-
-\newpage
-
-\begin{grammar}
+%\end{grammar}
+%
+%\newpage
+%
+%\begin{grammar}
 \meta{special initial} \: ! \| \$ \| \% \| \verb"&" \| * \| / \| : \| < \| =
  \>  \| > \| ? \| \verb"^" \| \verb"_" \| \verb"~"
 \meta{subsequent} \: \meta{initial} \| \meta{digit}
@@ -289,6 +292,8 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
 \meta{intraline whitespace} \: \meta{character tabulation}
 \> \| \meta{any character whose category is Zs}%
 \end{grammar}
+
+}
 
 A \meta{hex scalar value} represents a Unicode scalar value
 between 0 and \sharpsign{}x10FFFF, excluding the range
@@ -369,11 +374,11 @@ decimal points or exponents must be in decimal radix.
 %marks the end of a line.  Moreover, the two-character line endings
 %\meta{carriage return} \meta{linefeed} and \meta{carriage return}
 %\meta{next line} each count as a single line ending.
-В Scheme окончание строки является значащим в однострочных комментариях (см. секцию~\ref
-{whitespaceandcomments}) и внутри строковых литералов. В исходном тексте Scheme любое
-окончание строки в \meta{line ending} означает конец строки. Кроме того, двухсимвольное
-окончание строки \meta{carriage return} \meta{linefeed} и \meta{carriage return} \meta
-{next line} считается одним окончанием строки.
+В Scheme окончание строки является значащим в однострочных комментариях
+(см. секцию~\ref{whitespaceandcomments}) и внутри строковых литералов. В исходном тексте Scheme
+любое окончание строки в \meta{line ending} означает конец строки. Кроме того, двухсимвольное
+окончание строки \meta{carriage return} \meta{linefeed} и \meta{carriage return} \meta{next
+  line} считается одним окончанием строки.
 
 %In a string literal, a \hyper{line ending} not preceded by a {\cf\backwhack}
 %stands for a linefeed character, which is the standard line-ending
@@ -409,14 +414,14 @@ Zl, или Zp. Пробельные символы используются дл
 образом, например, комментарий не может находиться в середине идентификатора или представления
 числового объекта.
 
-\newpage
+%\newpage
 
 %A semicolon ({\tt;}) indicates the start of a line
 %comment.\mainindex{comment}\mainschindex{;} The comment continues to
 %the end of the line on which the semicolon appears.
 Точка с запятой ({\tt;}), указывает начало строки комментария.\mainindex{comment}
   \mainschindex{;} Комментарий продолжается до конца строки, на которой находится точка с
-запятой.
+запятой.\vspace{1mm}
 
 %Another way to indicate a comment is to prefix a \hyper{datum}
 %(cf.\ section~\ref{datumsyntax}) with {\tt \#;}\sharpindex{;}, possibly with
@@ -426,13 +431,13 @@ Zl, или Zp. Пробельные символы используются дл
 Другим способом указания комментария является добавления к \hyper{datum} (см.\ секцию~\ref
 {datumsyntax}) префикса {\tt\bfseries \#;}\sharpindex{;}, возможно с \meta{interlexeme space} перед
 \hyper{datum}. Комментарий состоит из приставки комментария {\tt\bfseries \#;} и \hyper{datum}.
-Такая нотация полезна для ``комментирования'' секций кода.
+Такая нотация полезна для ``комментирования'' секций кода.\vspace{1mm}
 
 %Block comments may be indicated with properly nested {\tt
 %  \#|}\index{#"|@\texttt{\sharpsign\verticalbar}}\index{"|#@\texttt{\verticalbar\sharpsign}}
 %and {\tt |\#} pairs.
 Блоковые комментарии могут быть обозначены соответствующим образом вложенными парами {\tt\bfseries \#|}
-\index{#"|'@\texttt{\sharpsign\verticalbar}}\index{"|#@\texttt{\verticalbar\sharpsign}} и {\tt\bfseries |\#}.
+\index{#"|'@\texttt{\sharpsign\verticalbar}}\index{"|#@\texttt{\verticalbar\sharpsign}} и {\tt\bfseries |\#}.\vspace{1mm}
 
 \begin{scheme}
 \bfseries\#|
@@ -456,7 +461,7 @@ Zl, или Zp. Пробельные символы используются дл
 интерпретируется как комментарий.
 
 %\subsection{Identifiers}
-\subsection{Идентификаторы}
+\subsection{Идентификаторы}\vspace{2mm}
 \label{identifiersection}
 
 %Most identifiers\mainindex{identifier} allowed by other programming
@@ -474,23 +479,23 @@ Zl, или Zp. Пробельные символы используются дл
 символов'' является идентификатором, если она начинается с символа, с которого не может начинаться
 представление числового объекта. Кроме того, идентификаторами являются \ide{+}, \ide{-} и \ide{...},
 равно как и последовательность букв, цифр и расширенных алфавитных символов, начинающаяся
-с двухсимвольной последовательности \ide{->}. Некоторые примеры идентификаторов:
+с двухсимвольной последовательности \ide{->}. Некоторые примеры идентификаторов:\vspace{2mm}
 
 \begin{scheme}
 \bfseries lambda         q                soup
 \bfseries list->vector   {+}                V17a
 \bfseries <=             a34kTMNs         ->-
 \bfseries the-word-recursion-has-many-meanings%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %Extended alphabetic characters may be used within identifiers as if
 %they were letters.  The following are extended alphabetic characters:
 Расширенные алфавитные символы могут использоваться внутри идентификаторов, как если бы они
-были буквами. Расширенными алфавитными символами являются:
+были буквами. Расширенными алфавитными символами являются:\vspace{2mm}
 
 \begin{scheme}
 \bfseries !\ \$ \% \verb"&" * + - . / :\ < = > ? @ \verb"^" \verb"_" \verb"~" %
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %Moreover, all characters whose Unicode scalar values are greater than 127 and
 %whose Unicode category is Lu, Ll, Lt, Lm, Lo, Mn, Mc, Me, Nd, Nl, No, Pd,
@@ -541,6 +546,9 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 
 \texonly
 \newcommand{\extab}{\>}
+{%
+\renewcommand{\baselinestretch}{1.05}
+\selectfont
 \begin{tabbing}
 {\cf\#\backwhack{}x0000000000}\=\kill
 \endtexonly
@@ -580,7 +588,7 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 {\cf\bfseries\#\backwhack{}xFF}        \extab \textrm{U+00FF}\\
 {\cf\bfseries\#\backwhack{}xff}        \extab \textrm{U+00FF}\\
 {\cf\bfseries\#\backwhack{}x ff}       \extab \textrm{U+0078}\\
- \extab followed by another datum, {\bfseries\cf{}ff}\\[34mm]
+ \extab followed by another datum, {\bfseries\cf{}ff}\\%%%%%%%%%%%%%%%%%%%[34mm]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\cf\bfseries\#\backwhack{}x(ff)}      \extab \textrm{U+0078}\\
  \extab followed by another datum,\\
  \extab a parenthesized {\bfseries\cf{}ff}\\
@@ -599,7 +607,11 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 \endhtmlonly
 \texonly
 \end{tabbing}
+
+}
 \endtexonly
+
+
 
 %(The notation \exception{\&lexical} means that the line in question is
 %a lexical syntax violation.)
@@ -918,6 +930,9 @@ Datum-синтаксис описывает синтаксис синтакси�
 Следующая грамматика описывает синтаксис синтаксических данных в терминах лексем различных видов,
 определённых в грамматике в секции ~\ref{lexicalsyntaxsection}:
 
+{%
+\renewcommand{\baselinestretch}{1.05}
+\selectfont
 \begin{grammar}%
 \meta{datum} \: \meta{lexeme datum}
 \>  \| \meta{compound datum}
@@ -937,6 +952,8 @@ Datum-синтаксис описывает синтаксис синтакси�
  \>\>\quad\quad {\rm integer in $\{0, \ldots, 255\}$}$\rangle$%
 \end{grammar}
 
+}
+
 %\subsection{Pairs and lists}
 \subsection{Пары и списки}
 \label{pairlistsyntax}
@@ -950,7 +967,7 @@ Datum-синтаксис описывает синтаксис синтакси�
 находящихся в правилах \meta{list}, эквивалентно соответствию пар круглых
 скобок.
 
-\newpage
+%\newpage
 
 %The most general notation for Scheme pairs as syntactic data is
 %the ``dotted'' notation \hbox{\cf (\hyperi{datum} .\ \hyperii{datum})} where
@@ -1057,6 +1074,9 @@ Datum-синтаксис описывает синтаксис синтакси�
 \subsection{Сокращения}\unsection
 \label{abbreviationsection}
 
+{%
+\renewcommand{\baselinestretch}{1.05}
+\selectfont
 \begin{entry}{%
 \pproto{\singlequote\hyper{datum}}{}
 \pproto{\backquote\hyper{datum}}{}
@@ -1087,6 +1107,8 @@ for {\cf (unsyntax \hyper{datum})}, and
 \\\quad\index{#,@\texttt{\#,\atsign}}{\cf\#,@}\hyper{datum}
 for {\cf (unsyntax-splicing \hyper{datum})}.
 \end{entry}
+
+}
 
 %%% Local Variables:
 %%% mode: latex

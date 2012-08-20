@@ -18,7 +18,7 @@
 \BOOKMARK [0][-]{chapter.3}{Числа}{}% 18
 \BOOKMARK [1][-]{section.3.1}{Числовая башня}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.2}{Точность}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.3}{Fixnums\040and\040flonums}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.3}{Fixnums и flonums}{chapter.3}% 21
 \BOOKMARK [1][-]{section.3.4}{Требования к реализациям}{chapter.3}% 22
 \BOOKMARK [1][-]{section.3.5}{Бесконечность и NaN}{chapter.3}% 23
 \BOOKMARK [1][-]{section.3.6}{Распознавание -0.0}{chapter.3}% 24
@@ -54,10 +54,10 @@
 \BOOKMARK [0][-]{chapter.8}{Программы верхнего уровня}{}% 54
 \BOOKMARK [1][-]{section.8.1}{Синтаксис программ верхнего уровня}{chapter.8}% 55
 \BOOKMARK [1][-]{section.8.2}{Семантика программы верхнего уровня}{chapter.8}% 56
-\BOOKMARK [0][-]{chapter.9}{Primitive\040syntax}{}% 57
-\BOOKMARK [1][-]{section.9.1}{Primitive\040expression\040types}{chapter.9}% 58
-\BOOKMARK [1][-]{section.9.2}{Macros}{chapter.9}% 59
-\BOOKMARK [0][-]{chapter.10}{Expansion\040process}{}% 60
+\BOOKMARK [0][-]{chapter.9}{Синтаксис примитивов}{}% 57
+\BOOKMARK [1][-]{section.9.1}{Типы примитивных выражений}{chapter.9}% 58
+\BOOKMARK [1][-]{section.9.2}{Макросы}{chapter.9}% 59
+\BOOKMARK [0][-]{chapter.10}{Процесс разворачивания}{}% 60
 \BOOKMARK [0][-]{chapter.11}{Base\040library}{}% 61
 \BOOKMARK [1][-]{section.11.1}{Base\040types}{chapter.11}% 62
 \BOOKMARK [1][-]{section.11.2}{Definitions}{chapter.11}% 63

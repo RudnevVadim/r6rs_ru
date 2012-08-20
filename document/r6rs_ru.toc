@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.1}Основные типы}{6}{section.1.1}
 \contentsline {paragraph}{Булевые}{6}{section*.5}
 \contentsline {paragraph}{Числовые}{6}{section*.6}
-\contentsline {paragraph}{Знаковые}{6}{section*.7}
+\contentsline {paragraph}{Символьные}{6}{section*.7}
 \contentsline {paragraph}{Строковые}{6}{section*.8}
 \contentsline {paragraph}{Символьные}{7}{section*.9}
 \contentsline {paragraph}{Пары и списки}{7}{section*.10}
@@ -27,7 +27,7 @@
 \contentsline {chapter}{\numberline {3}Числа}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Числовая башня}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Точность}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Fixnums and flonums}{11}{section.3.3}
+\contentsline {section}{\numberline {3.3}Fixnums и flonums}{11}{section.3.3}
 \contentsline {section}{\numberline {3.4}Требования к реализациям}{11}{section.3.4}
 \contentsline {section}{\numberline {3.5}Бесконечность и NaN}{12}{section.3.5}
 \contentsline {section}{\numberline {3.6}Распознавание -0.0}{12}{section.3.6}
@@ -76,20 +76,20 @@
 \contentsline {chapter}{\numberline {8}Программы верхнего уровня}{28}{chapter.8}
 \contentsline {section}{\numberline {8.1}Синтаксис программ верхнего уровня}{28}{section.8.1}
 \contentsline {section}{\numberline {8.2}Семантика программы верхнего уровня}{29}{section.8.2}
-\contentsline {chapter}{\numberline {9}Primitive syntax}{29}{chapter.9}
-\contentsline {section}{\numberline {9.1}Primitive expression types}{29}{section.9.1}
-\contentsline {section}{\numberline {9.2}Macros}{29}{section.9.2}
-\contentsline {chapter}{\numberline {10}Expansion process}{30}{chapter.10}
-\contentsline {chapter}{\numberline {11}Base library}{31}{chapter.11}
-\contentsline {section}{\numberline {11.1}Base types}{31}{section.11.1}
-\contentsline {section}{\numberline {11.2}Definitions}{31}{section.11.2}
+\contentsline {chapter}{\numberline {9}Синтаксис примитивов}{29}{chapter.9}
+\contentsline {section}{\numberline {9.1}Типы примитивных выражений}{29}{section.9.1}
+\contentsline {section}{\numberline {9.2}Макросы}{30}{section.9.2}
+\contentsline {chapter}{\numberline {10}Процесс разворачивания}{30}{chapter.10}
+\contentsline {chapter}{\numberline {11}Base library}{32}{chapter.11}
+\contentsline {section}{\numberline {11.1}Base types}{32}{section.11.1}
+\contentsline {section}{\numberline {11.2}Definitions}{32}{section.11.2}
 \contentsline {subsection}{\numberline {11.2.1}Variable definitions}{32}{subsection.11.2.1}
 \contentsline {subsection}{\numberline {11.2.2}Syntax definitions}{32}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}Bodies}{32}{section.11.3}
+\contentsline {section}{\numberline {11.3}Bodies}{33}{section.11.3}
 \contentsline {section}{\numberline {11.4}Expressions}{33}{section.11.4}
 \contentsline {subsection}{\numberline {11.4.1}Quotation}{33}{subsection.11.4.1}
 \contentsline {subsection}{\numberline {11.4.2}Procedures}{33}{subsection.11.4.2}
-\contentsline {subsection}{\numberline {11.4.3}Conditionals}{33}{subsection.11.4.3}
+\contentsline {subsection}{\numberline {11.4.3}Conditionals}{34}{subsection.11.4.3}
 \contentsline {subsection}{\numberline {11.4.4}Assignments}{34}{subsection.11.4.4}
 \contentsline {subsection}{\numberline {11.4.5}Derived conditionals}{34}{subsection.11.4.5}
 \contentsline {subsection}{\numberline {11.4.6}Binding constructs}{35}{subsection.11.4.6}
@@ -98,43 +98,43 @@
 \contentsline {section}{\numberline {11.6}Procedure predicate}{39}{section.11.6}
 \contentsline {section}{\numberline {11.7}Arithmetic}{39}{section.11.7}
 \contentsline {subsection}{\numberline {11.7.1}Propagation of exactness and inexactness}{39}{subsection.11.7.1}
-\contentsline {subsection}{\numberline {11.7.2}Representability of infinities and NaNs}{39}{subsection.11.7.2}
+\contentsline {subsection}{\numberline {11.7.2}Representability of infinities and NaNs}{40}{subsection.11.7.2}
 \contentsline {subsection}{\numberline {11.7.3}Semantics of common operations}{40}{subsection.11.7.3}
 \contentsline {subsubsection}{Integer division}{40}{section*.16}
 \contentsline {subsubsection}{Transcendental functions}{40}{section*.17}
 \contentsline {subsection}{\numberline {11.7.4}Numerical operations}{41}{subsection.11.7.4}
 \contentsline {subsubsection}{Numerical type predicates}{41}{section*.18}
-\contentsline {subsubsection}{Generic conversions}{41}{section*.19}
+\contentsline {subsubsection}{Generic conversions}{42}{section*.19}
 \contentsline {subsubsection}{Arithmetic operations}{42}{section*.20}
-\contentsline {subsubsection}{Numerical Input and Output}{45}{section*.21}
+\contentsline {subsubsection}{Numerical Input and Output}{46}{section*.21}
 \contentsline {section}{\numberline {11.8}Booleans}{46}{section.11.8}
-\contentsline {section}{\numberline {11.9}Pairs and lists}{46}{section.11.9}
+\contentsline {section}{\numberline {11.9}Pairs and lists}{47}{section.11.9}
 \contentsline {section}{\numberline {11.10}Symbols}{48}{section.11.10}
-\contentsline {section}{\numberline {11.11}Characters}{48}{section.11.11}
+\contentsline {section}{\numberline {11.11}Characters}{49}{section.11.11}
 \contentsline {section}{\numberline {11.12}Strings}{49}{section.11.12}
 \contentsline {section}{\numberline {11.13}Vectors}{50}{section.11.13}
 \contentsline {section}{\numberline {11.14}Errors and violations}{51}{section.11.14}
-\contentsline {section}{\numberline {11.15}Control features}{51}{section.11.15}
+\contentsline {section}{\numberline {11.15}Control features}{52}{section.11.15}
 \contentsline {section}{\numberline {11.16}Iteration}{53}{section.11.16}
-\contentsline {section}{\numberline {11.17}Quasiquotation}{53}{section.11.17}
-\contentsline {section}{\numberline {11.18}Binding constructs for syntactic keywords}{54}{section.11.18}
-\contentsline {section}{\numberline {11.19}Macro transformers}{55}{section.11.19}
+\contentsline {section}{\numberline {11.17}Quasiquotation}{54}{section.11.17}
+\contentsline {section}{\numberline {11.18}Binding constructs for syntactic keywords}{55}{section.11.18}
+\contentsline {section}{\numberline {11.19}Macro transformers}{56}{section.11.19}
 \contentsline {section}{\numberline {11.20}Tail calls and tail contexts}{57}{section.11.20}
-\contentsline {chaptergroup}{Appendices}{58}{section.11.20}
-\contentsline {chapter}{\numberline {A}Formal semantics}{58}{appendix.A}
-\contentsline {section}{\numberline {A.1}Background}{58}{section.A.1}
-\contentsline {section}{\numberline {A.2}Grammar}{58}{section.A.2}
-\contentsline {section}{\numberline {A.3}Quote}{60}{section.A.3}
-\contentsline {section}{\numberline {A.4}Multiple values}{60}{section.A.4}
-\contentsline {section}{\numberline {A.5}Exceptions}{61}{section.A.5}
-\contentsline {section}{\numberline {A.6}Arithmetic and basic forms}{61}{section.A.6}
-\contentsline {section}{\numberline {A.7}Lists}{62}{section.A.7}
-\contentsline {section}{\numberline {A.8}Eqv}{62}{section.A.8}
-\contentsline {section}{\numberline {A.9}Procedures and application}{62}{section.A.9}
-\contentsline {section}{\numberline {A.10}Call/cc and dynamic wind}{63}{section.A.10}
-\contentsline {section}{\numberline {A.11}Letrec}{63}{section.A.11}
-\contentsline {section}{\numberline {A.12}Underspecification}{64}{section.A.12}
-\contentsline {chapter}{\numberline {B}Sample definitions for derived forms}{64}{appendix.B}
-\contentsline {chapter}{\numberline {C}Additional material}{66}{appendix.C}
-\contentsline {chapter}{\numberline {D}Example }{67}{appendix.D}
-\contentsline {chapter}{\numberline {E}Language changes}{68}{appendix.E}
+\contentsline {chaptergroup}{Appendices}{59}{section.11.20}
+\contentsline {chapter}{\numberline {A}Formal semantics}{59}{appendix.A}
+\contentsline {section}{\numberline {A.1}Background}{59}{section.A.1}
+\contentsline {section}{\numberline {A.2}Grammar}{59}{section.A.2}
+\contentsline {section}{\numberline {A.3}Quote}{61}{section.A.3}
+\contentsline {section}{\numberline {A.4}Multiple values}{61}{section.A.4}
+\contentsline {section}{\numberline {A.5}Exceptions}{62}{section.A.5}
+\contentsline {section}{\numberline {A.6}Arithmetic and basic forms}{62}{section.A.6}
+\contentsline {section}{\numberline {A.7}Lists}{63}{section.A.7}
+\contentsline {section}{\numberline {A.8}Eqv}{63}{section.A.8}
+\contentsline {section}{\numberline {A.9}Procedures and application}{63}{section.A.9}
+\contentsline {section}{\numberline {A.10}Call/cc and dynamic wind}{64}{section.A.10}
+\contentsline {section}{\numberline {A.11}Letrec}{64}{section.A.11}
+\contentsline {section}{\numberline {A.12}Underspecification}{65}{section.A.12}
+\contentsline {chapter}{\numberline {B}Sample definitions for derived forms}{65}{appendix.B}
+\contentsline {chapter}{\numberline {C}Additional material}{67}{appendix.C}
+\contentsline {chapter}{\numberline {D}Example }{68}{appendix.D}
+\contentsline {chapter}{\numberline {E}Language changes}{69}{appendix.E}

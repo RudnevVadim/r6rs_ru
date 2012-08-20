@@ -1,188 +1,279 @@
-\chapter{Primitive syntax}
+%\chapter{Primitive syntax}
+\chapter{Синтаксис примитивов}\vspace{2mm}
 
-After the {\cf import} form within a {\cf library} form or a top-level
-program, the forms
-that constitute the body of the library or the top-level program
-depend on the libraries that are
-imported. In particular, imported syntactic keywords determine 
-the available syntactic abstractions and whether each form is a 
-definition or expression. A few form types are
-always available independent of imported libraries, however,
-including constant literals, variable references, procedure calls,
- and macro uses.
+%After the {\cf import} form within a {\cf library} form or a top-level
+%program, the forms
+%that constitute the body of the library or the top-level program
+%depend on the libraries that are
+%imported. In particular, imported syntactic keywords determine
+%the available syntactic abstractions and whether each form is a
+%definition or expression. A few form types are
+%always available independent of imported libraries, however,
+%including constant literals, variable references, procedure calls,
+% and macro uses.
+После формы {\bfseries\cf import} внутри формы {\bfseries\cf library} или программы верхнего уровня,
+формы, составляющие тело библиотеки или программы верхнего уровня, зависят от
+импортированных библиотек.
+В частности, импортированные синтаксические ключевые слова определяют
+доступные синтаксические абстракции и является ли каждая форма определением или
+выражением. Некоторые типы форм всегда доступны независимо от импортированных библиотек,
+однако, включая константные литералы, обращения к переменным, вызовы
+процедур и применения макросов.
 
-\section{Primitive expression types}
+%\section{Primitive expression types}
+\section{Типы примитивных выражений}
 \label{primitiveexpressionsection}
 
-The entries in this section all describe expressions, which may occur
-in the place of \hyper{expression} syntactic variables.  See
-also section~\ref{expressionsection}.
+%The entries in this section all describe expressions, which may occur
+%in the place of \hyper{expression} syntactic variables.  See
+%also section~\ref{expressionsection}.
+Все записи в этой секции описывают выражения, которые могут находиться на месте синтаксических
+переменных \hyper{expression}. См. также секцию~\ref{expressionsection}.
 
-\subsection*{Constant literals}\unsection
+%\subsection*{Constant literals}\unsection
+\subsection*{Константные литералы}\unsection
 
 \begin{entry}{%
 \pproto{\hyper{number}}{\exprtype}
 \pproto{\hyper{boolean}}{\exprtype}
 \pproto{\hyper{character}}{\exprtype}
 \pproto{\hyper{string}}{\exprtype}
-\pproto{\hyper{bytevector}}{\exprtype}}\mainindex{literal}
+\pproto{\hyper{bytevector}}{\exprtype}}\mainindex{literal}\vspace{1mm}
 
-An expression consisting of a representation of a number object, a
-boolean, a character, a string, or a bytevector, evaluates ``to
-itself''.
+%An expression consisting of a representation of a number object, a
+%boolean, a character, a string, or a bytevector, evaluates ``to
+%itself''.
+Выражение, состоящее из представления числового объекта, булевого значения, символа, строки или
+байт-вектора, вычисляется ``как есть''.\vspace{1mm}
 
 \begin{scheme}
-145932     \ev  145932
-\schtrue   \ev  \schtrue
-"abc"      \ev  "abc"
-\#vu8(2 24 123) \ev \#vu8(2 24 123)%
-\end{scheme}
+\bfseries 145932     \ev  \bfseries 145932
+\bfseries \schtrue   \ev  \bfseries \schtrue
+\bfseries "abc"      \ev  \bfseries "abc"
+\bfseries \#vu8(2 24 123) \ev \bfseries\#vu8(2 24 123)%
+\end{scheme}\vspace{1mm}
 
-As noted in section~\ref{storagemodel}, the value of a literal
-expression is immutable.
+%As noted in section~\ref{storagemodel}, the value of a literal
+%expression is immutable.
+Как отмечено в секции ~\ref{storagemodel}, значение литерального выражения является неизменяемым.
 \end{entry}
 
-\subsection*{Variable references}\unsection
+%\subsection*{Variable references}\unsection
+\subsection*{Обращения к переменным}\unsection
 \begin{entry}{%
-\pproto{\hyper{variable}}{\exprtype}}
+\pproto{\hyper{variable}}{\exprtype}}\vspace{1mm}
 
-An expression consisting of a variable\index{variable}
-(section~\ref{variablesection}) is a variable reference if it is not a
-macro use (see below).  The value of
-the variable reference is the value stored in the location to which the
-variable is bound.  It is a syntax violation to reference
-an unbound\index{unbound} variable.
+%An expression consisting of a variable\index{variable}
+%(section~\ref{variablesection}) is a variable reference if it is not a
+%macro use (see below).  The value of
+%the variable reference is the value stored in the location to which the
+%variable is bound.  It is a syntax violation to reference
+%an unbound\index{unbound} variable.
+Выражение, состоящее из переменной\index{variable} (секция~\ref{variablesection}), является
+обращением к переменной в случае, если оно не является применением макроса (см. ниже). Значением
+обращения к переменной является значение,
+хранящееся в области памяти, с которой связана переменная.
+Обращение к непривязанной \index{unbound} переменной является нарушением синтаксиса.
 
-The following example examples assumes the base library
-has been imported:
+%The following example examples assumes the base library
+%has been imported:
+В следующих примерах предполагается, что основная библиотека импортирована:\vspace{1mm}
 %
 \begin{scheme}
-(define x 28)
-x   \ev  28%
-\end{scheme}
+\bfseries(define x 28)
+\bfseries x   \ev  \bfseries 28%
+\end{scheme}\vspace{1mm}
 \end{entry}
 
-\subsection*{Procedure calls}\unsection
+%\subsection*{Procedure calls}\unsection
+\subsection*{Вызовы процедур}\unsection
 
 \begin{entry}{%
-\pproto{(\hyper{operator} \hyperi{operand} \dotsfoo)}{\exprtype}}
+\pproto{\textbf{(}\hyper{operator} \hyperi{operand} \dotsfoo\textbf{)}}{\exprtype}}\vspace{1mm}
 
-A procedure call consists of expressions for the procedure to be
-called and the arguments to be passed to it, with enclosing
-parentheses.  A form in an expression context is a procedure call if
-\hyper{operator} is not an identifier bound as a syntactic keyword
-(see section~\ref{macrosection} below).
+%A procedure call consists of expressions for the procedure to be
+%called and the arguments to be passed to it, with enclosing
+%parentheses.  A form in an expression context is a procedure call if
+%\hyper{operator} is not an identifier bound as a syntactic keyword
+%(see section~\ref{macrosection} below).
+Вызов процедуры состоит из заключённых в круглые скобки выражений вызова процедуры и передаваемых ей
+аргументов. Форма в контексте выражения является вызовом процедуры, если \hyper{operator} не
+является идентификатором, привязанным к синтаксическому ключевому слову
+(см. секцию~\ref{macrosection} ниже).
 
-When a procedure call is evaluated, the operator and operand
-expressions are evaluated (in an unspecified order) and the resulting
-procedure is passed the resulting
-arguments.\mainindex{call}\mainindex{procedure call}
+%When a procedure call is evaluated, the operator and operand
+%expressions are evaluated (in an unspecified order) and the resulting
+%procedure is passed the resulting
+%arguments.\mainindex{call}\mainindex{procedure call}
+При вычислении вызова процедуры вычисляются (в произвольном порядке) выражения оператора и операндов
+и полученной процедуре передаются полученные аргументы.\mainindex{call}\mainindex{procedure
+  call}
 
-The following examples assume the \rsixlibrary{base} library
-has been imported:
+%The following examples assume the \rsixlibrary{base} library
+%has been imported:
+В следующих примерах предполагается, что библиотека \textbf{\rsixlibrary{base}} импортирована.\vspace{1mm}
 %
 \begin{scheme}%
-(+ 3 4)                          \ev  7
-((if \schfalse + *) 3 4)         \ev  12%
-\end{scheme}
+\bfseries (+ 3 4)                          \ev\bfseries 7
+\bfseries ((if \schfalse + *) 3 4)         \ev\bfseries 12%
+\end{scheme}\vspace{1mm}
 %
-If the value of \hyper{operator} is not a procedure, an exception with
-condition type {\cf\&assertion} is raised.  Also, if \hyper{operator}
-does not accept as many arguments as there are \hyper{operand}s, an
-exception with condition type {\cf\&assertion} is raised.
+%If the value of \hyper{operator} is not a procedure, an exception with
+%condition type {\cf\&assertion} is raised.  Also, if \hyper{operator}
+%does not accept as many arguments as there are \hyper{operand}s, an
+%exception with condition type {\cf\&assertion} is raised.
 
-\begin{note} In contrast to other dialects of Lisp, the order of
-evaluation is unspecified, and the operator expression and the operand
-expressions are always evaluated with the same evaluation rules.
+Если значение \hyper{operator} не является процедурой, возбуждается исключение с типом состояния
+{\cf\bfseries\&assertion}. Если количество \hyper{operand} превышает количество принимаемых
+\hyper{operand} аргументом, также возбуждается исключение с типом состояния {\cf\bfseries\&assertion}.
 
-Although the order of evaluation is otherwise unspecified, the effect of
-any concurrent evaluation of the operator and operand expressions is
-constrained to be consistent with some sequential order of evaluation.
-The order of evaluation may be chosen differently for each procedure call.
+\begin{note} %In contrast to other dialects of Lisp, the order of
+%evaluation is unspecified, and the operator expression and the operand
+%expressions are always evaluated with the same evaluation rules.
+В отличие от других диалектов Lisp порядок вычисления не определён, и выражение оператора, и
+выражения операнда всегда вычисляются с теми же правилами вычисления.
+
+%Although the order of evaluation is otherwise unspecified, the effect of
+%any concurrent evaluation of the operator and operand expressions is
+%constrained to be consistent with some sequential order of evaluation.
+%The order of evaluation may be chosen differently for each procedure call.
+Хотя порядок вычисления иначе не определён, эффект любого параллельного вычисления выражений
+оператора и операнда ограничен быть совместимым с некоторым последовательным порядком
+вычисления. Порядок вычисления может быть выбран другим при каждом вызове процедуры.
 \end{note}
 
-\begin{note} In many dialects of Lisp, the form {\tt
-()} is a legitimate expression.  In Scheme, expressions written as
-list/pair forms must have at
-least one subexpression, so {\tt ()} is not a syntactically valid
-expression.
+%\newpage
+
+\begin{note} %In many dialects of Lisp, the form {\tt
+%()} is a legitimate expression.  In Scheme, expressions written as
+%list/pair forms must have at
+%least one subexpression, so {\tt ()} is not a syntactically valid
+%expression.
+Во многих диалектах Lisp форма {\tt\textbf{()}} является допустимым выражением. В Scheme
+выражения, записанные как формы списков/пар, должны иметь по крайней мере одно подвыражение, таким
+образом, {\tt\textbf{()}} не является синтаксически допустимым выражением.
 \end{note}
 
 \end{entry}
 
-\section{Macros}
+%\section{Macros}
+\section{Макросы}\vspace{1mm}
 \label{macrosection}
 
-Libraries and top-level programs can define and use new kinds of derived expressions and
-definitions called {\em syntactic abstractions} or
-{\em macros}.\mainindex{syntactic abstraction}\mainindex{macro}
-A syntactic abstraction is created by binding a keyword to a
-{\em macro transformer} or, simply, {\em transformer}.
-\index{macro transformer}\index{transformer}
-The transformer determines
-how a use of the macro (called a \defining{macro use})
-is transcribed into a more primitive form.
+%Libraries and top-level programs can define and use new kinds of derived expressions and
+%definitions called {\em syntactic abstractions} or
+%{\em macros}.\mainindex{syntactic abstraction}\mainindex{macro}
+%A syntactic abstraction is created by binding a keyword to a
+%{\em macro transformer} or, simply, {\em transformer}.
+%\index{macro transformer}\index{transformer}
+%The transformer determines
+%how a use of the macro (called a \defining{macro use})
+%is transcribed into a more primitive form.
+В библиотеках и программах верхнего уровня могут определяться и использоваться новые виды
+производных выражений и определений, называемых {\em синтаксическими абстракциями} или {\em
+  макросами}.\mainindex{syntactic abstraction} \mainindex {macro} Синтаксическая абстракция
+создаётся путём привязки ключевого слова к {\em макротрансформеру}, или просто {\em
+  трансформеру}.\index{macro transformer}\index{macro transformer} Трансформер
+определяет, как применение макроса (называемое \defining{макроприменением}) расшифровывается в
+более примитивную форму.\vspace{1mm}
 
-Most macro uses have the form:
+%Most macro uses have the form:
+Большинство макросов имеют форму:\vspace{1mm}
 \begin{scheme}
-(\hyper{keyword} \hyper{datum} \dotsfoo)%
-\end{scheme}%
-where \hyper{keyword} is an identifier that uniquely determines the
-kind of form.  This identifier is called the {\em syntactic
-keyword}\index{syntactic keyword}, or simply {\em
-keyword}\index{keyword}, of the macro\index{macro keyword}.
-The number of \hyper{datum}s and the syntax
-of each depends on the syntactic abstraction.
+\textbf{(}\hyper{keyword} \hyper{datum} \dotsfoo\textbf{)}%
+\end{scheme}\vspace{1mm}%
+%where \hyper{keyword} is an identifier that uniquely determines the
+%kind of form.  This identifier is called the {\em syntactic
+%keyword}\index{syntactic keyword}, or simply {\em
+%keyword}\index{keyword}, of the macro\index{macro keyword}.
+%The number of \hyper{datum}s and the syntax
+%of each depends on the syntactic abstraction.
+где \hyper{keyword} -- идентификатор, уникально определяющий вид формы. Этот
+идентификатор называется {\em синтаксическим ключевым словом}\index{syntactic keyword},
+или просто {\em ключевым словом}\index{keyword}, макроса\index{macro keyword}. Количество
+\hyper{datum} и синтаксис каждого из них зависит от синтаксической абстракции.\vspace{1mm}
 
-Macro uses can also take the form of improper lists, singleton
-identifiers, or {\cf set!} forms, where the second subform of the
-{\cf set!} is the keyword (see section~\ref{identifier-syntax})
-library section~\extref{lib:make-variable-transformer}{{\cf make-variable-transformer}}):
+%Macro uses can also take the form of improper lists, singleton
+%identifiers, or {\cf set!} forms, where the second subform of the
+%{\cf set!} is the keyword (see section~\ref{identifier-syntax})
+%library section~\extref{lib:make-variable-transformer}{{\cf make-variable-transformer}}):
+Макроприменения могут также принимать форму нестрогих списков, еденичных идентификаторов
+или форм {\cf\bfseries set!}, где вторая подформа {\cf\bfseries set!} является
+ключевым словом (см. секцию~\ref{identifier-syntax}), библиотечную
+секцию~\extref{lib:make-variable-transformer} {{\cf\bfseries make-variable-transformer}}):\vspace{1mm}
 \begin{scheme}
-(\hyper{keyword} \hyper{datum} \dotsfoo . \hyper{datum})
+\textbf{(}\hyper{keyword} \hyper{datum} \dotsfoo . \hyper{datum}\textbf{)}
 \hyper{keyword}
-(set! \hyper{keyword} \hyper{datum})%
-\end{scheme}
+\textbf{(}set! \hyper{keyword} \hyper{datum}\textbf{)}%
+\end{scheme}\vspace{1mm}
 
-The {\cf define-syntax}, {\cf let-syntax} and {\cf letrec-syntax}
-forms, described in sections~\ref{define-syntax} and \ref{let-syntax},
-create bindings for keywords, associate them with macro transformers,
-and control the scope within which they are visible.
+%The {\cf define-syntax}, {\cf let-syntax} and {\cf letrec-syntax}
+%forms, described in sections~\ref{define-syntax} and \ref{let-syntax},
+%create bindings for keywords, associate them with macro transformers,
+%and control the scope within which they are visible.
+Формы {\cf\bfseries define-syntax}, {\cf\bfseries let-syntax} и {\cf\bfseries letrec-syntax},
+описанные в секциях~\ref{define-syntax} и \ref{letrec-syntax}, создают привязки для ключевых
+слов, связывают их с макротрансформерами, и задают область, внутри которых они видимы.\vspace{1mm}
 
-The {\cf syntax-rules} and {\cf identifier-syntax} forms, described in
-section~\ref{syntaxrulessection}, create transformers via a pattern
-language.  Moreover, the {\cf syntax-case} form, described in library
-chapter~\extref{lib:syntaxcasechapter}{{\cf syntax-case}}, 
-allows creating transformers via arbitrary Scheme code.
+%The {\cf syntax-rules} and {\cf identifier-syntax} forms, described in
+%section~\ref{syntaxrulessection}, create transformers via a pattern
+%language.  Moreover, the {\cf syntax-case} form, described in library
+%chapter~\extref{lib:syntaxcasechapter}{{\cf syntax-case}},
+%allows creating transformers via arbitrary Scheme code.
+Формы {\cf\bfseries syntax-rules} и {\cf\bfseries identifier-syntax}, описанные в секции
+~\ref{syntaxrulessection}, создают трансформеры посредством языка шаблонов. Кроме того, форма
+{\cf\bfseries syntax-case}, описанная в библиотечной главе~\extref{lib:syntaxcasechapter}
+{{\cf\bfseries syntax-case}}, позволяет создавать трансформеры посредством произвольного кода
+Scheme.\vspace{1mm}
 
-Keywords occupy the same name space as variables.
-That is, within the same
-scope, an identifier can be bound as a variable or keyword, or neither, but
-not both, and local bindings of either kind may shadow other bindings of
-either kind.
+%Keywords occupy the same name space as variables.
+%That is, within the same
+%scope, an identifier can be bound as a variable or keyword, or neither, but
+%not both, and local bindings of either kind may shadow other bindings of
+%either kind.
+Ключевые слова занимают то же пространство имён, что и переменные. Таким образом,
+внутри той же области видимости, идентификатор может привязываться как переменная или
+ключевое слово, или ни один, но не оба, и локальные привязки любого вида могут маскировать другие
+привязки любого вида.\vspace{1mm}
 
-Macros defined using {\cf syntax-rules} and {\cf identifier-\hp{}syntax}
-are ``hygienic'' and ``referentially transparent'' and thus preserve
-Scheme's lexical scoping~\cite{Kohlbecker86,
-  hygienic,Bawden88,macrosthatwork,syntacticabstraction}:
-\mainindex{hygienic} \mainindex{referentially transparent}
+%Macros defined using {\cf syntax-rules} and {\cf identifier-\hp{}syntax}
+%are ``hygienic'' and ``referentially transparent'' and thus preserve
+%Scheme's lexical scoping~\cite{Kohlbecker86,
+%  hygienic,Bawden88,macrosthatwork,syntacticabstraction}:
+%\mainindex{hygienic} \mainindex{referentially transparent}
+Макрос, определённый с помощью {\cf\bfseries syntax-rules} и {\cf\bfseries
+  identifier-\hp{}syntax}, является ``гигиеничным'' и ``референциально прозрачным'' и, таким
+образом, предохраняет лексическую сферу действия
+Scheme~\cite{Kohlbecker86,hygienic,Bawden88,macrosthatwork,syntacticabstraction}:\mainindex{hygienic}
+\mainindex{referentially transparent}
 
 \begin{itemize}
-\item If a macro transformer inserts a binding for an identifier
-(variable or keyword) not appearing in the macro use, the identifier is in effect renamed
-throughout its scope to avoid conflicts with other identifiers.
+%\item If a macro transformer inserts a binding for an identifier
+%(variable or keyword) not appearing in the macro use, the identifier is in effect renamed
+%throughout its scope to avoid conflicts with other identifiers.
+\item Если макротрансформер вносит привязку для идентификатора (переменной или ключевого
+слова), отсутствующего в макроприменении, идентификатор используется переименованным
+по всей своей области видимости для предотвращения конфликтов с другими идентификаторами.
 
-\item If a macro transformer inserts a free reference to an
-identifier, the reference refers to the binding that was visible
-where the transformer was specified, regardless of any local
-bindings that may surround the use of the macro.
+%\item If a macro transformer inserts a free reference to an
+%identifier, the reference refers to the binding that was visible
+%where the transformer was specified, regardless of any local
+%bindings that may surround the use of the macro.
+\item Если макротрансформер вносит свободное обращение к идентификатору, обращение относится к
+  привязке, которая была видима в месте определения трансформера, независимо от всех
+  локальных привязкок, которые могут окружать применение макроса.
 \end{itemize}
 
-Macros defined using the {\cf syntax-case} facility are also
-hygienic unless {\cf datum\coerce{}syntax}
-(see library section~\extref{lib:conversionssection}{Syntax-object and datum conversions}) is used.
+%Macros defined using the {\cf syntax-case} facility are also
+%hygienic unless {\cf datum\coerce{}syntax}
+%(see library section~\extref{lib:conversionssection}{Syntax-object and datum conversions}) is
+%used.
+Макрос, определённый с помощью средства {\cf\bfseries syntax-case},
+также является гигиеничным, кроме случаев, когда используется {\cf\bfseries
+  datum\coerce{}syntax} (см. библиотечную секцию~\extref{lib:conversionssection}{Syntax-object
+  and datum conversions}).
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "r6rs"
-%%% End: 
+%%% End:

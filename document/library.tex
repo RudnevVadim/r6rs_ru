@@ -1,7 +1,8 @@
 %\chapter{Libraries}
-\chapter{Библиотеки}
+\chapter{Библиотеки}\vspace{2mm}
 \label{librarychapter}
 \mainindex{library}
+
 %Libraries are parts of a program that can be distributed
 %independently.
 %The library system supports macro definitions within libraries,
@@ -143,36 +144,36 @@
 библиотеку, уровни, на которых они должны быть доступны и локальные имена, которыми
 они должны быть названы. \hyper{import spec} должен быть одним из следующего:
 
-\newpage
+%\newpage
 
 \begin{scheme}
 \hyper{import set}
 (\textbf{for} \hyper{import~set} \hyper{import~level} \ldots)%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %An \hyper{import level}  is one of the following:
-\hyper{import level} является одним из следующего:
+\hyper{import level} является одним из следующего:\vspace{1mm}
 \begin{scheme}
 \textbf{run}
 \textbf{expand}
 \textbf{(meta} \hyper{level}\textbf{)}%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %where \hyper{level} represents an exact integer object.
-Где \hyper{level} представляет точный целый объект.
+Где \hyper{level} представляет точный целый объект.\vspace{1mm}
 
 %As an \hyper{import level}, {\cf run} is an abbreviation for {\cf
 %  (meta 0)}, and {\cf expand} is an abbreviation for {\cf (meta 1)}.
 %Levels and phases are discussed in section~\ref{phasessection}.
 Как \hyper{import level}, {\cf \bfseries run} является сокращением для {\cf\bfseries (meta 0)},
 а {\cf\bfseries expand} - сокращением для {\cf\bfseries (meta 1)}. Уровни и фазы описаны в
-секции~\ref{phasessection}.
+секции~\ref{phasessection}.\vspace{1mm}
 
 %An \hyper{import~set} names a set of bindings from another library and
 %possibly specifies local names for the imported bindings.  It must be
 %one of the following:
 \hyper{import~set} именует множество привязок из другой библиотеки и, возможно, определяет
-локальные имена для импортированных привязок. Он должен быть одним из следующего:
+локальные имена для импортированных привязок. Он должен быть одним из следующего:\vspace{1mm}
 
 \begin{scheme}
 \hyper{library~reference}
@@ -181,17 +182,17 @@
 \textbf{(except} \hyper{import~set} \hyper{identifier} \ldots\textbf{)}
 \textbf{(prefix} \hyper{import~set} \hyper{identifier}\textbf{)}
 \textbf{(rename} \hyper{import~set} \textbf{(}\hyperi{identifier} \hyperii{identifier}\textbf{)} \ldots\textbf{)}%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %A \hyper{library~reference} identifies a library by its
 %name and optionally by its version.  It has one of the following forms:
 \hyper{library~reference} идентифицирует библиотеку её именем и,
-произвольно, её версией. Он имеет одну из следующих форм:
+произвольно, её версией. Он имеет одну из следующих форм:\vspace{1mm}
 
 \begin{scheme}
 \textbf{(}\hyperi{identifier} \hyperii{identifier} \ldots\textbf{)}
 \textbf{(}\hyperi{identifier} \hyperii{identifier} \ldots \hyper{version~reference}\textbf{)}%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %A \hyper{library~reference} whose first \hyper{identifier} is
 %{\cf for}, {\cf library}, {\cf only}, {\cf except}, {\cf prefix}, or {\cf rename} is
@@ -203,13 +204,13 @@ library}, {\cf\bfseries only}, {\cf\bfseries except}, {\cf\bfseries prefix} ил
 rename}, разрешается только внутри {\cf\bfseries library}
 \hyper{import~set}. \hyper{import~set} {\cf\textbf{(library}
   \hyper{library~reference}\textbf{)}} в противном случае
-эквивалентен \hyper{library~reference}.
+эквивалентен \hyper{library~reference}.\vspace{1mm}
 
 %A \hyper{library~reference} with no \hyper{version~reference}
 %(first form above) is equivalent to a \hyper{library~reference} with a
 %\hyper{version~reference} of {\cf ()}.
 \hyper{library~reference} без \hyper{version~reference} (первая форма выше) эквивалентен
-\hyper{library~reference} с \hyper{version~reference} {\cf\bfseries ()}.
+\hyper{library~reference} с \hyper{version~reference} {\cf\bfseries ()}.\vspace{1mm}
 
 %A \hyper{version~reference} specifies a set of \hyper{version}s that
 %it matches.  The \hyper{library~reference} identifies all libraries of
@@ -219,14 +220,14 @@ rename}, разрешается только внутри {\cf\bfseries library}
 \hyper{version~reference} указывает множество \hyper{version}, которым он
 соответствует. \hyper{library~reference} идентифицирует все библиотеки того же самого
 имени и чья версия соответствует \hyper{version~reference}. \hyper{version~reference}
-имеет следующую форму:
+имеет следующую форму:\vspace{1mm}
 %
 \begin{scheme}
 \textbf{(}\hyperi{sub-version reference} \ldots \hypern{sub-version reference}\textbf{)}
 \textbf{(and} \hyper{version reference} \ldots\textbf{)}
 \textbf{(or} \hyper{version reference} \ldots\textbf{)}
 \textbf{(not} \hyper{version reference}\textbf{)}%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 %
 %A \hyper{version reference} of the first form matches a \hyper{version}
 %with at least $n$ elements, whose \hyper{sub-version reference}s match
@@ -244,10 +245,12 @@ rename}, разрешается только внутри {\cf\bfseries library}
 этому. Соответственно, {\cf\bfseries or} \hyper{version reference} соответствует версии, если
 один из \hyper{version references} после {\cf\bfseries or} соответствуют этому, и {\cf\bfseries
   not} \hyper{version reference} соответствует версии, если \hyper{version references} после
-этого не соответствует этому.
+этого не соответствует этому.\vspace{1mm}
 
 %A \hyper{sub-version reference} has one of the following forms:
 \hyper{sub-version reference} имеет одну из следующих форм:
+
+%\newpage
 
 \begin{scheme}
 \hyper{sub-version}
@@ -256,7 +259,7 @@ rename}, разрешается только внутри {\cf\bfseries library}
 \textbf{(and} \hyper{sub-version~reference} \ldots\textbf{)}
 \textbf{(or} \hyper{sub-version~reference} \ldots\textbf{)}
 \textbf{(not} \hyper{sub-version~reference}\textbf{)}%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %A \hyper{sub-version reference} of the first form matches a
 %\hyper{sub-version} if it is equal to it.  A {\cf >=}
@@ -276,10 +279,10 @@ rename}, разрешается только внутри {\cf\bfseries library}
 последующие \hyper{sub-version reference} соответствуют ему. Соответственно, {\cf\bfseries or}
 \hyper{sub-version reference} соответствует sub-version, если один из последующих \hyper{sub-version
 reference} соответствует ему, и {\cf\bfseries not} \hyper{sub-version reference} соответствует
-sub-version, если последующий \hyper{sub-version reference} не соответствует ему.
+sub-version, если последующий \hyper{sub-version reference} не соответствует ему.\vspace{1mm}
 
 %Examples:
-Примеры:
+Примеры:\vspace{1mm}
 
 \texonly\begin{center}\endtexonly
   \begin{tabular}{lll}
@@ -298,13 +301,13 @@ sub-version, если последующий \hyper{sub-version reference} не 
     {\cf ((or 1 2 3))} & {\cf (2)} & yes\\
     {\cf ((or 1 2 3))} & {\cf (3)} & yes\\
     {\cf ((or 1 2 3))} & {\cf (4)} & no
-  \end{tabular}
+  \end{tabular}\vspace{1mm}
 \texonly\end{center}\endtexonly
 
 %When more than one library is identified by a library reference, the
 %choice of libraries is determined in some implementation-dependent manner.
 Если при обращении к библиотеке идентифицировано более одной библиотеки, выбор библиотеки
-определяется неким зависимым от реализации методом.
+определяется неким зависимым от реализации методом.\vspace{1mm}
 
 %To avoid problems such as incompatible types and replicated state,
 %implementations should prohibit the two libraries whose library names
@@ -313,7 +316,7 @@ sub-version, если последующий \hyper{sub-version reference} не 
 Во избежании проблем, таких, как несовместимость типов и дублирование состояний, реализация
 должна запретить сосуществование в одной программе двух библиотек, библиотечные имена которых
 состоят из одинаковой последовательности идентификаторов, но версии которых являются
-несоответствующими.
+несоответствующими.\vspace{1mm}
 
 %By default, all of an imported library's exported bindings are made
 %visible within an importing library using the names given to the bindings
@@ -325,7 +328,7 @@ sub-version, если последующий \hyper{sub-version reference} не 
 внутри импортированной библиотеки с именами, присвоенными привязкам в импортируемой
 библиотеке. Точный набор импортитуемых привязок и имён этих привязок может быть установлен с
 помощью форм {\cf\bfseries only}, {\cf\bfseries except}, {\cf\bfseries prefix} и {\cf\bfseries
-rename} как описано ниже.
+rename} как описано ниже.\vspace{1mm}
 
 \begin{itemize}
 %\item An {\cf only} form produces a subset of the bindings from another
@@ -336,7 +339,7 @@ rename} как описано ниже.
 \item Форма {\cf\bfseries only} порождает подмножество привязок из иного \hyper{import~set},
   содержащее только перечисленные \hyper{identifier}. Включенные \hyper{identifier} должны
   существовать в исходном \hyper{import~set}.
-\newpage
+%\newpage
 %\item An {\cf except} form produces a subset of the bindings from another
 %\hyper{import~set}, including all but the listed
 %\hyper{identifier}s.
@@ -364,7 +367,7 @@ rename} как описано ниже.
   формирования конечного \hyper{import~set}. Каждый \hyperi{identifier} должен быть в исходном
   \hyper{import~set}, каждый \hyperii{identifier} не должен быть в промежуточном
   \hyper{import~set}, а все \hyperii{identifier} должны быть разными.
-\end{itemize}
+\end{itemize}\vspace{1mm}
 %It is a syntax violation if a constraint given above is not met.
 Невыполнение приведённого выше ограничения является синтаксическим нарушением.\vspace{1mm}
 
@@ -458,7 +461,7 @@ rename} как описано ниже.
 экспортированы из библиотеки. Однако экспортируемый макрос может \emph{неявно экспортировать}
 в иных случаях неэкспортируемый идентификатор, определённый в библиотеке или
 импортированный в неё. Иными словами, он может вставить обращение к этому идентификатору
-в генерируемый им выходной код.\vspace{-1.2mm}
+в генерируемый им выходной код.
 
 \label{importsareimmutablesection}
 %All explicitly exported variables are immutable in both the
@@ -718,10 +721,13 @@ $p_b+q_c$. \hyper{import~set} без ограничивающего {\cf\bfserie
 разворачивания фаз или {\cf\bfseries library}, может быть непортируемой.\vspace{-4mm}
 
 %\section{Examples}
-\section{Примеры}
+\section{Примеры}\vspace{-1mm}
 
 Examples for various \hyper{import~spec}s and \hyper{export~spec}s:
 
+{%
+\renewcommand{\baselinestretch}{1.04}
+\selectfont
 \begin{scheme}
 (library (stack)
   (export make push! pop! empty!)
@@ -733,9 +739,9 @@ Examples for various \hyper{import~spec}s and \hyper{export~spec}s:
                      (set-car! s (cdar s))
                      v))
   (define (empty! s) (set-car! s '())))
-\end{scheme}
-
-\begin{scheme}
+%\end{scheme}
+%\newpage
+%\begin{scheme}
 (library (balloons)
   (export make push pop)
   (import (rnrs))
@@ -780,8 +786,14 @@ Examples for various \hyper{import~spec}s and \hyper{export~spec}s:
   (pop! p))       ; displays "Boom! 24"%
 \end{scheme}
 
-Examples for macros and phases:
+}%\vspace{-1mm}
 
+%Examples for macros and phases:
+Примеры макросов и фаз:%\vspace{-1mm}
+
+{%
+\renewcommand{\baselinestretch}{1.04}
+\selectfont
 \begin{schemenoindent}
 (library (my-helpers id-stuff)
   (export find-dup)
@@ -826,6 +838,7 @@ Examples for macros and phases:
         body0 body ...)])))%
 \end{schemenoindent}
 
+}
 
 %%% Local Variables:
 %%% mode: latex
