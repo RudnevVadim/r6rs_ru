@@ -11,9 +11,9 @@
 Главы, описывающие привязки в основной и стандартных библиотеках,
 упорядочены записями. Каждая запись описывает одну языковую характеристику или группу
 связанных характеристик, где характеристика является или синтаксической конструкцией, или
-встроенной процедурой. Запись начинается с одной или более строки заголовка вида
+встроенной процедурой. Запись начинается с одной или более строк заголовка вида
 
-\newpage
+%\newpage
 
 \noindent\pproto{\var{template}}{\var{category}}\unpenalty
 
@@ -41,7 +41,7 @@
 %section~\ref{phasessection}.
 Если \var{category} -- ``\exprtype'', запись описывает специальную синтаксическую
 конструкцию, а шаблон демонстрирует синтаксис форм конструкции. Шаблон записывается в
-нотации, аналогичной правой часть правил BNF в главе~\ref{readsyntaxchapter}, и описывает
+нотации, аналогичной правой части правил BNF в главе~\ref{readsyntaxchapter}, и описывает
 набор форм, эквивалентных формам, соответствующим шаблону в качестве синтаксических
 данных. Некоторые записи ``\exprtype'' содержат суффикс ({\bfseries\cf expand}), что указывает
 на экспорт синтаксического ключевого слова конструкции с уровнем $1$. В противном случае
@@ -62,7 +62,7 @@
 %\hyper{expression} stands for any form which is a
 %syntactically valid expression.  Other non-terminals that are used in
 %templates are defined as part of the specification.
-Компоненты описываемой шаблоном формы устанавливаются синтаксическими переменными, заключёнными
+Компоненты описываемой шаблоном формы обозначаются синтаксическими переменными, заключёнными
 в угловые скобки, например, \hyper{expression}, \hyper{variable}. В синтаксических переменных
 регистр является незначащим. Синтаксические переменные представляют другие формы или их
 последовательности. Синтаксическая переменная может обращаться к нетерминальному символу в
@@ -95,10 +95,10 @@
 %as the macro transformers involved in expanding the form terminate.
 %If the implementation detects that a component does not meet the
 %restriction, an exception with condition type {\cf\&syntax} is raised.
-Обеспечение каждого компонента формы шейпом, определённым в шаблоне, является компетенцией
-программиста. В описании синтаксиса могут формулироваться другие ограничения на компоненты формы.
+Обеспечение каждого компонента формы шейпом, определённым в шаблоне, является обязанностью
+программиста. В описании синтаксиса могут формулироваться и другие ограничения на компоненты формы.
 Обычно такое ограничение формулируется фразой вида ``\hyper{x} должен быть\mainindex{must be}
-\ldots''. Опять же, это подразумевает компетенцию программиста. Обязанностью реализации является
+\ldots''. Опять же, это подразумевает обязанности программистов. Обязанностью реализации является
 проверка удовлетворения этих ограничений при условии завершения работы участвующих в
 разворачивании формы макротрансформеров. При обнаружении реализацией невыполнения компонентом
 ограничения генерируется исключение с типом состояния {\bfseries\cf\&syntax}.\vspace{2mm}
@@ -169,11 +169,11 @@
 %For example, the header line for {\tt vector-ref} given above dictates that the
 %first argument to {\tt vector-ref} must be a vector.  The following naming
 %conventions imply type restrictions:
-Для краткости в работе выполняется соглашение, что если имя параметра является также и
+Для краткости в стандарте выполняется соглашение, что если имя параметра является также и
 именем типа, соответствующий аргумент должен иметь именованный тип. Например, строка
 заголовка для {\bfseries\tt vector-ref}, приведённая выше, предписывает, что первый аргумент
 {\bfseries\tt vector-ref} должен быть вектором. Следующие соглашения именования
-подразумевают ограничения типа:\vspace{1mm}
+подразумевают ограничения типов:\vspace{1mm}
 
 %\texonly\begin{center}\endtexonly
 %  \begin{tabular}{ll}
@@ -222,9 +222,10 @@
 %conventions that are described in specific chapters.  For example,
 %library chapter~\extref{lib:numberchapter}{Arithmetic} uses a number of special
 %parameter variables for the various subsets of the numbers.
-Другие ограничения типа выражаются посредством соглашений именований параметров, описанных в
+Другие ограничения типов выражаются посредством соглашений именований параметров, описанных в
 конкретных главах. Например, в библиотечной главе~\extref{lib:numberchapter}{Arithmetic}
-используется множество специальных переменных параметра для различных подмножеств чисел.\vspace{1.5mm}
+используется множество специальных параметрических переменных для различных подмножеств
+чисел.\vspace{2.1mm}
 
 %With the listed type restrictions, it is the programmer's responsibility to
 %ensure that the corresponding argument is of the specified type.
@@ -232,7 +233,7 @@
 %that type.
 При перечисленных ограничениях типа обязанностью программиста является гарантия, что
 соответствующий аргумент имеет указанный тип. Проверка этого типа является обязанностью
-реализации.\vspace{1.6mm}
+реализации.\vspace{2.1mm}
 
 %A parameter called \var{list} means that it is the
 %programmer's responsibility to pass an argument that is a list (see
@@ -243,9 +244,9 @@
 %argument is either an empty list or a pair.
 Параметр, называемый \var{list}, означает, что обязанностью программиста является передача
 аргумента, который является списком (см. секцию~\ref{listsection}). Обязанностью реализации
-является проверка, что аргумент должным образом структурирован для операции, чтобы выполнить её
-функцию, до степени, что это возможно и разумно. Реализация должна по крайней мере проверить,
-что аргумент является или пустым списком или парой.\vspace{1.6mm}
+является проверка того, что аргумент так структуирован для выполнения функции операции, что это
+возможно и разумно. Реализация должна проверить, что аргумент является по крайней мере или
+пустым списком, или парой.\vspace{2.1mm}
 
 %Descriptions of procedures may express other restrictions on the
 %arguments of a procedure.  Typically, such a restriction is formulated
@@ -253,10 +254,10 @@
 %using the word ``must'').
 Описания процедур могут выражать другие ограничения аргументов процедур. Обычно такое
 ограничение формулируется фразой вида ``\var{x} должна быть \ldots'' (или иначе
-с помощью слова ``должна'').\vspace{1.6mm}
+с помощью слова ``должна'').\vspace{2.1mm}
 
 %\section{Implementation responsibilities}
-\section{Обязанности реализации}\vspace{1.6mm}
+\section{Обязанности реализации}\vspace{2.1mm}
 
 %In addition to the restrictions implied by naming conventions, an
 %entry may list additional explicit restrictions.
@@ -283,21 +284,21 @@
   реализации}''. В этом случае обязанности, указанные для этих подформ или аргументов в
 остальной части описания, касаются только программиста. Параграф, описывающий обязанность
 реализации, не затрагивает обязанности реализации по проверке подформ или аргументов, не
-упомянутых в параграфе.\vspace{1.6mm}
+упомянутых в параграфе.\vspace{2.1mm}
 
 %\section{Other kinds of entries}
-\section{Другие виды записей}\vspace{1.6mm}
+\section{Другие виды записей}\vspace{2.1mm}
 
 %If \var{category} is something other than ``syntax'' and
 %``procedure'', then the entry describes a non-procedural value, and
 %the \var{category} describes the type of that value.  The header line
 Если \var{category} -- нечто иное, чем ``syntax'' и ``procedure'', запись описывает
 непроцедурное значение, и \var{category} описывает тип этого значения. Строка
-заголовка\vspace{1.6mm}
+заголовка\vspace{2.1mm}
 
 \noindent\rvproto{\bfseries\&who}{condition type}\\
 %indicates that {\cf\&who} is a condition type.  The header line
-указывает, что {\bfseries\cf\&who} является типом условий. Строка заголовка
+указывает, что {\bfseries\cf\&who} является типом состояния. Строка заголовка
 
 \noindent\rvproto{\bfseries unquote}{auxiliary syntax}\\
 %indicates that {\cf unquote} is a syntax binding that may occur
@@ -352,7 +353,8 @@
 
 %The ``\evalsto'' symbol is also used when the evaluation of an
 %expression causes a violation.  For example,
-Символ ``\evalsto'' также применяется, если вычисление выражения приводит к нарушению. Например,\vspace{1mm}
+Если вычисление выражения приводит к нарушению, также применяется символ ``\evalsto''.
+Например,\vspace{1mm}
 
 \begin{scheme}
 \bfseries(integer->char \sharpsign{}xD800) \xev \exception{\bfseries\&assertion}%
@@ -396,7 +398,7 @@
 %By convention, the names of procedures that store values into previously
 %allocated locations (see section~\ref{storagemodel}) usually end in
 %``\ide{!}''.
-В соответствии с соглашением имена процедур, сохраняющих значения в отведённых ранее
+В соответствии с соглашением имена процедур, сохраняющих значения в ранее выделенных
 областях памяти (см. секцию ~\ref{storagemodel}), обычно завершаются ``\ide{\bfseries !}''.
 
 %By convention, ``\ide{->}'' appears within the names of procedures that
@@ -404,7 +406,7 @@
 %For example, {\cf list->vector} takes a list and returns a vector whose
 %elements are the same as those of the list.
 В соответствии с соглашением ``\ide{\bfseries ->}'' присутствует внутри имён процедур,
-принимающих объект одного типа и возвращающих аналогичный объект другого типа. Например,
+принимающих объект одного типа, и возвращающих аналогичный объект другого типа. Например,
 {\cf\bfseries list->vector} принимает список и возвращает вектор, элементы которого совпадают с
 таковыми из списка.
 
@@ -413,8 +415,8 @@
 %letters; otherwise, the predicate's name does not end with a question
 %mark.
 В соответствии с соглашением имена предикатов --- процедур, всегда возвращающих
-булево значение --- завершаются ``\ide{\bfseries ?}'', когда имя содержит произвольные буквы; в
-противном случае имя предиката не завершается вопросительным знаком.
+булево значение --- оканчиваются ``\ide{\bfseries ?}'', если имя содержит произвольные буквы; в
+противном случае имя предиката не оканчивается вопросительным знаком.
 
 %By convention, the components of compound names are separated by ``\ide{-}''
 %In particular, prefixes that are actual words or can be pronounced as

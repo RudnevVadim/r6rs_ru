@@ -24,7 +24,7 @@
 \indexentry{datum value|hyperpage}{9}
 \indexentry{syntactic datum|hyperpage}{9}
 \indexentry{continuation|hyperpage}{9}
-\indexentry{escape procedure|hyperpage}{10}
+\indexentry{escape   procedure|hyperpage}{10}
 \indexentry{library|hyperpage}{10}
 \indexentry{top-level   program|hyperpage}{10}
 \indexentry{must|hyperpage}{10}
@@ -44,7 +44,7 @@
 \indexentry{infinity|hyperpage}{12}
 \indexentry{положительная бесконечность|hyperpage}{12}
 \indexentry{отрицательная бесконечность|hyperpage}{12}
-\indexentry{NaN|hyperpage}{12}
+\indexentry{не число|hyperpage}{12}
 \indexentry{-0.0|hyperpage}{12}
 \indexentry{datum|hyperpage}{12}
 \indexentry{syntactic datum|hyperpage}{12}
@@ -89,7 +89,7 @@
 \indexentry{empty list|hyperpage}{18}
 \indexentry{'@\texttt  {'}|hyperpage}{18}
 \indexentry{`@\texttt  {`}|hyperpage}{18}
-\indexentry{,@\texttt  {,}|hyperpage}{18}
+\indexentry{\bfseries  ,@\texttt  {\bfseries  ,}|hyperpage}{18}
 \indexentry{,@\texttt{,\atsign}|hyperpage}{18}
 \indexentry{'@\texttt  {\#{}'}|hyperpage}{18}
 \indexentry{`@\texttt  {\#{}`}|hyperpage}{18}
@@ -100,18 +100,18 @@
 \indexentry{standard library|hyperpage}{18}
 \indexentry{identifier|hyperpage}{18}
 \indexentry{keyword|hyperpage}{18}
-\indexentry{syntactic keyword|hyperpage}{19}
+\indexentry{syntactic keyword|hyperpage}{18}
 \indexentry{variable|hyperpage}{19}
 \indexentry{binding|hyperpage}{19}
 \indexentry{binding construct|hyperpage}{19}
 \indexentry{definition|hyperpage}{19}
 \indexentry{регион|hyperpage}{19}
-\indexentry{несвязанным|hyperpage}{19}
+\indexentry{непривязанным|hyperpage}{19}
 \indexentry{bound|hyperpage}{19}
 \indexentry{exceptional situation|hyperpage}{19}
 \indexentry{raise|hyperpage}{19}
 \indexentry{continuable exception|hyperpage}{19}
-\indexentry{ограничения реализации|hyperpage}{19}
+\indexentry{ограничением реализации|hyperpage}{19}
 \indexentry{argument checking|hyperpage}{19}
 \indexentry{responsibility|hyperpage}{20}
 \indexentry{Нарушение синтаксиса|hyperpage}{20}

@@ -2,7 +2,7 @@
 \hyphenation{white-space}
 %%\vfill\eject
 %\chapter{Lexical syntax and datum syntax}
-\chapter{Лексический и datum-синтаксис}
+\chapter{Лексический синтаксис и datum-синтаксис}
 \label{readsyntaxchapter}
 
 %The syntax of Scheme code is organized in three levels:
@@ -43,7 +43,7 @@
     representation}}) одновременно служат как формой записи объектов, так и библиотекой Scheme
 {\bfseries\rsixlibrary{io ports}} (секция библиотек~\extref{lib:portsiosection}{Port I/O}),
 предоставляющей процедуры {\cf\bfseries get-datum} и {\cf\bfseries put-datum} для чтения и
-записи синтаксических данных, преобразовывающие их из текстового представления в
+записи синтаксических данных, преобразовывая их из текстового представления в
 соответствующие объекты, и наоборот. Каждый синтаксический datum представляет соответствующее
 \defining{datum-значение}. Синтаксический datum может использоваться в программе для
 получения соответствующего datum-значения с помощью {\cf\bfseries quote}
@@ -65,13 +65,13 @@
 Исходный текст Scheme состоит из синтаксических данных и (незначащих)
 комментариев. Синтаксические данные в исходном тексте Scheme называются
 \textit{формами}\mainindex{form}. (Форма, вложенная в другую форму, называется
-\defining{подформой}.) Следовательно, синтаксис Scheme обладает свойством, что любая
+\defining{подформой}.) Следовательно, синтаксис Scheme обладает таким свойством, что любая
 последовательность символов, являющаяся формой, является также и синтаксическим datum,
-представляющей некоторый объект. Это может привести к замешательству, так как из контекста может
-быть не ясно, предназначена ли данная последовательность символов для представления объектов или
-текста программы. Это - также источник мощи, так как это облегчает написание программ,
-типа интерпретаторов или компиляторов, интерпретирующих программы в качестве объектов (или
-наоборот).
+представляющим некоторый объект. Это может привести к путанице, так как из контекста может
+быть не ясно, предназначена ли данная последовательность знаков для представления объектов или
+текста программы. Это также и мощное вычислительное средство, так как облегчает написание
+программ, таких, как интерпретаторы или компилятороы, интерпретирующих программы как объекты
+(или наоборот).
 
 %A datum value may have several different external representations.
 %For example, both ``{\tt \#e28.000}'' and
@@ -93,8 +93,8 @@ Datum-значение может иметь несколько различны
 %values, this report sometimes uses the term \defining{datum} for
 %either a syntactic datum or a datum value when the exact meaning
 %is apparent from the context.
-Вследствие точного соответствия синтаксических данных и datum-значений в данной работе термин
-\defining{datum} иногда используется и для синтаксического datum, и для datum-значения, когда
+Вследствие близкого соответствия синтаксических данных и datum-значений в данном стандарте термин
+\defining{datum} иногда используется и для синтаксического datum, и для datum-значения, если
 точный смысл очевиден из контекста.
 
 %An implementation must not extend the lexical or datum syntax in
@@ -110,13 +110,13 @@ Datum-значение может иметь несколько различны
 %this report.
 %{\cf \sharpsign{}!r6rs} is otherwise treated as a comment; see section~\ref{whitespaceandcomments}.
 Реализации запрещено расширять лексический или datum-синтаксис, за одним исключением: синтаксис
-{\cf{\bfseries \sharpsign{}!}\meta {identifier}} при любом \meta{identifier} (см. секцию~\ref
+{\cf{\bfseries \sharpsign{}!}\meta{identifier}} при любом \meta{identifier} (см. секцию~\ref
 {identifiersection}), отличном от {\cf\bfseries r6rs}, не должен считаться синтаксическим
 нарушением, а специфические идентификаторы с префиксом {\cf\bfseries \sharpsign {}!} могут
 использоваться в качестве флагов, указывающих на наличие в последующем вводе расширений
 лексического стандарта или datum-синтаксиса. Синтаксис {\cf \sharpsign \bfseries{}!r6rs} может
 применяться для указания, что последующий ввод записан с лексическим и datum-синтаксисом,
-описанным в данной работе. В противном случае {\cf \sharpsign\bfseries {}!r6rs} считается
+описанным в данном стандарте. В противном случае {\cf \sharpsign\bfseries {}!r6rs} считается
 комментарием; см. секцию~\ref{whitespaceandcomments}.\vspace{-1mm}
 
 %\section{Notation}
@@ -126,8 +126,8 @@ Datum-значение может иметь несколько различны
 %The formal syntax for Scheme is written in an extended BNF.
 %Non-terminals are written using angle brackets.  Case is insignificant
 %for non-terminal names.
-Формальный синтаксис Scheme записан в расширенной BNF. Нетерминальные символы окружены
-угловыми скобками. Для нетерминальных имён регистр не имеет значения.
+Формальный синтаксис Scheme записан в расширенной BNF. Нетерминальные символы заключены в
+угловые скобки. Для нетерминальных имён регистр не имеет значения.
 
 %All spaces in the grammar are for legibility.
 %\meta{Empty} stands for the empty string.
@@ -166,27 +166,27 @@ Datum-значение может иметь несколько различны
 %Besides the formal account of the syntax, this section also describes
 %what datum values are represented by these syntactic data.
 Лексический синтаксис определяет, как символьная последовательность разбивается на
-последовательность лексем\index{lexeme}, пропуская незначащие части, типа комментариев и
-пробелов. Полагается, что символьная последовательность является текстом согласно стандарту
-Unicode~\cite{Unicode}. Некоторые лексемы, типа идентификаторов, представлений числовых объектов,
-строки и т.д., лексического синтаксиса являются синтаксическими данными в datum-синтаксисе
-и, таким образом, представляют объекты. Помимо формального описания синтаксиса, в этой
-секции также описывается, какие datum-значения представляют эти синтаксические
+последовательность лексем\index{lexeme} с пропуском незначащих частей, таких, как комментарии и
+пробелы. Полагается, что символьная последовательность является текстом согласно стандарту
+Unicode~\cite{Unicode}. Некоторые лексемы, такие, как идентификаторы, представления числовых
+объектов, строки и т.д. лексического синтаксиса являются синтаксическими данными в
+datum-синтаксисе и, таким образом, представляют объекты. Помимо формального описания
+синтаксиса, в этой секции также описывается, какие datum-значения представляют эти синтаксические
 данные.
 
 %The lexical syntax, in the description of comments, contains
 %a forward reference to \meta{datum}, which is described as part of the
 %datum syntax.  Being comments, however, these \meta{datum}s do not play
 %a significant role in the syntax.
-Лексический синтаксис в описании комментариев содержит прямую ссылку на \meta{datum},
-описанную как часть datum-синтаксиса. Будучи комментариями, однако,
+Лексический синтаксис в описании комментариев содержит прямое обращение к \meta{datum},
+описанное как часть datum-синтаксиса. Будучи комментариями, однако,
 такие \meta{datum} не играют существенную роль в синтаксисе.
 
 %Case is significant except in representations of booleans, number objects, and
 %in hexadecimal numbers specifying Unicode scalar values.  For example, {\cf \#x1A}
 %and {\cf \#X1a} are equivalent.  The identifier {\cf Foo} is, however,
 %distinct from the identifier {\cf FOO}.
-Регистр является значащим, за исключением представлений booleans, числовых объектов и
+Регистр является значащим, за исключением представлений булевых выражений, числовых объектов и
 шестнадцатеричных чисел, определяющих скалярные значения Unicode. Например, {\cf\bfseries \#x1A}
 и {\cf\bfseries \#X1a} эквивалентны. А вот идентификатор {\cf\bfseries Foo} отличается от
 идентификатора {\cf\bfseries FOO}.
@@ -197,28 +197,32 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
 
 %\meta{Interlexeme space} may occur on either side of any lexeme, but not
 %within a lexeme.
-\meta{Interlexeme space} может находиться с любой стороны лексемы, но не внутри лексемы\vspace{1mm}
+\meta{Interlexeme space} может находиться с любой стороны лексемы, но не внутри лексемы
 
 %\hyper{Identifier}s, {\cf .}, \hyper{number}s, \hyper{character}s, and
 %\hyper{boolean}s, must be terminated by a \meta{delimiter} or by the
 %end of the input.
 \hyper{Identifier}, {\cf .}, \hyper{number}, \hyper{character} и
-\hyper{boolean} могут заканчиваться \meta{delimiter} или концом ввода.\vspace{1mm}
+\hyper{boolean} могут заканчиваться \meta{delimiter} или концом ввода.
 
 %The following two characters are reserved for future extensions to the
 %language: {\tt \verb"{" \verb"}"}
 Следующие два знака зарезервированы для будущих расширений языка:
-{\tt \verb"{" \verb"}"}\vspace{1mm}
+{\tt\bfseries \verb"{" \verb"}"}
 
 {%
-\renewcommand{\baselinestretch}{1.1}
+\renewcommand{\baselinestretch}{1.08}
 \selectfont
 \begin{grammar}%
 \meta{lexeme} \: \meta{identifier} \| \meta{boolean} \| \meta{number}\index{identifier}
 \>  \| \meta{character} \| \meta{string}
-\>  \| ( \| ) \| \openbracket{} \| \closedbracket{} \| \sharpsign( \| \sharpsign{}vu8( | \singlequote{} \| \backquote{} \| , \| ,@ \| {\bf.}
-\>  \| \sharpsign\singlequote{} \| \sharpsign\backquote{} \| \sharpsign, \| \sharpsign,@
-\meta{delimiter} \: ( \| ) \| \openbracket{} \| \closedbracket{} \| " \| ; \| \sharpsign{}
+\>  \| \textbf{(} \| \textbf{)} \| \textbf{\openbracket{}} \| \textbf{\closedbracket{}} \| %
+\textbf{\sharpsign(} \| \textbf{\sharpsign{}vu8(} | \textbf{\singlequote{}} \| %
+\textbf{\backquote{}} \| \textbf{,} \| \textbf{,@} \| {\bf\bfseries.}
+\>  \| \textbf{\sharpsign\singlequote{}} \| \textbf{\sharpsign\backquote{}} \| %
+\textbf{\sharpsign,} \| \textbf{\sharpsign,@}
+\meta{delimiter} \: \textbf{(} \| \textbf{)} \| \textbf{\openbracket{}} \| %
+\textbf{\closedbracket{}} \| \textbf{"} \| \textbf{;} \| \textbf{\sharpsign{}}
 \>  \| \meta{whitespace}
 \meta{whitespace} \: \meta{character tabulation}
 \> \| \meta{linefeed} \| \meta{line tabulation} \| \meta{form feed}
@@ -230,12 +234,12 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
 \meta{comment} \: ; \= $\langle$\rm all subsequent characters up to a
                     \>\ \rm \meta{line ending} or \meta{paragraph separator}$\rangle$\index{comment}
 \qquad \= \| \meta{nested comment}
-\> \| \#; \meta{interlexeme space} \meta{datum}
-\> \| \#!r6rs
-\meta{nested comment} \: \#| \= \meta{comment text}
-\> \arbno{\meta{comment cont}} |\#
+\> \| \textbf{\#}; \meta{interlexeme space} \meta{datum}
+\> \| \textbf{\#!r6rs}
+\meta{nested comment} \: \textbf{\#|} \= \meta{comment text}
+\> \arbno{\meta{comment cont}} \textbf{|\#}
 \meta{comment text} \: \= $\langle$\rm character sequence not containing
-\>\ \rm {\tt \#|} or {\tt |\#}$\rangle$
+\>\ \rm {\tt\bfseries \#|} or {\tt\bfseries |\#}$\rangle$
 \meta{comment cont} \: \meta{nested comment} \meta{comment text}
 \meta{atmosphere} \: \meta{whitespace} \| \meta{comment}
 \meta{interlexeme space} \: \arbno{\meta{atmosphere}}%
@@ -252,8 +256,8 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
  \>  \| \meta{peculiar identifier}
 \meta{initial} \: \meta{constituent} \| \meta{special initial}
  \> \| \meta{inline hex escape}
-\meta{letter} \:  a \| b \| c \| ... \| z
-\> \| A \| B \| C \| ... \| Z
+\meta{letter} \:  \textbf{a} \| \textbf{b} \| \textbf{c} \| ... \| \textbf{z}
+\> \| \textbf{A} \| \textbf{B} \| \textbf{C} \| ... \| \textbf{Z}
 \meta{constituent} \: \meta{letter}
  \> \| $\langle${\rm any character whose Unicode scalar value is greater than}
  \> \quad {\rm 127, and whose category is Lu, Ll, Lt, Lm, Lo, Mn,}
@@ -263,30 +267,34 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
 %\newpage
 %
 %\begin{grammar}
-\meta{special initial} \: ! \| \$ \| \% \| \verb"&" \| * \| / \| : \| < \| =
- \>  \| > \| ? \| \verb"^" \| \verb"_" \| \verb"~"
+\meta{special initial} \: \textbf{!} \| \textbf{\$} \| \textbf{\%} \| {\bfseries\verb"&"} \| %
+\textbf{*} \| \textbf{/} \| \textbf{:} \| \textbf{<} \| \textbf{=}
+ \>  \| \textbf{>} \| \textbf{?} \| {\bfseries\verb"^"} \| {\bfseries\verb"_"} \| {\bfseries\verb"~"}
 \meta{subsequent} \: \meta{initial} \| \meta{digit}
  \>  \| \meta{any character whose category is Nd, Mc, or Me}
  \>  \| \meta{special subsequent}
-\meta{digit} \: 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
+\meta{digit} \: \textbf{0} \| \textbf{1} \| \textbf{2} \| \textbf{3} \| \textbf{4} \| \textbf{5} %
+\| \textbf{6} \| \textbf{7} \| \textbf{8} \| \textbf{9}
 \meta{hex digit} \: \meta{digit}
- \> \| a \| A \| b \| B \| c \| C \| d \| D \| e \| E \| f \| F
-\meta{special subsequent} \: + \| - \| .\ \| @
-\meta{inline hex escape} \: \backwhack{}x\meta{hex scalar value};
+ \> \| \textbf{a} \| \textbf{A} \| \textbf{b} \| \textbf{B} \| \textbf{c} \| \textbf{C} \| %
+ \textbf{d} \| \textbf{D} \| \textbf{e} \| \textbf{E} \| \textbf{f} \| \textbf{F}
+\meta{special subsequent} \: \textbf{+} \| \textbf{-} \| \textbf{.}\ \| \textbf{@}
+\meta{inline hex escape} \: {\bfseries\backwhack{}x}\meta{hex scalar value};
 \meta{hex scalar value} \: \atleastone{\meta{hex digit}}
-\meta{peculiar identifier} \: + \| - \| ... \| -> \arbno{\meta{subsequent}}
-\meta{boolean} \: \schtrue{} \| \#T \| \schfalse{} \| \#F
-\meta{character} \: \#\backwhack{}\meta{any character}
- \>  \| \#\backwhack{}\meta{character name}
- \>  \| \#\backwhack{}x\meta{hex scalar value}
-\meta{character name} \: nul \| alarm \| backspace \| tab
-\> \| linefeed \| newline \| vtab \| page \| return
-\> \| esc \| space \| delete
+\meta{peculiar identifier} \: \textbf{+} \| \textbf{-} \| ... \| \textbf{->} \arbno{\meta{subsequent}}
+\meta{boolean} \: {\bfseries\schtrue{}} \| \bfseries{\#T} \| {\bfseries\schfalse{}} \| {\bfseries\#F}
+\meta{character} \: {\bfseries\#\backwhack{}}\meta{any character}
+ \>  \| {\bfseries\#\backwhack{}}\meta{character name}
+ \>  \| {\bfseries\#\backwhack{}x}\meta{hex scalar value}
+\meta{character name} \: \textbf{nul} \| \textbf{alarm} \| \textbf{backspace} \| \textbf{tab}
+\> \| \textbf{linefeed} \| \textbf{newline} \| \textbf{vtab} \| \textbf{page} \| \textbf{return}
+\> \| \textbf{esc} \| \textbf{space} \| \textbf{delete}
 \meta{string} \: " \arbno{\meta{string element}} "
-\meta{string element} \: \meta{any character other than \doublequote{} or \backwhack}
- \> \| \backwhack{}a \| \backwhack{}b \| \backwhack{}t \| \backwhack{}n \| \backwhack{}v \| \backwhack{}f \| \backwhack{}r
- \>  \| \backwhack\doublequote{} \| \backwhack\backwhack
- \>  \| \backwhack\meta{intraline whitespace}\meta{line ending}
+\meta{string element} \: \meta{any character other than {\bfseries\doublequote{}} or {\bfseries\backwhack}}
+ \> \| {\bfseries\backwhack{}a} \| {\bfseries\backwhack{}b} \| {\bfseries\backwhack{}t} \| %
+ {\bfseries\backwhack{}n} \| {\bfseries\backwhack{}v} \| {\bfseries\backwhack{}f} \| {\bfseries\backwhack{}r}
+ \>  \| {\bfseries\backwhack\doublequote{}} \| {\bfseries\backwhack\backwhack}
+ \>  \| {\bfseries\backwhack}\meta{intraline whitespace}\meta{line ending}
  \>  \hspace*{4em}\meta{intraline whitespace}
  \>  \| \meta{inline hex escape}
 \meta{intraline whitespace} \: \meta{character tabulation}
@@ -295,17 +303,25 @@ Unicode~\cite{Unicode}. Некоторые лексемы, типа иденти
 
 }
 
-A \meta{hex scalar value} represents a Unicode scalar value
-between 0 and \sharpsign{}x10FFFF, excluding the range
+%A \meta{hex scalar value} represents a Unicode scalar value
+%between 0 and \sharpsign{}x10FFFF, excluding the range
+%$\left[\sharpsign{}x\textrm{D800}, \sharpsign{}x\textrm{DFFF}\right]$.
+\meta{hex scalar value} представляет собой скалярное значение Unicode
+между 0 и \sharpsign{}x10FFFF, за исключением диапазона
 $\left[\sharpsign{}x\textrm{D800}, \sharpsign{}x\textrm{DFFF}\right]$.
 
 \label{numbersyntax}%
-The rules for \meta{num $R$}, \meta{complex $R$}, \meta{real
-$R$}, \meta{ureal $R$}, \meta{uinteger $R$}, and \meta{prefix $R$} below
-should be replicated for \hbox{$R = 2, 8, 10,$}
-and $16$.  There are no rules for \meta{decimal $2$}, \meta{decimal
-$8$}, and \meta{decimal $16$}, which means that number representations containing
-decimal points or exponents must be in decimal radix.
+%The rules for \meta{num $R$}, \meta{complex $R$}, \meta{real
+%$R$}, \meta{ureal $R$}, \meta{uinteger $R$}, and \meta{prefix $R$} below
+%should be replicated for \hbox{$R = 2, 8, 10,$}
+%and $16$.  There are no rules for \meta{decimal $2$}, \meta{decimal
+%$8$}, and \meta{decimal $16$}, which means that number representations containing
+%decimal points or exponents must be in decimal radix.
+Правила для \meta{num $R$}, \meta{complex $R$}, \meta{real $R$}, \meta{ureal $R$},
+\meta{uinteger $R$} и \meta{prefix $R$} ниже должны быть дублированы для \hbox{$R = 2, 8, 10$}
+и $16$.  Не существует правил для \meta{decimal $2$}, \meta{decimal $8$} и \meta{decimal $16$},
+что означает, что представления чисел, содержащих десятичные точки или экспоненты
+должны быть с десятичным основанием.
 
 \begin{grammar}%
 \meta{number} \: \meta{num $2$} \| \meta{num $8$}
@@ -313,31 +329,31 @@ decimal points or exponents must be in decimal radix.
 \meta{num $R$} \: \meta{prefix $R$} \meta{complex $R$}
 \meta{complex $R$} \: %
          \meta{real $R$} %
-      \| \meta{real $R$} @ \meta{real $R$}
-   \> \| \meta{real $R$} + \meta{ureal $R$} i %
-      \| \meta{real $R$} - \meta{ureal $R$} i
-   \> \| \meta{real $R$} + \meta{naninf} i %
-      \| \meta{real $R$} - \meta{naninf} i
-   \> \| \meta{real $R$} + i %
-      \| \meta{real $R$} - i
-   \> \| + \meta{ureal $R$} i %
-      \| - \meta{ureal $R$} i
-   \> \| + \meta{naninf} i %
-      \| - \meta{naninf} i
-   \> \| + i %
-      \| - i
+      \| \meta{real $R$} \textbf{@} \meta{real $R$}
+   \> \| \meta{real $R$} \textbf{+} \meta{ureal $R$} \textbf{i} %
+      \| \meta{real $R$} \textbf{-} \meta{ureal $R$} \textbf{i}
+   \> \| \meta{real $R$} \textbf{+} \meta{naninf} \textbf{i} %
+      \| \meta{real $R$} \textbf{-} \meta{naninf} \textbf{i}
+   \> \| \meta{real $R$} \textbf{+ i} %
+      \| \meta{real $R$} \textbf{- i}
+   \> \| \textbf{+} \meta{ureal $R$} \textbf{i} %
+      \| \textbf{-} \meta{ureal $R$} \textbf{i}
+   \> \| \textbf{+} \meta{naninf} \textbf{i} %
+      \| \textbf{-} \meta{naninf} \textbf{i}
+   \> \| \textbf{+ i} %
+      \| \textbf{- i}
 \meta{real $R$} \: \meta{sign} \meta{ureal $R$}
-  \> \| + \meta{naninf} \| - \meta{naninf}
-\meta{naninf} \: nan.0 \| inf.0
+  \> \| \textbf{+} \meta{naninf} \| \textbf{-} \meta{naninf}
+\meta{naninf} \: \textbf{nan.0} \| \textbf{inf.0}
 \meta{ureal $R$} \: %
          \meta{uinteger $R$}
    \> \| \meta{uinteger $R$} / \meta{uinteger $R$}
    \> \| \meta{decimal $R$} \meta{mantissa width}
 \meta{decimal $10$} \: %
          \meta{uinteger $10$} \meta{suffix}
-   \> \| . \atleastone{\meta{digit $10$}} \meta{suffix}
-   \> \| \atleastone{\meta{digit $10$}} . \arbno{\meta{digit $10$}} \meta{suffix}
-   \> \| \atleastone{\meta{digit $10$}} . \meta{suffix}
+   \> \| \textbf{.} \atleastone{\meta{digit $10$}} \meta{suffix}
+   \> \| \atleastone{\meta{digit $10$}} \textbf{.} \arbno{\meta{digit $10$}} \meta{suffix}
+   \> \| \atleastone{\meta{digit $10$}} \textbf{.} \meta{suffix}
 \meta{uinteger $R$} \: \atleastone{\meta{digit $R$}}
 \meta{prefix $R$} \: %
          \meta{radix $R$} \meta{exactness}
@@ -347,25 +363,26 @@ decimal points or exponents must be in decimal radix.
 \begin{grammar}%
 \meta{suffix} \: \meta{empty}
    \> \| \meta{exponent marker} \meta{sign} \atleastone{\meta{digit $10$}}
-\meta{exponent marker} \: e \| E \| s \| S \| f \| F
-   \> \| d \| D \| l \| L
+\meta{exponent marker} \: \textbf{e} \| \textbf{E} \| \textbf{s} \| \textbf{S} \| \textbf{f} \| \textbf{F}
+   \> \| \textbf{d} \| \textbf{D} \| \textbf{l} \| \textbf{L}
 \meta{mantissa width} \: \meta{empty}
-   \> \| | \atleastone{\meta{digit 10}}
-\meta{sign} \: \meta{empty}  \| + \|  -
+   \> \| \textbf{|} \atleastone{\meta{digit 10}}
+\meta{sign} \: \meta{empty}  \| \textbf{+} \|  \textbf{-}
 \meta{exactness} \: \meta{empty}
-   \> \| \#i\sharpindex{i} \| \#I \| \#e\sharpindex{e} \| \#E
-\meta{radix 2} \: \#b\sharpindex{b} \| \#B
-\meta{radix 8} \: \#o\sharpindex{o} \| \#O
-\meta{radix 10} \: \meta{empty} \| \#d \| \#D
-\meta{radix 16} \: \#x\sharpindex{x} \| \#X
-\meta{digit 2} \: 0 \| 1
-\meta{digit 8} \: 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7
+   \> \| {\bfseries\#i\sharpindex{i}} \| {\bfseries\#I} \| {\bfseries\#e\sharpindex{e}} \| {\bfseries\#E}
+\meta{radix 2} \: {\bfseries\#b\sharpindex{b}} \| {\bfseries\#B}
+\meta{radix 8} \: {\bfseries\#o\sharpindex{o}} \| {\bfseries\#O}
+\meta{radix 10} \: \meta{empty} \| {\bfseries\#d} \| {\bfseries\#D}
+\meta{radix 16} \: {\bfseries\#x\sharpindex{x}} \| {\bfseries\#X}
+\meta{digit 2} \: \textbf{0} \| \textbf{1}
+\meta{digit 8} \: \textbf{0} \| \textbf{1} \| \textbf{2} \| \textbf{3} \| \textbf{4} \| %
+\textbf{5} \| \textbf{6} \| \textbf{7}
 \meta{digit 10} \: \meta{digit}
 \meta{digit 16} \: \meta{hex digit}
 \end{grammar}
 
 %\subsection{Line endings}
-\subsection{Окончание строки}
+\subsection{Окончания строк}
 \label{lineendings}
 
 %Line endings are significant in Scheme in single-line comments (see
@@ -374,17 +391,17 @@ decimal points or exponents must be in decimal radix.
 %marks the end of a line.  Moreover, the two-character line endings
 %\meta{carriage return} \meta{linefeed} and \meta{carriage return}
 %\meta{next line} each count as a single line ending.
-В Scheme окончание строки является значащим в однострочных комментариях
+В Scheme окончания строк являются значащими в однострочных комментариях
 (см. секцию~\ref{whitespaceandcomments}) и внутри строковых литералов. В исходном тексте Scheme
-любое окончание строки в \meta{line ending} означает конец строки. Кроме того, двухсимвольное
-окончание строки \meta{carriage return} \meta{linefeed} и \meta{carriage return} \meta{next
-  line} считается одним окончанием строки.
+любые окончания строк в \meta{line ending} означают конец строки. Кроме того, двухсимвольные
+окончания строк \meta{carriage return} \meta{linefeed} и \meta{carriage return} \meta{next
+  line} считаются одним окончанием строки.
 
 %In a string literal, a \hyper{line ending} not preceded by a {\cf\backwhack}
 %stands for a linefeed character, which is the standard line-ending
 %character of Scheme.
 В строковом литерале \hyper{line ending} без {\cf\backwhack} перед ним обозначает
-символ linefeed, являющийся стандартным символом конца строки Scheme.
+символ перевода строки -- стандартный символ конца строки Scheme.
 
 %\subsection{Whitespace and comments}
 \subsection{Пробельные символы и комментарии}
@@ -399,8 +416,8 @@ decimal points or exponents must be in decimal radix.
 %but not within a lexeme.  Whitespace may also occur inside a string,
 %where it is significant.
 \defining{Пробельными} символами являются пробелы, обратные переводы строк, переводы каретки, символы
-табуляции, переводы страницы, линейные табуляции и любой другой символ, категория которого - Zs,
-Zl, или Zp. Пробельные символы используются для улучшения удобочитаемости и при необходимости
+табуляции, переводы страницы, линейные табуляции и любой другой символ, категорией которого является Zs,
+Zl или Zp. Пробельные символы используются для улучшения читаемости и при необходимости
 отделения лексем друг от друга. Пробельные символы могут находиться между любыми двумя
 лексемами, но не внутри лексемы. Пробельный символ может также находиться в строке, где он
 является значащим.
@@ -409,34 +426,32 @@ Zl, или Zp. Пробельные символы используются дл
 %comments are invisible to Scheme, except that they act as delimiters,
 %so, for example, a comment cannot appear in the middle of an
 %identifier or representation of a number object.
-Лексический синтаксис включает несколько форм комментариев. Во всех случаях, комментарии
-невидимы, в Scheme, за исключением того, что они действуют как разделители, таким
-образом, например, комментарий не может находиться в середине идентификатора или представления
-числового объекта.
+Лексический синтаксис включает несколько форм комментариев. В Sheme комментарии всегда
+невидимы, за исключением того, что они действуют как разделители, так, например, комментарий не
+может находиться в середине идентификатора или представления числового объекта.
 
 %\newpage
 
 %A semicolon ({\tt;}) indicates the start of a line
 %comment.\mainindex{comment}\mainschindex{;} The comment continues to
 %the end of the line on which the semicolon appears.
-Точка с запятой ({\tt;}), указывает начало строки комментария.\mainindex{comment}
-  \mainschindex{;} Комментарий продолжается до конца строки, на которой находится точка с
-запятой.\vspace{1mm}
+Точка с запятой ({\tt;}) задаёт начало строки комментария.\mainindex{comment}\mainschindex{;}
+Комментарий продолжается до конца строки, на которой находится точка с запятой.\vspace{1mm}
 
 %Another way to indicate a comment is to prefix a \hyper{datum}
 %(cf.\ section~\ref{datumsyntax}) with {\tt \#;}\sharpindex{;}, possibly with
 %\meta{interlexeme space} before the \hyper{datum}.  The comment consists of
 %the comment prefix {\tt \#;} and the \hyper{datum} together.  This
 %notation is useful for ``commenting out'' sections of code.
-Другим способом указания комментария является добавления к \hyper{datum} (см.\ секцию~\ref
-{datumsyntax}) префикса {\tt\bfseries \#;}\sharpindex{;}, возможно с \meta{interlexeme space} перед
+Другим способом задания комментария является добавление к \hyper{datum} (см.\ секцию~\ref
+{datumsyntax}) префикса {\tt\bfseries \#;}\sharpindex{;}, возможно, с \meta{interlexeme space} перед
 \hyper{datum}. Комментарий состоит из приставки комментария {\tt\bfseries \#;} и \hyper{datum}.
-Такая нотация полезна для ``комментирования'' секций кода.\vspace{1mm}
+Такая нотация применяется для ``комментирования'' секций кода.\vspace{1mm}
 
 %Block comments may be indicated with properly nested {\tt
 %  \#|}\index{#"|@\texttt{\sharpsign\verticalbar}}\index{"|#@\texttt{\verticalbar\sharpsign}}
 %and {\tt |\#} pairs.
-Блоковые комментарии могут быть обозначены соответствующим образом вложенными парами {\tt\bfseries \#|}
+Блоковые комментарии могут задаваться согласовано вложенными парами {\tt\bfseries \#|}
 \index{#"|'@\texttt{\sharpsign\verticalbar}}\index{"|#@\texttt{\verticalbar\sharpsign}} и {\tt\bfseries |\#}.\vspace{1mm}
 
 \begin{scheme}
@@ -451,17 +466,17 @@ Zl, или Zp. Пробельные символы используются дл
 \bfseries        \#;(= n 1)
 \bfseries        1       ; identity of *
 \bfseries        (* n (fact (- n 1))))))%
-\end{scheme}
+\end{scheme}\vspace{1mm}
 
 %The lexeme {\cf \sharpsign{}!r6rs}, which signifies that the program text
 %that follows is written with the lexical and datum syntax described in this
 %report, is also otherwise treated as a comment.
-Лексема {\cf\bfseries \sharpsign{}!r6rs}, которая означает, что текст следующей далее программы
-написан с лексическим и data-синтаксисом, описанным в данной работе, также иным образом
-интерпретируется как комментарий.
+Лексема {\cf\bfseries \sharpsign{}!r6rs}, означающая, что текст следующей далее программы
+записан с лексическим и datum-синтаксисом, описанным в данном стандарте, в других случаях
+также интерпретируется как комментарий.\vspace{1mm}
 
 %\subsection{Identifiers}
-\subsection{Идентификаторы}\vspace{2mm}
+\subsection{Идентификаторы}\vspace{1mm}
 \label{identifiersection}
 
 %Most identifiers\mainindex{identifier} allowed by other programming
@@ -475,11 +490,11 @@ Zl, или Zp. Пробельные символы используются дл
 %characters that begins with the two-character sequence \ide{->}.
 %Here are some examples of identifiers:
 Большинство идентификаторов\mainindex{identifier}, допустимых в других языках программирования,
-также допустимы и в Scheme. В общем случае, последовательность букв, цифр, и ``расширенных алфавитных
+также допустимы и в Scheme. В общем случае последовательность букв, цифр и ``расширенных алфавитных
 символов'' является идентификатором, если она начинается с символа, с которого не может начинаться
 представление числового объекта. Кроме того, идентификаторами являются \ide{+}, \ide{-} и \ide{...},
 равно как и последовательность букв, цифр и расширенных алфавитных символов, начинающаяся
-с двухсимвольной последовательности \ide{->}. Некоторые примеры идентификаторов:\vspace{2mm}
+с двухсимвольной последовательности \ide{->}. Несколько примеров идентификаторов:\vspace{1mm}
 
 \begin{scheme}
 \bfseries lambda         q                soup
@@ -491,7 +506,7 @@ Zl, или Zp. Пробельные символы используются дл
 %Extended alphabetic characters may be used within identifiers as if
 %they were letters.  The following are extended alphabetic characters:
 Расширенные алфавитные символы могут использоваться внутри идентификаторов, как если бы они
-были буквами. Расширенными алфавитными символами являются:\vspace{2mm}
+были буквами. Расширенными алфавитными символами являются:\vspace{1mm}
 
 \begin{scheme}
 \bfseries !\ \$ \% \verb"&" * + - . / :\ < = > ? @ \verb"^" \verb"_" \verb"~" %
@@ -505,12 +520,15 @@ Zl, или Zp. Пробельные символы используются дл
 %identifier \verb|H\x65;llo| is the same as the identifier
 %\verb|Hello|, and the identifier \verb|\x3BB;| is the same as the
 %identifier $\lambda$.
-Кроме того, в идентификаторах могут использоваться все символы, чьи скалярные значения Unicode
-больше, чем 127, и чьей категорией Unicode является Lu, Ll, Lt, Lm, Lo, Mn, Mc, Me, Nd, Nl, No,
-Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой символ может использоваться в
-идентификаторе, если он специфицирован через \meta{inline hex escape}. Например,
-идентификатор \verb|H\x65;llo| - точо такой же, как и идентификатор \verb|Hello|, а идентификатор
-\verb|\x3BB;| - точно такой же, как и идентификатор $\lambda$.
+Кроме того, в идентификаторах могут использоваться все символы, скалярные значения Unicode
+которых больше 127, и с категорией Unicode Lu, ~Ll, ~Lt, ~Lm, ~Lo, ~Mn, ~Mc, ~Me, ~Nd, ~Nl, ~No, ~Pd, ~Pc,
+~Po, ~Sc, ~Sm, ~Sk, ~So или ~Co. Кроме того, в идентификаторе может использоваться любой символ, если
+он специфицирован посредством \meta{inline hex escape}. Например, идентификаторы
+{\bfseries\verb|H\x65;llo|} и {\bfseries\verb|Hello|} аналогичны, также аналогичны
+идентификаторы {\bfseries\verb|\x3BB;|} и {\bfseries
+  $\lambda$}.~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~
 
 %Any identifier may be used as a variable\index{variable} or as a
 %syntactic keyword\index{syntactic keyword} (see
@@ -520,8 +538,8 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 %represents a \textit{symbol}\index{symbol} (see section~\ref{symbolsection}).
 В программе Scheme любой идентификатор может использоваться как переменная\index{variable} или
 как синтаксическое ключевое слово\index{syntactic keyword} (см. секции~\ref{variablesection}
-и~\ref{macrosection}) . Любой идентификатор может также использоваться как синтаксический datum,
-в этом случае он представляет \textit{символ}\index{symbol} (см. секцию~\ref{symbolsection}).
+и~\ref{macrosection}). Любой идентификатор может также использоваться как синтаксический datum,
+в этом случае он представляет собой \textit{символ}\index{symbol} (см. секцию~\ref{symbolsection}).
 
 \subsection{Булевы значения}
 
@@ -631,10 +649,10 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 Регистр является значащим в {\bfseries\sharpsign\backwhack}\hyper{character} и в
 {\bfseries\sharpsign\backwhack} {\rm$\langle$character name$\rangle$}, но не в
 {\bfseries\cf\sharpsign\backwhack{}x}\meta{hex scalar value}. За \meta{character} должен находиться
-\meta{delimeter} или конец ввода. Это правило разрешает различные неоднозначные случаи с участием
-названных символов, требуя, например, чтобы последовательность символов
+\meta{delimeter} или конец ввода. Это правило разрешает различные неоднозначные ситуации с
+именованными символами, оно требует, например, чтобы последовательность символов
 ``{\bfseries\tt\sharpsign\backwhack space}'' интерпретировалась как символ пробела, а не как символ
-``{\bfseries\tt\sharpsign\backwhack s}''и следующим за ним идентификатором ``{\bfseries\tt pace}''.
+``{\bfseries\tt\sharpsign\backwhack s}''и назодящийся за ним идентификатор ``{\bfseries\tt pace}''.
 
 \begin{note}
   %The {\cf\sharpsign\backwhack{}newline} notation is retained for
@@ -652,11 +670,11 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 %({\cf "}).  Within a string literal, various escape
 %sequences\mainindex{escape sequence} represent characters other than
 %themselves.  Escape sequences always start with a backslash (\backwhack{}):
-\vest Строка представляется последовательностью символов, окружённых двойными кавычками
-({\bfseries\cf "}). Внутри стрового литерала различные управляющие последовательности\mainindex
-{escape sequence} представляют символы, кроме самих себя. Управляющие последовательности
-всегда начинаются с обратного слеша ({\bfseries\backwhack{}}):
-
+\vest Строка представляет собой последовательность символов, окружённых двойными кавычками
+({\bfseries\cf "}). Внутри стрового литерала различные управляющие
+последовательности\mainindex{escape sequence} представляют собой символы, отличные от них
+самих. Управляющие последовательности всегда начинаются с обратного слеша
+({\bfseries\backwhack{}}):
 
 \begin{itemize}
 \item{\bfseries\cf\backwhack{}a} : alarm, U+0007
@@ -675,7 +693,7 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 
 %These escape sequences are case-sensitive, except that the alphabetic
 %digits of a \meta{hex scalar value} can be uppercase or lowercase.
-Эти управляющие последовательности регистрочувствительны, за исключением того, что алфавитные
+Эти управляющие последовательности регистрочувствительны, с одним исключением -- алфавитные
 цифры \meta{hex scalar value} могут быть заглавными или строчными.
 
 %Any other character in a string after a backslash is a syntax violation. Except
@@ -688,9 +706,9 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 Любой другой символ в строке после обратного слеша является нарушением синтаксиса. За
 исключением окончания строки, любой символ в строковом литерале вне управляющей
 последовательностии, не являющийся двойными кавычками, обозначает самого себя. Например,
-односимвольный строковый литерал {\tt "$\lambda$"} (двойные кавычки, строчная lambda, двойные
-кавычки) представляет ту же самую строку, как и {\tt\bfseries "\backwhack{}x03bb;"}. Окончание строки,
-находящееся не за обратным слешем, обозначает символ linefeed.
+односимвольный строковый литерал {\tt\bfseries "$\lambda$"} (двойные кавычки, строчная lambda, двойные
+кавычки) представляет собой ту же строку, что и {\tt\bfseries "\backwhack{}x03bb;"}. Окончание строки,
+находящееся не после обратного слеша, обозначает символ перевода строки.
 
 %Examples:
 Примеры:
@@ -734,7 +752,7 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 %The syntax of external representations for number objects is described
 %formally by the \meta{number} rule in the formal grammar.
 %Case is not significant in external representations of number objects.
-Синтаксис внешних представлений числовых объектов формально описан правилом \meta{number}
+Синтаксис внешних представлений числовых объектов формально описывается правилом \meta{number}
 формальной грамматики. Во внешних представлениях числовых объектов регистр является незначащим.
 
 %A representation of a number object may be written in binary, octal, decimal, or
@@ -746,8 +764,8 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 шестнадцатеричном виде при помощи приставки основания. Приставками основания являются
 {\bfseries\cf \#b}\sharpindex{b} (двоичная), {\bfseries\cf \#o}\sharpindex{o} (восьмеричная),
 {\bfseries\cf \#d}\sharpindex{d} (десятичная) и {\bfseries\cf \#x}\sharpindex{x}
-(шестнадцатеричная). Без приставки основания представление числового объекта предполагается
-выраженным в десятичном виде.
+(шестнадцатеричная). При отсутствии приставки основания представление числового объекта
+полагается десятичным.
 
 %A representation of a number object may be specified to be either exact or
 %inexact by a prefix.  The prefixes are {\cf \#e}\sharpindex{e}
@@ -760,10 +778,10 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 %a nonempty mantissa width;
 %otherwise it is exact.
 Представление числового объекта может указываться точным или неточным с помощью
-приставки. Приставками являются {\bfseries\cf \#e}\sharpindex{e} для точного и {\bfseries\cf
-  \#i}\sharpindex{i} для неточного. Приставка точности может находиться до или после любой
-используемой приставки основания. Если представление числового объекта не содержит приставки
-точности, константа является неточной, если она содержит десятичную точку, экспоненту или
+приставки. Приставками являются {\bfseries\cf \#e}\sharpindex{e} в случае точного, и {\bfseries\cf
+  \#i}\sharpindex{i} в случае неточного представления. Приставка точности может находиться до
+или после любой используемой приставки основания. При отсутствии в представлении числового объекта
+приставки точности, константа является неточной, если она содержит десятичную точку, экспоненту или
 непустую ширину мантиссы; в противном случае она является точной.
 
 %In systems with inexact number objects
@@ -785,17 +803,17 @@ Pd, Pc, Po, Sc, Sm, Sk, So, или Co. Кроме того, любой симв�
 %implementation.  The default precision has at least as much precision
 %as \var{double}, but
 %implementations may wish to allow this default to be set by the user.
-В системах с неточными числовыми объектами переменной точности может быть полезно определение
-точности константы. С этой целью представления числовых объектов могут записываться с
-экспоненциальным маркером, указывающим желаемую точность неточного представления. Буквы
-{\bfseries\cf s}, {\bfseries\cf f}, {\bfseries\cf d} и {\bfseries\cf l} указывают на использование
-точности \var{short}, \var{single}, \var {double} и \var{long} соответственно. (Если существует
-менее четырёх внутренних неточных представлений, четыре спецификации размера преобразовываются в
-доступные. Например, реализация с двумя внутренними представлениями может преобразовывать вместе
-short и single, а также long и double) Кроме того, маркер точности {\bfseries\cf e} указывает
-точность по умолчанию для реализации. Точность по умолчанию имеет значение по крайней мере не
-менее точности \var{double}, но реализации могут позволять пользователю устанавливать данное
-умолчание.
+В системах с неточными числовыми объектами переменной точности может применяться спецификация
+точности константы. Для этого представления числовых объектов могут записываться с
+экспоненциальным маркером, задающим желаемую точность неточного представления. Буквы
+{\bfseries\cf s}, {\bfseries\cf f}, {\bfseries\cf d} и {\bfseries\cf l} специфицируют использование
+точности \var{short}, \var{single}, \var {double} и \var{long} соответственно. (При наличии
+менее четырёх внутренних неточных представлений четыре спецификации размера преобразовываются в
+доступные. Например, реализация с двумя внутренними представлениями может совместно преобразовывать
+данные short и single, а также long и double) Кроме того, экспоненциальный маркер
+{\bfseries\cf e} указывает точность реализации по умолчанию. Точность по умолчанию имеет
+значение не менее точности \var{double}, но реализации могут разрешать пользователю
+устанавливать данное значение по умолчанию.
 
 \begin{scheme}
 \bfseries 3.1415926535898F0
@@ -814,11 +832,11 @@ short и single, а также long и double) Кроме того, маркер
 %that contains no vertical bar, then its numerical value should be computed
 %as though it had a mantissa width of 53 or more.
 Представление числового объекта с непустой шириной мантиссы {\cf \var{x}|\var{p}} представляет
-наилучшее двоичное приближение с плавающей точкой \var{x} с помощью \var{p}-битной значащей
-части. Например, {\cf\bfseries 1.1|53} является представлением наилучшего приближения 1.1 в IEEE
-двойной точности. Если \var{x} является внешним представлением неточного действительного
-числового объекта, не содержащим вертикальной черты, его численное значение должно
-вычисляться так, как если бы оно имело ширину мантиссы 53 или более.
+собой наилучшую двоичную аппроксимацию плавающей точки \var{x} с помощью \var{p}-битной значащей
+части. Например, {\cf\bfseries 1.1|53} является представлением наилучшей аппроксимации 1.1 в
+IEEE двойной точности. Если \var{x} является внешним представлением неточного действительного
+числового объекта, не содержащим вертикальной черты, его численное значение должно вычисляться
+так, как если бы оно имело ширину мантиссы 53 или более.
 
 %Implementations that use binary floating-point representations
 %of real number objects should represent {\cf \var{x}|\var{p}}
@@ -863,8 +881,8 @@ short и single, а также long и double) Кроме того, маркер
 %and therefore their external representations should
 %carry a {\cf |\var{p}} suffix with the actual width of the
 %significand.
-Если основным представлением с плавающей точкой является двойная точность IEEE, {\cf |\var{p}},
-суффикс не должен всегда быть пропущеным: Денормализованные числа с плавающей точкой имеют пониженную
+Если основным представлением плавающей точки является двойная точность IEEE, суффикс {\cf |\var{p}}
+не обязан всегда пропускаться: Денормализованные числа с плавающей точкой имеют пониженную
 точность, и поэтому их внешние представления должны содержать суффикс {\cf |\var{p}} с
 фактической шириной значащей части.
 \end{note}
@@ -874,8 +892,8 @@ short и single, а также long и double) Кроме того, маркер
 %literal represents the NaN that is the result of {\cf (/ 0.0 0.0)},
 %and may represent other NaNs as well.
 Литералы {\cf\bfseries +inf.0} и {\cf\bfseries -inf.0} представляют положительную и
-отрицательную бесконечность соответственно. Литерал {\cf\bfseries +nan.0} представляет NaN,
-являющийся результатом {\cf\bfseries(/ 0.0 0.0)}, и может также представлять другие NaN.
+отрицательную бесконечность соответственно. Литерал {\cf\bfseries +nan.0} представляет не число,
+являющееся результатом {\cf\bfseries(/ 0.0 0.0)}, и может также представлять другие не числа.
 
 %If \var{x} is an external representation of an inexact real number
 %object and
@@ -885,12 +903,12 @@ short и single, а также long и double) Кроме того, маркер
 %Some or all of the other external representations of
 %inexact real number objects may also represent flonums, but that is not required by
 %this report.
-Если \var{x} является внешним представлением неточного действительного числового объекта и не
-содержит вертикальной черты и экспоненциального маркера кроме {\cf\bfseries e}, неточным
-действительным числовым объектом, представляющим его, является flonum (см. секцию
-библиотек~\extref{lib:flonumssection}{Flonums}). Некоторые или все другие внешние представления
-неточных действительных числовых объектов могут также представлять flonums, но это не является
-требованием данной работы.
+Если \var{x} является внешним представлением неточного действительного числового объекта, а
+также не содержит вертикальной черты и иного экспоненциального маркера, нежели {\cf\bfseries e},
+неточным действительным числовым объектом, представляющим его, является flonum (см. библиотечную
+секцию~\extref{lib:flonumssection}{Flonums}). Некоторые или все другие внешние представления
+неточных действительных числовых объектов также могут представлять flonum, но это не является
+требованием данного стандарта.
 
 %\section{Datum syntax}
 \section{Datum-синтаксис}
@@ -900,7 +918,7 @@ short и single, а также long и double) Кроме того, маркер
 %syntactic data\mainindex{syntactic datum} in terms of a sequence of
 %\meta{lexeme}s, as defined in the lexical syntax.
 Datum-синтаксис описывает синтаксис синтаксических данных\mainindex{syntactic datum}
-в терминах последовательности \meta{лексем} как определено в лексическом
+в терминах последовательности \meta{lexeme}, как определено в лексическом
 синтаксисе.
 
 %Syntactic data include the lexeme data described in the
@@ -912,7 +930,7 @@ Datum-синтаксис описывает синтаксис синтакси�
 \begin{itemize}
 %\item pairs and lists, enclosed by \verb|( )| or \verb|[ ]| (see
 %  section~\ref{pairlistsyntax})
-\item пары и списки, заключённые в \verb|( )| или \verb|[ ]| (см.
+\item пары и списки, заключённые в {\bfseries\verb|( )|} или {\bfseries\verb|[ ]|} (см.
   секцию~\ref{pairlistsyntax})
 %\item vectors (see section~\ref{vectorsyntax})
 \item векторы (см. секцию~\ref{vectorsyntax})
@@ -940,14 +958,14 @@ Datum-синтаксис описывает синтаксис синтакси�
 \>  \| \meta{character} \| \meta{string} \|  \meta{symbol}
 \meta{symbol} \: \meta{identifier}
 \meta{compound datum} \: \meta{list} \| \meta{vector} \| \meta{bytevector}
-\meta{list} \: (\arbno{\meta{datum}}) \| [\arbno{\meta{datum}}]
-\>    \| (\atleastone{\meta{datum}} .\ \meta{datum}) \| [\atleastone{\meta{datum}} .\ \meta{datum}]
+\meta{list} \: \textbf{(}\arbno{\meta{datum}}\textbf{)} \| \textbf{[}\arbno{\meta{datum}}\textbf{]}
+\>    \| \textbf{(}\atleastone{\meta{datum}} .\ \meta{datum}\textbf{)} \| \textbf{[}\atleastone{\meta{datum}} .\ \meta{datum}\textbf{]}
 \>    \| \meta{abbreviation}
 \meta{abbreviation} \: \meta{abbrev prefix} \meta{datum}
-\meta{abbrev prefix} \: ' \| ` \| , \| ,@
-\>    \| \#' | \#` | \#, | \#,@
-\meta{vector} \: \#(\arbno{\meta{datum}})
-\meta{bytevector} \: \#vu8(\arbno{\meta{u8}})
+\meta{abbrev prefix} \: \textbf{'} \| \textbf{`} \| \textbf{,} \| \textbf{,@}
+\>    \| \textbf{\#'} | \textbf{\#`} | \textbf{\#,} | \textbf{\#,@}
+\meta{vector} \: \textbf{\#(}\arbno{\meta{datum}}\textbf{)}
+\meta{bytevector} \: \textbf{\#vu8(}\arbno{\meta{u8}}\textbf{)}
 \meta{u8} \: $\langle${\rm any \meta{number} representing an exact}
  \>\>\quad\quad {\rm integer in $\{0, \ldots, 255\}$}$\rangle$%
 \end{grammar}
@@ -977,15 +995,15 @@ Datum-синтаксис описывает синтаксис синтакси�
 %cdr is 5.
 Наиболее общей нотацией для пар Scheme как синтаксических данных является ``точечная'' нотация
 \hbox{\cf (\hyperi{datum} .\ \hyperii{datum})}, где \hyperi{datum} является представлением
-значения car, а \hyperii{datum} - значения поля cdr. Например, {\cf\bfseries (4 .\ 5)} является
-парой, car которой - 4, а cdr - 5.
+значения поля car, а \hyperii{datum} -- значения поля cdr. Например, {\cf\bfseries (4 .\ 5)} является
+парой, car которой -- 4, а cdr -- 5.
 
 %A more streamlined notation can be used for lists: the elements of the
 %list are simply enclosed in parentheses and separated by spaces.  The
 %empty list\index{empty list} is represented by {\tt()} .  For example,
-Для списков может использоваться более чёткая нотация: элементы списка просто заключаются в
+Для списков может использоваться упрощённая нотация: элементы списка просто заключаются в
 круглые скобки и разделяются пробелами. Пустой список\index{empty list} представляется, как
-{\tt()}. Например,
+{\bfseries\tt()}. Например,
 
 \begin{scheme}
 \bfseries(a b c d e)%
@@ -999,14 +1017,14 @@ Datum-синтаксис описывает синтаксис синтакси�
 \end{scheme}
 
 %are equivalent notations for a list of symbols.
-являются эквивалентными формами записи списка символов
+являются эквивалентными формами записи списка символов.
 
 %The general rule is that, if a dot is followed by an open parenthesis,
 %the dot, open parenthesis, and matching closing parenthesis
 %can be omitted in the external representation.
-Общее правило гласит, что если за точкой следует открывающаяся круглая скобка, точка,
-открывающаяся круглая скобка и соответствующая ей закрывающаяся круглая скобка
-во внешнем представлении могут быть пропущены.
+Согласно общему правилу, если за точкой следует открывающая круглая скобка, то точка,
+открывающая круглая скобка и соответствующая ей закрывающая круглая скобка во внешнем
+представлении могут быть пропущены.
 
 %The sequence of characters ``{\cf (4 .\ 5)}'' is the external representation of a
 %pair, not an expression that evaluates to a pair.
@@ -1019,7 +1037,7 @@ Datum-синтаксис описывает синтаксис синтакси�
 Последовательность символов ``{\cf\bfseries (4 .\ 5)}'' является внешним представлением пары, а не
 выражением, которое вычисляется как пара. Аналогично, последовательность символов ``{\tt\bfseries (+ 2 6)}''
 {\em не} является внешним представлением целого числа 8, даже при том, что она {\em является} выраженим
-(на языке библиотеки {\bfseries\rsixlibrary{base}}), вычисляемым как целое число 8; наоборот, это
+(на языке библиотеки {\bfseries\rsixlibrary{base}}), вычисляемым как целое число 8; напротив, это
 синтаксический datum, представляющий трёхэлементный список, элементами которого являются
 символ {\tt\bfseries +} и целые числа 2 и 6.
 
@@ -1033,10 +1051,10 @@ Datum-синтаксис описывает синтаксис синтакси�
 %containing the number object for zero in element 0, the list {\cf(2 2 2 2)} in
 %element 1, and the string {\cf "Anna"} in element 2 can be represented as
 %follows:
-Векторные данные, представляюшие вектора объектов (см. секцию~\ref{vectorsection}),
+Данные векторов, представляюшие вектора объектов (см. секцию~\ref{vectorsection}),
 представляются с помощью нотации {\tt{\bfseries\#(}\hyper{datum}
   \dotsfoo{\bfseries)}}. Например, вектор с длиной 3, содержащий числовой объект для нуля в
-элементе 0, список {\cf\bfseries (2 2 2 2)} в элементе 1 и строку {\cf\bfseries "Анна"} в
+элементе 0, список {\cf\bfseries (2 2 2 2)} в элементе 1 и строку {\cf\bfseries "Anna"} в
 элементе 2, может быть представлен следующим образом:
 
 \begin{scheme}
@@ -1056,7 +1074,7 @@ Datum-синтаксис описывает синтаксис синтакси�
 %{\tt\#vu8(\hyper{u8} \dotsfoo)}, where the \hyper{u8}s represent the octets of
 %the bytevector.  For example, a bytevector of length 3 containing the
 %octets 2, 24, and 123 can be represented as follows:
-Байт-векторные данные, представляющие байтовые вектора (см. библиотечную
+Данные байтовых векторов, представляющие байтовые вектора (см. библиотечную
 главу~\extref{lib:bytevectorschapter}{Bytevectors}), представляются с помощью нотации
 {\tt{\bfseries\#vu8(}\hyper{u8} \dotsfoo{\bfseries )}}, где \hyper{u8} представляет октет
 байтового вектора. Например, байтовый вектор с длиной 3, содержащий октеты 2, 24 и 123, может быть
@@ -1078,35 +1096,51 @@ Datum-синтаксис описывает синтаксис синтакси�
 \renewcommand{\baselinestretch}{1.05}
 \selectfont
 \begin{entry}{%
-\pproto{\singlequote\hyper{datum}}{}
-\pproto{\backquote\hyper{datum}}{}
-\pproto{,\hyper{datum}}{}
-\pproto{,\atsign\hyper{datum}}{}
-\pproto{\#'\hyper{datum}}{}
-\pproto{\#\backquote\hyper{datum}}{}
-\pproto{\#,\hyper{datum}}{}
-\pproto{\#,@\hyper{datum}}{}
-}
+\pproto{\textbf{\singlequote}\hyper{datum}}{}
+\pproto{\textbf{\backquote}\hyper{datum}}{}
+\pproto{\textbf{,}\hyper{datum}}{}
+\pproto{\textbf{,\atsign}\hyper{datum}}{}
+\pproto{\textbf{\#'}\hyper{datum}}{}
+\pproto{\textbf{\#\backquote}\hyper{datum}}{}
+\pproto{\textbf{\#,}\hyper{datum}}{}
+\pproto{\textbf{\#,@}\hyper{datum}}{}
+}\vspace{-1mm}
 
 %Each of these is an abbreviation:
 Каждый из них является сокращением:
-\\\quad\schindex{'}\singlequote\hyper{datum}
-for {\cf (quote \hyper{datum})},
-\\\quad\schindex{`}\backquote\hyper{datum}
-for {\cf (quasiquote \hyper{datum})},
-\\\quad\schindex{,}{\cf,}\hyper{datum}
-for {\cf (unquote \hyper{datum})},
-\\\quad\index{,@\texttt{,\atsign}}{\cf,}\atsign\hyper{datum}
-for {\cf (unquote-splicing \hyper{datum})},
-\\\quad\sharpindex{'}{\cf\#'}\hyper{datum}
-for {\cf (syntax \hyper{datum})},
-\\\quad\sharpindex{`}{\cf\#`}\hyper{datum}
-for {\cf (quasisyntax \hyper{datum})},
-\\\quad\sharpindex{,}{\cf\#,}\hyper{datum}
-for {\cf (unsyntax \hyper{datum})}, and
-\\\quad\index{#,@\texttt{\#,\atsign}}{\cf\#,@}\hyper{datum}
-for {\cf (unsyntax-splicing \hyper{datum})}.
-\end{entry}
+%\\\quad\schindex{'}\singlequote\hyper{datum}
+%for {\cf (quote \hyper{datum})},
+%\\\quad\schindex{`}\backquote\hyper{datum}
+%for {\cf (quasiquote \hyper{datum})},
+%\\\quad\schindex{,}{\cf,}\hyper{datum}
+%for {\cf (unquote \hyper{datum})},
+%\\\quad\index{,@\texttt{,\atsign}}{\cf,}\atsign\hyper{datum}
+%for {\cf (unquote-splicing \hyper{datum})},
+%\\\quad\sharpindex{'}{\cf\#'}\hyper{datum}
+%for {\cf (syntax \hyper{datum})},
+%\\\quad\sharpindex{`}{\cf\#`}\hyper{datum}
+%for {\cf (quasisyntax \hyper{datum})},
+%\\\quad\sharpindex{,}{\cf\#,}\hyper{datum}
+%for {\cf (unsyntax \hyper{datum})}, and
+%\\\quad\index{#,@\texttt{\#,\atsign}}{\cf\#,@}\hyper{datum}
+%for {\cf (unsyntax-splicing \hyper{datum})}.
+\\\quad\schindex{'}{\bfseries\singlequote}\hyper{datum}
+для {\cf \textbf{(quote} \hyper{datum}\textbf{)}},
+\\\quad\schindex{`}{\bfseries\backquote}\hyper{datum}
+для {\cf \textbf{(quasiquote} \hyper{datum}\textbf{)}},
+\\\quad\schindex{\bfseries ,}{\cf\bfseries ,}\hyper{datum}
+для {\cf \textbf{(unquote} \hyper{datum}\textbf{)}},
+\\\quad\index{,@\texttt{,\atsign}}{\cf,}{\bfseries\atsign}\hyper{datum}
+для {\cf \textbf{(unquote-splicing} \hyper{datum}\textbf{)}},
+\\\quad\sharpindex{'}{\bfseries\cf\#'}\hyper{datum}
+для {\cf \textbf{(syntax} \hyper{datum}\textbf{)}},
+\\\quad\sharpindex{`}{\bfseries\cf\#`}\hyper{datum}
+для {\cf \textbf{(quasisyntax} \hyper{datum}\textbf{)}},
+\\\quad\sharpindex{,}{\bfseries\cf\#,}\hyper{datum}
+для {\cf \textbf{(unsyntax} \hyper{datum}\textbf{)}}, and
+\\\quad\index{#,@\texttt{\#,\atsign}}{\bfseries\cf\#,@}\hyper{datum}
+для {\cf \textbf{(unsyntax-splicing} \hyper{datum}\textbf{)}}.
+\end{entry}\vspace{-1mm}
 
 }
 

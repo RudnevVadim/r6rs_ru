@@ -7,10 +7,10 @@
 %code to run.  Through the imported libraries, whether directly or through the
 %transitive closure of importing, a top-level program defines a complete Scheme
 %program.
-\defining{Программа верхнего уровня} задаёт точку входа для определения и выполнения программы
-Scheme. В программе верхнего уровня указывается набор библиотек для импорта и код для
-выполнения. (Через импортированные библиотеки, или непосредственно или через переходное закрытие
-импортирования ?), программа верхнего уровня определяет полную программу Scheme.
+\defining{Программа верхнего уровня} задаёт точку входа к определению и выполнению программы
+Scheme. В программе верхнего уровня указывается набор импортируемых библиотек и исполняемый код.
+Через импортированные библиотеки непосредственно, или через транзитивное замыкание
+импортирования, программа верхнего уровня определяет полную программу Scheme.
 
 %\section{Top-level program syntax}
 \section{Синтаксис программ верхнего уровня}
@@ -52,7 +52,7 @@ Scheme. В программе верхнего уровня указываетс
 %specified by \hyper{top-level body form} refers to the result of macro
 %expansion.
 \hyper{import form} идентичен разделу import в библиотеках
-(см. секцию~\ref{librarysyntaxsection}) и задаёт ряд библиотек импорта. \hyper{top-level body}
+(см. секцию~\ref{librarysyntaxsection}) и задаёт набор импортируемых библиотек. \hyper{top-level body}
 похож на \hyper{library body} (см. секцию~\ref{librarybodysection}), за исключением того, что
 определения и выражения могут находиться в произвольном порядке. Таким образом, синтаксис,
 задаваемый \hyper{top-level body form} относится к результату разворачивания макросов.
@@ -65,8 +65,8 @@ Scheme. В программе верхнего уровня указываетс
 %{\cf let-syntax}, or {\cf letrec-syntax}
 %forms, may be specified by a syntactic abstraction
 %(see section~\ref{macrosection}).
-При использовании {\bfseries\cf begin}, {\bfseries\cf let-syntax} или {\bfseries\cf
-  letrec-syntax} из библиотеки \textbf{\rsixlibrary{base}}, находящихся в теле верхнего уровня
+Если используются {\bfseries\cf begin}, {\bfseries\cf let-syntax} или {\bfseries\cf
+  letrec-syntax} из библиотеки \textbf{\rsixlibrary{base}}, находящиеся в теле верхнего уровня
 до первого выражения, они соединяются с телом; см. секцию~\ref{begin}. Часть или всё тело,
 включая части, обернутые в формы {\bfseries\cf begin}, {\bfseries\cf let-syntax} или
 {\bfseries\cf letrec-syntax}, может быть определено синтаксической абстракцией
@@ -82,8 +82,8 @@ Scheme. В программе верхнего уровня указываетс
 %Each \hyper{expression} that appears before a
 %definition in
 %the top-level body is converted into a dummy definition
-Программа верхнего уровня выполняется, рассматривая программу подобно к библиотеке, и вычисляя её
-определения и выражения. Семантику тела верхнего уровня можно грубо объяснить простым
+Программа верхнего уровня выполняется путём обработки программы аналогично библиотеке, и вычисления её
+определений и выражений. Семантику тела верхнего уровня можно грубо интерпретировать простым
 переводом в тело библиотеки: Каждый \hyper{expression}, находящееся перед определением
 в теле верхнего уровня, преобразовывается в фиктивное определение\vspace{2mm}
 %
